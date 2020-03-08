@@ -1,0 +1,63 @@
+MANUAL
+
+    rename() renames a file, moving it between directories if required. Any other
+    hard links to the file (as created using link(2)) are unaffected. Open file
+    descriptors for oldpath are also unaffected.
+
+    If newpath already exists it will be atomically replaced (subject to a few
+    conditions; see ERRORS below), so that there is no point at which another process
+    attempting to access newpath will find it missing.
+
+    If oldpath and newpath are existing hard links referring to the same file,
+    then rename() does nothing, and returns a success status.
+
+    If newpath exists but the operation fails for some reason rename() guarantees to
+    leave an instance of newpath in place.
+
+    oldpath can specify a directory. In this case, newpath must either not exist, or
+    it must specify an empty directory.
+
+    However, when overwriting there will probably be a window in which both oldpath
+    and newpath refer to the file being renamed.
+
+    If oldpath refers to a symbolic link the link is renamed; if newpath refers to a
+    symbolic link the link will be overwritten
+
+    EXDEV
+        oldpath and newpath are not on the same mounted file system. (Linux permits a
+        file
+
+        system to be mounted at multiple points, but rename() does not work across
+        different mount points, even if the same file system is mounted on both.)
+
+
+APUE
+
+    1. If oldname specifies a file that is not a directory, then we are renaming a file or
+    a symbolic link. In this case, if newname exists, it cannot refer to a directory. If
+    newname exists and is not a directory, it is removed, and oldname is renamed to
+    newname. We must have write permission for the directory containing oldname
+    and the directory containing newname, since we are changing both directories.
+
+    2. If oldname specifies a directory, then we are renaming a directory. If newname
+    exists, it must refer to a directory, and that directory must be empty. (When we
+    say that a directory is empty, we mean that the only entries in the directory are
+    dot and dot-dot.) If newname exists and is an empty directory, it is removed, and
+    oldname is renamed to newname. Additionally, when we’re renaming a directory,
+    newname cannot contain a path prefix that names oldname. For example, we
+    can’t rename /usr/foo to /usr/foo/testdir, because the old name
+    (/usr/foo) is a path prefix of the new name and cannot be removed.
+
+    3.If either oldname or newname refers to a symbolic link, then the link itself is
+    processed, not the file to which it resolves.
+
+    4.We can’t rename dot or dot-dot. More precisely, neither dot nor dot-dot can
+    appear as the last component of oldname or newname.
+
+    5.As a special case, if oldname and newname refer to the same file, the function
+    returns successfully without changing anything.
+
+    If newname already exists, we need permissions as if we were deleting it. Also, because
+    we’re removing the directory entry for oldname and possibly creating a directory entry
+    for newname, we need write permission and execute permission in the directory
+    containing oldname and in the directory containing newname.

@@ -1,0 +1,20 @@
+7029:   ./fileref close
+00005644e9d1f000      8K r-x-- fileref
+00005644e9f20000      4K r---- fileref
+00005644e9f21000      4K rw--- fileref
+00005644ead31000    132K rw---   [ anon ]
+00007fac6187b000   1948K r-x-- libc-2.27.so
+00007fac61a62000   2048K ----- libc-2.27.so
+00007fac61c62000     16K r---- libc-2.27.so
+00007fac61c66000      8K rw--- libc-2.27.so
+00007fac61c68000     16K rw---   [ anon ]
+00007fac61c6c000    156K r-x-- ld-2.27.so
+00007fac61e76000      8K rw---   [ anon ]
+00007fac61e93000      4K r---- ld-2.27.so
+00007fac61e94000      4K rw--- ld-2.27.so
+00007fac61e95000      4K rw---   [ anon ]
+00007ffcc90d5000    132K rw---   [ stack ]
+00007ffcc9127000     12K r----   [ anon ]
+00007ffcc912a000      4K r-x--   [ anon ]
+ffffffffff600000      4K r-x--   [ anon ]
+ total             4512K

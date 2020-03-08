@@ -1,0 +1,42 @@
+RWLock = {owner: Thread, readers: int, critsec: Mutex, noreaders: CondVar, nowriter: CondVar, writer: Mutex}
+
+init RWLock
+	owner = -1;
+	readers = 0;
+	writeractive = 0;
+	init_mutex(critsec);
+	init_mutex(writer);
+	init_cond(nowriter, NULL);
+	init_cond(wrtier, NULL);
+
+rdlock RWLock
+	lock(critsec)
+	while(owner != -1)
+		cond_wait(writer, critsec)
+	readers++;	
+	unlock(critsec)
+
+wrlock RWLock
+	lock(writer)
+	lock(critsec)
+	if(readers)
+		cond_wait(nowriter, critsec)
+	owner = gettid();
+	unlock(critsec)
+	unlock(writer)
+
+unlock RWLock
+	lock(critsec)
+	if(gettid() == owner){
+		owner = 0;
+		writeractive = 0;
+		cond_broadcast(writer);
+	}
+	else{
+		reader--;
+		if(readers == 0)
+			cond_signal(nowriter);
+		unlock(writer)
+	}
+	unlock(critsec)
+

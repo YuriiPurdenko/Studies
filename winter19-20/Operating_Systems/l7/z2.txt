@@ -1,0 +1,29 @@
+Plik odwzorowany w pamiec
+
+    Prywatny - zawarosc pliku, ale tylko ja chce modyfikowac ten plik
+
+    Wspoldzielony - zawartosc pliku, np. zczytywanie znakow z klawiatury lub komunikacja miedy procesami poprzez edytowanie pliku
+
+
+Plik odwzorowany w pamiec anonimowa
+
+    Prywatny - inicjalizacja pamieci tylko dla siebie, fork ma copy on write
+
+    Wspoldzielony - inicjalizacja pamieci, ktora jest np dzielona przez dzieci z forka
+
+
+
+void *mmap(void * addr , size_t length , int prot , int flags , int fd , off_t offset );\
+
+Flagi  MAP_PRIVATE, MAP_SHARED, MAP_ANONYMOUS
+
+Memory mapped by mmap() is preserved across fork(2), with the same
+       attributes.
+
+All of a process’s mappings are automatically unmapped when it terminates or
+performs an exec(). (execve tez)
+
+
+The execve system call is installing a fresh new virtual address space in your process (so the old virtual address space of the program doing execve successfully disappears, being overwritten by the new one), so you don't share any data with the previous one
+
+Wszystkie poza plikiem wspoldzielonym odwzorowanym w pamiec/ i poczatkowo anonimowej.

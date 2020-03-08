@@ -1,0 +1,29 @@
+mkdir() - tworzenie katalogu
+opendir(),readdir() and closedir() - otwieranie, czytanie i zamykanie katalogu
+rmdir() - usuwanie katalogu, ktory musi byc pusty - posiadac tylko . i ..
+rename
+stat
+
+fsync
+ls
+chmod
+
+TWARDE WIAZANIA
+    TYLKO DLIA PLIKOW!
+    tylko na tym samym dysku
+    //link() - hard link, odwoluje sie do inode oryginalnego pliku, 
+    //unlink()
+
+SYMBOLICZNE WIAZANIE
+    mozna na plikach i folderach
+    rozne dyski/ serwery
+    tworza plik - symbolic file
+    w pliku trzymaja sciezke do oryginalnego pliku
+
+mount() - zmiana/montowanie systemu plikow
+
+system plikow zawiera metadane na temat pliku np. rozmiar, gdzie znajduja sie bloki na dysku - mozna sie odwolac dzieki inode
+
+nlink_t   st_nlink;       /* Number of hard links */
+
+plik zostaje usuniety wtedy kiedy st_nlink = 0

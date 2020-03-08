@@ -1,0 +1,37 @@
+Napisać program w języku C, który wczytuje literę oznaczającą jedno z dwóch zadań do wykonania, czyli kodowanie (litera K) lub dekodowanie (litera D) oraz dwie liczby naturalne dodatnie x i y oznaczające długość i wysokość prostokąta , który jest kluczem do tych operacji. Kodowanie polega na kolejnym wpisywaniu x * y przeczytanych znaków (lub mniej - na końcu wejścia) wierszami do zadanego prostokąta, a następnie wypisywaniu ich kolumnami do standardowego wyjścia. Na przykład dla x = 3 i y = 2 zakodowany tekst ABCDEFGHIJKLMNOP wyglądałby następująco: ADBECFGJHKILMPNO
+
+Znaki końca wiersza, spacje, itd. traktujemy tak samo jak każdy inny znak - tekst do zakodowania może być wielowierszowy. Zatem zakodowany tekst zawiera dokładnie te same znaki, co tekst początkowy, ale w innej kolejności. Dekodowanie oznacza czynność odwrotną, czyli z tekstu zakodowanego należy odtworzyć tekst początkowy. Zakładamy, że x i y są z przedziału [2,1000].
+
+W pierwszym wierszu standardowego wejścia podane są kolejno i oddzielone spacjami litera o oraz dwie liczby x y . W drugim i kolejnych wierszach znajduje się tekst do zakodowania lub odkodowania. Program powinien wypisać do standardowego wyjścia tylko przekształcony tekst (liczba wypisanych znaków powinna być taka sama, jak liczba przeczytanych znaków z wierszy 2, 3, itd, aż do EOF).
+
+W szczególności oznacza to, że w programie dla sprawdzarki nie wolno wypisać nic więcej, np wyjaśnienia, co program robi lub jakie dane należy wprowadzić.
+
+ 
+
+Wskazówka: Do wczytania danych można użyć instrukcji scanf("%c %d %d", &o, &x, &y); Następnie w pętli trzeba pominąć pozostałe znaki z wiersza: while ((c = getchar()) != EOF && c != '\n');  - i dopiero wtedy zacząć czytać tekst do kodowania (o == 'K') lub dekodowania (o == 'D').
+
+ 
+
+Przykład danych 1:
+
+K 4 3
+Ala ma kota.
+A kot lubi mleko.
+
+Wynik 1:
+
+Amolata a k.
+ouAtb  ikl mol.e
+k
+
+Przykład danych 2:
+
+D 4 3
+Amolata a k.
+ouAtb  ikl mol.e
+k
+
+Wynik 2:
+
+Ala ma kota.
+A kot lubi mleko.

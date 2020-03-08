@@ -1,0 +1,42 @@
+ps - daje "zrzut" aktywnych procesow
+    -e - zobaczyć wszystkie procesy w systemie
+    -o Display information associated with  keywords
+    user - Nazwa użytkownika
+    pid - ID procesu
+    pgid - ID grupy procesów - równoważnie - ID procesu będącego przywódcą grupy procesów
+    tid - the unique number
+    pri - priority of the process.
+    stat - Wieloliterowy stan procesu.
+    wchan - Nazwa funkcji jądra, w której proces jest uśpiony, lub "-" jeśli proces jest wykonywany, lub "*" jeśli proces jest wielowątkowy, a ps nie wyświetla wątków.
+    cmd - Sama nazwa programu wykonywalnego
+
+proces init ma pid rodzica 0, uznaje sie ze jego rodzicem jest kernel, za to on jest rodzicem dla wszystkich procesow systemowych oraz tych, ktorych rodzice zostali zabici
+
+
+Poniżej są różne wartości, które specyfikatory wyjścia s, stat i state
+(nagłówek "STAT" lub "S") wyświetlą, aby opisać stan procesu:
+(ZNAC) D    Nieprzerywalnie uśpiony (zazwyczaj wejście/wyjście)
+(ZNAC) R    Wykonywany lub możliwy do wykonania (w kolejce do wykonania)
+(ZNAC) S    Przerywalnie uśpiony (czekający na zakończenie zdarzenia)
+(ZNAC) T    Zatrzymany, albo przez sygnał kontroli zadań, albo z powodu śledzenia.
+W    Stronicowany (niepoprawne od wersji jądra  2.6.xx)
+X    Zmarły (nigdy nie powinno wystąpić)
+(ZNAC) Z    Proces niefunkcjonujący ("zombie"), zakończony, ale nie usunięty przez
+     rodzica
+t    traced
+I    Idle Kernela
+
+
+
+Dla formatów BSD, jeżeli użyto słowa kluczowego stat, mogą zostać wyświetlone
+dodatkowe znaki:
+<    o wysokim priorytecie (niemiły dla innych użytkowników)
+N    o niskim priorytecie (miły dla innych użytkowników)
+L    mający zablokowane strony w pamięci (dla czasu rzeczywistego lub IO)
+(ZNAC) s    będący liderem sesji
+l    wielowątkowy (używając CLONE_THREAD, jak to robi NPTL pthreads)
+(ZNAC) +    będący w pierwszoplanowej grupie procesów
+
+ps -eo user,pid,ppid,pgid,tid,pri,stat,wchan,cmd
+
+pstree - watki w klamrowych nawiasach

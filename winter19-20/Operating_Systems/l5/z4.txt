@@ -1,0 +1,64 @@
+The original, historical use of ioctl(2) was to set parameters like baud rate and number of framing bits in a serial-communications driver
+
+Later, ioctl calls were added for other driver functions, and fcntl(2) was added as a hook into the file system.
+
+pozniej fcntl zostal dodany aby umozliwic podczepieniu sie do systemu plikow
+
+
+PROBLEMY:
+
+- semantyka zdef przez sterownik urzadzenia
+
+-uprawnienia sprawdzenie przez sterownik urzadzenia
+
+- brak kontroli wartosci req code
+
+-słabo udokumentowane
+
+- nie jest przenosne
+
+- niechlujny zestaw makr opisujące typy operacji oraz wartosci argumentow
+
+- przez slaby model obiektow w uniksie, uniemozliwiajace "naturalne" dodawanie pomocniczych operacji, programisci musza wybierac pomiedzy niesatysfakcjonujacymi alternatywami fcntl/ioctl, tworzenie specjalnych sys call'i lub podczepianie poprzez specjalny wirtualny system
+
+Nie wiadomo jak zmieni sie model obiektów w przyszlosci, jak zostanie wzbogacony
+
+
+ioctl - sterowanie urządzeniem
+
+int ioctl(int d, int request, ...);
+
+    d - deskryptor
+
+    request - zalezny od urzadzenia, zawiera zakodowana informacje czy argument jest parametrem wejciowym lub wyjsciowym oraz jego rozmiar w bajtach    
+    
+
+    char *argp - wskaznik do obszaru pamieci
+
+
+  /*
+   * Ioctl's have the command encoded in the lower word, and the size of
+   * any in or out parameters in the upper word.  The high 3 bits of the
+   * upper word are used to encode the in/out status of the parameter.
+   *
+   *	 31 29 28                     16 15            8 7             0
+   *	+---------------------------------------------------------------+
+   *	| I/O | Parameter Length        | Command Group | Command       |
+   *	+---------------------------------------------------------------+
+   */
+
+
+#define DIOCEJECT	_IOW('d', 112, int)	/* eject removable disk */
+#define ODIOCEJECT	_IO('d', 112)		/* eject removable disk */
+
+The old ioctl has been renamed to ODIOCEJECT for binary compatibility.
+
+
+#define	KIOCTYPE	_IOR('k', 9, int)	/* get keyboard type */
+
+This  ioctl() returns a new keyboard type defined for  the USB keyboard.
+
+
+#define	SIOCGIFCONF 	_IOWR('i', 38, struct ifconf)	/* get ifnet list */
+
+ifnet - kernel interfaces for manipulating network interfaces

@@ -1,0 +1,37 @@
+#lang racket
+
+;; definicja wyrażeń arytmetycznych z jedną zmienną
+
+(struct const (val) #:transparent)
+(struct op (symb l r) #:transparent)
+(struct variable () #:transparent)
+
+(define (expr? e)
+  (match e
+    [(variable) true]
+    [(const n)  (number? n)]
+    [(op s l r) (and (member s '(+ *))
+                     (expr? l)
+                     (expr? r))]
+    [_          false]))
+
+;; przykładowe wyrażenie
+
+(define f (op '* (op '* (variable) (variable))
+                 (variable)))
+
+;; pochodna funkcji
+
+(define (∂ f)
+  (match f
+    [(const n)   (const 0)]
+    [(variable)  (const 1)]
+    [(op '+ f g) (op '+ (∂ f) (∂ g))]
+    [(op '* f g) (op '+ (op '* (∂ f) g)
+                        (op '* f (∂ g)))]))
+
+;; przykładowe użycie
+
+(define df (∂ f))
+(define ddf (∂ (∂ f)))
+(define dddf (∂ (∂ (∂ f))))

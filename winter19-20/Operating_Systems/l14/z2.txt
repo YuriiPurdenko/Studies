@@ -1,0 +1,28 @@
+typedef struct Sem{
+  pthread_mutex_t mutex;
+  pthread_cond_t waiters;
+  int value;
+} Sem_t;
+
+
+Sem_t *Sem_t_init(int n){
+  pthread_mutex_init(&(sem->mutex), 1);
+  pthread_cond_init(&(sem->waiters), 0);
+  sem->value = n;
+  return sem;
+}
+
+void wait(Sem_t *sem){
+  pthread_mutex_lock(&sem->mutex);
+  while(value == 0)
+    pthread_cond_wait(&sem->waiters, &sem->mutex);
+  sem->value--;
+  pthread_mutex_unlock(&sem->mutex);
+}
+
+Sem_t *post(Sem_t *sem){
+  pthread_mutex_lock(&sem->mutex);
+  pthread_cond_signal(&sem->waiters)
+  sem->value++;
+  pthread_mutex_unlock(&sem->mutex);
+}

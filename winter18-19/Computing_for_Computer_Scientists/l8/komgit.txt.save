@@ -1,0 +1,30 @@
+git init - inicializuje repezytorium git, stworzy nowy podkatalog .git, zawierajace szkielet git a
+
+git add [plik] - dodake pliki, ktore chce 'sledzic'
+
+git commit 'nazwa' - zatwierdza zmiany
+
+git clone [link] - pozwala uzyskac kopie istniejacego repozytorium//pobiera wszystkie rewizje kazdego pliku
+
+git clone [link] [folder] - zapisuje w podanym folderze
+
+git status - pozwala sprawdzic status plikow
+// w pliku .gitignore tworze liste wzorcow, ktore git ma ignorowac (sa tam wyrazenia podobne do wyrazen regularnych)
+
+git diff - pokazuje dokladnie ktore linie zostaly zmienione(dodane/usuniete)
+
+git remote - pozwala na zdalne obslugiwanie repo
+
+git push
+
+git branch
+
+git merge
+
+git checkout - pozwala przelaczac sie pomiedzy commitami
+
+git log - pokazuje wszystkie commity
+
+git rm - usuwa  plik// gdziec trzeba dodac flage -f aby usunac(wymogi bezpieczenstwa)
+
+

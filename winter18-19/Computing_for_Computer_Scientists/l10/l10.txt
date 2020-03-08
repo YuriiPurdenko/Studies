@@ -1,0 +1,39 @@
+git clone https://github.com/iiuwr18/lista10-wiklam.git
+cd lista10-wiklam/
+touch README.md
+echo "Zadanie 1 z listy 10 z PWI" >> README.md
+git add README.md
+git commit -m "Dodanie pliku README.md do mastera"
+touch o-mnie.txt
+echo "Wiktor Pilarczyk" >> o-mnie.txt
+git branch ja
+git checkout ja
+git add o-mnie.txt
+git commit -m "Dodanie o-mnie.txt w nowej galezi ja"
+echo "Haslo wykladowcy z PWI" >> o-mnie.txt
+git add o-mnie.txt
+git commit -m "Dodanie do o-mnie.txt najciekawszej rzeczy ktora poznalem"
+echo "Tweebuffelsmeteenskootmorsdoodgeskietfontein" >> o-mnie.txt
+git add o-mnie.txt
+git commit -m "Dodanie miasta w Afryce do o-mnie.txt"
+git checkout master
+git branch komputer
+git checkout komputer
+touch o-komputerze.txt
+uname -a | cat >> o-komputerze.txt
+git add o-komputerze.txt
+git commit -m "Dodanie o-komputerze w nowej galezi komputer"
+cat /proc/meminfo >> o-komputerze.txt
+git add o-komputerze.txt
+git commit -m "Dodanie do o-komputerze /proc/meminfo"
+git checkout master
+echo "Dzisiaj nie jest niedziela" >> README.md
+git add README.md
+git commit -m "Dodatnie waznej informacji do README.md"
+git log
+git reflog
+gitk
+gitk --all
+git push --set-upstream origin ja
+
+git config --global push.default matching

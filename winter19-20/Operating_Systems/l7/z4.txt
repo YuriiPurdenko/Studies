@@ -1,0 +1,14 @@
+Przy wywolaniu execve jesli program ma ustawiony set-uid to zmienie sie efektywny i zachowany id dla procesow A i B:
+
+A  real=2000 effective=0 saved=0
+B  real=2000 effective=1000 saved=1000
+
+Do programow, nalezy dodac
+
+dla A
+if (setuid(getuid() == -1)
+    errExit("setuid");
+
+dla B
+if (setreuid(getuid(), getuid()) == -1)
+    errExit("setreuid");

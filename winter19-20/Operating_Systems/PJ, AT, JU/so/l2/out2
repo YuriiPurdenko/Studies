@@ -1,0 +1,434 @@
+COMMAND   PID USER   FD      TYPE             DEVICE  SIZE/OFF     NODE NAME
+firefox 15997   pj  cwd       DIR              254,2      4096  5508069 /home/pj
+firefox 15997   pj  rtd       DIR              254,2      4096        2 /
+firefox 15997   pj  txt       REG              254,2    216120 14695141 /usr/lib/firefox/firefox
+firefox 15997   pj  DEL       REG               0,26             123592 /dev/shm/org.mozilla.ipc.16069.31
+firefox 15997   pj  DEL       REG               0,26             185871 /dev/shm/org.mozilla.ipc.16069.29
+firefox 15997   pj  DEL       REG                0,5             557060 /SYSV00000000
+firefox 15997   pj  mem       REG              254,2   2641198  8786341 /home/pj/.mozilla/firefox/7l85z3f5.default/extensions/uBlock0@raymondhill.net.xpi
+firefox 15997   pj  mem       REG              254,2  27194928 13382286 /usr/lib/x86_64-linux-gnu/libicudata.so.63.2
+firefox 15997   pj  mem       REG              254,2   1890312 13386510 /usr/lib/x86_64-linux-gnu/libicuuc.so.63.2
+firefox 15997   pj  mem       REG              254,2   2984248 13382290 /usr/lib/x86_64-linux-gnu/libicui18n.so.63.2
+firefox 15997   pj  mem       REG              254,2    224864 13372164 /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0
+firefox 15997   pj  mem       REG              254,2   1731832 13377290 /usr/lib/x86_64-linux-gnu/libxml2.so.2.9.4
+firefox 15997   pj  mem       REG              254,2    247904 13373079 /usr/lib/x86_64-linux-gnu/libcroco-0.6.so.3.0.1
+firefox 15997   pj  mem       REG              254,2    186968 13378944 /usr/lib/x86_64-linux-gnu/libsoxr.so.0.1.1
+firefox 15997   pj  mem       REG              254,2    687176 13378975 /usr/lib/x86_64-linux-gnu/libxvidcore.so.4.3
+firefox 15997   pj  mem       REG              254,2  15972544 13378974 /usr/lib/x86_64-linux-gnu/libx265.so.165
+firefox 15997   pj  mem       REG              254,2   1851544 13378971 /usr/lib/x86_64-linux-gnu/libx264.so.155
+firefox 15997   pj  mem       REG              254,2    124840 13378957 /usr/lib/x86_64-linux-gnu/libtwolame.so.0.0.0
+firefox 15997   pj  mem       REG              254,2    243864 13378953 /usr/lib/x86_64-linux-gnu/libtheoraenc.so.1.1.2
+firefox 15997   pj  mem       REG              254,2    100240 13378939 /usr/lib/x86_64-linux-gnu/libspeex.so.1.5.0
+firefox 15997   pj  mem       REG              254,2     43136 13378935 /usr/lib/x86_64-linux-gnu/libshine.so.3.0.1
+firefox 15997   pj  mem       REG              254,2    370600 13373077 /usr/lib/x86_64-linux-gnu/libopus.so.0.7.0
+firefox 15997   pj  mem       REG              254,2    350648 13373075 /usr/lib/x86_64-linux-gnu/libopenjp2.so.2.3.0
+firefox 15997   pj  mem       REG              254,2    305128 13373073 /usr/lib/x86_64-linux-gnu/libmp3lame.so.0.0.0
+firefox 15997   pj  mem       REG              254,2    425128 13373068 /usr/lib/x86_64-linux-gnu/libcodec2.so.0.8.1
+firefox 15997   pj  mem       REG              254,2   4086464 13373035 /usr/lib/x86_64-linux-gnu/libaom.so.0
+firefox 15997   pj  mem       REG              254,2     31104 13378937 /usr/lib/x86_64-linux-gnu/libsnappy.so.1.1.7
+firefox 15997   pj  mem       REG              254,2    581176 13378986 /usr/lib/x86_64-linux-gnu/libzvbi.so.0.13.2
+firefox 15997   pj  mem       REG              254,2   5663096 13379894 /usr/lib/x86_64-linux-gnu/librsvg-2.so.2.44.10
+firefox 15997   pj  mem       REG              254,2    110704 13373069 /usr/lib/x86_64-linux-gnu/libcrystalhd.so.3.6
+firefox 15997   pj  mem       REG              254,2    420472 13373085 /usr/lib/x86_64-linux-gnu/libwebp.so.6.0.2
+firefox 15997   pj  mem       REG              254,2     39192 13378969 /usr/lib/x86_64-linux-gnu/libwebpmux.so.3.0.1
+firefox 15997   pj  mem       REG              254,2  14046536 13387680 /usr/lib/x86_64-linux-gnu/libavcodec.so.58.35.100
+firefox 15997   pj  mem       REG              254,2   1810752 14695147 /usr/lib/firefox/libmozavcodec.so
+firefox 15997   pj  mem       REG              254,2    460824 13378993 /usr/lib/x86_64-linux-gnu/libavutil.so.56.22.100
+firefox 15997   pj  mem       REG              254,2    199408 14695148 /usr/lib/firefox/libmozavutil.so
+firefox 15997   pj  DEL       REG               0,26             122438 /dev/shm/org.chromium.6EQv2D
+firefox 15997   pj  mem       REG              254,2    145952 13373040 /usr/lib/x86_64-linux-gnu/libva.so.2.400.0
+firefox 15997   pj  mem       REG              254,2    548510  8402367 /home/pj/.mozilla/firefox/7l85z3f5.default/extensions/{73a6fe31-595d-460b-a920-fcc0f8843232}.xpi
+firefox 15997   pj  mem       REG              254,2    705684 13500805 /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf
+firefox 15997   pj  mem       REG              254,2    178312 13382321 /usr/lib/x86_64-linux-gnu/libwavpack.so.1.2.0
+firefox 15997   pj  mem       REG              254,2    125080 13378952 /usr/lib/x86_64-linux-gnu/libtheoradec.so.1.1.4
+firefox 15997   pj  mem       REG              254,2     72352 13373038 /usr/lib/x86_64-linux-gnu/libdrm.so.2.4.0
+firefox 15997   pj  mem       REG              254,2    158400 10092716 /lib/x86_64-linux-gnu/liblzma.so.5.2.4
+firefox 15997   pj  DEL       REG                0,5             589827 /SYSV00000000
+firefox 15997   pj  mem       REG              254,2     52312 13378972 /usr/lib/x86_64-linux-gnu/libnuma.so.1.0.0
+firefox 15997   pj  mem       REG              254,2     18488 13373048 /usr/lib/x86_64-linux-gnu/libvdpau.so.1.0.0
+firefox 15997   pj  mem       REG              254,2    129016 13378990 /usr/lib/x86_64-linux-gnu/libswresample.so.3.3.100
+firefox 15997   pj  mem       REG              254,2     59400 13373071 /usr/lib/x86_64-linux-gnu/libgsm.so.1.0.18
+firefox 15997   pj  mem       REG              254,2    544024 14692722 /usr/lib/x86_64-linux-gnu/nss/libnssckbi.so
+firefox 15997   pj  mem       REG              254,2    567728 14692721 /usr/lib/x86_64-linux-gnu/nss/libfreeblpriv3.so
+firefox 15997   pj  DEL       REG                0,5             294913 /SYSV00000000
+firefox 15997   pj  mem       REG              254,2     27200 13373046 /usr/lib/x86_64-linux-gnu/libva-x11.so.2.400.0
+firefox 15997   pj  DEL       REG                0,5             262144 /SYSV00000000
+firefox 15997   pj  mem       REG              254,2    278648 14696143 /usr/lib/x86_64-linux-gnu/nss/libsoftokn3.so
+firefox 15997   pj  mem       REG              254,2    757076 13500806 /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+firefox 15997   pj  mem       REG              254,2     14504 13373042 /usr/lib/x86_64-linux-gnu/libva-drm.so.2.400.0
+firefox 15997   pj  DEL       REG               0,26             123207 /dev/shm/org.mozilla.ipc.16240.0
+firefox 15997   pj  DEL       REG               0,26             121784 /dev/shm/org.chromium.w0w0GQ
+firefox 15997   pj  DEL       REG               0,26             122430 /dev/shm/org.chromium.FnRAYg
+firefox 15997   pj  DEL       REG               0,26             121780 /dev/shm/org.chromium.HGZVUM
+firefox 15997   pj  DEL       REG               0,26             121785 /dev/shm/org.chromium.UBRGDm
+firefox 15997   pj  DEL       REG               0,26             125821 /dev/shm/org.mozilla.ipc.16069.30
+firefox 15997   pj  DEL       REG               0,26             122424 /dev/shm/org.chromium.Zn0pGb
+firefox 15997   pj  DEL       REG               0,26             121783 /dev/shm/org.chromium.ekPnKk
+firefox 15997   pj  DEL       REG               0,26             121782 /dev/shm/org.chromium.UrLPNO
+firefox 15997   pj  DEL       REG               0,26             122427 /dev/shm/org.chromium.MI1jkJ
+firefox 15997   pj  DEL       REG               0,26             121781 /dev/shm/org.chromium.lbEjRi
+firefox 15997   pj  DEL       REG               0,26             122429 /dev/shm/org.chromium.DZnK5K
+firefox 15997   pj  DEL       REG               0,26             122292 /dev/shm/org.mozilla.ipc.16147.0
+firefox 15997   pj  mem       REG              254,2     26952 10093350 /lib/x86_64-linux-gnu/libnss_dns-2.29.so
+firefox 15997   pj  DEL       REG               0,26             121362 /dev/shm/org.chromium.Bmt5gL
+firefox 15997   pj  DEL       REG               0,26             122428 /dev/shm/org.chromium.vch1cf
+firefox 15997   pj  DEL       REG               0,26             124787 /dev/shm/org.mozilla.ipc.15997.21
+firefox 15997   pj  DEL       REG               0,26             124788 /dev/shm/org.mozilla.ipc.15997.22
+firefox 15997   pj  mem       REG              254,2     63400 13507768 /usr/lib/x86_64-linux-gnu/gio/modules/libdconfsettings.so
+firefox 15997   pj  mem       REG              254,2     35653 13631626 /usr/share/glib-2.0/schemas/gschemas.compiled
+firefox 15997   pj  DEL       REG               0,26             122923 /dev/shm/org.mozilla.ipc.15997.2
+firefox 15997   pj  DEL       REG               0,26             118774 /dev/shm/org.mozilla.ipc.16069.0
+firefox 15997   pj  DEL       REG               0,26             122106 /dev/shm/org.mozilla.ipc.15997.1
+firefox 15997   pj  DEL       REG               0,26             118763 /dev/shm/org.chromium.t4q1Eh
+firefox 15997   pj  mem       REG              254,2     14528 13379134 /usr/lib/x86_64-linux-gnu/libXss.so.1.0.0
+firefox 15997   pj  mem       REG              254,2       787  5534623 /home/pj/.config/dconf/user
+firefox 15997   pj  mem       REG               0,32         2    73361 /run/user/1000/dconf/user
+firefox 15997   pj  mem       REG              254,2     30672 13895748 /usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-png.so
+firefox 15997   pj  mem       REG              254,2    138424 13635620 /usr/share/mime/mime.cache
+firefox 15997   pj  mem       REG              254,2      1652 13510805 /usr/share/icons/hicolor/icon-theme.cache
+firefox 15997   pj  mem       REG              254,2     87700 13776960 /usr/share/icons/gnome/icon-theme.cache
+firefox 15997   pj  mem       REG              254,2    109436 14686334 /usr/share/icons/Adwaita/icon-theme.cache
+firefox 15997   pj  mem       REG              254,2      2544  5545772 /home/pj/.cache/fontconfig/a41116dafaf8b233ac2c61cb73f2ea5f-le64.cache-7
+firefox 15997   pj  mem       REG              254,2    380132 13500811 /usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf
+firefox 15997   pj  mem       REG              254,2     20296  9586025 /var/cache/fontconfig/ffe46fca-26b2-46e0-8ed6-7bf3ea2755b6-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     14088  9586024 /var/cache/fontconfig/619b7440-dcd0-4c4b-8af3-692b4b1e24d2-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      6528  9586947 /var/cache/fontconfig/c27506e8-6dac-4d98-ab2a-46afb190d672-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      1792  9586023 /var/cache/fontconfig/faf54404-6616-43a3-83c6-d5be1cca7324-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     24264  9586022 /var/cache/fontconfig/b3b3d4fc-9cce-4b69-98e1-d02f8e90e773-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     15656  9586021 /var/cache/fontconfig/f6171d94-40e2-400b-8c63-165135324b94-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     46128  9586020 /var/cache/fontconfig/08d16c12-e780-43ed-a341-abbab2b61a00-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      9928  9571683 /var/cache/fontconfig/ce9b3b60-e4d8-4cec-949b-d93bd85b947d-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     27640  9586019 /var/cache/fontconfig/739999e5-174e-4a39-90fd-7094f27cd1d2-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     32288  9586018 /var/cache/fontconfig/2d85e858-0a27-4831-96d3-0d38996cf6da-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     14640  9592098 /var/cache/fontconfig/245cd6e3-f4d9-4a39-9965-481398beb44e-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      1840  9586017 /var/cache/fontconfig/7047c4aa-40ce-4a6e-aed7-0f7585117c4e-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      1912  9586016 /var/cache/fontconfig/30de1950-9c38-40e7-9ce7-35097470841e-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      1896  9586014 /var/cache/fontconfig/23293bdd-14f3-4d4d-a6cd-f49bfccccd13-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      6280  9586013 /var/cache/fontconfig/f26e3ae3-3f30-4d13-afe3-a3240fa8ec7e-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     21088  9586012 /var/cache/fontconfig/4b9a0785-b821-4049-8f9a-0761fd70cc9b-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      1928  9586011 /var/cache/fontconfig/ed09e208-4fc4-42b1-a5a2-33b858bc27fd-le64.cache-7
+firefox 15997   pj  mem       REG              254,2    384136  9586010 /var/cache/fontconfig/67aa1676-68e0-4abb-bdd7-23ee58ea44aa-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      8488  9586009 /var/cache/fontconfig/e5bd8a40-d11b-43a2-933e-f382f339220c-le64.cache-7
+firefox 15997   pj  mem       REG              254,2    241256  9571966 /var/cache/fontconfig/0e1ec734-d425-43ce-b1b9-6ba616eaaebe-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     15512  9592097 /var/cache/fontconfig/3640fa8a-4ba4-4e62-8e36-9166305257d7-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     24856  9571955 /var/cache/fontconfig/5abc1d97-9aa3-4f20-876f-91daff9367ea-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     29512  9571684 /var/cache/fontconfig/bb850217-5a62-4958-9415-dc3f0a461d36-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     10328  9586008 /var/cache/fontconfig/4a0f9ff8-f91a-4aa5-86e2-f16b376e73fd-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      7928  9571844 /var/cache/fontconfig/711f43bc-a193-4f68-88a5-12a53fcd50a1-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      4320  9586007 /var/cache/fontconfig/cdc6a37d-7fb9-4795-b086-d583a29f31a0-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     12448  9586006 /var/cache/fontconfig/8449c548-fe04-4e91-ab98-827ebaa3e5bc-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      6520  9586005 /var/cache/fontconfig/e04bf20d-33b3-4831-afc2-c86b130ebf60-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      1984  9586004 /var/cache/fontconfig/7bd8decb-579a-4753-ae55-2a2d9bda69fa-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     77200  9586003 /var/cache/fontconfig/c9ef8ace-13bd-400a-ae78-d4d0b21df012-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      1792  9586002 /var/cache/fontconfig/b2b77c07-7760-4d54-a98c-0b7ac8732612-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     24344  9586001 /var/cache/fontconfig/360c5c64-d5ac-4f7c-b3e8-d2033ee29f69-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      3368  9586000 /var/cache/fontconfig/802dd1f9-35ff-4a82-9e52-d7fd8db102ac-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      1936  9585999 /var/cache/fontconfig/d609774e-ea68-4fc2-bb02-44da3d572e2f-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      8016  9585998 /var/cache/fontconfig/fc7d742e-d3b2-4e3c-ba2e-874e32891e44-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     47336  9571725 /var/cache/fontconfig/34c6f79b-10d6-4fc1-8a97-a461d580aed0-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     13016  9585997 /var/cache/fontconfig/bfa33334-d4ea-4ba5-b782-3bb6ecdfefcb-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     19464  9585996 /var/cache/fontconfig/4ab24c57-5500-40a2-8163-9dca2d534090-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      1912  9585995 /var/cache/fontconfig/f8f7b46c-7dd5-40c0-bb1a-581306df7191-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      5072  9585994 /var/cache/fontconfig/0bcc6fbc-6421-4e2f-96a5-1c53c9b002fc-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      2184  9585993 /var/cache/fontconfig/24d5cde3-6eec-4433-9d94-b278ae407abb-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      2008  9585992 /var/cache/fontconfig/eac7e16e-b6aa-498d-b79c-23ffc72765fb-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     10960  9585991 /var/cache/fontconfig/2461a127-e3d5-4e91-a05a-4b783cf9589b-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      8064  9585989 /var/cache/fontconfig/da7ba0fd-d157-4ca9-96b9-f502fe2ca625-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      5856  9585988 /var/cache/fontconfig/64aca7f4-988b-4c1a-a514-95e8ac0c3940-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      5880  9585987 /var/cache/fontconfig/0d814460-eaff-44b8-8112-f0a4289e6a1e-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      6088  9585986 /var/cache/fontconfig/18da89ff-844a-4867-8410-45042f985abd-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      6064  9568350 /var/cache/fontconfig/0592712a-d71b-4e2e-8234-9c72098fa173-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     69576  9585984 /var/cache/fontconfig/10b13c76-f516-4792-975f-9449baaeba27-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     87160  9585982 /var/cache/fontconfig/5a896fc4-5a00-4c9d-bfc4-59449eb707b8-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     45512  9585980 /var/cache/fontconfig/e4c18ccf-795f-4a0a-866b-49a5efee5645-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     77104  9585971 /var/cache/fontconfig/70c37aca-87e8-4bb3-bb42-78ef8a4c4945-le64.cache-7
+firefox 15997   pj  mem       REG              254,2    694248 13378962 /usr/lib/x86_64-linux-gnu/libvorbisenc.so.2.0.11
+firefox 15997   pj  mem       REG              254,2    182184 13378959 /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.8
+firefox 15997   pj  mem       REG              254,2     34688 13378949 /usr/lib/x86_64-linux-gnu/libogg.so.0.8.2
+firefox 15997   pj  mem       REG              254,2    489408 13379014 /usr/lib/x86_64-linux-gnu/libFLAC.so.8.3.0
+firefox 15997   pj  mem       REG              254,2     22368 13379004 /usr/lib/x86_64-linux-gnu/libasyncns.so.0.3.1
+firefox 15997   pj  mem       REG              254,2    495728 13379016 /usr/lib/x86_64-linux-gnu/libsndfile.so.1.0.28
+firefox 15997   pj  mem       REG              254,2     22976 13379026 /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+firefox 15997   pj  mem       REG              254,2    542888 14550160 /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-12.2.so
+firefox 15997   pj  mem       REG              254,2     37056  9587791 /var/cache/fontconfig/bc8028c3-70c3-437c-a945-3f858011d234-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     27336  9585977 /var/cache/fontconfig/b37a692c-443e-4571-9a82-9e2dd2fad665-le64.cache-7
+firefox 15997   pj  mem       REG              254,2    100776  9585960 /var/cache/fontconfig/1784246d-0c3f-4680-b28b-385b6564c503-le64.cache-7
+firefox 15997   pj  mem       REG              254,2    338832 13379029 /usr/lib/x86_64-linux-gnu/libpulse.so.0.20.3
+firefox 15997   pj  mem       REG              254,2    135544  9585946 /var/cache/fontconfig/d5432262-3c2d-4c91-afbf-c579ebe91205-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     93112 10093347 /lib/x86_64-linux-gnu/libnsl-2.29.so
+firefox 15997   pj  mem       REG              254,2      2344  9585990 /var/cache/fontconfig/5c0ad401-c734-4d65-8b5c-fe815c404305-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     10984  9585981 /var/cache/fontconfig/fa5cf546-80ad-4325-bd42-0a754901dfb1-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      6400  9585979 /var/cache/fontconfig/f4fe5388-80dc-4805-84ce-ea58c16d31ec-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     14104  9585976 /var/cache/fontconfig/525399d1-8c79-4956-9afa-23ee9854e19e-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     14120  9585975 /var/cache/fontconfig/20216988-9e17-44a8-96c9-abe4751f9cbd-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     53872  9585949 /var/cache/fontconfig/903a1ccf-d2d7-4b1d-a396-17633a06b430-le64.cache-7
+firefox 15997   pj  mem       REG              254,2   5290639  8402399 /home/pj/.cache/mozilla/firefox/7l85z3f5.default/startupCache/startupCache.8.little
+firefox 15997   pj  mem       REG              254,2   7043559  8402397 /home/pj/.cache/mozilla/firefox/7l85z3f5.default/startupCache/scriptCache-current.bin
+firefox 15997   pj  mem       REG              254,2    763758  8402366 /home/pj/.cache/mozilla/firefox/7l85z3f5.default/startupCache/scriptCache-child-current.bin
+firefox 15997   pj  mem       REG              254,2     12648  9587395 /var/cache/fontconfig/da56c655-1b02-491a-a8e8-f9300d8a1d7e-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      1952  9585978 /var/cache/fontconfig/bf0d8610-16a5-4d54-b105-d19d5b48d7cd-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     12664  9587387 /var/cache/fontconfig/080745a4-f164-4fdc-bf59-6b8881cd52a1-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     24264  9585968 /var/cache/fontconfig/73b82b7b-00e6-419d-8515-a682580f2e96-le64.cache-7
+firefox 15997   pj  mem       REG              254,2  43091489 14695135 /usr/lib/firefox/browser/omni.ja
+firefox 15997   pj  mem       REG              254,2  16879172 14695154 /usr/lib/firefox/omni.ja
+firefox 15997   pj  mem       REG              254,2      4384  9585972 /var/cache/fontconfig/27ade70a-761e-41e5-b8df-446184af3343-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     10528  9585970 /var/cache/fontconfig/017d7350-e51e-4534-b6cf-d71c855170dd-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     12296  9585967 /var/cache/fontconfig/9b5d54e2-6352-4b28-a959-6d63602ddd3b-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     43880 10092697 /lib/x86_64-linux-gnu/libwrap.so.0.7.6
+firefox 15997   pj  mem       REG              254,2     51696 10093351 /lib/x86_64-linux-gnu/libnss_files-2.29.so
+firefox 15997   pj  mem       REG              254,2      1776  9585969 /var/cache/fontconfig/3bf1c1e7-688c-46bc-8dbd-da16f7c4689c-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     16392  9592096 /var/cache/fontconfig/a372656f-af29-4d5b-a72a-f1d780c1a261-le64.cache-7
+firefox 15997   pj  mem       REG              254,2     16936  9585954 /var/cache/fontconfig/ce7a9dd7-af92-4d29-9515-0292040ed47d-le64.cache-7
+firefox 15997   pj  DEL       REG               0,26             122426 /dev/shm/org.chromium.rrRErd
+firefox 15997   pj  DEL       REG               0,26             122425 /dev/shm/org.chromium.nSB1yH
+firefox 15997   pj  DEL       REG               0,26             124803 /dev/shm/org.mozilla.ipc.16069.32
+firefox 15997   pj  mem       REG              254,2      9096  9571007 /var/cache/fontconfig/638bf3a1-5ec4-42f0-9ba3-3b75e11abd40-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      2512  9587790 /var/cache/fontconfig/ca61731a-52fa-4d84-90a4-796fcc944ea7-le64.cache-7
+firefox 15997   pj  mem       REG              254,2      8888  9585950 /var/cache/fontconfig/a1aad7e6-986b-4544-be55-fc533c912179-le64.cache-7
+firefox 15997   pj  mem       REG              254,2    200752 13392877 /usr/lib/locale/C.UTF-8/LC_CTYPE
+firefox 15997   pj  mem       REG              254,2   1517626 13386462 /usr/lib/locale/C.UTF-8/LC_COLLATE
+firefox 15997   pj  mem       REG              254,2   5626784 13380531 /usr/lib/locale/locale-archive
+firefox 15997   pj  mem       REG              254,2    102496 13379010 /usr/lib/x86_64-linux-gnu/libICE.so.6.3.0
+firefox 15997   pj  mem       REG              254,2     39144 13379012 /usr/lib/x86_64-linux-gnu/libSM.so.6.0.1
+firefox 15997   pj  mem       REG              254,2     26936 13379140 /usr/lib/x86_64-linux-gnu/libxcb-util.so.0.0.0
+firefox 15997   pj  mem       REG              254,2    429544 13379672 /usr/lib/x86_64-linux-gnu/libXt.so.6.0.0
+firefox 15997   pj  mem       REG              254,2     42936 13379142 /usr/lib/x86_64-linux-gnu/libstartup-notification-1.so.0.0.0
+firefox 15997   pj  mem       REG              254,2    165816 13380061 /usr/lib/x86_64-linux-gnu/libdbus-glib-1.so.2.3.4
+firefox 15997   pj  mem       REG              254,2   1046824 13373036 /usr/lib/x86_64-linux-gnu/libasound.so.2.0.0
+firefox 15997   pj  mem       REG              254,2   2410560 13378964 /usr/lib/x86_64-linux-gnu/libvpx.so.5.0.0
+firefox 15997   pj  mem       REG              254,2    350680 13377178 /usr/lib/x86_64-linux-gnu/libevent-2.1.so.6.0.2
+firefox 15997   pj  mem       REG              254,2   1183192 13377186 /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+firefox 15997   pj  mem       REG              254,2    200160 13377188 /usr/lib/x86_64-linux-gnu/libnssutil3.so
+firefox 15997   pj  mem       REG              254,2   1357784 13376097 /usr/lib/x86_64-linux-gnu/libnss3.so
+firefox 15997   pj  mem       REG              254,2    189360 13377189 /usr/lib/x86_64-linux-gnu/libsmime3.so
+firefox 15997   pj  mem       REG              254,2    357056 13377190 /usr/lib/x86_64-linux-gnu/libssl3.so
+firefox 15997   pj  mem       REG              254,2    213728 13380473 /usr/lib/x86_64-linux-gnu/libjsoncpp.so.1.7.4
+firefox 15997   pj  DEL       REG               0,26             121357 /dev/shm/org.chromium.zaaL1p
+firefox 15997   pj  mem       REG              254,2     26402 13392862 /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+firefox 15997   pj  mem       REG              254,2 104077800 14695152 /usr/lib/firefox/libxul.so
+firefox 15997   pj  mem       REG              254,2     26864 10092723 /lib/x86_64-linux-gnu/libcap.so.2.25
+firefox 15997   pj  mem       REG              254,2     96568 13373982 /usr/lib/x86_64-linux-gnu/libbsd.so.0.9.1
+firefox 15997   pj  mem       REG              254,2     34736 13378917 /usr/lib/x86_64-linux-gnu/libdatrie.so.1.3.5
+firefox 15997   pj  mem       REG              254,2    343008 10092702 /lib/x86_64-linux-gnu/libblkid.so.1.1.0
+firefox 15997   pj  mem       REG              254,2    613536 13372891 /usr/lib/x86_64-linux-gnu/libelogind.so.0.25.0
+firefox 15997   pj  mem       REG              254,2     22728 13376243 /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+firefox 15997   pj  mem       REG              254,2     14528 13376241 /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+firefox 15997   pj  mem       REG              254,2     30776 10092710 /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+firefox 15997   pj  mem       REG              254,2    243840 10092934 /lib/x86_64-linux-gnu/libexpat.so.1.6.8
+firefox 15997   pj  mem       REG              254,2    468944 10092692 /lib/x86_64-linux-gnu/libpcre.so.3.13.3
+firefox 15997   pj  mem       REG              254,2    112904 13378915 /usr/lib/x86_64-linux-gnu/libfribidi.so.0.4.0
+firefox 15997   pj  mem       REG              254,2     41000 13378919 /usr/lib/x86_64-linux-gnu/libthai.so.0.3.1
+firefox 15997   pj  mem       REG              254,2    178360 13378923 /usr/lib/x86_64-linux-gnu/libgraphite2.so.3.2.1
+firefox 15997   pj  mem       REG              254,2     84808 10093358 /lib/x86_64-linux-gnu/libresolv-2.29.so
+firefox 15997   pj  mem       REG              254,2    155296 10092611 /lib/x86_64-linux-gnu/libselinux.so.1
+firefox 15997   pj  mem       REG              254,2    383456 10092706 /lib/x86_64-linux-gnu/libmount.so.1.1.0
+firefox 15997   pj  mem       REG              254,2     35224 13371163 /usr/lib/x86_64-linux-gnu/libffi.so.6.0.4
+firefox 15997   pj  mem       REG              254,2    207016 13379905 /usr/lib/x86_64-linux-gnu/libatspi.so.0.0.1
+firefox 15997   pj  mem       REG              254,2    333976 10092885 /lib/x86_64-linux-gnu/libdbus-1.so.3.19.11
+firefox 15997   pj  mem       REG              254,2    121280 10092718 /lib/x86_64-linux-gnu/libz.so.1.2.11
+firefox 15997   pj  mem       REG              254,2     39480 13373064 /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+firefox 15997   pj  mem       REG              254,2     55576 13373060 /usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0
+firefox 15997   pj  mem       REG              254,2     14408 13373062 /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+firefox 15997   pj  mem       REG              254,2    227248 13377654 /usr/lib/x86_64-linux-gnu/libpng16.so.16.36.0
+firefox 15997   pj  mem       REG              254,2    673808 13373057 /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.36.0
+firefox 15997   pj  mem       REG              254,2    166824 13376245 /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+firefox 15997   pj  mem       REG              254,2     73424 13372955 /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+firefox 15997   pj  mem       REG              254,2     47768 13379685 /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+firefox 15997   pj  mem       REG              254,2     43384 13379132 /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+firefox 15997   pj  mem       REG              254,2     14496 13379130 /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+firefox 15997   pj  mem       REG              254,2    763816 13377657 /usr/lib/x86_64-linux-gnu/libfreetype.so.6.16.1
+firefox 15997   pj  mem       REG              254,2    281592 13373013 /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0
+firefox 15997   pj  mem       REG              254,2   1166640 13377213 /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.5800.3
+firefox 15997   pj  mem       REG              254,2    342072 13377215 /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.5800.3
+firefox 15997   pj  mem       REG              254,2    300976 13378921 /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.4200.3
+firefox 15997   pj  mem       REG              254,2     96096 13378928 /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.4200.3
+firefox 15997   pj  mem       REG              254,2   1013440 13378926 /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.20301.0
+firefox 15997   pj  mem       REG              254,2   1813680 13377211 /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.5800.3
+firefox 15997   pj  mem       REG              254,2   1250568 13379631 /usr/lib/x86_64-linux-gnu/libepoxy.so.0.0.0
+firefox 15997   pj  mem       REG              254,2     64840 13379610 /usr/lib/x86_64-linux-gnu/libwayland-client.so.0.3.0
+firefox 15997   pj  mem       REG              254,2     35200 13380291 /usr/lib/x86_64-linux-gnu/libwayland-cursor.so.0.0.0
+firefox 15997   pj  mem       REG              254,2    264904 13379163 /usr/lib/x86_64-linux-gnu/libxkbcommon.so.0.0.0
+firefox 15997   pj  mem       REG              254,2    210632 13380064 /usr/lib/x86_64-linux-gnu/libatk-bridge-2.0.so.0.0.0
+firefox 15997   pj  mem       REG              254,2    161712 13380057 /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.23009.1
+firefox 15997   pj  mem       REG              254,2    149424 13373439 /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.3800.1
+firefox 15997   pj  mem       REG              254,2   1171048 13373066 /usr/lib/x86_64-linux-gnu/libcairo.so.2.11600.0
+firefox 15997   pj  mem       REG              254,2     42768 13380059 /usr/lib/x86_64-linux-gnu/libcairo-gobject.so.2.11600.0
+firefox 15997   pj  mem       REG              254,2     22656 13373044 /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+firefox 15997   pj  mem       REG              254,2     10296 13379683 /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+firefox 15997   pj  mem       REG              254,2     63976 13379024 /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+firefox 15997   pj  mem       REG              254,2   1310216 13376249 /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+firefox 15997   pj  mem       REG              254,2   1026424 13380469 /usr/lib/x86_64-linux-gnu/libgdk-3.so.0.2404.1
+firefox 15997   pj  mem       REG              254,2   7251000 13380470 /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2404.1
+firefox 15997   pj  mem       REG              254,2    252912 13370173 /usr/lib/x86_64-linux-gnu/libnspr4.so
+firefox 15997   pj  mem       REG              254,2     14216 13380293 /usr/lib/x86_64-linux-gnu/libwayland-egl.so.1.0.0
+firefox 15997   pj  mem       REG              254,2     14376 13379642 /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+firefox 15997   pj  mem       REG              254,2     59288 13378930 /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.4200.3
+firefox 15997   pj  mem       REG              254,2      2600  9585948 /var/cache/fontconfig/d7eaa898-5160-4028-a842-afa4ca6bb2c6-le64.cache-7
+firefox 15997   pj  mem       REG              254,2        48 13392880 /usr/lib/locale/C.UTF-8/LC_MESSAGES/SYS_LC_MESSAGES
+firefox 15997   pj  mem       REG              254,2        62 13392882 /usr/lib/locale/C.UTF-8/LC_NAME
+firefox 15997   pj  mem       REG              254,2     14520 13370175 /usr/lib/x86_64-linux-gnu/libplds4.so
+firefox 15997   pj  mem       REG              254,2     22808 13370174 /usr/lib/x86_64-linux-gnu/libplc4.so
+firefox 15997   pj  mem       REG              254,2     14128 13379022 /usr/lib/x86_64-linux-gnu/libX11-xcb.so.1.0.0
+firefox 15997   pj  mem       REG              254,2     13968 14695151 /usr/lib/firefox/libmozwayland.so
+firefox 15997   pj  mem       REG              254,2     39912 10093360 /lib/x86_64-linux-gnu/librt-2.29.so
+firefox 15997   pj  mem       REG              254,2    146184 14695150 /usr/lib/firefox/libmozsandbox.so
+firefox 15997   pj  mem       REG              254,2   1325424 10093331 /lib/x86_64-linux-gnu/libm-2.29.so
+firefox 15997   pj  mem       REG              254,2   1820104 10093322 /lib/x86_64-linux-gnu/libc-2.29.so
+firefox 15997   pj  mem       REG              254,2    100736 10093065 /lib/x86_64-linux-gnu/libgcc_s.so.1
+firefox 15997   pj  mem       REG              254,2   1915720 13370818 /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.26
+firefox 15997   pj  mem       REG              254,2     14592 10093324 /lib/x86_64-linux-gnu/libdl-2.29.so
+firefox 15997   pj  mem       REG              254,2    147048 10093357 /lib/x86_64-linux-gnu/libpthread-2.29.so
+firefox 15997   pj  mem       REG              254,2       131 13386461 /usr/lib/locale/C.UTF-8/LC_ADDRESS
+firefox 15997   pj  mem       REG              254,2        47 13392885 /usr/lib/locale/C.UTF-8/LC_TELEPHONE
+firefox 15997   pj  mem       REG              254,2       252 13392878 /usr/lib/locale/C.UTF-8/LC_IDENTIFICATION
+firefox 15997   pj  mem       REG              254,2     18328 13377214 /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.5800.3
+firefox 15997   pj  mem       REG              254,2     14208 14695149 /usr/lib/firefox/libmozgtk.so
+firefox 15997   pj  mem       REG              254,2     39008 14695146 /usr/lib/firefox/liblgpllibs.so
+firefox 15997   pj  mem       REG              254,2    165632 10093318 /lib/x86_64-linux-gnu/ld-2.29.so
+firefox 15997   pj    0r     FIFO               0,12       0t0   121333 pipe
+firefox 15997   pj    1w      CHR                1,3       0t0     1028 /dev/null
+firefox 15997   pj    2w      CHR                1,3       0t0     1028 /dev/null
+firefox 15997   pj    3r      REG               0,26    553688   122438 /dev/shm/org.chromium.6EQv2D (deleted)
+firefox 15997   pj    4u     unix 0x000000009e6566c5       0t0   121987 type=STREAM
+firefox 15997   pj    5u  a_inode               0,13         0     8911 [eventfd]
+firefox 15997   pj    6r      REG               0,26       352   118763 /dev/shm/org.chromium.t4q1Eh (deleted)
+firefox 15997   pj    7wW     REG              254,2         0  5508182 /home/pj/.mozilla/firefox/7l85z3f5.default/.parentlock
+firefox 15997   pj    8u  a_inode               0,13         0     8911 [eventpoll]
+firefox 15997   pj    9r     FIFO               0,12       0t0   122898 pipe
+firefox 15997   pj   10w     FIFO               0,12       0t0   122898 pipe
+firefox 15997   pj   11r     FIFO               0,12       0t0   122899 pipe
+firefox 15997   pj   12w     FIFO               0,12       0t0   122899 pipe
+firefox 15997   pj   13r      REG              254,2  16879172 14695154 /usr/lib/firefox/omni.ja
+firefox 15997   pj   14r      REG              254,2  43091489 14695135 /usr/lib/firefox/browser/omni.ja
+firefox 15997   pj   15r     FIFO               0,12       0t0   122900 pipe
+firefox 15997   pj   16w     FIFO               0,12       0t0   122900 pipe
+firefox 15997   pj   17r     FIFO               0,12       0t0   122901 pipe
+firefox 15997   pj   18w     FIFO               0,12       0t0   122901 pipe
+firefox 15997   pj   19u  netlink                          0t0   121350 ROUTE
+firefox 15997   pj   20r     FIFO               0,12       0t0   121993 pipe
+firefox 15997   pj   21w     FIFO               0,12       0t0   121993 pipe
+firefox 15997   pj   22r      CHR                1,9       0t0     1033 /dev/urandom
+firefox 15997   pj   23u  a_inode               0,13         0     8911 [eventpoll]
+firefox 15997   pj   24r     FIFO               0,12       0t0   121352 pipe
+firefox 15997   pj   25w     FIFO               0,12       0t0   121352 pipe
+firefox 15997   pj   26u  a_inode               0,13         0     8911 [eventpoll]
+firefox 15997   pj   27r     FIFO               0,12       0t0   121353 pipe
+firefox 15997   pj   28w     FIFO               0,12       0t0   121353 pipe
+firefox 15997   pj   29r      REG              254,2    763758  8402366 /home/pj/.cache/mozilla/firefox/7l85z3f5.default/startupCache/scriptCache-child-current.bin
+firefox 15997   pj   30r      REG              254,2   5290639  8402399 /home/pj/.cache/mozilla/firefox/7l85z3f5.default/startupCache/startupCache.8.little
+firefox 15997   pj   31r      REG              254,2   7043559  8402397 /home/pj/.cache/mozilla/firefox/7l85z3f5.default/startupCache/scriptCache-current.bin
+firefox 15997   pj   32r     FIFO               0,12       0t0   121354 pipe
+firefox 15997   pj   33w     FIFO               0,12       0t0   121354 pipe
+firefox 15997   pj   34u  a_inode               0,13         0     8911 [eventfd]
+firefox 15997   pj   35r      REG               0,26       308   121357 /dev/shm/org.chromium.zaaL1p (deleted)
+firefox 15997   pj   36uw     REG              254,2     98304  5508199 /home/pj/.mozilla/firefox/7l85z3f5.default/permissions.sqlite
+firefox 15997   pj   37u     sock                0,9       0t0   118772 protocol: UNIX
+firefox 15997   pj   38uw     REG              254,2    524288  5508194 /home/pj/.mozilla/firefox/7l85z3f5.default/cookies.sqlite
+firefox 15997   pj   39u      REG              254,2         0  5523300 /home/pj/.mozilla/firefox/7l85z3f5.default/cookies.sqlite-wal
+firefox 15997   pj   40r      REG               0,26    179799   121362 /dev/shm/org.chromium.Bmt5gL (deleted)
+firefox 15997   pj   41r      REG              254,2   2641198  8786341 /home/pj/.mozilla/firefox/7l85z3f5.default/extensions/uBlock0@raymondhill.net.xpi
+firefox 15997   pj   42u     sock                0,9       0t0   122911 protocol: UNIX
+firefox 15997   pj   43u     unix 0x00000000a40d65c5       0t0   121364 type=SEQPACKET
+firefox 15997   pj   44u     unix 0x00000000fe81a73e       0t0   121365 type=SEQPACKET
+firefox 15997   pj   45r     FIFO               0,12       0t0   121366 pipe
+firefox 15997   pj   46w     FIFO               0,12       0t0   121366 pipe
+firefox 15997   pj   47u     unix 0x00000000da15d796       0t0   121367 type=SEQPACKET
+firefox 15997   pj   48u     unix 0x00000000bc7baca8       0t0   121368 type=SEQPACKET
+firefox 15997   pj   49u     unix 0x00000000a2ddd026       0t0   122105 type=STREAM
+firefox 15997   pj   50u     sock                0,9       0t0   122913 protocol: UNIX
+firefox 15997   pj   51u     unix 0x0000000046e0d9a0       0t0   122034 type=STREAM
+firefox 15997   pj   52u     unix 0x00000000daac5c37       0t0   122918 type=SEQPACKET
+firefox 15997   pj   53r     FIFO               0,12       0t0   121371 pipe
+firefox 15997   pj   54u     sock                0,9       0t0   118776 protocol: UNIX
+firefox 15997   pj   55u     unix 0x000000001eaa0ee6       0t0   122909 type=STREAM
+firefox 15997   pj   56u     unix 0x00000000a32b1804       0t0   122919 type=SEQPACKET
+firefox 15997   pj   57u      REG              254,2     45056  5508213 /home/pj/.mozilla/firefox/7l85z3f5.default/cert9.db
+firefox 15997   pj   58u      REG              254,2     36864  5508214 /home/pj/.mozilla/firefox/7l85z3f5.default/key4.db
+firefox 15997   pj   59u     unix 0x00000000c98aac1f       0t0   122920 type=STREAM
+firefox 15997   pj   60u     unix 0x000000005940d259       0t0   122905 type=STREAM
+firefox 15997   pj   61u     unix 0x00000000455b04fb       0t0   122102 type=STREAM
+firefox 15997   pj   62u     unix 0x00000000083ba8b7       0t0   122907 type=STREAM
+firefox 15997   pj   63u  a_inode               0,13         0     8911 [eventfd]
+firefox 15997   pj   64uw     REG              254,2   5242880  5508201 /home/pj/.mozilla/firefox/7l85z3f5.default/places.sqlite
+firefox 15997   pj   65u     unix 0x00000000d0286cc7       0t0   121558 type=STREAM
+firefox 15997   pj   66u  a_inode               0,13         0     8911 [eventfd]
+firefox 15997   pj   67r  a_inode               0,13         0     8911 inotify
+firefox 15997   pj   68rw     REG              254,2   5242880  5508201 /home/pj/.mozilla/firefox/7l85z3f5.default/places.sqlite
+firefox 15997   pj   69u      REG              254,2         0  5523329 /home/pj/.mozilla/firefox/7l85z3f5.default/places.sqlite-wal
+firefox 15997   pj   70uw     REG              254,2   5242880  5508205 /home/pj/.mozilla/firefox/7l85z3f5.default/favicons.sqlite
+firefox 15997   pj   71u      REG              254,2         0  5523331 /home/pj/.mozilla/firefox/7l85z3f5.default/favicons.sqlite-wal
+firefox 15997   pj   72rw     REG              254,2   5242880  5508201 /home/pj/.mozilla/firefox/7l85z3f5.default/places.sqlite
+firefox 15997   pj   73u      REG              254,2         0  5523329 /home/pj/.mozilla/firefox/7l85z3f5.default/places.sqlite-wal
+firefox 15997   pj   74rw     REG              254,2   5242880  5508205 /home/pj/.mozilla/firefox/7l85z3f5.default/favicons.sqlite
+firefox 15997   pj   75u      REG              254,2         0  5523331 /home/pj/.mozilla/firefox/7l85z3f5.default/favicons.sqlite-wal
+firefox 15997   pj   76uw     REG              254,2    229376  5508217 /home/pj/.mozilla/firefox/7l85z3f5.default/content-prefs.sqlite
+firefox 15997   pj   77uw     REG              254,2     98304  5508208 /home/pj/.mozilla/firefox/7l85z3f5.default/webappsstore.sqlite
+firefox 15997   pj   78u      REG              254,2         0  5523329 /home/pj/.mozilla/firefox/7l85z3f5.default/places.sqlite-wal
+firefox 15997   pj   79u      REG              254,2         0  5523339 /home/pj/.mozilla/firefox/7l85z3f5.default/webappsstore.sqlite-wal
+firefox 15997   pj   80rw     REG              254,2   5242880  5508201 /home/pj/.mozilla/firefox/7l85z3f5.default/places.sqlite
+firefox 15997   pj   81rw     REG              254,2     98304  5508208 /home/pj/.mozilla/firefox/7l85z3f5.default/webappsstore.sqlite
+firefox 15997   pj   82u      REG              254,2         0  5523339 /home/pj/.mozilla/firefox/7l85z3f5.default/webappsstore.sqlite-wal
+firefox 15997   pj   83u     IPv4             185730       0t0      TCP 192.168.1.114:60272->104.31.90.96:https (ESTABLISHED)
+firefox 15997   pj   84u      REG              254,2         0  5523329 /home/pj/.mozilla/firefox/7l85z3f5.default/places.sqlite-wal
+firefox 15997   pj   85rw     REG              254,2   5242880  5508205 /home/pj/.mozilla/firefox/7l85z3f5.default/favicons.sqlite
+firefox 15997   pj   86u      REG              254,2         0  5523331 /home/pj/.mozilla/firefox/7l85z3f5.default/favicons.sqlite-wal
+firefox 15997   pj   87rw     REG              254,2   5242880  5508205 /home/pj/.mozilla/firefox/7l85z3f5.default/favicons.sqlite
+firefox 15997   pj   88u      REG              254,2         0  5523331 /home/pj/.mozilla/firefox/7l85z3f5.default/favicons.sqlite-wal
+firefox 15997   pj   89uw     REG              254,2  13737984  5508304 /home/pj/.mozilla/firefox/7l85z3f5.default/storage/permanent/chrome/idb/3870112724rsegmnoittet-es.sqlite
+firefox 15997   pj   90uw     REG              254,2  13737984  5508304 /home/pj/.mozilla/firefox/7l85z3f5.default/storage/permanent/chrome/idb/3870112724rsegmnoittet-es.sqlite
+firefox 15997   pj   91u      REG              254,2         0  5523817 /home/pj/.mozilla/firefox/7l85z3f5.default/storage/permanent/chrome/idb/3870112724rsegmnoittet-es.sqlite-wal
+firefox 15997   pj   92uw     REG              254,2    262144  5508260 /home/pj/.cache/mozilla/firefox/7l85z3f5.default/OfflineCache/index.sqlite
+firefox 15997   pj   93u     IPv4             124793       0t0      TCP 192.168.1.114:39120->waw02s08-in-f206.1e100.net:https (ESTABLISHED)
+firefox 15997   pj   94u     IPv4             123585       0t0      TCP 192.168.1.114:60906->sof01s12-in-f3.1e100.net:http (ESTABLISHED)
+firefox 15997   pj   95u     IPv4             124796       0t0      TCP 192.168.1.114:53376->waw02s16-in-f4.1e100.net:https (ESTABLISHED)
+firefox 15997   pj   96r      REG               0,26    553688   122438 /dev/shm/org.chromium.6EQv2D (deleted)
+firefox 15997   pj   97r      REG              254,2    548510  8402367 /home/pj/.mozilla/firefox/7l85z3f5.default/extensions/{73a6fe31-595d-460b-a920-fcc0f8843232}.xpi
+firefox 15997   pj   98u     IPv4             125817       0t0      TCP 192.168.1.114:43898->waw02s17-in-f14.1e100.net:https (ESTABLISHED)
+firefox 15997   pj   99u     sock                0,9       0t0   121772 protocol: UNIX
+firefox 15997   pj  100u     IPv4             123589       0t0      TCP 192.168.1.114:59416->waw02s16-in-f3.1e100.net:https (ESTABLISHED)
+firefox 15997   pj  101u     sock                0,9       0t0   123945 protocol: UNIX
+firefox 15997   pj  102u     unix 0x00000000f3f2d6ad       0t0   122957 type=STREAM
+firefox 15997   pj  103u     unix 0x00000000afc560f1       0t0   121614 type=STREAM
+firefox 15997   pj  104u     IPv4             121779       0t0      TCP 192.168.1.114:56196->ec2-34-213-227-39.us-west-2.compute.amazonaws.com:https (ESTABLISHED)
+firefox 15997   pj  105r     FIFO               0,12       0t0   121616 pipe
+firefox 15997   pj  106u     IPv4             125820       0t0      TCP 192.168.1.114:50858->waw02s17-in-f3.1e100.net:https (ESTABLISHED)
+firefox 15997   pj  108u     IPv4             185883       0t0      TCP 192.168.1.114:34576->waw02s07-in-f3.1e100.net:https (ESTABLISHED)
+firefox 15997   pj  111u     unix 0x000000001ec421e3       0t0   122941 type=STREAM
+firefox 15997   pj  112r      REG               0,26     22640   122424 /dev/shm/org.chromium.Zn0pGb (deleted)
+firefox 15997   pj  113u     unix 0x00000000e0157074       0t0   122943 type=STREAM
+firefox 15997   pj  114r      REG               0,26      1566   122425 /dev/shm/org.chromium.nSB1yH (deleted)
+firefox 15997   pj  115u     unix 0x00000000a721a6c6       0t0   122945 type=STREAM
+firefox 15997   pj  116u     unix 0x00000000c5f9774f       0t0   122952 type=STREAM
+firefox 15997   pj  117r      REG               0,26      1120   122426 /dev/shm/org.chromium.rrRErd (deleted)
+firefox 15997   pj  118u     unix 0x000000006e652a59       0t0   122950 type=SEQPACKET
+firefox 15997   pj  119u     unix 0x00000000161a29e6       0t0   122951 type=SEQPACKET
+firefox 15997   pj  120r      REG               0,26      5334   122427 /dev/shm/org.chromium.MI1jkJ (deleted)
+firefox 15997   pj  121r      REG               0,26      2252   122428 /dev/shm/org.chromium.vch1cf (deleted)
+firefox 15997   pj  122u     unix 0x000000007722bc94       0t0   122954 type=STREAM
+firefox 15997   pj  123r      REG               0,26      2748   122429 /dev/shm/org.chromium.DZnK5K (deleted)
+firefox 15997   pj  124r      REG               0,26     53040   122430 /dev/shm/org.chromium.FnRAYg (deleted)
+firefox 15997   pj  125r      REG               0,26     21518   121780 /dev/shm/org.chromium.HGZVUM (deleted)
+firefox 15997   pj  126r      REG               0,26       170   121781 /dev/shm/org.chromium.lbEjRi (deleted)
+firefox 15997   pj  127r      REG               0,26      1910   121782 /dev/shm/org.chromium.UrLPNO (deleted)
+firefox 15997   pj  128r      REG               0,26      1772   121783 /dev/shm/org.chromium.ekPnKk (deleted)
+firefox 15997   pj  129r      REG               0,26     18658   121784 /dev/shm/org.chromium.w0w0GQ (deleted)
+firefox 15997   pj  130r      REG               0,26      4748   121785 /dev/shm/org.chromium.UBRGDm (deleted)
+firefox 15997   pj  131u     sock                0,9       0t0   122293 protocol: UNIX
+firefox 15997   pj  132u     sock                0,9       0t0   121812 protocol: UNIX
+firefox 15997   pj  133u     sock                0,9       0t0   122295 protocol: UNIX
+firefox 15997   pj  139uw     REG              254,2    131072  5505814 /home/pj/.mozilla/firefox/7l85z3f5.default/storage-sync.sqlite
+firefox 15997   pj  146u     sock                0,9       0t0   122441 protocol: UNIX
+firefox 15997   pj  149u     sock                0,9       0t0   124228 protocol: UNIX
+firefox 15997   pj  150u     sock                0,9       0t0   123205 protocol: UNIX
+firefox 15997   pj  151u     unix 0x00000000b0c64562       0t0   125023 type=STREAM
+firefox 15997   pj  153u     sock                0,9       0t0   125024 protocol: UNIX
+firefox 15997   pj  154u     unix 0x000000006d80d2cf       0t0   123032 type=STREAM
+firefox 15997   pj  155u     sock                0,9       0t0   125026 protocol: UNIX
+firefox 15997   pj  156r     FIFO               0,12       0t0   124019 pipe
+firefox 15997   pj  159u     unix 0x00000000bbb64029       0t0   125007 type=STREAM
+firefox 15997   pj  161u     unix 0x00000000bd74bc06       0t0   125009 type=STREAM
+firefox 15997   pj  163u     unix 0x00000000bbdecbc6       0t0   125011 type=STREAM
+firefox 15997   pj  164u     unix 0x000000005c2db93d       0t0   125018 type=STREAM
+firefox 15997   pj  166u     unix 0x000000007964bf49       0t0   125016 type=SEQPACKET
+firefox 15997   pj  167u     unix 0x00000000b510c7b8       0t0   125017 type=SEQPACKET
+firefox 15997   pj  170u     unix 0x00000000b4916617       0t0   125020 type=STREAM

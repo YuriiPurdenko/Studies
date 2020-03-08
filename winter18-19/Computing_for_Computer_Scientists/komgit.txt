@@ -1,0 +1,64 @@
+git init - inicializuje repezytorium git, stworzy nowy podkatalog .git, zawierajace szkielet git a
+
+git add [plik] - dodake pliki, ktore chce 'sledzic'
+
+git commit 'nazwa' - zatwierdza zmiany
+
+git clone [link] - pozwala uzyskac kopie istniejacego repozytorium//pobiera wszystkie rewizje kazdego pliku
+
+git clone [link] [folder] - zapisuje w podanym folderze
+
+git status - pozwala sprawdzic status plikow
+// w pliku .gitignore tworze liste wzorcow, ktore git ma ignorowac (sa tam wyrazenia podobne do wyrazen regularnych)
+
+git diff - pokazuje dokladnie ktore linie zostaly zmienione(dodane/usuniete)
+
+git remote - 
+
+git push - pozwala na zapisanie repezytorium na serwerze git'a
+
+git branch - tworzy nowe odgalezienie
+	   -f master HEAD~3	przenosi mastera do jego prapradziadka
+
+git merge - pozwala stworzyc nowego commita z polaczenia dwoch odgalezien
+
+git checkout - pozwala przelaczac sie pomiedzy commitami, ale takze tworzyc nowe odgalezienia
+	    -b [odgalezienie] -pozwala nadac mastera odgalezieniu
+
+gir log - pokazuje wszystkie commity
+
+git rebase - pozwala nam podlaczyc sie do instniejacego commita
+	   -i HEAD~4 interaktywnie, pozwala zarzadzac commitami do 4 w gore HEAD
+
+poruszanie sie do gory o jeden commir ^ np master^ -ojciec lub master^^ -dziadek
+o kilka ~<num>
+
+git revert -//zdalnie
+
+git reset - odwraca zmiany cofajac referencje branch do starszego//lokalnie
+
+git cherry-pick <commit1> <commit2> <...> - kopiujesz szerego commitow pod HEAD
+
+git fetch - aktulaizuje repozytorium bez zmiany lokalnego repozytorium
+
+git pull - polaczenie git fetch i git merge
+	 --rebase to samo co git fetch a pozniej merge
+
+roznica miedzy git log a git reflog jest taka, ze git log pokazuje jedynie commity rodzicow zas reflog pokazuje wszystkie chronologicznie??
+
+gitk - przegladarka do moich commitow
+
+git log --graph --abbrev-commit --decorate  //graf commitow
+
+git fetch -- ściągnięcie danych z serwera
+git merge albo git rebase -- scalenie zdalnych zmian z naszymi
+git merge tworzy nowy komit przy scalaniu
+git rebase przypisuje istniejące komity
+git pull = git fetch & git merge
+git pull --rebase = git fetch & git rebase
+git push -- wrzucenie zmian na serwer
+git stash -- "chowa" nasze zmiany na później.
+git branch -- tworzy nową gałąź
+git branch -f -- zmiana przypisania gałęzi (opcja -f konieczna jeśli dana gałąź już istnieje)
+git checkout -- pozwala się przełączyć na inną gałąź
+git checkout -b -- tworzy nową gałąź i od razu się na nią przełącza

@@ -1,0 +1,19 @@
+obraz procesu(ang.process image) - Tworzenie obrazu procesu obejmuje kompilację, konsolidację i ładowanie.
+Process image is an executable file required while executing the program. This image usually contains the following sections −
+
+    Code segment or text segment
+    Data segment
+    Stack segment
+    Heap segment
+
+    process image is an image of a process taken when memory is allocated to it before execution.
+
+bit uprawnień - 
+
+metadane - dane na temat danych
+
+kursor - 
+
+dowiązanie symboliczne - 
+
+nielokalne skoki - 

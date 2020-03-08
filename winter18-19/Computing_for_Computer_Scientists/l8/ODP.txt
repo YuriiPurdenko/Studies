@@ -1,0 +1,40 @@
+#Zadanie 1 
+
+git clone https://github.com/alewmoose/2048-in-terminal
+cd 2048-in-terminal
+sudo apt-get install libncurses5-dev //jesli nie mam biblioteki tej
+make
+sudo make install
+./2048
+nano draw.c
+make
+sudo make install
+./2048
+make clean //cofnelo kompilacje? delete the executable file and all the object files from the directory, 
+
+#Zadanie 2
+
+git init testy
+cd testy
+touch README.md
+nano README.md
+git add README.md
+git commit
+echo "Wiktor Pilarczyk" | cat >> README.md
+git add README.md
+git commit
+echo "CZASOPISMO" | cat >> README.md
+git add README.md
+git commit
+git log
+git checkout "#"
+git checkout master
+
+#Zadanie 3
+
+git clone https://github.com/iiuwr18/lista-obecnosci-wszyscy.git
+cd lista-obecnosci-wszyscy/
+nano lista.csv
+git add lista.csv 
+git commit
+git push

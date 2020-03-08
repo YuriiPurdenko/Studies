@@ -1,0 +1,14 @@
+Bitmapa przechowuje informacje na temat zajetych i wolnyc blokow
+
+alloc szuka pierwszego niezapalonego bitu w bitmapie, zapal go, zmniejsza liczbe wolnych blokow oraz zwraca wskaznik na miejsce w przestrzeni
+free sprawdza czy  otrzymalismy dobry index z zallokowana pamiecia, a pozniej zwalnia zapalony bit w bitmapie, zwieksza liczbe wolnych blokow oraz zwraca wskaznik na miejsce w przestrzeni
+
+O(n) - przeszkuiwanie bitmapy, podobne do First in
+
+liczba metadanych na jeden blok to (size_t + size_t + wskaznik)/liczba blokow + 1 bit bitmaski, czyli (3*4*8)/liczba blokow + 1
+
+maksymalnym rozmiatem nieuzytkow moze byc 32*8 - 1, jesli w bloku bedziemy korzystac z jednego bitu??
+
+fragmentacja wewnetrzna jest dosyc duza jesli allokujemy rzeczy mniejsze niz 8*int
+
+Fragmentacja zewnetrzna chyba nie, problemem moze byc kiedy mamy strukture wieksza od naszego bloku

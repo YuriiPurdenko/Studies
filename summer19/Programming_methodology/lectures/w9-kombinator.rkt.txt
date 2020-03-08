@@ -1,0 +1,224 @@
+#lang racket
+
+(provide (all-defined-out))
+
+;; definicja wyrażeń
+
+(struct variable     (x)        #:transparent)
+(struct const        (val)      #:transparent)
+(struct op           (symb l r) #:transparent)
+(struct let-expr     (x e1 e2)  #:transparent)
+(struct if-expr      (b t e)    #:transparent)
+(struct cons-expr    (l r)      #:transparent)
+(struct car-expr     (p)        #:transparent)
+(struct cdr-expr     (p)        #:transparent)
+(struct pair?-expr   (p)        #:transparent)
+(struct null-expr    ()         #:transparent)
+(struct null?-expr   (e)        #:transparent)
+(struct symbol-expr  (v)        #:transparent)
+(struct symbol?-expr (e)        #:transparent)
+(struct lambda-expr  (x b)      #:transparent)
+(struct app-expr     (f e)      #:transparent)
+
+(define (expr? e)
+  (match e
+    [(variable s)       (symbol? s)]
+    [(const n)          (or (number? n)
+                            (boolean? n))]
+    [(op s l r)         (and (member s '(+ *))
+                             (expr? l)
+                             (expr? r))]
+    [(let-expr x e1 e2) (and (symbol? x)
+                             (expr? e1)
+                             (expr? e2))]
+    [(if-expr b t e)    (andmap expr? (list b t e))]
+    [(cons-expr l r)    (andmap expr? (list l r))]
+    [(car-expr p)       (expr? p)]
+    [(cdr-expr p)       (expr? p)]
+    [(pair?-expr p)     (expr? p)]
+    [(null-expr)        true]
+    [(null?-expr p)     (expr? p)]
+    [(symbol-expr v)    (symbol? v)]
+    [(symbol?-expr p)   (expr? p)]
+    [(lambda-expr x b)  (and (symbol? x) (expr? b))]
+    [(app-expr f e)     (and (expr? f) (expr? e))]
+    [_                  false]))
+
+;; wartości zwracane przez interpreter
+
+(struct val-symbol (s)   #:transparent)
+(struct closure (x b e)) ; Racket nie jest transparentny w tym miejscu,
+                         ; to my też nie będziemy
+
+(define (my-value? v)
+  (or (number? v)
+      (boolean? v)
+      (and (pair? v)
+           (my-value? (car v))
+           (my-value? (cdr v)))
+      ; null-a reprezentujemy symbolem (a nie racketowym
+      ; nullem) bez wyraźnej przyczyny
+      (and (symbol? v) (eq? v 'null))
+      (and ((val-symbol? v) (symbol? (val-symbol-s v))))
+      (and (closure? v) (symbol? (closure-x v))
+                        (expr? (closure-b v))
+                        (env? (closure-e v)))))
+
+;; wyszukiwanie wartości dla klucza na liście asocjacyjnej
+;; dwuelementowych list
+
+(define (lookup x xs)
+  (cond
+    [(null? xs)
+     (error x "unknown identifier :(")]
+    [(eq? (caar xs) x) (cadar xs)]
+    [else (lookup x (cdr xs))]))
+
+;; kilka operatorów do wykorzystania w interpreterze
+
+(define (op-to-proc x)
+  (lookup x `(
+              (+ ,+)
+              (* ,*)
+              (- ,-)
+              (/ ,/)
+              (> ,>)
+              (>= ,>=)
+              (< ,<)
+              (<= ,<=)
+              (= ,=)
+              (eq? ,(lambda (x y) (eq? (val-symbol-s x)
+                                       (val-symbol-s y))))
+              (!= ,(lambda (x y) (not (= x y)))) 
+              (&& ,(lambda (x y) (and x y)))
+              (|| ,(lambda (x y) (or x y)))
+              )))
+
+;; interfejs do obsługi środowisk
+
+(define (env-empty) null)
+(define env-lookup lookup)
+(define (env-add x v env) (cons (list x v) env))
+
+(define (env? e)
+  (and (list? e)
+       (andmap (lambda (xs) (and (list? e)
+                                 (= (length e) 2)
+                                 (symbol? (first e)))))))
+
+;; interpretacja wyrażeń
+
+(define (eval e env)
+  (match e
+    [(const n) n]
+    [(op s l r)
+     ((op-to-proc s) (eval l env)
+                     (eval r env))]
+    [(let-expr x e1 e2)
+     (let ((v1 (eval e1 env)))
+       (eval e2 (env-add x v1 env)))]
+    [(variable x) (env-lookup x env)]
+    [(if-expr b t e) (if (eval b env)
+                         (eval t env)
+                         (eval e env))]
+    [(cons-expr l r)
+     (let ((vl (eval l env))
+           (vr (eval r env)))
+       (cons vl vr))]
+    [(car-expr p)      (car (eval p env))]
+    [(cdr-expr p)      (cdr (eval p env))]
+    [(pair?-expr p)    (pair? (eval p env))]
+    [(null-expr)       'null]
+    [(null?-expr e)    (eq? (eval e env) 'null)]
+    [(symbol-expr v)   (val-symbol v)]
+    [(symbol?-expr e)  (val-symbol? (eval e env))]
+    [(lambda-expr x b) (closure x b env)]
+    [(app-expr f e)    (let ((vf (eval f env))
+                             (ve (eval e env)))
+                         (match vf
+                           [(closure x b c-env)
+                            (eval b (env-add x ve c-env))]
+                           [_ (error "application: not a function :(")]))]))
+
+(define (run e)
+  (eval e (env-empty)))
+
+;; kombinator punktu stałego a la Haskell Curry
+
+(define Y
+  (lambda-expr 'f
+    (let-expr 'o (lambda-expr 'x
+                    (app-expr (variable 'f)
+                              (lambda-expr 'a (app-expr (app-expr (variable 'x)
+                                                                  (variable 'x))
+                                                        (variable 'a)))))
+      (app-expr (variable 'o) (variable 'o)))))
+
+;; definiujemy rekurencyjną funkcję jako funkcję wyższego rzędu, która przyjmuje
+;; swoje rekurencyjne "ja" jako argument
+
+(define Fact 
+  (lambda-expr 'F (lambda-expr 'x
+     (if-expr (op '= (variable 'x) (const 0))
+              (const 1)
+              (op '* (variable 'x)
+                     (app-expr (variable 'F) (op '- (variable 'x) (const 1))))))))
+
+;; kombinator Y pozwala dać takiej funkcji jak wyżej siebie samą jako pierwszy
+;; argument
+
+(define fact
+  (app-expr Y Fact))
+
+;; testujemy w Rackecie
+
+(define (factorial n)
+  (run (app-expr fact (const n))))
+
+;; kolejny przykład: ewaluator wyrażeń w odwrotnej notacji polskiej
+
+(define Rpn-interp
+  (lambda-expr 'interp (lambda-expr 'xs (lambda-expr 'stack
+     (if-expr
+       (null?-expr (variable 'xs))
+       (car-expr (variable 'stack))
+       (if-expr
+         (symbol?-expr (car-expr (variable 'xs)))
+         (if-expr
+           (op 'eq? (car-expr (variable 'xs)) (symbol-expr '+))
+           (app-expr (app-expr (variable 'interp)
+                               (cdr-expr (variable 'xs)))
+                     (cons-expr (op '+ (car-expr (variable 'stack))
+                                       (car-expr (cdr-expr (variable 'stack))))
+                                (cdr-expr (cdr-expr (variable 'stack)))))
+           (app-expr (app-expr (variable 'interp)
+                               (cdr-expr (variable 'xs)))
+                     (cons-expr (op '* (car-expr (variable 'stack))
+                                       (car-expr (cdr-expr (variable 'stack))))
+                                (cdr-expr (cdr-expr (variable 'stack))))))
+         (app-expr (app-expr (variable 'interp)
+                             (cdr-expr (variable 'xs)))
+                   (cons-expr (car-expr (variable 'xs)) (variable 'stack)))))))))
+
+(define rpn-interp
+  (lambda-expr 'xs
+     (app-expr (app-expr (app-expr Y Rpn-interp)
+                         (variable 'xs))
+               (null-expr))))
+
+;; przykładowe wyrażenie w odwrotnej notacji polskiej
+
+(define rpn-expr
+  (cons-expr (const 2)
+  (cons-expr (const 3)
+  (cons-expr (symbol-expr '+)
+  (cons-expr (const 10)
+  (cons-expr (symbol-expr '*)
+  (null-expr)))))))
+
+;; interpreter (RPN-u) w interpreterze (naszego języka) w interpreterze (Racketa)
+
+(define (test-rpn)
+  (run (app-expr rpn-interp
+                 rpn-expr)))
+

@@ -1,0 +1,7 @@
+ZAD 2
+
+    Fragmentacja zewnetrzna - wystepuje kiedy liczba blokow wolnych jest wystarczajac, ale nie sa obok siebie, przez co nie mozna ich uzyc
+
+    Fragmentacja wewnetrzna - wtedy kiedy zostaje zaalokowany blok, który jest większy od "potrzebowanej" pamięci (nazywa sie wewnetrzna, poniewaz pamiec jest marnowana  w srodku zaalokowanych blokow)
+
+

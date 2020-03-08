@@ -1,0 +1,23 @@
+Instrukcja atomowa - (nie znaczy, ze nie da sie wywlaszczyc), atomowosc stanu, a nie operacji, nikt nie zobaczy stanu posredniego obliczen
+
+int compare-and-swap(int *addr, int expect, int new){
+	if(*addr == expect){
+		*addr = new;
+		return 1;
+	}
+	return 0;
+}
+
+void lock(spin_t *x){
+	while(compare-and-swap(x, 0, 1) == 0)
+		continue;
+}
+
+void unlock(spint_t *x){
+	compare-and-swap(x, 1, 0); //lepsze niz zrobienie cas* =  0 poniewaz cas atomowe
+}
+
+Ogolnie chyba nie ma sensu poniewaz, wykonywanie while niepotrzebnie zuzywa moc procesora.
+Moze dojsc do glodzenia - priorytety ;(
+
+Glowna roznica jest edektywnosc oraz procesy, ktore nie maja dostepu do danego zasobu nie wykorzystuja mocy procesora dopki nie poinformujemy je, ze moga znow korzystac z zasobu.

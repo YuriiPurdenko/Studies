@@ -1,0 +1,19 @@
+1. Wyjaśnij czemu złożenie ze sobą poprawnych współbieżnych podprocedur używających blokad nie musi dać poprawnej procedury (tj. „locks are not composable”).
+
+Ponieważ pomiedzy nimi moze zostac wykonane przerwanie i nie mozemy robic zadnych zalozen.
+
+2. Jak poprawić procedurę «transfer»?
+
+Mozna dodac locki, tylko wazne aby byly wczesniej ponumerowane/posortowane zmienne, ktore chcemy lockowac, aby ominac deadlocka.
+
+3. Czemu według autorów artykułu blokady nie są dobrym narzędziem do strukturyzowania współbieżnych programów?s
+
+Latwo popelnic blad.
+Mozemy dac za malo blokad co skutkuje np. dwoma watkami zmieniajacymi jedna zmienna.
+Mozemy dac za duzo blokad co skutkuje np. wykonaniem sekwencyjnym, a nawet deadlockiem.
+Mozemy dac za zle blokayd np. robic zalozenia ze cos jest zablokowane, a tak nie jest.
+Mozemy dac w zlej kolejnosci blokady co skutkuje np. deadlockiem.
+Error recovery	
+Mozemy zapomniec odblokowywac locka, przez co zablokujemy niepotrzebnie zmienna.
+
+Locki nie wspolgraja z modularnoscia!

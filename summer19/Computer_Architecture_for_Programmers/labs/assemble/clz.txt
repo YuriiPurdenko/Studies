@@ -1,0 +1,61 @@
+	.text
+	.global	clz
+	.type	clz, @function
+clz:
+
+   #dzialanie programu polega na tym, ze sprawdzam czy na poczatku nie wystepuje jakis zapalony bit
+   #jezeli tak to znaczy, ze musze zmniejszyc wynik i sprawdzic mniejszy fragment na przodzie
+   # w p. p. sprawdzam mniejszy fragment dalej 
+   #(i teoretycznie tez wczesniejszy, ale poniewaz tam sa zera wiec mi nie przeszkadza)
+
+	    mov $64,%rax
+	    
+	    mov $0xFFFFFFFF00000000,%r15 #32
+	    mov $0xFFFF0000FFFF0000,%r14 #16
+	    mov $0xFF00FF00FF00FF00,%r13 #8
+	    mov $0xF0F0F0F0F0F0F0F0,%r12 #4
+	    mov $0xCCCCCCCCCCCCCCCC,%r11 #2
+	    mov $0xAAAAAAAAAAAAAAAA,%r10 #1
+	    mov $0xFFFFFFFFFFFFFFFF,%r9  #czy wgl jest jakis bit zapalony
+	    
+	    
+	    
+	    
+	    and %rdi,%r15
+	    je L1
+	    sub $32,%rax
+	    shr	$32,%rdi
+
+L1:	    and %rdi,%r14
+	    je L2
+	    sub $16,%rax
+	    shr	$16,%rdi
+		
+L2:	    and %rdi,%r13
+	    je L3
+	    sub $8,%rax
+	    shr	$8,%rdi
+
+L3:	    and %rdi,%r12
+	    je L4
+	    sub $4,%rax
+	    shr	$4,%rdi
+
+L4:	    and %rdi,%r11
+	    je L5
+	    sub $2,%rax
+	    shr	$2,%rdi
+
+L5:	    and %rdi,%r10
+	    je L6
+	    sub $1,%rax
+	    shr	$1,%rdi
+	    
+L6:	    and %rdi,%r9
+	    je L7
+	    sub $1,%rax
+	    
+L7:	    ret
+
+	.size	clz, .-clz
+

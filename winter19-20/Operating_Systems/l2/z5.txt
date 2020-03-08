@@ -1,0 +1,24 @@
+time - run programs and summarize system resource usage
+
+    One of these things is not like the other. Real - actual elapsed time; User and Sys - CPU time used only by the process.
+
+        Real - time from start to finish of the call.
+
+        User - CPU time spent in user-mode code (outside the kernel) within the process. This is only actual CPU time used in executing the process. Other processes and time the process spends blocked do not count towards this figure.
+
+        Sys is the amount of CPU time spent in the kernel within the process. This means executing CPU time spent in system calls within the kernel (library code, is running in user-space). Like 'user', this is only CPU time used by the process.
+
+    User+Sys tell how much actual CPU time your process used. This is across all CPUs, if the process has multiple threads (and this process is running on than one processor) it could potentially exceed the wall clock time reported by Real.
+
+time find /usr
+time find/usr - czasami usr + sys > real
+ulimit -t 1; find /usr
+echo $?
+wyslano SIGKILL
+
+
+head -c 10000000 /dev/urandom | gzip | gzip | gzip > /dev/null
+
+real	0m0,280s
+user	0m0,790s
+sys	    0m0,088s

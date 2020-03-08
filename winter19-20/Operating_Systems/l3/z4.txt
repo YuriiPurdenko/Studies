@@ -1,0 +1,47 @@
+strace -e 'trace=!all' xeyes 
+pidof xeyes
+kill PID
+kill wysyla SIGTERM - Terminated. A gentle kill that gives processes a chance to clean up.
+
+strace -e 'trace=!all' xeyes 
+pkill xeyes
+kill wysyla SIGTERM - Terminated. A gentle kill that gives processes a chance to clean up.
+
+strace -e xeyes 
+xkill
+
+This command does not provide any warranty that the application whose connection to the X server is closed will abort nicely, or even abort at all. All this command does is to close the connection to the X server. Many existing applications do indeed abort when their connection to the X server is closed, but some can choose to continue.
+
+CTRL+Z 
+fg
+
+xeyes
+CTRL+Z
+cat /proc/15873/status > status0.txt
+kill -s USR1 15873
+cat /proc/15873/status > status1.txt
+kill -s USR2 15873
+cat /proc/15873/status > status2.txt
+kill -s HUP 15873
+cat /proc/15873/status > status3.txt
+kill -s INT 15873
+cat /proc/15873/status > status4.txt
+diff status0.txt status1.txt
+diff status1.txt status2.txt
+diff status2.txt status3.txt
+diff status3.txt status4.txt
+
+
+
+SIGUSR1/SIGUSR2 - sygnały zdefiniowane przez użytkownika
+SIGHUP - sygnał wysyłany do procesu kiedy jego terminal zostanie zamknięty.
+SIGINT - przerwanie z klawiatury
+
+
+SigPnd - for thread
+ShdPns - for process
+SigBlk - zablokowane
+SigIgn - ignorowane
+SigCgt - przechwycone. 
+
+Linux, at least, delivers basic UNIX signals in ascending numeric order.

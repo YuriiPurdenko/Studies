@@ -1,0 +1,47 @@
+Trzy wzorce przydziału pamięci:
+
+    rampy - wiele programow akkumuluje pamiec, a pozniej konczy swoje dzialanie bo np na podstawie wszystkich otrzymanych danych moze podac wynik
+    smierci sa bardziej odizolowane co powoduje problemy fragmentacji
+    
+
+    szczyty - program bardziej dzieli sie na fazy, w ktorych alokuje pamiec, a pozniej ja deallokuje
+        smierci dotycza sie pamieci zaallokowanej podczas fazy, lepsze dla fragmentacji
+
+    płaskowyże - allokuje pamiec a pozniej z niej dlugo korzysta
+
+
+Wlasnosci:
+    rampy i plaskowyze- omijanie krotkoterminowych fragmentacji (latwe), dlugoterminowa fragmentacja nie jest problemem
+
+    szczyty i ostre plaskowyze - problem z fragmentacja (duzo obiektow allokowanych i uwalnianych)
+
+
+    Fragmentacja na szczytach jest wazne:
+        poniewaz wtedy potrzebujemy tej pamieci, a mamy ja ograniczona
+
+
+Informacje:
+
+    -obiekty zaalokowane razem zazwyczaj umieraja razem (lokalna allokacja)
+
+    -obiekty roznych typow moga miec inne funkcjonalnosci i umierac kiedy indziej (segregowanie po wielkosciach obiektow)
+
+
+
+BEST FIT - szuka najmniejszego dostepnego bloku, ktory umozliwi zzalokowanie pamieci
+        strategia - zmniejszyc marnowana pamiec, zapewniajac, ze fragmenty puste sa najmniejszej wielkosci
+        nie skaluje sie dobrze
+        "dobrze" zarzadza pamiecia
+
+
+FIRST FIT - wybiera pierwszy blok, ktory umozliwi zaalokowanie pamieci
+        duze bloki na poczatku (miejsce) beda splitowane na poczatku (czasowo), przez co moze powstac duzo nieuzytkow, powoduja tez wzrost czasu przeszukiwania
+        skaluje sie slabe w systemach gdzie wiele obiektow jest allokowanych i wiele wolnych blokow roznego rodzaju sie akumuluja
+        lepiej sie skaluje od best fit (nie trzeba przeszukiwac calej listy)
+
+
+NEXT FIT - cykl przeszukiwan
+        zazwyczaj szybciej znajduje wolny blok
+        problem, ze obiekty z roznych faz moga sie przeplatac (slaba lokalnosc)
+        najgorszy ze wszystkich pod wzgledem fragmentacji
+        dla wiekszych  pamieci lepiej jest stosowac drzewa niz listy

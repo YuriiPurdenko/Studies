@@ -1,0 +1,79 @@
+239,312d238
+< \section{Porównanie dokładności obliczania wielomianu optymalnego w zależności od bazy}
+< Porównania dla bazy ortogonalnej oraz bazd {$1, x, x^{2}, ...$}. Dane dla funkcji są identyczne jak powyżej.
+< \subsection{Dla funkcji x listy 7 zadania 8}
+< Stopień wielomianu optymalnego, a różnice w wielkości $\delta$.
+< \begin{center}
+<     \begin{tabular}{ |p{2cm}|p{4,5cm}|p{4,5cm}|}
+<      \hline
+<      Stopień wielomianu optymalnego &  Błąd względny między odległościami & Błąd bezwzględny względem bazd ortogonalnej\\
+<       \hline
+<       1 & 6.4666425426268547838e-15 & 2.3202703019193659142e-14\\
+<       \hline
+<       2 & 5.95172782585917659048e-16 & 2.15697453512714472894e-15\\
+<       \hline
+<       3 & 2.04710922692419305946e-16 & 1.1984356827452159378e-15\\
+<       \hline
+<       4 & 2.79033659242658438338e-15 & 3.0958144686251811424e-14\\
+<       \hline
+<       5 & 1.98817690961897511337e-17 & 8.34205522111729474868e-15\\
+<       \hline
+<       6 & 3.79439519379464424651e-14 & 6.98951427161064421676e-10\\
+<       \hline
+<       7 & 4.2628897304417041039e-10 & 6.03108786328256835312e+17\\
+<       \hline
+< \end{tabular}
+< \end{center}
+< \subsection{Dla funkcji z treści zadania}
+< \begin{center}
+<     \begin{tabular}{ |p{2cm}|p{4,5cm}|p{4,5cm}|}
+<      \hline
+<      Stopień wielomianu optymalnego &  Błąd względny między odległościami & Błąd bezwzględny względem bazd ortogonalnej\\
+<       	\hline
+< 	1 & 1.09788175458366138448e-17 & 1.0043946532488746388e-14\\
+< 	\hline
+< 	2 & 2.24519152123430642707e-19 & 1.49576263819501271238e-14\\
+< 	\hline
+< 	3 & 6.83002204604422398114e-19 & 4.60670739616362159977e-14\\
+< 	\hline
+< 	4 & 9.53692096978725386549e-19 & 1.195567356801952628e-13\\
+< 	\hline
+< 	5 & 6.35853736869512373674e-20 & 1.13393915307046848304e-14\\
+< 	\hline
+< 	6 & 4.85905744148349728884e-19 & 8.67019965614943267926e-14\\
+< 	\hline
+< 	7 & 7.37562624218113827034e-19 & 1.43160425656499147172e-13\\
+< 	\hline
+< 	8 & 1.24392645927077572376e-22 & 2.83282256435087719304e+09\\
+< 	\hline
+< \end{tabular}
+< \end{center}
+< \newpage
+< \subsection{Dla funkcji $x ^{x * sin(x)}$}
+< \begin{center}
+<     \begin{tabular}{ |p{2cm}|p{4,5cm}|p{4,5cm}|}
+<      \hline
+<      Stopień wielomianu optymalnego &  Błąd względny między odległościami & Błąd bezwzględny względem bazd ortogonalnej\\
+< 	\hline
+< 	1 & 1.26895022267703438956e-15 & 1.08097154787231143443e-16\\
+< 	\hline
+< 	2 & 7.11236625150490908709e-17 & 8.06295290304171003028e-18\\
+< 	\hline
+< 	3 & 2.12503625807158869065e-17 & 7.94958973542625150593e-18\\
+< 	\hline
+< 	4 & 3.04660810468426745956e-16 & 1.14108138575121590048e-16\\
+< 	\hline
+< 	5 & 1.53251977080826051747e-16 & 2.7230783488180611934e-16\\
+< 	\hline
+< 	6 & 1.77558434535235454277e-14 & 6.02480640720695684293e-14\\
+< 	\hline
+< 	7 & 3.86234827147858943153e-11 & 3.9093339838957780106e-10\\
+< 	\hline
+< 	8 & 2.21780378528282783894e-07 & 1.57315010560863976841e+13\\
+< 	\hline
+< \end{tabular}
+< \end{center}
+320,322d245
+< 
+< \subsection{Baza w obliczeniach}
+< W przedstawionych wynikach widać, że baza, którą zastosujemy do obliczeń nie ma znaczącego wpływu na nasze wyniki. Różnice wynikają głównie z błędów obliczeń, ponieważ zakładając, że podstawowe operacje jak mnożenie, dodawanie lub obliczanie iloczynu skalarnego jest rzędu jednej operacji, to algorytm obliczania dla bazy ortogonalnej jest rzędu O(n), zaś dla obliczania w bazie {$1, x, x^{2}, ...$} rzędu O($n^{3}$), gdyż odwracamy macierz, a duża wielkość błędu bezwzględna dla wielomianu interpolacyjnego wynika z tego, że dzieli przez małe wartości.

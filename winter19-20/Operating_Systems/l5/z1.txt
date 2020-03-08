@@ -1,0 +1,17 @@
+absolutna - nie zalezy od katalogu roboczego, sciezka od katalogu glownego
+
+relatywna - obliczana wzgledem katalogu roboczego
+
+znormalizowana - efektywna reprezentacja ścieżki, rozwiazanie wszystkich symlinkow
+
+chdir/ fchdir - zmienia katalog roboczy
+
+punkt montażowy - katalog w systemie plików, który zawiera informacje spoza dysku systemu operacyjnego i jego partycji
+
+The mount command serves to attach the filesystem found on some device to the big file tree. 
+
+noatime - Nie   wykonuje   aktualizacji  czasu  dostępu  w  i-węźle położonym na tym systemie plików (np.  w  celu  uzyskania szybszego  dostępu  do  bufora wiadomości, co przyspiesza działanie serwerów grup dyskusyjnych).
+
+noexec - Nie pozwala na uruchamianie żadnych binariów z tego  systemu  plików.   Opcja  ta może być użyteczna dla serwera, który ma systemy plików zawierające binaria dla architektur innych niż jego własna.
+
+sync - Wszelkie operacje wejścia/wyjścia dla tego systemu plików powinny być wykonywane synchronicznie. 

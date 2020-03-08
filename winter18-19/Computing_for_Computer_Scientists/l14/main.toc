@@ -1,0 +1,5 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Subjects - summer}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{List}{2}{0}{1}
+\beamer@subsectionintoc {1}{2}{Table}{7}{0}{1}
+\beamer@sectionintoc {2}{Graphic}{12}{0}{2}

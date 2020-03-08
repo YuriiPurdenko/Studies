@@ -1,0 +1,9 @@
+ff ff ff ff ff ff ff ff
+48 c7 c7 D8 00 68 55
+48 83 c4 08
+c3
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+a0 00 68 55 00 00 00 00
+ff ff ff ff ff ff ff ff
+11 19 40 00 00 00 00 00
+32 37 30 35 38 65 38 38 00

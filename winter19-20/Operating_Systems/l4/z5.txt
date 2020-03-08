@@ -1,0 +1,24 @@
+TOCTTOU - Time Of Check To Time Of Use
+
+access - check real user's permissions for a file 
+
+
+char *realpath;
+str = realloc(NULL, sizeof(char)*strlen(path));
+strncpy(realpath, token, strlen(path) - 1);
+Pozniej zamiast z path korzystac z realpath
+
+
+free(realpath);
+/
+
+O_EXCL - dodanie flagi 
+
+#include "csapp.h"
+
+bool f_lock(const char *path) {
+    (void)Open(path, O_EXCL|O_CREAT|O_WRONLY, 0700);
+    return true;
+}
+void f_unlock(const char *path) {
+Unlink(path);

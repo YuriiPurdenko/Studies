@@ -1,0 +1,24 @@
+Wyjaśnij różnice w tworzeniu procesów w systemie Linux(§10.3.3) i WinNT(§11.4.3).
+
+    Linux:
+        Zostaje utworzony nowy process descriptor (task_struct) dla procesu-dziecka. Większość danych przepisywana jest od rodzica.
+        Dziecko otrzymuje PID
+        Tworzona zostaje mapa pamięci i nadawany dzielony dostęp do plików rodzica
+        Rejestry zostają wypełnione odpowiednimi informacjami.
+
+    WinNT – W WinNT procesy są tworzone w inny sposób niż w na Linuxie. Zamiast wywołania fork() używane jest wywołanie CreateProcess, które tworzy całkiem nowy proces, który wykonuje program podany jako argument. Proces-dziecko nie otrzymuje kopii pamięci swojego rodzica (CreateProcess działa trochę jak połączenie fork z execve).
+
+
+
+Naszkicuj przebieg akcji podejmowanych przez jądro w trakcie obsługi funkcji fork(2) i execve(2).
+
+    Kiedy fork zostaje wywołany, kernel tworzy task_struct i struktury danych takie jak kernel-mode stack czy thread_info. Struktury te są alokowane w ustalonej odległości od końca stosu procesu i zawierają różne parametry procesu razem z adresem deskryptora procesu. Następnie szuka się dostępnego PID i uaktualnia tablicę haszującą tak, żeby PID wskazywało na task_structa. Na koniec kopiuje¹ się pamięć rodzica.
+
+    Wywołanie exec sprawia, że jądro szuka danego polecenia, kopiuje argumenty i zmienne środowiskowe i zwalnia starą przestrzeń adresową i tablicę stron. Tworzona zostaje nowa przestrzeń adresowa ale (w większości systemów) nie zostaje ona uzupełniona (być może z wyjątkiem strony dla stosu). Rozpoczęcie wykonywania procesu skutkuje w page fault, który powoduje, że pierwsza strona kodu zostaje wtoczona z pliku wykonywalnego. W ten sposób nic nie musi zostać załadowane z wyprzedzeniem przez co programy mogą uruchamiać się szybko. Na koniec argumenty i zmienne środowiskowe zostają skopiowane na stos, sygnały zostają zresetowane a rejestry wypełnione zerami.
+
+
+
+
+Wyjaśnij jak system uniksowy optymalizuje klonowanie procesów z użyciem kopiowania przy zapisie¹.
+
+    System uniksowy optymalizuje klonowanie procesów poprzez odraczanie kopiowania pamięci rodzica do momentu, kiedy dziecko próbuje do niej pisać. Wykorzystuje się kopiowanie przy zapisie – nowo utworzony proces otrzymuje swoją tablicę stron, ale wszystkie oznaczone są jako read only. Kiedy dziecko próbuje pisać do pamięci, następuje protection fault. Jądro w takiej sytuacji alokuje nową kopię strony dla procesu (read/write) i dopiero wtedy kopiuje do niej pamięć.

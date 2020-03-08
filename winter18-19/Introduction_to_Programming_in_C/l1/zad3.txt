@@ -1,0 +1,40 @@
+Napisać program w języku C, który wczytuje liczbę rzeczywistą x (typu double) oraz dwie liczby całkowite p i d, gdzie x >= 0 i  2 <= p <= 36 i d >= 0, a następnie wylicza i wypisuje reprezentację liczby x w systemie pozycyjnym  o podstawie p z dokładnością do d cyfr po przecinku (https://pl.wikipedia.org/wiki/Systemy_pozycyjne). Jeśli p jest większe od 10, to cyfry większe bądź równe 10 powinny być reprezentowane przez kolejne duże litery: A (10), B (11), C (12), itd, aż do litery reprezentującej p-1. Na przykład dla danych: x = 25.5, p = 3 oraz d = 5 wynikiem powinno być 221,11111 , ponieważ 25.5 = 2*32 + 2*31 + 1*30 + 1*3-1 +1*3-2 + ..., a dla danych x = 35.5 p = 20 oraz d =2 wynikiem powinno być 1F,A0 , ponieważ 35.5 = 1*201 + 15*200 + 10*20-1, a F i A reprezentują odpowiednio 15 i 10. Ostatnia cyfra po przecinku nie powinna być zaokrąglana.
+
+W pierwszym wierszu standardowego wejścia podane są kolejno i oddzielone spacjami liczby x p d . Program powinien wypisać do standardowego wyjścia tylko jeden wiersz zawierający na początku reprezentację liczby x w systemie pozycyjnym  o podstawie p z dokładnością do d cyfr po przecinku. Jeśli d = 0, to przecinek nie powinien być wypisany.
+
+W szczególności oznacza to, że w programie dla sprawdzarki nie wolno wypisać nic więcej, np wyjaśnienia, co program robi lub jakie dane należy wprowadzić.
+
+ 
+
+Wskazówka: Z liczby naturalnej można wyodrębnić kolejne cyfry w systemie o podstawie p przez obliczanie reszty z dzielenia przez p (operacja  % w C) i następnie dzielenie przez p (operacja / w C), na przykład 35 % 20 daje wynik 15, a 35 / 20 to 1. Do wczytania danych można użyć instrukcji scanf("%lf %d %d", &x, &p, &d);
+
+ 
+
+Przykład danych 1:
+
+153 2 0
+
+Wynik 1:
+
+10011001
+
+ 
+
+Przykład danych 2:
+
+237125.2518 12 6
+
+Wynik 2:
+
+B5285,30313A
+
+ 
+
+Przykład danych 3:
+
+
+0.046875 32 3
+
+Wynik 3:
+
+0,1G0

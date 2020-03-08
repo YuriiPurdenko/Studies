@@ -1,0 +1,38 @@
+The principle of least privilege (POLP), is the practice of limiting access rights for users to the bare minimum permissions they need to perform their work. Under POLP, users are granted permission to read, write or execute only the files or resources they need to do their jobs: In other words, the least amount of privilege necessary.
+
+Problemy gzip to:
+    -niebezpieczna kompresja/dekompresja
+    -nie ma szufladkowania/kategoryzowania
+    -wykonywany z przywilejami uzytkownika
+
+chroot i krotkotrwale uid sa slabym rozwiazniem, poniewaz wymagaja przywileju roota i nie mozna zrobic, zalozen, ze jesli mamy wiele gzip, to moze warto umiescic je w jednej piaskownicy, zapewnia oczekiwana ochrone
+
+Glowna petla najpierw przetwarza argumenty polecenia, identyfikuje strumien i obiekty, ktore bedzie przetwarzac i wysyla deskryptory plikow do przetworzenia
+
+To sugeruje podzielnie, gdzie najpierw otwierane sa pliki na przywilejach uzytkownia, a nastepnie  przesylane zostaja deskryptory do piaskownicy, aby je przetworzyla
+
+podzielono gzip, na uzywanie 3 funkcji comp/decomp - gzip i decomp - bzip2 
+
+returned size, orig-inal filename, and modification time
+
+Piaskownica korzysta tylko z flag CAP_SEEK, CAP_READ,CAP_WRITE przez co nie ma mozliwosci przetworzenia innych plikow albo zasobow
+
+Zmiany te zajely 409 lini (16% poprzedniego kodu), glownie obsluga RPC. Zwiekszylo wydajnosc, ale po analizie okazalo sie, ze nie propaogwali poziomu kompresji do piaskownicy.
+
+Ale takie cos wymaga duzo pracy, czy mozna to zrobic latwiej?
+
+ Principle  of  Least  Authority  Shell - w ktorym powloka jest uruchamiana z uprawnieniami lokalnymi i potokami pomiedzy komponentami, ktore sa umieszczone w piaskownicach
+
+design tension exists hereas well:gzip’s non-pipeline mode performs a number ofapplication-specific  operations  requiring  ambient  privi-lege,  and  logic  like  this  may  be  equally  (if  not  more)awkward if placed in the shell. On the other hand, whenoperating purely in a pipeline, the PLASH approach of-fers the possibility of near-zero application modification
+
+Inna rzecza, ktora rozwazali to kategoryzowanie, bibliotek, ktore by dawaly swoj kod w gotowych piaskownicach
+
+Biblioteczne api czesto nie jest przyjaznie skonstruowane dla piaskownic, dlatego umiescili RPC w gzipie niz libz, poniewaz gzip zapewnia lokalne API oparte na deskryptorach, gdzie libz api na buforach. Koszt wydajnosci RPC na buferach rosnie z rozmiarem pliku, a dla UNIX I/O pozostaje taki sam.
+A takze historyczne  wrazliwosci biblioteki libjpeg skupialy sie na callback'ach niz wystepowania izolacji, a takie callbacki wymagaja duzej zmiany w srodowisku RPC.
+
+na dekompresowanym pliku
+CAP_SEEK, CAP_READ
+na nowym pliku
+CAP_WRITE
+
+RPC - zdalne wywolanie procedury

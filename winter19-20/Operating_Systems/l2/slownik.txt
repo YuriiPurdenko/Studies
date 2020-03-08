@@ -1,0 +1,67 @@
+ZAD1
+    Rodzic - dziecko - proces, ktory tworzy nowy proces (dziecko) zostaje jego rodzicem
+
+    Identyfikator - unikalny numer procesu/watku
+
+    Grupa - id grupy do ktorej nalezy
+
+    Wlasciciela - id grupy = id wlasciciela grupy
+
+    wątki jądra - Lekkie procesy, działające asynchronicznie w przestrzeni jądra (podobnie jak zwykłe wątki w przestrzeni użytkownika), niezwiązane z żadnym procesem użytkownika
+        kernel task running only in kernel mode
+
+        ich nazwy przedstawione są na liście procesów w nawiasach kwadratowych
+
+        Rodzicem wszystkich wątków jądra jest kthreadd - PID = 2
+
+    Hierarchia procesow - drzewo hierarchi budowane na podstawie relacji rodzic-dziecko
+
+Wątek – część programu wykonywana współbieżnie w obrębie jednego procesu, dziela przestrzen adresowa itp.
+
+ZAD 2
+    Zmienne środowiskowe - to dodatkowe dane przekazywane do uruchamianego programu. Ustawiane są podczas uruchamiania systemu, procesu logowania użytkownika oraz w trakcie pracy powłoki systemowej. 
+        They are part of the environment in which a process runs.
+
+    Argumenty programu - argumenty podawane podczas uruchamiania programu
+
+ZAD 3
+    Segmenty programu - Read/write data segment(.data, .bss)/heap?  Read-only code segment( .rodata, .init, .text,)
+
+    Anonymous memory is a memory mapping with no file or device backing it. This is how programs allocate memory from the operating system for use by things like the stack and heap
+
+    Pliki odwzorowane w pamiec - odwzorowuje plika na fragment wirtualnej przestrzeni adresowej, umozliwia szybsze dzialanie, efektywne przy wspoldzieleniu fragmentow pliku
+
+ZAD 4
+    Zasoby plikopodobne - deskryptor pliku, czytamy/piszemy do zasobu jakby byl to plika, ale moze to byc np. stdin/stdout
+
+    Pliki zwykłe - wśród plików zwykłych możemy wyróżnić cztery duże grupy:
+        Pliki tekstowe (ASCII text)
+        Pliki wykonywalne binarne (executable) - programy
+        Pliki wykonywalne tekstowe (command) - skrypty powłoki
+        Pliki z danymi aplikacji (data). 
+
+    Urzadzenia - ?
+
+    Gniazda -rodzaj polaczenia, podobne do potokow, ale o wyzszym koszcie stosowany do komunikacji miedzy komputerami/sieciowej, najczesciej stosowane rodzaje:
+        -niezawodny polaczeniowy strumien bajtow
+        -niezawodny polaczeniowy strumien pakietow
+        -zawodna transmisja pakietow
+
+    Potoki -  jeden z mechanizmów komunikacji międzyprocesowej umożliwiający wymianę danych pomiędzy dwoma procesami. Odbywa się to najczęściej poprzez połączenie standardowego wyjścia jednego procesu ze standardowym wejściem drugiego. 
+
+ZAD 5
+
+Czas wykonania - czas na procesorze (user,sys)
+    real - czas od momentu utworzenia do ukonczenia
+    usr - suma czasow w ktorym procesory dzialaly w trybie user
+    sys - czas dzialania w trybie jadra
+1) roznia sie bo musi czekac na dane z dysku i wtedy usr i sys sie zatrzymuja a real czeka
+2) moze byc wieksza bo mamy wieloprocesorowe komputery i ich czas dzialania sie sumuje
+
+ZAD 6
+
+    Kopiowanie przez referencje - czyli np kopiowanie pamieci poprzez przekazanie wskaznika na nia i odwolanie sie od niego wtedy kiedy jest na to zapotrzebowanie
+
+ZAD 7
+
+    Fork bomby - zapętelenie się forka

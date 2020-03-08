@@ -1,0 +1,19 @@
+Niech S bedzie miejscem zatrzymania/wywlaszczenia pomiedzy 17, a 18 linijka
+
+v = 2, wiec count na poczatku = 2
+
+Wywolujemy 4 procesy
+
+kolejnosc wywolan  numerprocesu : funkcja (ew. ->S miejsce zatrzymania)
+
+1 : P		wtedy count = 1, delay - 0
+2 : P		wtedy count = 0, delay = 0
+3 : P -> S	wtedy count = -1, delay = 0
+4 : P -> S	wtedy count = -2, delay = 0
+1 : V		wtedy count = -1, delay = 1
+2 : V		wtedy count = 0, delay = 1
+
+Kontynuacja 3 : P -> S wtedy count = 0, delay = 0
+3 : V wtedy count = 1, delay = 0
+
+Kontynuacja 4 : P -> S uruchamia P(delay) i czeka przez wieki :(

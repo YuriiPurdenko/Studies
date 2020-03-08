@@ -1,0 +1,19 @@
+Korzysta z shadow memory, w ktorej zaznacza czy mozna korzystac z pamieci programu (bajtowo) i z instrumentacji, aby przy kazdej operacji wczytania i zapisania sprawdzic pamiec.
+
+Korzystajac z tego ze pamiec ma byc wyrownana do osmiu, to kolejnych 8 bajtow
+k z nich jest dostepne, a 8 - k jest niedostpene.
+
+1/8 VM to shadow map
+
+dla dowolnego adresu addr, ma on odzwierciedlenie w shadow map (addr>>3 + offset) gdzie offset = pierwszy adres z wolna pamiecia
+
+k w shadow map oznacza, ze pierwsze k bajtow sa dostepne, 0 < k < 7
+dla 0 - 8 bajtow dostepnych
+dla k ujemnego - wszystkie bajty sa niedostepne (rozne liczby ujemne oznaczaja rozne regiony pamieci, ktore sa niedostepne (heap redzone,stack redzones,global redzones, freed memory)
+
+shadowAddr = (Addr >> 3) + Offset;
+k = *ShadowAddr;
+if (k != 0 && ((Addr & 7) + AccessSize > k))
+    ReportAndCrash(Addr);
+
+nie korzysta sie z instrumentacji dla lokalnych stosow (np w petli for)

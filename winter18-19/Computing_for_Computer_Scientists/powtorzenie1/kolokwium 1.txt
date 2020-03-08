@@ -1,0 +1,123 @@
+LISTA I
+
+	touch - tworzy plik
+
+	mkdir - tworzy folder
+
+	ls - wyświetla liste plikow/folderoe
+	   -l - wyswietla dokladne informacje o plikach i folderach
+	   -a - nie ignoruje plikow zaczynajacych sie .
+	   -al - a+l
+	   -R -pozwala przeszukac wszystkie podkatalogi w danym pliku
+
+	wget - pobiera plik z danej strony
+
+	cat plik - czyta pliki
+	    plik1 > plik2 - zapisuje to co odczytal z plik1 w pliku2
+	    	  >>      - pozwala nadpisac plik
+
+	more - jesli plik jest duzy pozwala na otworzenei go  w terminalu i samemu sie przewija na dol
+
+	less - to samo co more tylko mozna przewijac do gory
+
+	nano - pozwala edytowac tekst w terminalu
+
+	rm - usuwa podany plik
+
+	rm -r - rekurencyjnie usuwa wszystko co znajduje sie w danym katalogu
+
+	man komenda - pozwala zajrzec do dokumentacji danej komeendy
+
+	sleep - 
+
+	history - historia uzywanych komend
+
+	alias skrocona nazwa='komenda'	- pozwala na tworzenie wlasnych komend //alias jest tymczasowy dla danej sesji, jesli chcemy to zmienic nalezy zapisac go w folderze bashrc-plik konfigurujacy 	warstwy
+	unalias - pozwala usunac alias
+
+LISTA II
+
+	mkdir -p - pozwala tworzyc wiele folderow naraz x/{a,b,c} - w folderze x pojawi sie folder a,b i c
+
+	time - wyswietla czas pomiedzy wywolanie, a wykonaniem, ile to zajelo cpu uzytkownika, ile to zajelo cpu systemu
+
+	touch a/x a/b/x tworzy plik x w podfolderze a/ i podfolderze a/b/
+
+	screen - pozwala na uruchomieniu procesu w jakiejs warstwie, wyjsc z niej za pomoca ctrl+a +d 
+	       -r - pozwala na powrot do sesji
+	       -ls/-list - wyswietla uruchomione sesje
+	       ctr+d ctrl+d pozwala wyjsc z screena
+
+	tar -czvf name-of-archive.tar.gz /path/to/directory-or-file -kompresja w gzipie
+
+	tar -cjvf archive.tar.bz2 stuff - kompresja w bzip
+
+	bunzip2 ostechnix.txt.bz2	dekompresja bzip
+
+	gunzip ostechnix.txt.gz		dekomprezja gzip
+
+
+LISTA III
+	
+	ssh-keygen - powzwal na wygenerowanie klucza dostepu	
+
+	plik etc/passwd zawiera informacje na temat wszystkich uzytkownikow, ktorzy za zarejestrowani w systemie unix
+
+	w - pokazuje kto jest aktualnie zalogowany i co robi
+
+	last - ostatnio zalogowani uzytkownicy
+
+	who -b - ostatni restart komputera
+
+	chmod 777 plik - sluzy do zmiany ustawien prawd dostepu dla uzytkownika, grup, wszystkich
+
+	ln plik hardlink  - hard link jest to te sam plik, zawiera on dane
+
+	ln -s /path/to/file /path/to/symlink - tworzy symlink dzieki czemu na poczatku chmod powstaje l // symboliczny jest podobny do skrotu jesli plik zostanie usuniety to symlink staje sie bezuzyteczny
+
+LISTA IV
+
+	ps -eF -wszystkie procesy z dokładnym opisem
+	
+	sleep 3600 & - uruchamia proces w tle  wpodwarstwie (wyświetla numer procesu), jeśli terminal zostanie zamknięty proces zostanie zabity
+
+	nohup sleep 3600 &  -dziala po wyjsciu z warstwy/wylogowaniu sie użytkownika.
+
+	sleep 3600	- zatrzymuje sie
+
+	ps -eF -wszystkie procesy z dokładnym opisem
+
+	grep ^user - tam gdzie wyjście zaczyna się od nazwy uzytkownika
+
+	jobs	- wszystkie procesy w terminalu, ktore nie zostaly zakonczone
+
+	bg - wznawia zatrzymane procesy w tle
+
+	fg - wznawia proces w terminalu
+	
+	grep -r -L 'good' /usr/share/* | grep 'right$'| xargs cat >>wszystkie	-wszystkie pliki w w katalogu usr/share (-r rekurencyjnie), które nie zawieraja 'good' (-L), ktore koncza sie na 'right'($) xargs - tworzy z tych lini wejscie , nadpisz do pliku wszystkie
+
+	grep -c '\*Julia\.\*' Julia.txt  - w pliku Julia.txt liczy (-c) wyrazenia  *Julia.*
+	grep -c '\*.*\.\*' Julia.txt     - to samo tylko wyrazenia *jakiesslowo.*
+	grep -o '\*.*\.\*' Julia.txt | sort | uniq	wyswietla tylko pasujace Imiona, po czym sortuje i wypisuje tak, aby sie nie powtarzalo
+	grep -o '\*.*\.\*' Julia.txt | sort | uniq -c | sort -n -r	to samo tylko przy tym, aby sie nie powtarzalo zlicza(-c) je, sortuje numerczynie(-n), od najwiekszej do najmniejszej (-r)
+	
+LISTA V
+
+	wget -m http://www.ii.uni.wroc.pl/~piotrek/pwi	-pobiera rekurencyjnie to samo co -r
+	
+	file plik - determinuje typ pliku
+	
+	iconv -f ISO-8859-2  -t UTF-8 shout1.txt  > shout5.txt - konwertuje plik z jednego kodowania (-f) do innego (-t)
+	
+	grep -x  '^\[.*].*\:.*' dane.txt > odp - wypisuje tylko calkowite linie(-x), ktore zaczynaja sie (^) od [ (\[) pozniej maja jakies slowo(.*) ] ciag znakow : (\:), a pozniej tez jakis ciag znakow(nie jest to potrzebne akurat)
+	
+	grep -x -E '^\[.*].*\:.*([a-zA-Z]{3}).*\1.*\1' dane.txt
+	
+	grep -E -o "\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\b" dane.txt - rozszerzone wyrazenie regularne (-E), tylko pazuja slowa (-o) jest to poczatek slowa (\b) wystepuja przynajmniej jeden raz znaki z nawiasow(+) wystepuje @ pozniej tak samo znaki pozniej . (\.) oraz koncowska storny internetowej koniec slowa (\b)
+
+
+http://icis.pcz.pl/~dyja/pliki/SP/wyklad04.pdf -o grepie
+
+
+

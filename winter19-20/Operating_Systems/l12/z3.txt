@@ -1,0 +1,17 @@
+A) Blad wykonania w 5 i 12
+	Producent juz cos umiescil
+	Klient dochodzi do 14 linijki jest prawdziwa
+		chce przejsc do wakeup, ale zostaje wywlaszczony
+	Producent zapelnia kolejke, a pozniej wykonuje sleep()
+	Klient wysyla wakeup
+	Producent zapelnia kolejke
+
+Na odwrot podobnie.
+
+B) Zakleszczenie w liniach 5 i 12
+	producent zapelnia kolejke
+	producent sprawdza czy jest pelny -> True
+		wiec chce przejsc do instukcji sleep, ale zostaje wywlaszczony
+	wtedy klient oproznia cala kolejke
+		sprawdza warunek czy jest pust -> True
+	oba zasypiaja

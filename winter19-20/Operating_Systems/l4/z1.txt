@@ -1,0 +1,37 @@
+The real user ID, real group ID and	other group IDs	of the new process image remain the same as the calling process image.
+
+ The new process also inherits the following attributes from the calling
+ process:
+
+   process ID		see getpid(2)
+   parent process ID	see getppid(2)
+   process group ID	see getpgrp(2)
+   access groups	see getgroups(2)
+   working directory	see chdir(2)
+   root	directory	see chroot(2)
+   control terminal	see termios(4)
+   resource usages	see getrusage(2)
+   interval timers	see getitimer(2)
+   resource limits	see getrlimit(2)
+   file	mode mask	see umask(2)
+   signal mask		see sigaction(2), sigprocmask(2)
+
+
+File descriptors open in the calling process image	remain open in the new process image, except for those for which the close-on-exec flag is set. file 0, 1, 2 zostaja otwarte jesli zostaly zamkniete
+
+ Signals set to be ignored in the calling process are set to be ignored in
+     the new process.  Signals which are set to	be caught in the calling
+     process image are set to default action in	the new	process	image.
+     Blocked signals remain blocked regardless of changes to the signal	ac-
+     tion.  The	signal stack is	reset to be undefined
+Sygnał  SIHCHLD  (jeżeli  jest ustawiony na SIG_IGN) może, ale nie musi
+       być przestawiony na SIG_DFL
+
+
+set-uid/set-gid -  pozwalają na uruchomienie pliku wykonywalnego z prawami właściciela/grupy tego pliku oraz zmieniają działanie niektórych operacji na katalogach
+
+cd /usr/bin
+ls -al | grep '\-..s...... '
+ls -al | grep '\-.....s... '
+
+Obraz procesu - przestrzen, kontekst, inaczej PCB + przestrzen adresowa!!!!!

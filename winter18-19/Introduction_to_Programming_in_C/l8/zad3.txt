@@ -1,0 +1,31 @@
+Spacer po słowach. Mając daną listę słów tej samej długości a także słowo początkowe i końcowe napisz program, który znajdzie najmniejszą potrzebną liczbę przejść od słowa początkowego do końcowego. Przejście pomiędzy parą słów jest możliwe, jeśli różnią się dokładnie jednym znakiem. 
+
+Wejście: W pierwszej linii znajduje się liczba n (n ⩽ 10000) oznaczająca wielkość słownika. Następnie znajduje się n wyrazów (długości ⩽ 32) oddzielonych spacją oznaczających kolejne elementy słownika. Każdy wyraz składa się jedynie z wielkich liter alfabetu łacińskiego. W ostatnim wierszu znajdują się 2 słowa, należące do słownika, oddzielone spacją oznaczające kolejno słowo początkowe i końcowe.
+
+Wyjście: Liczba oznaczająca najmniejszą ilość potrzebnych przejść ze słowa początkowego do końcowego, lub -1 w taka nie istnieje.
+
+Przykład 1:
+
+4
+AA BA AB BB
+AA BB
+
+Wynik 1:
+
+2
+
+Wyjaśnienie:
+
+Przykładowe przejście to: AA -> AB -> BB
+
+ 
+
+Przykład 2:
+
+4
+ABCD EFGH IJKL MNOP
+ABCD MNOP
+
+Wynik 2:
+
+-1

@@ -1,0 +1,48 @@
+\documentclass[a4paper]{article}
+% Kodowanie latain 2
+%\usepackage[latin2]{inputenc}
+\usepackage[T1]{fontenc}
+% Można też użyć UTF-8
+\usepackage[utf8]{inputenc}
+\usepackage{filecontents,listings,graphicx,varwidth}% http://ctan.org/pkg/{filecontents,listings,graphicx,varwidth}
+% Język
+\usepackage[polish]{babel}
+% \usepackage[english]{babel}
+
+% Rózne przydatne paczki:
+% - znaczki matematyczne
+\usepackage{amsmath, amsfonts}
+% - wcięcie na początku pierwszego akapitu
+\usepackage{indentfirst}
+% - komenda \url 
+\usepackage{hyperref}
+% - dołączanie obrazków
+\usepackage{graphics}
+% - szersza strona
+\usepackage[nofoot,hdivide={2cm,*,2cm},vdivide={2cm,*,2cm}]{geometry}
+\frenchspacing
+% - brak numerów stron
+\pagestyle{empty}
+
+% dane autora
+\author{Wiktor Pilarczyk, UT: 923434620}
+\title{Przykładowy plik w systemie \LaTeX}
+\date{\today}
+
+% początek dokumentu
+\begin{document}
+\maketitle
+\section{Polecenie ID}
+Wyświelta rzeczywiste ID użytkownika, aktualnie zalogowanego (UID), unikalny numer przypisany do danego użytkownika w systemie) oraz  grupy do niego przypisanej(GID). Reszta to są grupy do, których użytkownik należy wraz z ich numerami.
+\section{Czas Unixowy}
+Jest to system używany do opisywania daty. Polega na liczbie sekund, która upłyneła od 1 stycznia 1970 roku. Problem roku 2038 polega na tym, że w systemach gdzie ta liczba jest trzymana przez 32 bity, dnia 19 stycznia 2038 roku o godzinie 3:14:08, liczba przekroczy zakres 2147483647 ($2^{31}-1$).
+\section{Wielokrotna Kompilacja}
+Pierwsze kompilacja aktualizuje referencje, a druga umieszcza referencje.
+\section{ASCII ART}
+Obrazek:\\
+:~~~~\slash\textbackslash\_\slash\textbackslash ~~~ (\\
+:~~~(~\^ ~.~ \^~)~\_)\\
+:~~~~~~\textbackslash " \slash ~~~~(\\
+:~~~(~~|~~~|~~~)\\
+:~(\_\_d~b\_\_)\\
+\end{document}

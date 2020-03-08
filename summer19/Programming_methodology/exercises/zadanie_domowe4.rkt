@@ -1,0 +1,112 @@
+#lang racket
+
+(require rackunit)
+
+(define (merge x y)
+  (define (it x y z)
+    (cond
+      [(and (null? x) (null? y)) (reverse z)]
+      [(null? x) (it x (cdr y) (append (list (car y)) z))]
+      [(null? y) (it (cdr x) y (append (list (car x)) z))]
+      [(< (car x) (car y)) (it (cdr x) y (append (list (car x)) z))]
+      [else (it x (cdr y) (append (list (car y)) z))]))
+  (it x y null))
+
+(define (split x)
+  (define (it x y n)
+    (if (> n 0)
+      (it (cdr x) (append (list (car x)) y) (- n 1))
+      (cons (reverse y) x)))
+  (it x null (/ (length x) 2)))
+
+(define (merge-sort x)
+  (cond
+    [(< (length x) 2) x]
+    [else (let [[p (split x)]]
+            (merge (merge-sort (car p)) (merge-sort (cdr p))))]))
+
+(define split-test
+  (test-suite
+   "Test of spliting list"
+   (check-equal? (list 1 2 3 4 5 6 7) (append (car (split (list 1 2 3 4 5 6 7))) (cdr (split (list 1 2 3 4 5 6 7))))
+                 "Split works correctly for odd list")
+   
+   (check-equal? (list 1 2 3 4 5 6) (append (car (split (list 1 2 3 4 5 6))) (cdr (split (list 1 2 3 4 5 6))))
+                 "Split works correctly for even list")
+   (check-equal? (list) (append (car (split (list))) (cdr (split (list))))
+                 "Split works correctly for empty list")
+   (test-case
+    "Type match"
+    (let ((r (split (list 1 2 3 4 5 6 7))))
+      (check-equal? (pair? r) true)
+      (check-equal? (list? (car r)) true)
+      (check-equal? (list? (cdr r)) true)))
+   
+   (test-case
+    "Type match"
+    (let ((r (split (list 1 2 3 4 5 6))))
+      (check-equal? (pair? r) true)
+      (check-equal? (list? (car r)) true)
+      (check-equal? (list? (cdr r)) true)))
+
+   (test-case
+    "Type match"
+    (let ((r (split (list))))
+      (check-equal? (pair? r) true)
+      (check-equal? (list? (car r)) true)
+      (check-equal? (list? (cdr r)) true)))))
+
+(define merge-test
+  (test-suite
+   "Test of merging list"
+   (check-equal? (list 1 2 3 4 5 6 7) (merge (list 1 2 4 6) (list 3 5 7))
+                 "Merge works correctly for odd list")
+   
+   (check-equal? (list 1 2 3 4 5 6) (merge (list 4 5 6) (list 1 2 3))
+                 "Merge works correctly for even list")
+   (check-equal? (list) (merge (list) (list))
+                 "Merge works correctly for empty list")
+   (test-case
+    "Type match"
+    (let ((r (merge (list 1 2 4 6) (list 3 5 7))))
+      (check-equal? (list? r) true)))
+   
+   (test-case
+    "Type match"
+    (let ((r (merge (list 4 5 6) (list 1 2 3))))
+      (check-equal? (list? r) true)))
+
+   (test-case
+    "Type match"
+    (let ((r (merge (list) (list))))
+      (check-equal? (list? r) true)))))
+
+
+(define merge-sort-test
+  (test-suite
+   "Test of merge-sorting list"
+   (check-equal? (list 1 2 3 4 5 6 7) (merge-sort (list 3 1 2 5 7 4 6))
+                 "Merge-sort works correctly for odd list")
+   
+   (check-equal? (list 1 2 3 4 5 6) (merge-sort (list 6 5 4 3 2 1))
+                 "Merge-sort works correctly for even list")
+   (check-equal? (list) (merge-sort (list))
+                 "Merge-sort works correctly for empty list")
+   (test-case
+    "Type match"
+    (let ((r (merge-sort (list 3 1 2 5 7 4 6))))
+      (check-equal? (list? r) true)))
+   
+   (test-case
+    "Type match"
+    (let ((r (merge-sort (list 6 5 4 3 2 1))))
+      (check-equal? (list? r) true)))
+
+   (test-case
+    "Type match"
+    (let ((r (merge-sort (list))))
+      (check-equal? (list? r) true)))))
+
+(run-test split-test)
+(run-test merge-test)
+(run-test merge-sort-test)

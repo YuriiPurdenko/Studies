@@ -1,0 +1,24 @@
+ZAD 1
+    ścieżka absolutna - 
+
+    ścieżka relatywna -
+
+    ścieżka znormalizowana
+
+    punkty motażowe -
+
+ZAD 2
+atomowe operacje - Atomic operations are program operations that run completely independently of any other processes.
+
+dowiązania twarde -
+
+dowiązania symboliczne -
+
+potok - jednokierunkowe (klasyczny Unix i Linux) lub dwukierunkowe (FreeBSD, MacOS) strumieniowe przesyłanie danych z buforowaniem w jądrze.
+    Potoki zachowują się przy odczycie jak zwykłe pliki→ short count tylko, jeśli nie ma więcej danych.Przy zapisie jest ciekawiej, do długości zapisu PIPE_BUF write dopisuje do bufora atomowo, tj. w jednym kroku.
+
+przekierować - 
+
+zmiana kotnekstu -
+
+wielozadaniowość kooperacyjna (cooperative multitasking) - 

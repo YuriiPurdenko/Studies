@@ -1,0 +1,8 @@
+using Plots
+using Printf
+pyplot()
+f(x) = cos.(x)
+
+x = LinRange(0.0, 2*pi, 1000);
+plot(x, f.(x), color="blue", linewidth=3.0, linestyle=:dash, 
+    title="\$f(x)=\\cos(x)\$", legend=false, xlabel="\$x\$")

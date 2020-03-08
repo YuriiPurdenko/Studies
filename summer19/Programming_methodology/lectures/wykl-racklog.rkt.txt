@@ -1,0 +1,108 @@
+#lang racket
+
+(require racklog)
+
+;; Relacje rodzinne
+
+(define %ojciec
+  (%rel ()
+        [('andrzej 'błażej)]
+        [('andrzej 'beata)]
+        [('błażej 'czarek)]
+        [('czarek 'damian)]))
+
+;; możemy Racketowi zdać pytanie:
+;; > (%which (x) (%ojciec 'andrzej x))
+;; a potem poprosić o więcej
+;; > (%more)
+
+(define %dziadek
+  (%rel (x y z)
+        [(x z)
+         (%ojciec x y)
+         (%ojciec y z)]));;
+
+(define %rodzenstwo
+  (%rel (x y z)
+        [(x y)
+         (%ojciec z x)
+         (%ojciec z y)]))
+
+(define %przodek
+  (%rel (x y z)
+        [(x y)
+         (%ojciec x y)]
+        [(x y)
+         (%ojciec x z)
+         (%przodek z y)]))
+
+(define %jest-w-rodzinie
+  (%rel (x)
+        [('andrzej)]
+        [(x)
+         (%przodek 'andrzej x)]))
+
+(define %jest-ojcem
+  (%rel (x)
+        [(x)
+         (%ojciec x (_))]))
+
+;; Programowanie logiczne
+
+(define %elem-pary
+  (%rel (x)
+        [(x (cons x (_)))]
+        [(x (cons (_) x))]))
+
+(define %car
+  (%rel (x)
+        [(x (cons x (_)))]))
+
+(define %swap
+  (%rel (x y)
+        [((cons x y) (cons y x))]))
+
+(define %elem-listy
+  (%rel (x y xs)
+        [(x (cons x (_)))]
+        [(x (cons y xs))
+         (%elem-listy x xs)]))
+
+(define %append
+  (%rel (x xs ys zs)
+        [(null ys ys)]
+        [((cons x xs) ys (cons x zs))
+         (%append xs ys zs)]))
+
+;; Arytmetyka i komunikacja z Racketem
+
+(define %len
+  (%rel (n x xs m)
+        [(null 0)]
+        [((cons x xs) n)
+         (%len xs m)
+         (%is n (+ 1 m))]))
+
+(define %kwadrat
+  (%rel (x y)
+        [(x y)
+         (%is y (* x x))]))
+
+(define %insert
+  (%rel (x xs y ys zs)
+        [(x null (list x))]
+        [(x (cons y ys) (cons x (cons y ys)))
+         (%< x y)]
+        [(x (cons y ys) (cons y zs))
+         (%>= x y)
+         (%insert x ys zs)]))
+
+(define %insertion-sort
+  (%rel (x xs ys zs)
+        [(null null)]
+        [((cons x xs) zs)
+         (%insertion-sort xs ys) ; (*)
+         (%insert x ys zs)       ;
+         ]))
+
+;; (*) jeśli zamienimy te dwa wywołania miejscami, to co się stanie?

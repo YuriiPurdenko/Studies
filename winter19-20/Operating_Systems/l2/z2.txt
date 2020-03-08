@@ -1,0 +1,73 @@
+proc(5) - proc  jest  pseudosystemem plików przechowujacy informacje o procesach, który służy jako lepszy interfejs do struktur jądra. Zazwyczaj jest montowany w katalogu /proc.  Jest  on  w większości   przeznaczony   tylko   do  odczytu,  lecz  niektóre  pliki umożliwiają modyfikacje zmiennych jądr
+
+    Contains a hierarchy of special files which represent the current state of the kernel — allowing applications and users to peer into the kernel's view of the system. 
+    information detailing the system hardware and any processes currently running.
+    
+    /proc/ directory contains another type of file called a virtual file. It is for this reason that /proc/ is often referred to as a virtual file system. 
+    Most of them are listed as zero bytes in size. In addition, most of the time and date settings on virtual files reflect the current time and date(constantly updated).
+    
+    /proc/interrupts, /proc/meminfo provide an up-to-the-moment glimpse of the system's hardware. /proc/filesystems file and the /proc/sys/ directory provide system configuration information and interfaces.
+    Files containing  similar information topic are grouped into virtual directories and sub-directories.
+
+    Wiekszosc jest read-only, ale niektore pozwalaja zmieniac ustawienia jadra (/proc/sys/)
+
+
+                ls -al
+    
+/proc/[pid]/environ
+              This file contains the initial environment that was set when
+              the currently executing program was started via execve(2).
+              The entries are separated by null bytes ('\0'), and there may
+              be a null byte at the end.
+
+                cat environ | tr '\000' '\n'
+
+/proc/[pid]/cmdline
+              This read-only file holds the complete command line for the
+              process, unless the process is a zombie.  In the latter case,
+              there is nothing in this file: that is, a read on this file
+              will return 0 characters.  The command-line arguments appear
+              in this file as a set of strings separated by null bytes
+              ('\0'), with a further null byte after the last string.
+
+                cat cmdline            
+
+/proc/[pid]/stats
+              Status information about the process.  This is used by ps(1).
+              It is defined in the kernel source file fs/proc/array.c.
+
+                 cat stat | tr ' ' '\n'            
+
+
+*3 State: Current state of the process.  One of "R (running)", "S (sleeping)", "D (disk sleep)", "T (stopped)", "T (tracing stop)", "Z (zombie)", or "X (dead)".
+
+*11 Groups: Supplementary group list./Wszystkie grupy uzytkownikow do ktorych ten uzytkownik nalezy
+
+*16 VmPeak: Peak virtual memory size. (Peak memory is the maximum amount of memory your process has used over its lifetime _/ najwyzsza liczba ile uzywalismy adresow pamieci/ najwieksze zuzycie przestrzenii adresowej
+
+*17 VmSize: Virtual memory size.(przestrzeni adresowej)
+
+*21 VmRSS: Resident set size.  Note that the value here is the sum of RssAnon, RssFile, and RssShmem.
+              * RssAnon: Size of resident anonymous memory.  (since Linux
+                4.5).
+
+              * RssFile: Size of resident file mappings.  (since Linux 4.5).
+
+              * RssShmem: Size of resident shared memory (includes System V
+                shared memory, mappings from tmpfs(5), and shared anonymous
+                mappings).  (since Linux 4.5).
+    RSS is the Resident Set Size and is used to show how much memory is allocated to that process and is in RAM.
+    It does not include memory that is swapped out. It does include memory from shared libraries as long as the 
+    pages from those libraries are actually in memory. It does include all stack and heap memory.
+    Ta czesc procesu, ktora faktycznie rezyduje w pamieci ram
+
+*32 Threads: Number of threads in process containing this thread.
+
+*46,47 voluntary_ctxt_switches, nonvoluntary_ctxt_switches: Number
+                of voluntary and involuntary context switches (since Linux
+                2.6.23).
+    A voluntary context switch occurs whenever a thread must await the availability of a resource or the arrival of an event. Wywolywane poprzez SYSCALLe
+
+    An involuntary context switch takes place when a thread executes for the duration of its time slice or when the system identifies a higher-priority thread to run. Wywlaszczone przez scheduler. 
+
+tr - translate characters

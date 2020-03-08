@@ -1,0 +1,5 @@
+Nalezy skompilowac gre za pomoca make. (Mozna usunac niepotrzebne pliki za pomoca make clean).
+
+Nadać ustawienia dosßepu plikom .zapis4.txt .zapis6.txt .zapis8.txt .AtoB .BtoA za pomocą komendy "chmod 777 nazwa_pliku".
+
+Nastepnie uruchomic program final z odp parametrem A/B w zaleznosc, ktorym graczem chce sie rozpaczac rozgrywke. Instrukcja gry znajduje sie w menu.

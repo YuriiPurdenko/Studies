@@ -1,0 +1,30 @@
+X-serwer jest serwerem dla programow, pozwalajacym wyswietlacz rzeczy graficzne
+
+/proc/[pid]/maps
+      A file containing the currently mapped memory regions and
+      their access permissions.  See mmap(2) for some further infor‐
+      mation about memory mappings.
+
+
+On Unix-like operating systems, Xorg is the executable of the X Window System server, developed by the X.org foundation.
+
+    pidof Xorg
+
+The pmap command reports the memory map of a process or processes.
+
+    pmap -X [PID]
+
+stack - labeled
+anon - anonymous memory
+heap - labeled
+Read/write data segment(.data, .bss)
+Read-only code segment( .rodata, .init, .text,)
+pliki odwzorowane w pamiec - np. biblioteki
+
+Address: start address of map
+Kbytes: size of map in kilobytes
+RSS: resident set size in kilobytes
+Dirty: dirty pages (both shared and private) in kilobytes
+Mode: permissions on map: read, write, execute, shared, private
+Mapping: file backing the map, or '[ anon ]' for allocated memory, or '[ stack ]' for the program stack
+

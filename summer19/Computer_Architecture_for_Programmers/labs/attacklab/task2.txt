@@ -1,0 +1,3 @@
+W pole odpowiedzi wpisz linie tekstu, które zostaną skonwertowane programem «hex2raw» do postaci binarnej i wpisane na standardowe wejście programu «ctarget», aby wykorzystać jego podatność.
+
+Każdą linię tekstu musi poprzedzać komentarz zaczynający się znakami "/*" i kończący "*/" wyjaśniający co koduje następna linia składająca się z bajtów zapisanych jako liczby w systemie szesnastkowym.

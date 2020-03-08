@@ -1,0 +1,22 @@
+make
+./mkholes
+stat -c=%b,%B,%s holes.bin
+du -s holes.bin
+
+Non-zero blocks: 138
+
+rozmiar bloków w bajtach: 512
+rozmiar pliku w bajtach: 33 550 336
+
+liczba bloków alokowanych: 1112 
+suma rozmiaru bloków alokowanych: 569 344
+różnica z alokowanymi: 32 980 992
+
+// to jest to samo co wyzej bo du mowi o blokach rozmiaru 1024 bajtow!!
+liczba blokow uzywanych: 556
+suma rozmiaru bloków alokowanych: 284 672
+roznica z blokami uzywanymi: 33 265 664 //blad!
+
+liczba  używanych  bloków  jest  mniejsza  od  tej  wynikającej  z  objętości  pliku - ponieważ większa część dziur nie jest trzymana w pamięci, lecz jeśli, ktoś chcę uzyskać dostęp do dziury 'sztucznie' system plikow kreuje strone wypelniona zerami
+
+Czemu jest większa od liczby faktycznie używanych bloków zgłaszanych - 

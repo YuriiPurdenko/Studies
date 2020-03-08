@@ -1,0 +1,54 @@
+I CZESC
+
+Unix has trouble integrating software objects with operations that don't fit neatly into the byte stream or file repertoire of operations (create, open, read, write, delete).
+
+wymusza uzywanie brzydkiego ioctl do obslugi grafiki/gui
+
+Fani Macintosha sa za tym, aby a single filename may have both data and resource ‘forks’, the data fork corresponding to the Unix byte stream and the resource fork being a collection of name/value pairs.
+
+Partyzanci uniksowi - kazdy plik sam sie opisywal/ posiadal wlasne metadane
+praktyczny problem z ochrona metadanych
+problem kiedy zmieniac metadane np uzywajac cat'a?
+    rodzi kolejne pytanie czy atrybuty sa wlasciwosciami nazw plikow czy powiazane z danymi pliku jako rodzaj niewidocznej preambuly/postambuly
+stawia kolejne pytanie, ktore operacje powoduja ze te wlasciwosci sa widoczne 
+
+proba byl system plików Xerox PARC, ktory pozwalal zwracac strumien bajtow zawierajacych atrybuty i tresc
+
+Linux 2.5 juz obsluguje dolaczanie wlasciwosci, ale nie jest to za bardzo uzywane
+
+
+fork is a set of data associated with a file-system object
+
+resource fork stores information in a specific form, containing details such as icon bitmaps, the shapes of windows, definitions of menus and their contents, and application code
+
+The presence of a resource fork makes it easy to store a variety of additional information, such as allowing the system to display the correct icon for a file and open it without the need for a file extension in the file name.
+
+access to the resource fork works more like extracting structured records from a database.
+
+The resource fork is sometimes used to store the metadata of a file, although it can also be used for storing the actual data, as was the case with font files in the classic Mac operating systems. 
+
+II CZESC
+
+    Extended attributes are name:value pairs associated permanently with
+       files and directories,
+
+     Extended attributes are accessed as atomic objects.
+ 
+    Space consumed for extended attributes may be counted towards the
+       disk quotas of the file owner and file group.
+
+    Extended attributes (xattrs) are typically stored in a separate data block on the disk and referenced from inodes via inode.i_file_acl*. 
+
+     two places where extended attributes can be found. The first place is between the end of each inode entry and the beginning of the next inode entry.
+
+     The second place where extended attributes can be found is in the block pointed to by inode.i_file_acl. As of Linux 3.11, it is not possible for this block to contain a pointer to a second extended attribute block (or even the remaining blocks of a cluster). In theory it is possible for each attribute's value to be stored in a separate data block, though as of Linux 3.11 the code does not permit this. 
+
+wget --xattr https://skos.ii.uni.wroc.pl/pluginfile.php/28824/mod_resource/content/0/so19_lista_6.pdf
+
+getfattr -d so19_lista_6.pdf
+
+user.xdg.referrer - The address of the webpage where a person clicked a link that sent them to your page.
+
+user.xdg.origin.url: Set on a file downloaded from a url. Its value should equal the url it was downloaded from.
+
+setfattr -n user.md5sum -v $(md5sum so19_lista_6.pdf | cut -c 32) so19_lista_6.pdf

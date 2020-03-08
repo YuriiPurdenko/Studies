@@ -1,0 +1,57 @@
+\documentclass{beamer}
+\usetheme{Warsaw}
+\title[Future]{My Presentation}
+\subtitle{Using Beamer}
+\author{Wiktor Pilarczyk}
+\institute{University of Wroclaw}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section{Subjects - summer}
+\subsection{List}
+
+\begin{frame}
+\frametitle{My Summer Subjects}
+\begin{enumerate}[(I)]
+\item<1-> Analiza II
+\item<2-> Algebra I
+\item<3-> Metody Programowania
+\item<4-> Topologia
+\item<5-> Systemy Operacyjne
+\end{enumerate}
+\end{frame}
+
+\subsection{Table}
+\begin{frame}
+\frametitle{Table}
+\begin{table}
+\begin{tabular}{l | c | c | c }
+Subject & Lecture hours & Exercieses hours & ECTS\\
+\hline \hline
+Analiza II & 60 & 60 & 10 \onslide<2-> \\
+Algebra I & 45 & 45 & 8  \onslide<3->\\
+Metody Programowania & 45 & 45+30 & 9\onslide<4->\\
+Topologia & 30 & 30 & 6 \onslide<5->\\
+Systemy Operacyjne & 30 & 30 & 6
+\end{tabular}
+\caption{Subject comparison}
+\end{table}
+\end{frame}
+
+\section{Graphic}
+\begin{frame}
+\frametitle{Graphic}
+\begin{figure}
+\includegraphics[width=0.3\textwidth,natwidth=20,natheight=20]{tlo.jpeg}
+\caption{tlo}
+\end{figure}
+\end{frame}
+
+
+
+\end{document}

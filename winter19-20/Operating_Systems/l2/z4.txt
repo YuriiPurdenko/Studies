@@ -1,0 +1,89 @@
+Lsof - lists on its standard output file information about files opened by processes
+    An  open file may be a regular file, a directory, a block special file, a character special file, an executing text  reference,  a  library,  a stream  or  a  network  file  (Internet socket, NFS file or UNIX domain socket.) 
+    c firefox - selects	 the listing of	files for processes executing the command that begins with the characters of firefox
+diff - roznica
+    u - unified pokazuje wszystko/+ dodane / - tych ktorych nie ma juz
+    
+     lsof -c firefox
+    lsof -c firefox > before.txt
+    lsof -c firefox > after.txt
+    diff -u before.txt after.txt
+
+
+FD is the File Descriptor number of the file or:
+
+   cwd  current working directory;      przy sciezce wzglednej /a/b = cwd/a/b
+   Lnn  library references (AIX);
+   err  FD information error (see NAME column);
+   jld  jail directory (FreeBSD);
+   ltx  shared library text (code and data);
+   Mxx  hex memory-mapped type number xx.
+   m86  DOS Merge mapped file;
+   mem  memory-mapped file;             plik odwzorowany na pamiec
+   mmap memory-mapped device;
+   pd   parent directory;
+   rtd  root directory;                 jesli bedziemy robic sciezke absolutna to np a/b = rtd/a/b
+   tr   kernel trace file (OpenBSD);
+   txt  program text (code and data);   plik programu
+   v86  VP/ix mapped file;
+
+TYPE is the type of the node associated with the file - e.g., GDIR, GREG, VDIR, VREG, etc.
+
+    REG - pliki zwykłe
+    DIR - katalogi
+
+    or ``IPv4'' for an IPv4 socket;
+    or ``ax25'' for a Linux AX.25 socket;
+    or ``inet'' for an Internet domain socket;
+    or ``rte'' for an AF_ROUTE socket;
+    or ``sock'' for a socket of unknown domain;
+    or ``unix'' for a UNIX domain socket;
+    or ``x.25'' for an HP-UX x.25 socket;
+
+    or ``PIPE'' for pipes;
+    or ``PORT'' for a SYSV named pipe;
+
+SIZE, SIZE/OFF, or OFFSET
+                  is the size of the file or the file offset in bytes.
+
+NODE        inaczej identyfikator pliku dyskowego       
+            is the node number of a local file;
+            or the inode number of an NFS(Network File System) file in the server host;
+            or the Internet protocol type - e.g, ``TCP'';
+            or ``STR'' for a stream;
+            or ``CCITT'' for an HP-UX x.25 socket;
+            or the IRQ or inode number of a Linux AX.25 socket device.
+ 
+DEVICE     contains the device numbers, separated by commas, for a
+                  character special, block special, regular, directory or
+                  NFS file;
+
+                  or ``memory'' for a memory file system node under Tru64
+                  UNIX;
+
+                  or the address of the private data area of a Solaris
+                  socket stream;
+
+                  or a kernel reference address that identifies the file
+                  (The kernel reference address may be used for FIFO's, for
+                  example.);
+
+                  or the base address or device name of a Linux AX.25 socket
+                  device.
+
+                  Usually only the lower thirty two bits of Tru64 UNIX
+                  kernel addresses are displayed.
+
+
+
+FD - file descripto
+    ID zasobu plikopodobnego
+        -plik regularny
+        -potok
+        -gniazda
+        -urzadzenia (BLK & CHR)
+        -katalogi
+         (dowiazania symb)
+
+lsof - c firefox | grep ICP
+lsof - c firefox | grep TCP

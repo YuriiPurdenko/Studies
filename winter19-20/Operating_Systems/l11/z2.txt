@@ -1,0 +1,3 @@
+sytuacja wycigu - race condition - kiedy dwa lub wieksza liczba procesow czytaja i zapisuja wspoldzielone dane, a rezultat zalezy od tego ktory proces i kiedy bedzie dziala
+
+Wynik zalezy od przeplotu programu/procesu

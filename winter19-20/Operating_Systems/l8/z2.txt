@@ -1,0 +1,13 @@
+Fragmentacja zewnetrzna - wystepuje kiedy suma blokow wolnych jest wystarczajaca, aby zzalokowac obiekt, ale nie sa obok siebie, przez co nie mozna ich uzyc
+
+Fragmentacja wewnetrzna - wtedy kiedy zostaje zaalokowany blok, który jest większy od "potrzebowanej" pamięci (nazywa sie wewnetrzna, poniewaz pamiec jest marnowana  w srodku zaalokowanych blokow)
+    np alignment, albo specjalne nie usinanie remaindera
+
+
+
+Nie mozna stosowac komapktowania, poniewaz program korzysta do wskaznikow pamieci przez co teoretycznie musielibysmy tez zmieniac zmienne w programie co jest niemozliwe, poniewaz jesli stosowalibysmy jakies punkty odniesienia od adresu to mamy problem.
+
+
+Przyczyny fragmentacji zewnetrznej:
+    -deallokujemy pamiec, ale jej sasiadow nie  :(
+    -przez zmiany w jaki sposob program korzysta z pamieci (np. deallokacja duzej liczby malych obiektow, a allokuje duze obiekty)

@@ -1,0 +1,48 @@
+#ZAD 1
+
+git clone https://github.com/iiuwr18/quicksort17.git
+cd quicksort17
+git checkout 69b523
+swipl quicksort.pl tests.pl
+git checkout HEAD~1
+swipl quicksort.pl tests.pl
+git checkout HEAD~1
+swipl quicksort.pl tests.pl
+git checkout master
+git revert 9fdaf3f
+nano quicksort.pl
+git add quicksort.pl
+git commit -m 'poprawiony program'
+git push
+
+#ZAD 2
+
+git clone https://github.com/iiuwr18/lista10-wiklam.git
+cd lista10-wiklam
+touch ulubiony-film.txt
+nano ulubiony-film.txt
+git add ulubiony-film.txt
+git commit -m "Dodanie ulubiony-film.txt do branch ja"
+git rebase -i ja~2
+nano o-mnie.txt
+git add o-mnie.txt
+git commit --amend
+git rebase -i HEAD~2
+git checkout master
+git log --graph --abbrev-commit --decorate 
+git cherry-pick ...
+git merge origin/komputer
+git log --graph --abbrev-commit --decorate 
+git checkout cos
+nano ulubiony-film.txt
+git add ulubiony-film.txt
+git commit -m "Dodanie roku filmu do ulubionych-film.txt"
+git tag -a v0 -m "wersja 0"
+git log --graph --abbrev-commit --decorate 
+git checkout master
+git merge v0
+git push --all
+
+swipl quicksort.pl tests.pl
+quicksort([5,1,2], L)
+{'Pulpit/studia/pwi/l11/quicksort17'}

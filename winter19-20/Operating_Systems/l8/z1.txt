@@ -1,0 +1,4 @@
+sbrk zmienia rozmiar segmentu data, wiec jedyne co mozemy to tylko zwiekszac ten segment, wiec jesli np chcielisbysmy zwolnic pamiec to nie mamy takiej mozliwosci.
+
+Mmap i munmap maja ta wlasciwosc, ze mozemy allokowac dowolne wolne bloki oraz je "uwalniac". Jedynie jesli nie ma miejsca w pamieci, aby zzalokowac obiekt wtedy mmap nie moze nic zrobic, trzeba skorzystac z sbrk.
+

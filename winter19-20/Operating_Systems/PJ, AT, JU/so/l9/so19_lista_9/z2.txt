@@ -1,0 +1,24 @@
+Mamy 2^19 bajtow pamieci
+Nasze slowa maszynowa zajmuja 2^3 bajtow
+Chcemy, aby pamiec byla wyrownana do 16
+
+Poniewaz chcemy, aby nasza pamiec, byla wyrownana do 16, wiec najmniejszy blok jaki mozemy zzalokowac zajmowac bedzie 2 slowa maszynowe (header i 1 slowo maszynowe).
+Czyli dostepnych adresow mamy 2^19/2^4 co daje 2^15 (-1 gdyz "pierwszy bedzie zawieral metadane)
+
+Na poczatku naszej areny 1 slowo maszynowe zawiera wskaznik na header i footer wolnych blokow, jesli nie ma zadnych to sa skierowane na siebie albo NULL.
+
+Slowo maszynowe jest na tyle duze, ze mozna w nim przechowywac header (lub footer)  + bit czy jest zajety (dla wolnych blokow + wskaznik na poprzedni i nastepny wolny blok).
+
+Wolny blok
+Header jak i footer zajmuja po 15 bitow osobno(wynika z liczby adresow dostepnych do adresowania), bit czy jest zajety zajmjue 1 bit, a wskazniki podobnie jak footer i header po 15.
+Wiec sumarycznie metadane dla wolnego bloku pamieci zajmuje (15 + 15 + 1) + (15 + 15 + 1) = 62 bitow co jest podzielone dla dwoch slow maszynowych.
+
+Zajety blok
+w zajetym bloku bedziemy miec tylko header z wielkoscia naszego bloku oraz bitem ze jest zajety.
+
+W naszej arenie bedzie wystepowac alignment, aby wskaznik zwracany przez malloc byl podzielny przez 16.
+Wiec jesli mallocujemy n slow maszynowych, to jesli n jest parzyste to wystepuje allignemnt 1 slowa maszynowego
+
+uszkodzenia danych algorytmow mozna wyktyc podczas przeszukiwania listy wolnych blokow, jesli nie znajdziemy, odpowiadajacego bloku to powinnismy wskazywac na NULLA lub na roota, nie powinnismy "przechodzic" bloku 2 razy
+
+inne uszkodzenia mozna wykryc jesli zwolnimy cala pamiec to powinnismy miec jeden duzy blok o rozmiarze dostepnej przestrzeni adresowej

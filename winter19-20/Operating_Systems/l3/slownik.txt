@@ -1,0 +1,44 @@
+ZAD 1
+
+    Stany procesu
+
+    sen przerywalny - sleeping in memory if the process is in primary memory but is waiting for a event before continuing execution. For example,waiting for an I/O to complete, for a locked resource to be unlocked, or for a timer to expire. When the event occurs, a wakeup call is sent. If the reason for its sleep is gone, the process becomes runnable.
+
+     -Przerywalny jest to zablokowany stan, w ktorym proces czeka na 'event' 
+     np. I/O, dostęp do zasobów, sygnał od innego procesu
+
+    -Nieprzerywalny jest to zablokowany stan, w ktorym proces czeka 
+     na 'hardware conditions' przez co nie bedzie odbieral sygnalow
+     Uninterruptible sleep, processes that cannot be killed or interrupted with a signal,
+     usually to make them go away you have to reboot or fix the issue
+
+    zablokowac sygnal - mozna ustawić, aby blokować otrzymywanie, niektorych sygnalow
+     Blocking a signal means telling the operating system to hold it and deliver it later when it is unblocked.
+
+    zignorowac sygnal
+
+ZAD 2
+
+    kopiowanie przy zapisie -
+
+ZAD 4
+
+    Sygnały oczekujące
+
+ZAD 5
+    
+    Sieroty
+
+ZAD 7
+
+    Procedura obslugi sygnalow -
+
+    Bledy strony
+
+    Wirtualne strony
+
+    Pamiec wirtualna
+
+    Przechwycenie sygnalu
+
+    Wielobiezny

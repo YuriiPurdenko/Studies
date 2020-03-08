@@ -1,0 +1,39 @@
+Treść:
+
+Celem zadania jest wykrycie kolizji trójkątów poruszających się na płaszczyźnie, a dokładniej czy obecnie trójkąt (wraz z wnętrzem) przecina się z innym, a jeśli nie to czy w trakcie jednostki czasu dojdzie do kolizji z innym. Trójkąty stykające się wierzchołkiem przecinają się, a także jeśli bok jednego zawiera się w boku drugiego to także przecinają się.
+
+Na wejściu otrzymujemy w pierwszym wierszu liczbę n trójkątów (n<1000), a następnie w każdym wierszu jeden trójkąt w postaci 3 wierzchołków i wektora prędkości zadanych jako pary liczb całkowitych (współrzędne x i y). Czyli w każdym następnym wierszu mamy 8 liczb całkowitych oddzielonych spacjami. Wektor prędkości definiuje nam przesunięcie trójkąta w jednostce czasu.
+
+Na wyjściu w jednym wierszu zwracamy oddzielone spacjami n liczb oznaczające status dla każdego z trójkątów.  Liczby oznaczają:
+
+0 - trójkąt przecina się z innym
+1 - trójkąt nie przecina się i nie dojdzie do kolizji (w jednostce czasu)
+3 - trójkąt nie przecina się z innym ale dojdzie do kolizji z innym (w jednostce czasu)
+
+Wskazówki:
+1.(jak w zadaniu 3.3) Aby sprawdzić czy dwa odcinki przecinają się można zapisać je w postaci parametrycznej O(t)=a+t*(b-a) dla 0<=t<=1, wówczas mamy układ 2 równań dla współrzędnych x i y:  a1+t*(b1-a1)=a2+t*(b2-a2). Rozwiązując (np. wzory Cramera) jeśli otrzymamy rozwiązanie t to trzeba tylko sprawdzić czy jest ono w zakresie od 0 do 1 wtedy mamy przecięcie.
+
+2. Dwa trójkąty przecinają się jeśli przecina się któryś z boków jednego z którymś z boków drugiego lub pierwszy trójkąt jest we wnętrzu drugiego lub drugi wewnątrz pierwszego. Tak więc powinniśmy sprawdzić 9 (lub 8) przecięć odcinków, a następnie zawieranie. Dla zawierania można sprawdzić dla każdego boku trójkąta czy wszystkie wierzchołki drugiego trójkąta są po tej samej stronie boku co trzeci wierzchołek. Aby Sprawdzić czy punkty P i Q są po tej samej stronie prostej wyznaczonej przez punkty A i B wystarczy porównać znaki wyznaczników dla dwóch macierzy, pierwszej której kolumnami są wektory B-A i P-A i drugiej której kolumnami są wektory B-A i Q-A.
+
+3. Dla rozłącznych trójkątów aby sprawdzić czy dojdzie do kolizji można zauważyć, że pierwszym punktem kolizji będzie jeden z wierzchołków trójkątów. Tak więc możemy zaczepić wektor względnej prędkości trójkątów (v1-v2) w kolejnych wierzchołkach pierwszego trójkąta i sprawdzić czy ten odcinek przecina drugi trójkąt, a następnie to samo zrobić zaczepiając wektor (v2-v1) w wierzchołkach drugiego z trójkątów.
+
+Przykład:
+
+Na obrazku poniżej są wyświetlone na niebiesko wektory prędkości dla każdego z trójkątów zaczepione w pierwszych wierzchołkach trójkątów. Na czerwono mamy trójkąty w stanie kolizji, na pomarańczowo takie które nie są w kolizji ale dla których dojdzie do kolizji w jednostce czasu i pozostałe trójkąty zielone.   W tym przykładzie nie ma trójkątów się przecinających w skutek zawierania i wyświetlamy tylko brzegi trójkątów
+
+IN:
+10
+31 35 33 30 30 33 3 0
+16 13 8 21 20 17 0 -2
+15 23 7 29 19 26 -5 -3
+33 34 34 34 33 34 -5 -3
+39 21 29 19 44 20 2 0
+25 20 27 29 24 24 1 -4
+46 44 52 53 43 48 0 -3
+44 12 51 18 41 15 4 3
+19 12 23 14 17 13 -1 2
+24 23 32 19 20 21 -2 3
+
+OUT:
+
+ 3   3   1   3   0   0   1   1   3   0

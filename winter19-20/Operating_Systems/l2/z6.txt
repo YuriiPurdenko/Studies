@@ -1,0 +1,8 @@
+./fileref close
+jesli fd byloby zamkniete to dostalibysmy blad, wiec nie zamyka
+./fileref read
+zmienia polozenia kursora
+
+close powoduje, ze proces przestaje miec odnosnik do danego pliku
+a open sie do niego odnosi i zmienia wartosc, przez to ze dziecko
+otrzymuje referencje zczytuje wartosc dopiero wtedy kiedy ja potrzebuje

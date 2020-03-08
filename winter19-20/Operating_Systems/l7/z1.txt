@@ -1,0 +1,12 @@
+    Odwzorowanie plikow w pamiec - bezposrednie mapowanie zawartosciu pliku w procesie
+
+    Odwzorowanie pamieci anonimowej - nie ma odpowiadajacego pliku, jej strony sa ustawione na zero/ mowi sie tez ze jest to mapowanie wirtualnego pliku
+
+    odwzorowanie prywatne - zmiany zawartosci nie sa widoczne dla innych procesow i nie sa przenoszone do "underlying file"
+
+    odwzorowanie dzielone - sa widoczne zmiany i sa "przenoszone do underlying file"
+
+
+PLIKI KTORE MOZNA ODWZOROWAC
+-BLKDEV
+-REGFILE

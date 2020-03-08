@@ -1,0 +1,13 @@
+
+
+SEGV_ACCERR - A page was accessed which had the wrong permissions.
+
+SEGV_MAPERR - A page was accessed that is not even mapped into the address space of the application at all
+
+A minor fault means the page is in memory but not allocated to the requesting process or not marked as present in the memory management unit(bufer tlb) (is in RAM). A major fault means the page in no longer in memory (RAM).
+
+Bufor stron pozwala zaoszczedzic, czas na operacji pobrania pamieci z dysku poprzez cachowania jej w RAMie
+
+SIGBUS is generated for
+file-based mappings if we access a part of the mapping for which no corresponding
+region exists in the file

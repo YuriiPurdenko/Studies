@@ -1,0 +1,123 @@
+#Introduction Sequence
+
+	#1
+		git commit
+		git commit
+	#2
+		git checkout -b bugFix
+	#3
+		git branch bugFix
+		git checkout bugFix
+		git commit
+		git checkout master
+		git commit
+		git merge bugFix
+	#4
+		git checkout -b bugFix
+		git commit
+		git checkout master
+		git commit 
+		git checkout bugFix
+		git rebase master
+#Ramping Around
+
+	#1
+		git checkout c4
+	#2
+		git checkout bugFix^
+	#3
+		git checkout HEAD^						
+		git branch -f bugFix HEAD^	
+		git branch -f master c6
+	#4
+		git reset local^
+		git checkout pushed	
+		git revert HEAD
+						
+#Moving Work Around
+
+	#1
+		git cherry-pick c3 c4 c7					
+	
+	#2
+		git rebase -i HEAD~4					
+			
+#A Mixed Bag
+
+	#1
+		git checkout master
+		git cherry-pick c4
+	#2
+		git rebase -i caption~2
+		git rebase -i caption~1
+		git rebase -i caption~2
+		git checkout master
+		git rebase caption
+	#3
+		git checkout c1
+		git cherry-pick c2 
+		git checkout c1
+		git cherry-pick c2' c3 
+		git checkout master
+		git rebase c3'
+		
+#Push & Pull -- Git Remotes
+	
+	#1
+		git clone
+	#2
+		git commit
+		git checkout o/master
+		git commit
+	#3
+		git fetch
+	#4
+		git pull
+	#5
+		git clone
+		git fakeTeamwork
+		git fakeTeamwork
+		git commit
+		git fetch
+		git merge c3
+	#6
+		git commit
+		git commit
+		git push
+	#7
+		git clone
+		git fakeTeamwork
+		git commit
+		git pull --rebase
+		git push	
+#Advanced Topics
+
+	#1
+		git checkout bugFix
+		git rebase c2
+		git checkout c4
+		git rebase c3'
+		git checkout c5
+		git rebase c4'
+		git checkout c6
+		git rebase c5'
+		git checkout c7
+		git rebase c6'
+		git checkout master
+		git rebase c7'
+		
+	#2
+		git checkout HEAD^^2^
+		git branch bugWrk
+		git checkout master
+	#3
+		git checkout c1
+		git cherry-pick c4 c3 c2
+		git checkout c1
+		git cherry-pick c5 c4' c3' c2'
+		git checkout one
+		git rebase c2'
+		git checkout two
+		git rebase c2''
+		git checkout three
+		git rebase c2

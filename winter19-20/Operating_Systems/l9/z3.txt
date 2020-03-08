@@ -1,0 +1,17 @@
+Pomijam prosty algorytm kubelkowy bo jak jego nazwa wskazuje jest ..
+    usprawnieniem jest przechowywanie informacji czy cala strona jest pusta przez co mozna ja pozniej zlaczac.
+
+Algorytm kubełkowy z gorliwym zlaczaniem:
+
+    malloc:
+        - jesli chcemy zzalokowac blok o dlugosci n szuka najmniejszy kubelek, ktorego wolne bloki sa  >= n, jesli znajdzie bierze pierwszy, remainder oddaje do odpowiedniego kubelka i aktualizuje liste
+        - jesli nie ma wolnego bloku korzysta z sbrk, aby dostac pamiec od stosu, w tym miejscu allkouje blok oraz remainder ...
+
+    free:
+        - podobnie jak w listach dwukierunkowych usuwa element, z ktorym sie laczy, a nowy umieszcza w odpowiednim kubleku 
+        - jesli checmy usunac ostatni element z kubelka to po prostu oznaczamy kubelek jako pusty/ dajemy mu wskaznik na NULLa
+
+Plusem leniwego zlaczania jest sytuacja w ktorej zwlaniamy pamiec, aby zaraz znowu ja zaallokowac to bierzemy ten kawalek, ktory zwolnilismy, w przypadku gorliwym bedzie szukal wiekszego bloku po czym go musi splitowac.
+
+Nie wiemy czy te duze bloki nam sie przydadza wiec plusem  w leniwym zlaczaniu jest oszczedzanie na kosztach zlaczania tych list, ale problemem jest jak potrzebujesz cos duzego to musisz przeszukiwac rzeczy, ktore mozesz zlaczyc.
+Nie jest lokalne, jak zlaczamy to przynajmniej staramy sie cos obok siebie utrzymac.

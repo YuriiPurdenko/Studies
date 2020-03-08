@@ -1,0 +1,4 @@
+wzajemne wykluczenie - sposob, ktory zapewnia wylacznosc na korzystanie z danego zasobu w danym okresie
+
+W zadani proces A(1) zatrzymuje sie pomiedzy liniami 9 i 10, a nastepnie proces B(0) dochodzi do linijek 6, a 7 nie spelnia predykatu while wiec przechodzi od sekcji krytycznej, a pozniej A kontynuuje i tez dochodzi do sekcji krytycznej :(
+

@@ -1,0 +1,26 @@
+Aby wystapilo zakleszczenie musi wystapic cykliczny lancuch oczekiwania na zasob.
+
+Wiemy o tym, ze krawedzie moga byc tylko pomiedzy sasiednimi filozofami.
+Jesli krawedz wychodzi z A do B oznacza to, ze A rzada zasobu, ktory posiada B.
+oraz z kazdego wierzcholka moze wychodzi tylko jedna krawedz, poniewaz zadania sa sekwencyjne
+
+Jesli wychodzi krawedz z a do b to nie moze wychodzi krawedz z b do a, poniewaz oznaczaloby to ze obaj filozowie posiadaja dany zasob, oraz go naraz zadaja - sprzecznosc
+
+
+Czyli dla n filozofow mamy n wierzcholkow z maksymalnie n krawedziami.
+
+Jedyna mozliwosc, aby powstal cykl jest cykl, ktory obejmuje wszystkich filozofow, poniewaz mozemy miec krawedzie tylko do sasiednich wierzcholkow, oraz nie mozemy miec krawedzi powrotnych.
+
+Wezmy dowolnego filozofa.
+
+DNW istnieje cykl
+
+w takim przypadku kazdy filozof musi byc w posiadaniu zasobu oraz zadac zasobu, cykl musi zawierac wszystkich filozofow wiec
+bso. zgodnie z wskazowkami zegara 1 -> 2 .... -> n -> 1
+ale skoro kazdy cos posiada to znaczy, ze wszyscy musza byc praworeczni, wiec otrzymujemy sprzecznosc.
+w druga strone analogicznie.
+
+
+Glodzenie
+
+	podobnie znowu z grafem, skoro wiemy, ze nie ma cyklu to istnieje wierzcholek, ktory jest koncem sciezki, i po zjedzeniu umozliwia poprzednikom jedzenie, i tak indukcyjnie

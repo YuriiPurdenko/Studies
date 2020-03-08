@@ -1,0 +1,25 @@
+Warunki konieczne do zaistnienia zakleszczen:
+	1. Warunek wzajemnego wykluczenia. W danym momencie kazdy zasob jest albo do jednego procesu albo jest dotepny.
+	2. Warunek wstrzymania i oczekiwania. Procesy posiadajace zasoby przydzielone wczesniej moga zadac nowych zasobow.
+	3. Warunek braku wywlaszczenia. Zasoby wczesniej przydzielone nie moga byc przymusowo zabrane procesom. Musza byc jawnie zwolnione przez proces, ktory jest ich wlascicielem.
+	4. Warunek cyklicznego oczekiwania. Musi wystepowac cykliczny lancuch zlozony z przynajmniej dwoch procesow. Kazdy proces nalezacy do lancucha oczekauje na zasob bedacy w posiadaniu nastepnego procesu w lancuchu.
+	~ Tannenbaum SO
+
+Przeciwdzialanie zakleszczeniom: 
+	Polega na nie doppuszczenie do sytuacji, ze ktorys z powyzszych warunkow nie jest spelniony.
+
+	Ad 1. Zasoby sa tylko do odczytu.
+	      Demon, który np. jako jedyny zada drukarki i tylko ten zasob zada wiec nie bedzie nalezal do zakleszczen. Wejscie do niego buferuje sie na dysku, ale problemem jest jak to miejsce na dysku sie skonczy.
+	      Buferowanie wszystkiego
+
+	Ad 2. Proces zada wszystkich zasobow - wtedy tylko jeden proces moze dzialac, ktory zada zasobow/ nie wszystkie procesy przed rozpaczeciem wiedza jakich zasobow beda potrzebowaly.
+	      Proces, ktory zada nowych zasobow zwalnia na chwile swoje zasoby.
+
+
+	Ad 3. Slabe bo jak proces drukuje i sie go wywlaszczy, to zacznie sie cos innego drukowac
+
+	Ad 4. Proces moze byc uprawniony tylko do jednego zasobu. Jesli proces chce skopiowac duzy plik z tasmy na drukarke jest to niemozliwe.
+	      Numerowanie zasobow - proces musi zadac zasobo zgodnie z kolejnosci numeracji - nie pozwala na powstanie cyklu. Problem z znalezieniem kolejnosci satysfakcjonujacej wszystkich - niemozliwe.
+
+
+

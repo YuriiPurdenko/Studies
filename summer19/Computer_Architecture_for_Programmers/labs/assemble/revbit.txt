@@ -1,0 +1,110 @@
+
+	.global	bitrev
+	.type	bitrev, @function
+	.section .text
+bitrev:
+
+#jak w poprzednich zadaniach rozbijam problem na mniejsze fragmenty i odwracam najpierw pojedyncze bit, a pozniej coraz 
+#wieksze fragmenty
+
+#obracanie sasiednich bitow
+
+	mov %rdi, %r15
+
+	mov %r15d,%r14d
+	sar $32, %rdi
+
+	mov %edi,%eax
+	shr $1,%r15d
+	and $0x55555555,%r14d
+
+	shr $1,%edi
+	and $0x55555555,%eax
+	and $0x55555555,%r15d
+	shl $1,%r14d
+
+
+	and $0x55555555,%edi
+	shl $1,%eax
+	or %r14d,%r15d
+
+	or %eax,%edi
+	mov %r15d, %r14d
+
+#obracanie pary bitow
+
+	mov %edi, %eax
+	shr $2,%r15d
+	and $0x33333333,%r14d
+
+	shr $2,%edi
+	and $0x33333333,%eax
+	and $0x33333333,%r15d
+	shl $2,%r14d
+
+
+	and $0x33333333,%edi
+	shl $2,%eax
+	or %r14d,%r15d
+
+	or %eax,%edi
+	mov %r15d, %r14d
+
+#obracanie czworek bitow
+
+	mov %edi, %eax
+	shr $4,%r15d
+	and $0x0F0F0F0F,%r14d
+
+	shr $4,%edi
+	and $0x0F0F0F0F,%eax
+	and $0x0F0F0F0F,%r15d
+	shl $4,%r14d
+
+
+	and $0x0F0F0F0F,%edi
+	shl $4,%eax
+	or %r14d,%r15d
+
+	or %eax,%edi
+	mov %r15d, %r14d
+
+#obracanie osemek bitow
+
+	mov %edi, %eax
+	shr $8,%r15d
+	and $0x00FF00FF,%r14d
+
+	shr $8,%edi
+	and $0x00FF00FF,%eax
+	and $0x00FF00FF,%r15d
+	shl $8,%r14d
+
+
+	and $0x00FF00FF,%edi
+	shl $8,%eax
+	or %r14d,%r15d
+
+	or %eax,%edi
+	mov %r15d, %r14d
+
+#obracanie szesnastek bitow
+
+	mov %edi, %eax
+	shr $16,%r15d
+
+	shr $16,%edi
+	shl $16,%r14d
+
+	shl $16,%eax
+	or %r14d,%r15d
+
+	or %edi,%eax		#zmiana (wynik zapisujemy juz w eaxsie)
+	
+#laczenie dwoch odwroconych 32 bitow
+
+	shl $32,%r15
+	or  %r15,%rax
+	
+	ret
+	.size	bitrev, .-bitrev

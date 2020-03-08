@@ -1,0 +1,8 @@
+ff ff ff ff ff ff ff ff
+48 c7 c7 88 8e 05 27
+48 83 c4 08
+c3
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+a0 00 68 55 00 00 00 00
+ff ff ff ff ff ff ff ff
+36 18 40 00 00 00 00 00

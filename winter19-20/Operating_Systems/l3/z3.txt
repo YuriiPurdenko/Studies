@@ -1,0 +1,88 @@
+Argumenty przeciw:
+
+    Fork is no longer simple.
+        -25 special cases in how the parent’s state is copied to the chil: file locks,
+         timers, asynchronous IO operations, tracing, etc
+
+        -numerous system call flags control fork’s behaviour with respect to memory mappings, 
+         file descriptors and threads
+
+        -OS facility must document its behaviour across a fork, and user-mode libraries must 
+         be prepared for their state to be forked at any time.
+
+    Fork doesn’t compose:
+        -because fork duplicates an entire address space, it is a poor fit for OS abstractions
+         implemented in user-mode. Buffered IO is a classic example: a user mustexplicitly flush
+         IO prior to fork, lest output be duplicated [73]
+
+    Fork isn’t thread-safe:
+        -child created by fork has only a single thread
+        -the child address space may end up as an inconsistent snapshot of the parent
+        -one thread doing memory allocationand holding a heap lock, while another thread 
+         forks. Anyattempt to allocate memory in the child (and thus acquire thesame lock) 
+         will immediately deadlock waiting for an unlockoperation that will never happen.
+
+    Fork is insecure:
+        -forked child inherits ev-erything from its parent, and the programmer is responsiblefor
+         explicitly removing state that the child does not need
+
+    Fork is slow:
+        -memory size and relative access cost havegrown continuously.
+    
+        -problemy przy address space randomisation, and just-in-time compilation,
+         by allocating alternating read-only and read-write pages.
+
+    Fork doesn’t scale:
+        -(unlike spawn) it fails to commute with other operations on the process
+        -problem with avoiding needless sharing - A forked process starts sharingeverything with its parent.
+
+    Fork encourages memory overcommit:
+        -memory used by copy-on-write page mappings. Each such page represents a potential allocation—if
+         any copy of thepage is modified, a new page of physical memory will beneeded to resolve the page fault
+        -on Linux, is toovercommitvirtual memory: operations that establish virtual address 
+         mappings, which includes fork’s copy-on-writeclone of an address space, 
+        -Real appli-cations are unprepared to handle apparently-spurious out-of-memory errors in fork 
+
+Summary.
+Fork  today  is  a  convenient  API  for  a  single-threaded process with a small memory footprint and simple 
+memory layout that requires fine-grained control over the execution environment of its children but does not need 
+to be strongly isolated from them. In other words, a shell.
+
+
+The vfork system call creates a new process that d shares address space with the parent, thus
+     avoiding expensive copy-on-write operations normally associated with creating a new process. 
+     The vfork system call differs from fork(2) in that the child borrows the
+     parent's memory and thread of control until a call to execve(2) or an
+     exit.  The parent process is suspended while the child is using its resources.
+
+     Be careful, also,
+     to call _exit(2) rather than exit(3) if you can't execve(2), since
+     exit(3) will flush and close standard I/O channels, and thereby mess up
+     the standard I/O data structures in the parent process.
+
+    tworzy nowy proces, który dzieli przestrzeń adresową rodzica dopóki dziecko wezwie exec. Pozwala to na podobny 
+    styl użycia jak fork gdzie nowy proces modyfikuje stan kernela przed wywołaniem execa. Przez dzielenie pamięci jest 
+    trudno używać go bezpiecznie ale unika się kopiowania przestrzeni adresowej dzięki czemu zyskuje się na wydajności.
+
+The posix_spawn() and posix_spawnp() functions are used to create a
+       new child process that executes a specified file.  These functions
+       were specified by POSIX to provide a standardized method of creating
+       new processes on machines that lack the capability to support the
+       fork(2) system call.  These machines are generally small, embedded
+       systems lacking MMU support.
+
+       The posix_spawn() and posix_spawnp() functions provide the
+       functionality of a combined fork(2) and exec(3), with some optional
+       housekeeping steps in the child process before the exec(3).  These
+       functions are not meant to replace the fork(2) and execve(2) system
+       calls.  In fact, they provide only a subset of the functionality that
+       can be achieved by using the system calls.
+
+        tworzy nowy proces-dziecko, który wykonuje wskazany plik (połączenie fork i exec). API posix_spawn ułatwia refaktorowanie
+        kodu, który zawierał fork i exec, które być może znajdowały się w odległych miejscach w kodzie. Wywołanie close() po wywołaniu 
+        fork może zostać zastępione przez pre-spawn call, które zapisuje, że w dziecku ma odbyć się zamknięcie danego pliku.
+
+posix_spawn:
+    -By contrast,posix_spawn()takes the same time (around 0.5 ms) regardless of
+     the parent’s size or memory layout.
+    -scalable - doesn't fail to commute with other operations on the process

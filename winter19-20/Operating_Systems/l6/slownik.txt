@@ -1,0 +1,28 @@
+ZAD 1
+
+    rozszerzone atrybuty pliku - Extended attributes are extensions to the normal attributes which are
+       associated with all inodes in the system. Used to provide additional functionality to a
+       filesystem—for example, additional security features such as Access
+       Control Lists (ACLs) may be implemented using extended attributes.
+
+
+ZAD 2
+
+    Dla plików dyskowych buforowanie pełne, dla plików terminala buforowanie liniami, dla stderr brak buforowania.
+
+    buforowanie liniami - 
+
+    buforowanie pełne -
+
+ZAD 3
+
+    Procesy mają tożsamość (ang. identity) użytkownika,z reguły tego który je utworzył
+    tożsamość - 
+
+ZAD 4
+
+    numer urządzenia -
+
+ZAD 5
+
+    lokalnej dwukierunkowej -

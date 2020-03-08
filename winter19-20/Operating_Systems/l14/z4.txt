@@ -1,0 +1,37 @@
+Futex czeka dopoki jakis warunek nie zostanie spelniony. Jest umieszczony w pamieci dzielonej pomiedzy procesami, zas dla wattkow musi byc jako zmienna globalna. Dziala w przestrzeni uzytkowanika, z blokawaniem przez kernel. W sumie to jest takie compare-and-block/compare-and-exchange atomowe,
+
+no explicit initialization or destruction is necessary to use futexes (usually)
+
+futex operation that requests to block a thread, the
+       kernel will block only if the futex word has the value that the
+       calling thread supplied (as one of the arguments of the futex() call)
+       as the expected value of the futex word.
+
+loading of the futex
+       word's value, the comparison of that value with the expected value,
+       and the actual blocking will happen atomically
+
+
+
+int futex(int *uaddr, int futex_op, int val,
+                 const struct timespec *timeout,   /* or: uint32_t val2 */
+                 int *uaddr2, int val3);
+
+
+uaddr argument points to the futex word (4B int alligned to 4B)
+
+futex_op - operacja, ktora ma wykonac futeks
+
+val - wartosc, ktora ma znaczenie w zaleznosci od operacji
+
+timeout, uaddr2, and val3 - tylko do specyficznych instrukcji w przeciwnym razie ignorowane
+
+timeout argument is a pointer to a timespec structure that specifies a timeout for the operation, or some operations, the least significant 4B are used as an integer whose meaning is determined by the operation. (val2)
+
+uaddr2 - a pointer to a second futex word that is employed by the operation.
+
+
+FUTEX_WAIT - tests if the value at the address uaddr still contains the expected value val and if so, then sleeps waiting for a FUTEX_WAKE operation on the futex word
+	does not match val, then the call fails immediately with the error
+
+FUTEX_WAKE wakes at most val of the waiters that are waiting (e.g., inside FUTEX_WAIT) on the futex word at the address uaddr. (INT_MAX (wake up all waiters)) No guarantee is provided about which waiters are awoken

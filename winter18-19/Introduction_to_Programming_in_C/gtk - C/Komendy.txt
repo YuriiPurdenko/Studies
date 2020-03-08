@@ -1,0 +1,2 @@
+gcc `pkg-config gtk+-3.0 --cflags` hello_world_gtk.c -o hello_world_gtk `pkg-config gtk+-3.0 --libs`
+// pozwala skompilowac program

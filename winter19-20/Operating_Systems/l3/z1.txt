@@ -1,0 +1,70 @@
+Mozliwe stany procesu:
+
+    -Uruchomiony czyli może być wykonywany lub być gotowy do wykonywania 
+     (process has been loaded into main memory and is awaiting execution on a CPU 
+     (to be context switched onto the CPU by the dispatcher) 
+
+    -Przerywalny jest to zablokowany stan, w ktorym proces czeka na 'event' 
+     np. I/O, dostęp do zasobów, sygnał od innego procesu
+
+    -Nieprzerywalny jest to zablokowany stan, w ktorym proces czeka 
+     na 'hardware conditions' przez co nie bedzie odbieral sygnalow
+     Uninterruptible sleep, processes that cannot be killed or interrupted with a signal,
+     usually to make them go away you have to reboot or fix the issue
+
+    -Stopowany/wstrzymany - proces zostal zatrzymany i moze zostac wznowiony
+     tylko przez inny proces, np. proces, ktory jest debugowany moze
+     byc w stanie wstrzymanym
+
+    -Zombie proces, ktory zostal juz zkaonczony/wykonany, ale z jakiegos powodu
+     musis byc przechowywana informacja o nim w tabeli procesow
+
+Akcje wyzwalające zmianę procesów:
+
+  A  Gotowy -> Uruchomiony  - Scheduler, gdy nadejdzie kolej na proces
+    
+  B  Uruchomiony -> Gotowy - jesli proces wykorzysta swoj kwant czasu
+
+  C  Uruchomiony -> Wstrzymany - otrzymanie sygnalu, np debuggowanie
+
+  D  Uruchomiony -> Przerywalny - np printf/ czytanie z pamieci
+
+  E  Uruchomiony -> Nieprzerywalny - the mkdir(2) system call is not interruptible/czeka na obsłużenie page fault)
+
+  F  Uruchomiony -> Zombie  - wykonanie procesu, ale jego rodzic go nie usmiercil
+
+  G  Wstrzymany -> Gotowy - np. zakonczenie debuggowania
+
+  H  Przerywalny -> Gotowy - np. zakonczenie I/O
+
+  I  Nieprzerywalny -> Gotowy - 
+
+Przejścia podejmowane przez:
+
+    Ready <--> Executing:
+        zaplanowanie wykonania procesu przez schedulera (działanie podejmowane przez jądro).
+
+    Executing -> Zombie:
+        dobrowolne zakończenie się procesu przez exit().
+        otrzymanie SIGKILLa lub SIGTERMa
+        zamknięcie przez system w przypadku deadlocka
+        błąd I/O (przez sterownik urządzenia)
+
+    Stopped <--> Ready:
+        otrzymanie sygnału SIGSTOP / SIGCONT (od procesu użytkownika)
+
+    Interruptible/Uninterruptible --> Ready:
+        wydarzenie I/O (wybudzane przez jądro)
+        sygnał (tylko w przypadku interruptible)
+
+    Executing -> Interruptible/Uninterruptible:
+        żadanie wykonania jakiegoś I/O
+
+
+Różnica mieðzy przerywalnym, a nieprzerywalnym w słowniku oraz powyżej.
+
+SIGKILL and SIGSTOP signals which cannot be ignored, caught,or blocked.
+
+When a process blocks a signal, the operating system does not deliver the signal until the process unblocks the signal. A process blocks a signal by modifying its signal mask with sigprocmask. But when a process ignores a signal, the signal is delivered and the process handles it by throwing it away. (oprócz SIGKILL'a, który jesli zostanie zignorowany zabija proces).
+
+You can't really block SIGKILL. Only KERNEL has the ability to do it, not us.

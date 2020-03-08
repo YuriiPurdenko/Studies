@@ -1,0 +1,37 @@
+Potwór. Zadaniem jest wytropienie potwora na podstawie częściowych informacji.
+
+Znana jest prostokątna mapa terenu, na której miejsca niedostępne oznaczone są znakiem '#'. Niedostępne są także miejsca poza mapą. Miejsce zrzucenia potwora oznaczone jest znakiem 'P', a miejsca gdzie potwór zostawił ślady znakiem 'S'. Pozostałe dostępne miejsca są oznaczone znakiem '.'. Znane są reguły zachowania potwora:
+
+    Potwór zaczyna iść od miejsca 'P' wybierając jeden z czterech kierunków (góra, dół, lewo, prawo).
+    Potwór idzie przed siebie w wybranym kierunku. Jeśli jednak nie ma już takiej możliwości (miejsce niedostępne), to wybiera od nowa jeden z (w tym przypadku maksymalnie trzech) możliwych kierunków.
+    Czasami potwór wybiera nowy (lub ten sam) kierunek bez konkretnego powodu. Jednak wiemy, że wtedy też zostawia w danym miejscu ślady 'S'. Potwór może zostawić ślady wielokrotnie w tym samym miejscu.
+    Wiadomo, że potwora nie było zanim pojawił się w miejscu 'P', więc później musiał odwiedzić wszystkie miejsca ze śladami.
+
+Wejście: liczby naturalne m i n oznaczające szerokość i wysokość mapy, a następnie n wierszy po m znaków opisujących miejsca.
+Można założyć m, n <= 100, że jest dokładnie jedno 'P' i co najwyżej 10 miejsc ze śladami 'S'.
+
+Wyjście: mapa jak na wejściu (bez oznaczania 'P' i 'S') z dodatkowo zaznaczonymi pozycjami znakiem 'X' na których może aktualnie znajdować się potwór.
+
+Przykład:
+
+7 6
+.##....
+.##.#.#
+.##.#.#
+P....S.
+.##.#..
+.#.S.#.
+
+Wynik:
+
+.##XXXX
+.##X#.#
+.##X#.#
+...X...
+.##X#..
+.#XXX#.
+
+Wyjaśnienie: Na początku potwór musiał iść w prawo, inaczej utkwiłby w pierwszej kolumnie i nie doszedł do obu miejsc ze śladami.
+Następnie jedna z możliwych tras to: w górę zostawiając ślady, w lewo, w dół, w lewo, w prawo, a następnie zostawiając ślady, w górę.
+
+Wskazówka: Aby przeszły testy wydajnościowe, proszę rozważyć minimalizację zużycia pamięci (np. używając pojedyńczych bitów) oraz ograniczenie czasu obliczeń (np. nie sprawdzając wielokrotnie tych samych ścieżek).

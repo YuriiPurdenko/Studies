@@ -1,0 +1,31 @@
+ZAD 1
+
+Tak, pojawiły się odnośniki do Literatury.
+
+ZAD 2
+
+Wyświelta rzeczywiste ID użytkownika, aktualnie zalogowanego (UID, unikalny numer przypisany do danego użytkownika w systemie) oraz  grupy do niego przypisanej(GID), a reszta to są grupy do, których użytkownik należy wraz z ich numerami.
+
+  /\_/\  (
+ ( ^.^ ) _)
+   \"/  (
+ ( | | )
+(__d b__)
+
+\usepackage[procnames]{listings}
+\begin{figure}
+\begin{verbatim}
+         __
+        /  \
+       / ..|\
+      (_\  |_)
+      /  \@'
+     /     \
+ _  /  `   |
+\\/  \  | _\
+ \   /_ || \\_
+  \____)|_) \_)
+
+\end{verbatim}
+\end{figure}
+\end{document}

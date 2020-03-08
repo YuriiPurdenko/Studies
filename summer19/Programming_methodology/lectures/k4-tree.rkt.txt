@@ -1,0 +1,53 @@
+#lang typed/racket
+
+;;; drzewa binarne
+
+(define-type Leaf 'leaf)
+(define-type (Node a b) (List 'node a b b))
+(define-type (Tree a) (U Leaf (Node a (Tree a))))
+
+(define-predicate leaf? Leaf)
+(define-predicate node? (Node Any Any))
+(define-predicate tree? (Tree Any))
+
+(: leaf Leaf)
+(define leaf 'leaf)
+
+(: node-val (All (a b) (-> (Node a b) a)))
+(define (node-val x)
+  (cadr x))
+
+(: node-left (All (a b) (-> (Node a b) b)))
+(define (node-left x)
+  (caddr x))
+
+(: node-right (All (a b) (-> (Node a b) b)))
+(define (node-right x)
+  (cadddr x))
+
+(: make-node (All (a b) (-> a b b (Node a b))))
+(define (make-node v l r)
+  (list 'node v l r))
+
+;;; wyszukiwanie i wstawianie w drzewach przeszukiwań binarnych
+
+(: find-bst (-> Integer (Tree Integer) Boolean))
+(define (find-bst x t)
+  (cond [(leaf? t)          false]
+        [(= x (node-val t)) true]
+        [(< x (node-val t)) (find-bst x (node-left t))]
+        [else (find-bst x (node-right t))]))
+
+(: insert-bst (-> Integer (Tree Integer) (Tree Integer)))
+(define (insert-bst x t)
+  (cond [(leaf? t)
+         (make-node x leaf leaf)]
+        [(< x (node-val t))
+         (make-node (node-val t)
+                    (insert-bst x (node-left t))
+                    (node-right t))]
+        [else
+         (make-node (node-val t)
+                    (node-left t)
+                    (insert-bst x (node-right t)))]))
+

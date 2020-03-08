@@ -1,0 +1,16 @@
+Sprawiedliwosc polega na tym, ze watki/procesy ktore pierwsze chcialy uzyskac dostep do zasobow, dostana go szybciej niz watki, ktore pozniej sie o nie zapobiegaly.
+
+Silny semafor to sprawiedliwy semafor.
+
+Odwrocenie procesow polega na tym, ze wykonuje sie inne zadanie nie powinno wedlug algorytmu szeregowania. Ochrona przed tym jest dziedziczenie priorytetow.
+
+Abstrakcyjnie patrzac maja liste, ktora mowi jaki muteks odblokowac, i mowia/podpowiadaja. schedulerowi, ktory powinien sie wykonywac
+
+
+CWICZENIA 
+
+Sprawiedliwosc:
+	jak mamy programy, ktore chca sie dostac do sekcji krytycznej to musza czekac i chca sie do niej dostac w okreslonej kolejnosci. Sprawiedliwosc polega na tym, ze kazda z osob, ktore chce sie dostac do sekcji krytycznej ma rowne szanse na dostanie sie do niej, kiedy ktos ja "odblokuje", kazdy z czekajacych ma swoj czas czekania.
+Nie nastapi glodzenie procesu/watku, ktory jest glodzony.
+
+Semafory nie zapobiegaja odwroceniu priorytetow.

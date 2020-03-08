@@ -1,0 +1,83 @@
+Symulacja. Zadaniem jest zasymulowanie działania maszyny opisanej poniżej.
+
+Przy pewnej komórce nieskończonej tablicy wypełnionej zerami stoi maszyna w stanie 0, którą należy zasymulować. Maszyna w każdym kroku
+
+    zapisuje 0 lub 1 w komórce przy której stoi,
+    decyduje, czy skończyć działanie (koniec oznacza też koniec symulacji),
+    jeśli nie kończy, przesuwa się o jedną komórkę w prawo lub w lewo
+    i ustawia sobie odpowiedni stan.
+
+Wejście: W pierwszej linii znajduje się liczba q (q ⩽ 32) oznaczająca liczbę stanów maszyny. W następnych 2·q wierszach znajdują się opisy zachowania maszyny w zależności od jej stanu i znaku w komórce, przy której stoi. Pierwszy z nich dla stanu 0 i znaku 0, drugi dla stanu 0 i znaku 1, trzeci dla stanu 1 i znaku 0 itd. Pierwsza liczba w wierszu oznacza znak, który napisze maszyna, druga — stronę, w którą pójdzie (1 — w prawo, 0 — w lewo), trzecia, czy kończy działanie (1 — zatrzymaj się, 0 — kontynuuj), czwarta — stan maszyny w następnym kroku. W ostatniej linii wejścia znajduje się liczba t (t ⩽ 1000000) kroków maszyny, które należy zasymulować.
+
+Wyjście: Napis halted, jeśli maszyna się zatrzymała, inaczej running. Następnie pozycję, na której znajduje się maszyna. W nowej linii maksymalne wychylenie maszyny lewo względem komórki początkowej, reprezentację (ciąg zer i jedynek) komórek tablicy, przy których znajdowała się maszyna i maksymalne wychylenie w prawo.
+
+Przykład 1:
+
+1
+1 1 0 0
+1 1 1 0
+60
+
+Wynik 1:
+
+running 60
+0 1111111111111111111111111111111111111111111111111111111111110 60
+
+Przykład 2:
+
+2
+1 1 0 1
+1 0 0 1
+1 0 0 0
+1 1 1 0
+5
+
+Wynik 2:
+
+running -1
+-2 1111 1
+
+Przykład 3:
+
+2
+1 1 0 1
+1 0 0 1
+1 0 0 0
+1 1 1 0
+6
+
+Wynik 3:
+
+halted -1
+-2 1111 1
+
+Wyjaśnienie przykładu 3:
+
+Zachowanie maszyny w kolejnych krokach symulacji („v” oznacza miejsce, gdzie stoi maszyna, a liczba nad nią jej stan):
+
+      0
+      v
+-3 0000000 3
+
+       1
+       v
+-3 0001000 3
+
+      0
+      v
+-3 0001100 3
+
+     1
+     v
+-3 0001100 3
+
+    0
+    v
+-3 0011100 3
+
+     1
+     v
+-3 0111100 3
+
+halted -1
+-2 1111 1

@@ -1,0 +1,607 @@
+COMMAND  PID   USER   FD      TYPE             DEVICE  SIZE/OFF     NODE NAME
+firefox 4509 wiklam  cwd       DIR              253,1      4096 38797314 /home/wiklam
+firefox 4509 wiklam  rtd       DIR              253,1      4096        2 /
+firefox 4509 wiklam  txt       REG              253,1    456944 20582646 /usr/lib/firefox/firefox
+firefox 4509 wiklam  mem       REG              253,1    191744 20580827 /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0
+firefox 4509 wiklam  mem       REG              253,1     43896 20586562 /usr/lib/x86_64-linux-gnu/libnuma.so.1.0.0
+firefox 4509 wiklam  mem       REG              253,1     10408 20583544 /usr/lib/x86_64-linux-gnu/libva-drm.so.2.100.0
+firefox 4509 wiklam  mem       REG              253,1     23008 20583546 /usr/lib/x86_64-linux-gnu/libva-x11.so.2.100.0
+firefox 4509 wiklam  mem       REG              253,1     14696 20583548 /usr/lib/x86_64-linux-gnu/libvdpau.so.1.0.0
+firefox 4509 wiklam  mem       REG              253,1     68008 20586290 /usr/lib/x86_64-linux-gnu/libdrm.so.2.4.0
+firefox 4509 wiklam  mem       REG              253,1    186968 20583558 /usr/lib/x86_64-linux-gnu/libsoxr.so.0.1.1
+firefox 4509 wiklam  mem       REG              253,1     51504 20583554 /usr/lib/x86_64-linux-gnu/libgsm.so.1.0.12
+firefox 4509 wiklam  mem       REG              253,1    301032 20586753 /usr/lib/x86_64-linux-gnu/libmp3lame.so.0.0.0
+firefox 4509 wiklam  mem       REG              253,1    174160 20583536 /usr/lib/x86_64-linux-gnu/libopencore-amrnb.so.0.0.3
+firefox 4509 wiklam  mem       REG              253,1     79864 20583538 /usr/lib/x86_64-linux-gnu/libopencore-amrwb.so.0.0.3
+firefox 4509 wiklam  mem       REG              253,1    350528 20578782 /usr/lib/x86_64-linux-gnu/libopenjp2.so.2.3.0
+firefox 4509 wiklam  mem       REG              253,1    301288 20586828 /usr/lib/x86_64-linux-gnu/libopus.so.0.5.2
+firefox 4509 wiklam  mem       REG              253,1     43104 20583556 /usr/lib/x86_64-linux-gnu/libshine.so.3.0.1
+firefox 4509 wiklam  mem       REG              253,1     30928 20583572 /usr/lib/x86_64-linux-gnu/libsnappy.so.1.1.7
+firefox 4509 wiklam  mem       REG              253,1    104336 20587030 /usr/lib/x86_64-linux-gnu/libspeex.so.1.5.0
+firefox 4509 wiklam  mem       REG              253,1    121248 20587070 /usr/lib/x86_64-linux-gnu/libtheoradec.so.1.1.4
+firefox 4509 wiklam  mem       REG              253,1    256360 20587072 /usr/lib/x86_64-linux-gnu/libtheoraenc.so.1.1.2
+firefox 4509 wiklam  mem       REG              253,1    124840 20587088 /usr/lib/x86_64-linux-gnu/libtwolame.so.0.0.0
+firefox 4509 wiklam  mem       REG              253,1    107192 20583540 /usr/lib/x86_64-linux-gnu/libvo-amrwbenc.so.0.0.4
+firefox 4509 wiklam  mem       REG              253,1   2410560 20587140 /usr/lib/x86_64-linux-gnu/libvpx.so.5.0.0
+firefox 4509 wiklam  mem       REG              253,1    170448 20579191 /usr/lib/x86_64-linux-gnu/libwavpack.so.1.2.0
+firefox 4509 wiklam  mem       REG              253,1     39088 20587164 /usr/lib/x86_64-linux-gnu/libwebpmux.so.3.0.1
+firefox 4509 wiklam  mem       REG              253,1   1220440 20583562 /usr/lib/x86_64-linux-gnu/libx264.so.152
+firefox 4509 wiklam  mem       REG              253,1  10954944 20583563 /usr/lib/x86_64-linux-gnu/libx265.so.146
+firefox 4509 wiklam  mem       REG              253,1    687176 20583564 /usr/lib/x86_64-linux-gnu/libxvidcore.so.4.3
+firefox 4509 wiklam  mem       REG              253,1    568728 20583567 /usr/lib/x86_64-linux-gnu/libzvbi.so.0.13.2
+firefox 4509 wiklam  mem       REG              253,1  13699096 20583574 /usr/lib/x86_64-linux-gnu/libavcodec.so.57.107.100
+firefox 4509 wiklam  DEL       REG                0,5              53110 /memfd:pulseaudio
+firefox 4509 wiklam  DEL       REG                0,5              39374 /memfd:pulseaudio
+firefox 4509 wiklam  DEL       REG                0,5              55382 /memfd:pulseaudio
+firefox 4509 wiklam  mem       REG              253,1    133600 20583542 /usr/lib/x86_64-linux-gnu/libva.so.2.100.0
+firefox 4509 wiklam  mem       REG              253,1   1863832 20582655 /usr/lib/firefox/libmozavcodec.so
+firefox 4509 wiklam  mem       REG              253,1    110776 20583552 /usr/lib/x86_64-linux-gnu/libcrystalhd.so.3.6
+firefox 4509 wiklam  DEL       REG               0,26                  6 /dev/shm/org.mozilla.ipc.5587.23
+firefox 4509 wiklam  DEL       REG               0,26                 87 /dev/shm/org.mozilla.ipc.5587.21
+firefox 4509 wiklam  DEL       REG                0,5            2326548 /SYSV00000000
+firefox 4509 wiklam  DEL       REG               0,26                 64 /dev/shm/org.mozilla.ipc.4573.302
+firefox 4509 wiklam  mem       REG              253,1    420216 20587160 /usr/lib/x86_64-linux-gnu/libwebp.so.6.0.2
+firefox 4509 wiklam  DEL       REG                0,5              51698 /memfd:pulseaudio
+firefox 4509 wiklam  DEL       REG                0,5              50402 /memfd:pulseaudio
+firefox 4509 wiklam  mem       REG              253,1  26904264 20586630 /usr/lib/x86_64-linux-gnu/libicudata.so.60.2
+firefox 4509 wiklam  mem       REG              253,1   1792008 20586640 /usr/lib/x86_64-linux-gnu/libicuuc.so.60.2
+firefox 4509 wiklam  mem       REG              253,1   1834232 20587241 /usr/lib/x86_64-linux-gnu/libxml2.so.2.9.4
+firefox 4509 wiklam  mem       REG              253,1    493592 20583550 /usr/lib/x86_64-linux-gnu/libavutil.so.55.78.100
+firefox 4509 wiklam  mem       REG              253,1   1101806 20582626 /usr/lib/firefox/browser/features/screenshots@mozilla.org.xpi
+firefox 4509 wiklam  DEL       REG               0,26                 40 /dev/shm/org.mozilla.ipc.4573.295
+firefox 4509 wiklam  mem       REG              253,1    124920 20583560 /usr/lib/x86_64-linux-gnu/libswresample.so.2.9.100
+firefox 4509 wiklam  mem       REG              253,1    239712 20586236 /usr/lib/x86_64-linux-gnu/libcroco-0.6.so.3.0.1
+firefox 4509 wiklam  mem       REG              253,1    227448 20586963 /usr/lib/x86_64-linux-gnu/librsvg-2.so.2.40.20
+firefox 4509 wiklam  mem       REG              253,1     30560 20844737 /usr/lib/x86_64-linux-gnu/libcanberra-0.30/libcanberra-pulse.so
+firefox 4509 wiklam  mem       REG              253,1     10264 20843840 /usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.so
+firefox 4509 wiklam  mem       REG              253,1    207432 20582656 /usr/lib/firefox/libmozavutil.so
+firefox 4509 wiklam  DEL       REG                0,5            3047446 /SYSV00000000
+firefox 4509 wiklam  DEL       REG                0,5            1015820 /SYSV00000000
+firefox 4509 wiklam  DEL       REG               0,26                 26 /dev/shm/org.chromium.9Xqih9
+firefox 4509 wiklam  DEL       REG                0,5             950282 /SYSV00000000
+firefox 4509 wiklam  DEL       REG                0,5             917513 /SYSV00000000
+firefox 4509 wiklam  mem       REG              253,1    333612 21629209 /usr/share/fonts/truetype/ubuntu/Ubuntu-B.ttf
+firefox 4509 wiklam  DEL       REG                0,5             983051 /SYSV00000000
+firefox 4509 wiklam  mem       REG              253,1     14488 20586053 /usr/lib/x86_64-linux-gnu/libXss.so.1.0.0
+firefox 4509 wiklam  mem       REG              253,1   1225992 40111657 /home/wiklam/.mozilla/firefox/g41068qu.default/extensions/{d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}.xpi
+firefox 4509 wiklam  mem       REG              253,1    648613 20582624 /usr/lib/firefox/browser/features/formautofill@mozilla.org.xpi
+firefox 4509 wiklam  DEL       REG              253,1           38802397 /home/wiklam/.local/share/gvfs-metadata/home-fc110923.log
+firefox 4509 wiklam  DEL       REG              253,1           38798813 /home/wiklam/.local/share/gvfs-metadata/home
+firefox 4509 wiklam  DEL       REG               0,26                 59 /dev/shm/org.mozilla.ipc.4741.0
+firefox 4509 wiklam  DEL       REG                0,5             622598 /SYSV00000000
+firefox 4509 wiklam  mem       REG              253,1     26936 52695808 /lib/x86_64-linux-gnu/libnss_dns-2.27.so
+firefox 4509 wiklam  mem       REG              253,1     10160 52695816 /lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+firefox 4509 wiklam  mem       REG              253,1     52448 20843943 /usr/lib/x86_64-linux-gnu/gio/modules/libdconfsettings.so
+firefox 4509 wiklam  mem       REG              253,1    540856 20582663 /usr/lib/firefox/libnssckbi.so
+firefox 4509 wiklam  mem       REG              253,1    518424 20582653 /usr/lib/firefox/libfreeblpriv3.so
+firefox 4509 wiklam  mem       REG              253,1    262232 20582671 /usr/lib/firefox/libsoftokn3.so
+firefox 4509 wiklam  DEL       REG                0,5             589825 /SYSV00000000
+firefox 4509 wiklam  DEL       REG               0,26                 89 /dev/shm/org.mozilla.ipc.4573.323
+firefox 4509 wiklam  DEL       REG                0,5            3178520 /SYSV00000000
+firefox 4509 wiklam  DEL       REG               0,26                 76 /dev/shm/org.mozilla.ipc.4573.312
+firefox 4509 wiklam  DEL       REG                0,5            3145743 /SYSV00000000
+firefox 4509 wiklam  DEL       REG               0,26                 43 /dev/shm/org.mozilla.ipc.5631.0
+firefox 4509 wiklam  DEL       REG               0,26                 69 /dev/shm/org.mozilla.ipc.5587.15
+firefox 4509 wiklam  DEL       REG               0,26                 61 /dev/shm/org.mozilla.ipc.5587.13
+firefox 4509 wiklam  DEL       REG               0,26                 57 /dev/shm/org.mozilla.ipc.5587.11
+firefox 4509 wiklam  DEL       REG               0,26                 42 /dev/shm/org.mozilla.ipc.5587.3
+firefox 4509 wiklam  DEL       REG                0,5            3080213 /SYSV00000000
+firefox 4509 wiklam  DEL       REG                0,5            2785303 /SYSV00000000
+firefox 4509 wiklam  DEL       REG               0,26                 88 /dev/shm/org.mozilla.ipc.5587.22
+firefox 4509 wiklam  DEL       REG               0,26                 55 /dev/shm/org.mozilla.ipc.4573.366
+firefox 4509 wiklam  DEL       REG               0,26                 32 /dev/shm/org.mozilla.ipc.5587.1
+firefox 4509 wiklam  DEL       REG               0,26                 25 /dev/shm/org.mozilla.ipc.5587.0
+firefox 4509 wiklam  DEL       REG               0,26                 62 /dev/shm/org.mozilla.ipc.4741.105
+firefox 4509 wiklam  DEL       REG               0,26                 46 /dev/shm/org.mozilla.ipc.5587.5
+firefox 4509 wiklam  DEL       REG                0,5            3112979 /SYSV00000000
+firefox 4509 wiklam  DEL       REG                0,5            2818056 /SYSV00000000
+firefox 4509 wiklam  mem       REG              253,1     81888 20580990 /usr/lib/x86_64-linux-gnu/libdbusmenu-gtk3.so.4.0.12
+firefox 4509 wiklam  mem       REG              253,1    114112 20579133 /usr/lib/x86_64-linux-gnu/libdbusmenu-glib.so.4.0.12
+firefox 4509 wiklam  DEL       REG               0,26                 68 /dev/shm/org.mozilla.ipc.4741.108
+firefox 4509 wiklam  DEL       REG               0,26                 66 /dev/shm/org.mozilla.ipc.4741.107
+firefox 4509 wiklam  DEL       REG                0,5            1343504 /SYSV00000000
+firefox 4509 wiklam  DEL       REG               0,26                 82 /dev/shm/org.mozilla.ipc.4509.419
+firefox 4509 wiklam  DEL       REG               0,26                 33 /dev/shm/org.mozilla.ipc.4509.420
+firefox 4509 wiklam  DEL       REG               0,26                 86 /dev/shm/org.mozilla.ipc.4509.333
+firefox 4509 wiklam  DEL       REG               0,26                 63 /dev/shm/org.mozilla.ipc.4741.106
+firefox 4509 wiklam  DEL       REG               0,26                 72 /dev/shm/org.mozilla.ipc.5587.18
+firefox 4509 wiklam  DEL       REG               0,26                 71 /dev/shm/org.mozilla.ipc.5587.17
+firefox 4509 wiklam  DEL       REG                0,5            1310727 /SYSV00000000
+firefox 4509 wiklam  DEL       REG               0,26                 70 /dev/shm/org.mozilla.ipc.5587.16
+firefox 4509 wiklam  DEL       REG               0,26                 67 /dev/shm/org.mozilla.ipc.5587.14
+firefox 4509 wiklam  DEL       REG               0,26                 60 /dev/shm/org.mozilla.ipc.5587.12
+firefox 4509 wiklam  DEL       REG               0,26                 90 /dev/shm/org.mozilla.ipc.4573.324
+firefox 4509 wiklam  DEL       REG               0,26                 51 /dev/shm/org.mozilla.ipc.5587.8
+firefox 4509 wiklam  DEL       REG               0,26                 39 /dev/shm/org.mozilla.ipc.4509.604
+firefox 4509 wiklam  DEL       REG               0,26                 48 /dev/shm/org.mozilla.ipc.5587.7
+firefox 4509 wiklam  DEL       REG               0,26                 47 /dev/shm/org.mozilla.ipc.5587.6
+firefox 4509 wiklam  DEL       REG               0,26                 36 /dev/shm/org.mozilla.ipc.4509.331
+firefox 4509 wiklam  DEL       REG               0,26                 50 /dev/shm/org.mozilla.ipc.4509.601
+firefox 4509 wiklam  DEL       REG               0,26                 79 /dev/shm/org.mozilla.ipc.4573.315
+firefox 4509 wiklam  mem       REG              253,1     26292 41030068 /home/wiklam/.mozilla/firefox/g41068qu.default/features/{b8796b52-b581-4beb-95df-88210070291d}/doh-rollout@mozilla.org.xpi
+firefox 4509 wiklam  mem       REG              253,1    353824 21629216 /usr/share/fonts/truetype/ubuntu/Ubuntu-R.ttf
+firefox 4509 wiklam  DEL       REG               0,26                 53 /dev/shm/org.mozilla.ipc.4509.525
+firefox 4509 wiklam  DEL       REG               0,26                 78 /dev/shm/org.mozilla.ipc.4573.314
+firefox 4509 wiklam  DEL       REG               0,26                 77 /dev/shm/org.mozilla.ipc.4573.313
+firefox 4509 wiklam  DEL       REG               0,26                 44 /dev/shm/org.mozilla.ipc.4509.526
+firefox 4509 wiklam  mem       REG              253,1     26454 20582625 /usr/lib/firefox/browser/features/fxmonitor@mozilla.org.xpi
+firefox 4509 wiklam  DEL       REG               0,26                  8 /dev/shm/org.chromium.2X1xf8
+firefox 4509 wiklam  DEL       REG               0,26                 45 /dev/shm/org.mozilla.ipc.5587.4
+firefox 4509 wiklam  DEL       REG               0,26                 30 /dev/shm/org.mozilla.ipc.4509.603
+firefox 4509 wiklam  DEL       REG               0,26                 34 /dev/shm/org.mozilla.ipc.5587.2
+firefox 4509 wiklam  DEL       REG               0,26                 65 /dev/shm/org.mozilla.ipc.4573.303
+firefox 4509 wiklam  DEL       REG               0,26                 58 /dev/shm/org.mozilla.ipc.4573.301
+firefox 4509 wiklam  DEL       REG               0,26                 54 /dev/shm/org.mozilla.ipc.4573.300
+firefox 4509 wiklam  DEL       REG               0,26                 28 /dev/shm/org.mozilla.ipc.4509.225
+firefox 4509 wiklam  mem       REG              253,1    183136 21627129 /usr/share/glib-2.0/schemas/gschemas.compiled
+firefox 4509 wiklam  mem       REG              253,1     93226 20582628 /usr/lib/firefox/browser/features/webcompat@mozilla.org.xpi
+firefox 4509 wiklam  DEL       REG               0,26                 22 /dev/shm/org.chromium.bAk2K6
+firefox 4509 wiklam  DEL       REG               0,26                 31 /dev/shm/org.mozilla.ipc.4663.0
+firefox 4509 wiklam  DEL       REG               0,26                  9 /dev/shm/org.mozilla.ipc.4509.224
+firefox 4509 wiklam  DEL       REG               0,26                 27 /dev/shm/org.mozilla.ipc.4509.602
+firefox 4509 wiklam  DEL       REG               0,26                 16 /dev/shm/org.chromium.U4hLsz
+firefox 4509 wiklam  DEL       REG               0,26                 23 /dev/shm/org.chromium.0KUb10
+firefox 4509 wiklam  DEL       REG               0,26                 18 /dev/shm/org.chromium.HdeKIt
+firefox 4509 wiklam  DEL       REG               0,26                 41 /dev/shm/org.mozilla.ipc.4573.296
+firefox 4509 wiklam  DEL       REG               0,26                 21 /dev/shm/org.chromium.8GmUuc
+firefox 4509 wiklam  DEL       REG               0,26                 20 /dev/shm/org.chromium.Rm8Oei
+firefox 4509 wiklam  DEL       REG               0,26                 19 /dev/shm/org.chromium.6lOLYn
+firefox 4509 wiklam  DEL       REG               0,26                 17 /dev/shm/org.mozilla.ipc.4509.228
+firefox 4509 wiklam  mem       REG              253,1    419816 20578772 /usr/lib/x86_64-linux-gnu/libibus-1.0.so.5.0.517
+firefox 4509 wiklam  DEL       REG               0,26                 13 /dev/shm/org.chromium.f9HCMQ
+firefox 4509 wiklam  DEL       REG               0,26                 15 /dev/shm/org.chromium.Pq3BeF
+firefox 4509 wiklam  DEL       REG               0,26                 14 /dev/shm/org.chromium.eO8A0K
+firefox 4509 wiklam  DEL       REG               0,26                 12 /dev/shm/org.chromium.UhYFyW
+firefox 4509 wiklam  DEL       REG               0,26                 11 /dev/shm/org.mozilla.ipc.4573.0
+firefox 4509 wiklam  DEL       REG               0,26                 10 /dev/shm/org.mozilla.ipc.4509.227
+firefox 4509 wiklam  DEL       REG               0,26                 37 /dev/shm/org.mozilla.ipc.4509.723
+firefox 4509 wiklam  mem       REG              253,1     15520 38814270 /home/wiklam/.config/dconf/user
+firefox 4509 wiklam  DEL       REG               0,26                  4 /dev/shm/org.chromium.Yjxpsk
+firefox 4509 wiklam  mem       REG              253,1     30752 20842338 /usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-ibus.so
+firefox 4509 wiklam  mem       REG              253,1    340712 21629032 /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
+firefox 4509 wiklam  mem       REG              253,1     23176 20843837 /usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-png.so
+firefox 4509 wiklam  mem       REG              253,1    138224 20973652 /usr/share/mime/mime.cache
+firefox 4509 wiklam  DEL       REG               0,26                  7 /dev/shm/org.chromium.jAOLhe
+firefox 4509 wiklam  mem       REG              253,1     19224 22023752 /usr/share/icons/hicolor/icon-theme.cache
+firefox 4509 wiklam  mem       REG              253,1     35776 22024006 /usr/share/icons/Adwaita/icon-theme.cache
+firefox 4509 wiklam  mem       REG              253,1    327184 22027897 /usr/share/icons/Humanity/icon-theme.cache
+firefox 4509 wiklam  mem       REG              253,1     26816 22027906 /usr/share/icons/Humanity-Dark/icon-theme.cache
+firefox 4509 wiklam  mem       REG              253,1     54104 22027914 /usr/share/icons/ubuntu-mono-dark/icon-theme.cache
+firefox 4509 wiklam  DEL       REG               0,26                  5 /dev/shm/org.chromium.YuTRNw
+firefox 4509 wiklam  mem       REG              253,1      1656 38805891 /home/wiklam/.cache/fontconfig/a41116dafaf8b233ac2c61cb73f2ea5f-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1    380132 21629034 /usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf
+firefox 4509 wiklam  mem       REG              253,1     26912 19280323 /var/cache/fontconfig/4be9850f182b35c1350b6bbf2e42601c-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1616 19280322 /var/cache/fontconfig/087e1975ba9a574b140bb1df193bf770-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     23760 19280321 /var/cache/fontconfig/6fe8b0d39a161d19087fe931545dda13-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     44448 19268067 /var/cache/fontconfig/945677eb7aeaf62f1d50efc3fb3ec7d8-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     27976 19280319 /var/cache/fontconfig/63c7aca0c1b0a3f740ee470c2e28e675-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     32888 19280318 /var/cache/fontconfig/a6d8cf8e4ec09cdbc8633c31745a07dd-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1    690288 20587135 /usr/lib/x86_64-linux-gnu/libvorbisenc.so.2.0.11
+firefox 4509 wiklam  mem       REG              253,1    485352 20585965 /usr/lib/x86_64-linux-gnu/libFLAC.so.8.3.0
+firefox 4509 wiklam  mem       REG              253,1     22368 20586102 /usr/lib/x86_64-linux-gnu/libasyncns.so.0.3.1
+firefox 4509 wiklam  mem       REG              253,1    487504 20583689 /usr/lib/x86_64-linux-gnu/libsndfile.so.1.0.28
+firefox 4509 wiklam  mem       REG              253,1     39784 52695890 /lib/x86_64-linux-gnu/libwrap.so.0.7.6
+firefox 4509 wiklam  mem       REG              253,1    514216 20842287 /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-11.1.so
+firefox 4509 wiklam  mem       REG              253,1    326544 20579131 /usr/lib/x86_64-linux-gnu/libpulse.so.0.20.2
+firefox 4509 wiklam  mem       REG              253,1     15080 19280320 /var/cache/fontconfig/6aa41aa22e18b8fa06a12da28ea9c28b-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     20408 19268038 /var/cache/fontconfig/2300eef321c393bfd76478a5c0e95b23-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      3424 19268031 /var/cache/fontconfig/0d8c3b2ac0904cb8a57a757ad11a4a08-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     84440 19268027 /var/cache/fontconfig/04aabc0a78ac019cf9454389977116d2-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      3152 19268035 /var/cache/fontconfig/1ac9eb803944fde146138c791f5cc56a-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1792 19280317 /var/cache/fontconfig/b95bc8ffbebda2bbdae4265e45b8178d-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1864 19280316 /var/cache/fontconfig/9c956a7723ca69a44b382d9179c9802f-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1640 19268086 /var/cache/fontconfig/dc05db6664285cc2f12bf69c139ae4c3-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      4608 19268032 /var/cache/fontconfig/14a5e22175779b556eaa434240950366-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1744 19268059 /var/cache/fontconfig/660208299946a285a940457d1287da33-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1848 19280314 /var/cache/fontconfig/5d1cca7074f29429a8d18692746c2426-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      4176 19268050 /var/cache/fontconfig/4f3e3037c9980c83b53a9351efadef62-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      6088 19268064 /var/cache/fontconfig/767a8244fc0220cfb567a839d0392e0b-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      2368 19278124 /var/cache/fontconfig/4794a0821666d79190d59a36cb4f44b5-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     20464 19280313 /var/cache/fontconfig/bbd3eebb6912613e2596f2fd46535a95-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1880 19280312 /var/cache/fontconfig/9eae20f1ff8cc0a7d125749e875856bd-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1    232888 19280311 /var/cache/fontconfig/0bd3dc0958fa2205aaaa8ebb13e2872b-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      8296 19280310 /var/cache/fontconfig/bf2c1853a9e9b00bb02fe2e9bcf1e201-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     17648 19268087 /var/cache/fontconfig/def309198bfa603429122923fa2bb2d4-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1816 19268075 /var/cache/fontconfig/b872e6e592da6075ffa4ab0a1fcc0c75-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1856 19268092 /var/cache/fontconfig/f6d4eedfaab2589bde49f7a3ff831d22-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1920 19268057 /var/cache/fontconfig/589f83ef4c36d296ce6e1c846f468f08-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1824 19268077 /var/cache/fontconfig/bab58bb527bb656aaa9f116d68a48d89-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1736 19268036 /var/cache/fontconfig/2171a34dccabdb6bcbbc728186263178-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1752 19268078 /var/cache/fontconfig/c5c45a61289222e0d30b1a26ef4effbe-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1744 19268073 /var/cache/fontconfig/aec30016f93e1b46d1a973dce0d74068-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1832 19268043 /var/cache/fontconfig/3f589640d34b7dc9042c8d453f7c8b9c-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      2080 19268033 /var/cache/fontconfig/16c2fda60d1b4b719f4b3d06fd951d25-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1744 19268072 /var/cache/fontconfig/a48eab177a16e4f3713381162db2f3e9-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1752 19268053 /var/cache/fontconfig/564b2e68ac9bc4e36a6f7f6d6125ec1c-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     19400 19273633 /var/cache/fontconfig/9d2451b1fd30e5bffe8383fd27c35478-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     24088 19268039 /var/cache/fontconfig/3047814df9a2f067bd2d96a2b9c36e5a-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     28944 19272744 /var/cache/fontconfig/bf3b770c553c462765856025a94f1ce6-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      2984 19268054 /var/cache/fontconfig/56cf4f4769d0f4abc89a4895d7bd3ae1-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      3192 19268076 /var/cache/fontconfig/b9d506c9ac06c20b433354fa67a72993-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     21528 19268074 /var/cache/fontconfig/b47c4e1ecd0709278f4910c18777a504-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     10136 19280309 /var/cache/fontconfig/14d493b97896515cad3840ba4896e372-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      4224 19280308 /var/cache/fontconfig/715927c029ee5789f7bcbe92036c8d73-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     12064 19280307 /var/cache/fontconfig/e49e89034d371f0f9de17aab02136486-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      6328 19280306 /var/cache/fontconfig/4b14b093aebc79c320de5e86ae1d3314-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1936 19280305 /var/cache/fontconfig/8aec10f4cc8391dcef22ca549f1e4354-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     76688 19268083 /var/cache/fontconfig/d52a8644073d54c13679302ca1180695-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      3128 19268041 /var/cache/fontconfig/370e5b74bf5dafc30834de68e24a87a4-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1920 19268062 /var/cache/fontconfig/6b2c5944714ca7831b25bed9e85cb5c8-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1776 19268082 /var/cache/fontconfig/d5178ab6d91b49bf20a416737dcea9e8-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1824 19268052 /var/cache/fontconfig/551ecf3b0e8b0bca0f25c0944f561853-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      8840 19268091 /var/cache/fontconfig/f259c2cffa685e28062317905db73c4a-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      5248 19268051 /var/cache/fontconfig/550f3886151c940c12a5ed35f6a00586-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      9840 19268060 /var/cache/fontconfig/674d1711f2d1d2a09646eb0bdcadee49-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1616 19280304 /var/cache/fontconfig/8a687c406b77f27d99abfeeba937fcce-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     23840 19280303 /var/cache/fontconfig/75ad6aa2358a85f0de2c8ee4837e8227-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      3320 19268044 /var/cache/fontconfig/3f7329c5293ffd510edef78f73874cfd-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1888 19280302 /var/cache/fontconfig/ac2cf712d852da827a87a9baf682f5b9-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      7824 19280301 /var/cache/fontconfig/65f976e5259cbe6dc7697b8648396239-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     46216 19280300 /var/cache/fontconfig/d589a48862398ed80a3d6066f4f56f4c-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     12632 19280299 /var/cache/fontconfig/246184dc75a16901ca37d96895904249-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     18888 19280298 /var/cache/fontconfig/b25010134a2e462c779c1c1d5ccbff7b-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1864 19280297 /var/cache/fontconfig/94f7fe9bd33aadfac165873bd010d595-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      4928 19280296 /var/cache/fontconfig/423767150eb258c59035de29db6fca84-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      2136 19280295 /var/cache/fontconfig/845c20fd2c4814bcec78e05d37a63ccc-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1960 19280294 /var/cache/fontconfig/e7de81b01590fb7e12b38e274e17d0db-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     14328 19280293 /var/cache/fontconfig/6386b86020ecc1ef9690bb720a13964f-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      7872 19280291 /var/cache/fontconfig/67709b7835c0f764c1135060c9575660-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     67416 19280286 /var/cache/fontconfig/198d8fcf01c96d0cf813f74fd759bdb7-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      2296 19280292 /var/cache/fontconfig/406a1d2d2bf3ed7664fbadefac0b2f66-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      5768 19280290 /var/cache/fontconfig/099525ddca5eae4f2477b69cf2d7f16d-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      5792 19280289 /var/cache/fontconfig/61092ac79d9058a69eda095afa0a78f1-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      6040 19280288 /var/cache/fontconfig/a722efc6911bbe16667b1a77497ffd37-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      6016 19280287 /var/cache/fontconfig/d63fdd8e0f42559533dd777c334fdfcc-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      2440 19268030 /var/cache/fontconfig/0c9eb80ebd1c36541ebe2852d3bb0c49-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1680 19268037 /var/cache/fontconfig/22368d551a680bfe5a62c02760edf4ea-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      2096 19268049 /var/cache/fontconfig/4d9c95eba1cb85bbcf2878543262124a-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1640 19268066 /var/cache/fontconfig/85e0a52ce643a7ba2ae53e5d6949cead-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      2072 19268046 /var/cache/fontconfig/49f0de54bdd920fe4f0dfd4cbac43e6b-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1648 19268093 /var/cache/fontconfig/f6e6e0a5c3d2f6ae0c0c2e0ecd42a997-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     10744 19280283 /var/cache/fontconfig/75114ca45c98e8a441da0ff356701271-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     44120 19280282 /var/cache/fontconfig/83bf95040141907cd45bb53cf7c1c148-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     57296 19268069 /var/cache/fontconfig/9b89f8e3dae116d678bbf48e5f21f69b-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1   5857856 40763546 /home/wiklam/.cache/mozilla/firefox/g41068qu.default/startupCache/startupCache.8.little
+firefox 4509 wiklam  mem       REG              253,1   8089892 40763499 /home/wiklam/.cache/mozilla/firefox/g41068qu.default/startupCache/scriptCache-current.bin
+firefox 4509 wiklam  mem       REG              253,1    781997 40763551 /home/wiklam/.cache/mozilla/firefox/g41068qu.default/startupCache/scriptCache-child-current.bin
+firefox 4509 wiklam  mem       REG              253,1      1824 19268047 /var/cache/fontconfig/4b2eda6bb976bda485cb2176619421d5-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     26712 19280279 /var/cache/fontconfig/53d14c92082a93e67d5078324eb314ca-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      5288 19268061 /var/cache/fontconfig/6afa1bb216ce958c1589e297e8008489-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      6208 19280281 /var/cache/fontconfig/6e6b34ae150a7ad95e82fb4a522f0bda-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     76592 19280273 /var/cache/fontconfig/4ac51e5cfbc76fc3f983e470323a16d3-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     95688 19280268 /var/cache/fontconfig/e13b20fdb08344e0e664864cc2ede53d-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1  43043814 20582629 /usr/lib/firefox/browser/omni.ja
+firefox 4509 wiklam  mem       REG              253,1  18639197 20582674 /usr/lib/firefox/omni.ja
+firefox 4509 wiklam  mem       REG              253,1     97176 52695804 /lib/x86_64-linux-gnu/libnsl-2.27.so
+firefox 4509 wiklam  mem       REG              253,1     47576 52695821 /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+firefox 4509 wiklam  mem       REG              253,1     39744 52695806 /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+firefox 4509 wiklam  mem       REG              253,1     47568 52695810 /lib/x86_64-linux-gnu/libnss_files-2.27.so
+firefox 4509 wiklam  mem       REG              253,1     34624 20586825 /usr/lib/x86_64-linux-gnu/libogg.so.0.8.2
+firefox 4509 wiklam  mem       REG              253,1    174360 20587133 /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.8
+firefox 4509 wiklam  mem       REG              253,1     39272 20586724 /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1
+firefox 4509 wiklam  mem       REG              253,1     88072 20587058 /usr/lib/x86_64-linux-gnu/libtdb.so.1.3.15
+firefox 4509 wiklam  mem       REG              253,1     31056 20587137 /usr/lib/x86_64-linux-gnu/libvorbisfile.so.3.3.7
+firefox 4509 wiklam  mem       REG              253,1     71680 20586181 /usr/lib/x86_64-linux-gnu/libcanberra.so.0.2.5
+firefox 4509 wiklam  mem       REG              253,1     18272 20586179 /usr/lib/x86_64-linux-gnu/libcanberra-gtk3.so.0.1.9
+firefox 4509 wiklam  mem       REG              253,1     26536 20844248 /usr/lib/x86_64-linux-gnu/gtk-3.0/modules/libcanberra-gtk3-module.so
+firefox 4509 wiklam  mem       REG              253,1     14008 19280278 /var/cache/fontconfig/6c08beecf0dac481ec92e759e0c2e6d7-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     14024 19280277 /var/cache/fontconfig/4d6aee6d44eccb37054d3216e945f618-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     12552 19280276 /var/cache/fontconfig/d6c6df98c3df5faf9bd0f8ef4d91efe5-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1    247720 20840949 /usr/lib/x86_64-linux-gnu/gvfs/libgvfscommon.so
+firefox 4509 wiklam  mem       REG              253,1    211144 20840945 /usr/lib/x86_64-linux-gnu/gio/modules/libgvfsdbus.so
+firefox 4509 wiklam  mem       REG              253,1     12568 19280275 /var/cache/fontconfig/9fb319ef52839f11ee26ab8b4cffa12b-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      4288 19280274 /var/cache/fontconfig/43bfe21a9e1edebcf703d79ee2950b06-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     10536 19280272 /var/cache/fontconfig/c19b55eb3b4c5b40ea175e31682068a5-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     23760 19280270 /var/cache/fontconfig/3629f2adf904f9a612908891fae71ceb-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1  11530592 20585019 /usr/lib/locale/locale-archive
+firefox 4509 wiklam  mem       REG              253,1     97952 20585986 /usr/lib/x86_64-linux-gnu/libICE.so.6.3.0
+firefox 4509 wiklam  mem       REG              253,1     30960 20586010 /usr/lib/x86_64-linux-gnu/libSM.so.6.0.1
+firefox 4509 wiklam  mem       REG              253,1     22744 20587223 /usr/lib/x86_64-linux-gnu/libxcb-util.so.1.0.0
+firefox 4509 wiklam  mem       REG              253,1    425552 20586055 /usr/lib/x86_64-linux-gnu/libXt.so.6.0.0
+firefox 4509 wiklam  mem       REG              253,1     34744 20587043 /usr/lib/x86_64-linux-gnu/libstartup-notification-1.so.0.0.0
+firefox 4509 wiklam  mem       REG              253,1    157624 20586256 /usr/lib/x86_64-linux-gnu/libdbus-glib-1.so.2.3.4
+firefox 4509 wiklam  mem       REG              253,1      5776 20586457 /usr/lib/x86_64-linux-gnu/libX11-xcb.so.1.0.0
+firefox 4509 wiklam  mem       REG              253,1 115649216 20582673 /usr/lib/firefox/libxul.so
+firefox 4509 wiklam  mem       REG              253,1      9872 20582660 /usr/lib/firefox/libmozwayland.so
+firefox 4509 wiklam  mem       REG              253,1     84032 52695761 /lib/x86_64-linux-gnu/libgpg-error.so.0.22.0
+firefox 4509 wiklam  mem       REG              253,1     27112 52695888 /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+firefox 4509 wiklam  mem       REG              253,1   1155768 52695759 /lib/x86_64-linux-gnu/libgcrypt.so.20.2.1
+firefox 4509 wiklam  mem       REG              253,1    112672 20586732 /usr/lib/x86_64-linux-gnu/liblz4.so.1.7.1
+firefox 4509 wiklam  mem       REG              253,1    153984 52695780 /lib/x86_64-linux-gnu/liblzma.so.5.2.2
+firefox 4509 wiklam  mem       REG              253,1     80104 52695716 /lib/x86_64-linux-gnu/libbsd.so.0.8.7
+firefox 4509 wiklam  mem       REG              253,1    311720 52695712 /lib/x86_64-linux-gnu/libblkid.so.1.1.0
+firefox 4509 wiklam  mem       REG              253,1     26544 20586252 /usr/lib/x86_64-linux-gnu/libdatrie.so.1.3.3
+firefox 4509 wiklam  mem       REG              253,1    182424 20586509 /usr/lib/x86_64-linux-gnu/libgraphite2.so.3.0.1
+firefox 4509 wiklam  mem       REG              253,1    536648 52691539 /lib/x86_64-linux-gnu/libsystemd.so.0.21.0
+firefox 4509 wiklam  mem       REG              253,1     22616 20586029 /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+firefox 4509 wiklam  mem       REG              253,1     14456 20586018 /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+firefox 4509 wiklam  mem       REG              253,1    464824 52695842 /lib/x86_64-linux-gnu/libpcre.so.3.13.3
+firefox 4509 wiklam  mem       REG              253,1     31032 20586366 /usr/lib/x86_64-linux-gnu/libffi.so.6.0.4
+firefox 4509 wiklam  mem       REG              253,1    340232 52695789 /lib/x86_64-linux-gnu/libmount.so.1.1.0
+firefox 4509 wiklam  mem       REG              253,1    101168 52695859 /lib/x86_64-linux-gnu/libresolv-2.27.so
+firefox 4509 wiklam  mem       REG              253,1    154832 52695865 /lib/x86_64-linux-gnu/libselinux.so.1
+firefox 4509 wiklam  mem       REG              253,1    202880 52691929 /lib/x86_64-linux-gnu/libexpat.so.1.6.7
+firefox 4509 wiklam  mem       REG              253,1     36904 20587066 /usr/lib/x86_64-linux-gnu/libthai.so.0.3.0
+firefox 4509 wiklam  mem       REG              253,1    646064 20586592 /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.10702.0
+firefox 4509 wiklam  mem       REG              253,1    194728 20586108 /usr/lib/x86_64-linux-gnu/libatspi.so.0.0.1
+firefox 4509 wiklam  mem       REG              253,1    313496 52691456 /lib/x86_64-linux-gnu/libdbus-1.so.3.19.4
+firefox 4509 wiklam  mem       REG              253,1    116960 52695892 /lib/x86_64-linux-gnu/libz.so.1.2.11
+firefox 4509 wiklam  mem       REG              253,1     39448 20586051 /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+firefox 4509 wiklam  mem       REG              253,1     51288 20581563 /usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0
+firefox 4509 wiklam  mem       REG              253,1     10312 20579082 /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+firefox 4509 wiklam  mem       REG              253,1    202672 20578867 /usr/lib/x86_64-linux-gnu/libpng16.so.16.34.0
+firefox 4509 wiklam  mem       REG              253,1    673808 20586882 /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.34.0
+firefox 4509 wiklam  mem       REG              253,1    162232 20580456 /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+firefox 4509 wiklam  mem       REG              253,1    735704 20586398 /usr/lib/x86_64-linux-gnu/libfreetype.so.6.15.0
+firefox 4509 wiklam  mem       REG              253,1     73640 20586031 /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+firefox 4509 wiklam  mem       REG              253,1     60552 20587148 /usr/lib/x86_64-linux-gnu/libwayland-client.so.0.3.0
+firefox 4509 wiklam  mem       REG              253,1      6024 20587152 /usr/lib/x86_64-linux-gnu/libwayland-egl.so.1.0.0
+firefox 4509 wiklam  mem       REG              253,1     31104 20587150 /usr/lib/x86_64-linux-gnu/libwayland-cursor.so.0.0.0
+firefox 4509 wiklam  mem       REG              253,1    256424 20587235 /usr/lib/x86_64-linux-gnu/libxkbcommon.so.0.0.0
+firefox 4509 wiklam  mem       REG              253,1     10272 20586027 /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+firefox 4509 wiklam  mem       REG              253,1     10288 20586023 /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+firefox 4509 wiklam  mem       REG              253,1     39240 20586025 /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+firefox 4509 wiklam  mem       REG              253,1     43320 20586049 /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+firefox 4509 wiklam  mem       REG              253,1     10376 20586041 /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+firefox 4509 wiklam  mem       REG              253,1   1137968 20579391 /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.5600.4
+firefox 4509 wiklam  mem       REG              253,1    342072 20579395 /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.5600.4
+firefox 4509 wiklam  mem       REG              253,1   1690808 20579389 /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.5600.4
+firefox 4509 wiklam  mem       REG              253,1    281984 20586380 /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.10.1
+firefox 4509 wiklam  mem       REG              253,1    313264 20586850 /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.4000.14
+firefox 4509 wiklam  mem       REG              253,1     87904 20586854 /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.4000.14
+firefox 4509 wiklam  mem       REG              253,1   1053560 20586334 /usr/lib/x86_64-linux-gnu/libepoxy.so.0.0.0
+firefox 4509 wiklam  mem       REG              253,1    198312 20586106 /usr/lib/x86_64-linux-gnu/libatk-bridge-2.0.so.0.0.0
+firefox 4509 wiklam  mem       REG              253,1    153520 20586104 /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.22810.1
+firefox 4509 wiklam  mem       REG              253,1    146776 20586436 /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.3611.0
+firefox 4509 wiklam  mem       REG              253,1   1161648 20586175 /usr/lib/x86_64-linux-gnu/libcairo.so.2.11510.0
+firefox 4509 wiklam  mem       REG              253,1     34720 20586173 /usr/lib/x86_64-linux-gnu/libcairo-gobject.so.2.11510.0
+firefox 4509 wiklam  mem       REG              253,1     22640 20586033 /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+firefox 4509 wiklam  mem       REG              253,1     63944 20586039 /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+firefox 4509 wiklam  mem       REG              253,1   1277384 20580465 /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+firefox 4509 wiklam  mem       REG              253,1     51096 20586852 /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.4000.14
+firefox 4509 wiklam  mem       REG              253,1     14232 20579393 /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.5600.4
+firefox 4509 wiklam  mem       REG              253,1   1003808 20579311 /usr/lib/x86_64-linux-gnu/libgdk-3.so.0.2200.30
+firefox 4509 wiklam  mem       REG              253,1   7350712 20579312 /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.30
+firefox 4509 wiklam  mem       REG              253,1      5776 20582657 /usr/lib/firefox/libmozgtk.so
+firefox 4509 wiklam  mem       REG              253,1    365488 20582672 /usr/lib/firefox/libssl3.so
+firefox 4509 wiklam  mem       REG              253,1    900136 20582659 /usr/lib/firefox/libmozsqlite3.so
+firefox 4509 wiklam  mem       REG              253,1    159936 20582669 /usr/lib/firefox/libsmime3.so
+firefox 4509 wiklam  mem       REG              253,1    616760 20582662 /usr/lib/firefox/libnss3.so
+firefox 4509 wiklam  mem       REG              253,1    191368 20582666 /usr/lib/firefox/libnssutil3.so
+firefox 4509 wiklam  mem       REG              253,1     14488 20582668 /usr/lib/firefox/libplds4.so
+firefox 4509 wiklam  mem       REG              253,1     39008 20582654 /usr/lib/firefox/liblgpllibs.so
+firefox 4509 wiklam  mem       REG              253,1     18680 20582667 /usr/lib/firefox/libplc4.so
+firefox 4509 wiklam  mem       REG              253,1     31680 52695861 /lib/x86_64-linux-gnu/librt-2.27.so
+firefox 4509 wiklam  mem       REG              253,1    125704 20582658 /usr/lib/firefox/libmozsandbox.so
+firefox 4509 wiklam  mem       REG              253,1    235280 20582661 /usr/lib/firefox/libnspr4.so
+firefox 4509 wiklam  mem       REG              253,1     11912 19280269 /var/cache/fontconfig/de83a0a961185c8bd1f159015d56c039-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     52392 19280261 /var/cache/fontconfig/8f02d4cb045bd6ce15663e43f347c9f8-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1   1700792 52695783 /lib/x86_64-linux-gnu/libm-2.27.so
+firefox 4509 wiklam  mem       REG              253,1   2030544 52695720 /lib/x86_64-linux-gnu/libc-2.27.so
+firefox 4509 wiklam  mem       REG              253,1     96616 52691454 /lib/x86_64-linux-gnu/libgcc_s.so.1
+firefox 4509 wiklam  mem       REG              253,1   1594864 20578548 /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+firefox 4509 wiklam  mem       REG              253,1     14560 52695743 /lib/x86_64-linux-gnu/libdl-2.27.so
+firefox 4509 wiklam  mem       REG              253,1    144976 52695853 /lib/x86_64-linux-gnu/libpthread-2.27.so
+firefox 4509 wiklam  mem       REG              253,1    170960 52695692 /lib/x86_64-linux-gnu/ld-2.27.so
+firefox 4509 wiklam  mem       REG              253,1     17936 19280267 /var/cache/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1    132088 19267738 /var/cache/fontconfig/467c019e582ee353435ea5c21d137ef6-le64.cache-7
+firefox 4509 wiklam  mem       REG               0,52         2       37 /run/user/1000/dconf/user
+firefox 4509 wiklam  DEL       REG               0,26                 24 /dev/shm/org.mozilla.ipc.5587.24
+firefox 4509 wiklam  DEL       REG               0,26                 29 /dev/shm/org.mozilla.ipc.4509.721
+firefox 4509 wiklam  mem       REG              253,1      1904 19280280 /var/cache/fontconfig/3334a778d104e76d188e9df399bc24d2-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     13672 19280265 /var/cache/fontconfig/198dcdad82c1ebc3868edff741eb1653-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      8648 19280263 /var/cache/fontconfig/16326683038b281783a0ef8c680e3a10-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1      1600 19280271 /var/cache/fontconfig/c277e94e32b20404286a1ddafa5a80f0-le64.cache-7
+firefox 4509 wiklam  DEL       REG               0,26                  3 /dev/shm/org.chromium.G95qtX
+firefox 4509 wiklam  mem       REG              253,1      2552 19267763 /var/cache/fontconfig/e0aa53bcfa504e64f87823c16bc01eb6-le64.cache-7
+firefox 4509 wiklam  mem       REG              253,1     26376 20843819 /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+firefox 4509 wiklam  mem       REG              253,1      3293 22414773 /usr/share/locale-langpack/en/LC_MESSAGES/gtk30.mo
+firefox 4509 wiklam    0r      CHR                1,3       0t0        6 /dev/null
+firefox 4509 wiklam    1u     unix 0x0000000000000000       0t0    39360 type=STREAM
+firefox 4509 wiklam    2u     unix 0x0000000000000000       0t0    39361 type=STREAM
+firefox 4509 wiklam    3u     unix 0x0000000000000000       0t0    43259 type=STREAM
+firefox 4509 wiklam    4u     unix 0x0000000000000000       0t0    45201 type=STREAM
+firefox 4509 wiklam    5u  a_inode               0,13         0     9908 [eventfd]
+firefox 4509 wiklam    6u  a_inode               0,13         0     9908 [eventfd]
+firefox 4509 wiklam    7u     unix 0x0000000000000000       0t0    45202 type=STREAM
+firefox 4509 wiklam    8u  a_inode               0,13         0     9908 [eventfd]
+firefox 4509 wiklam    9r      REG               0,26       352        5 /dev/shm/org.chromium.YuTRNw (deleted)
+firefox 4509 wiklam   10u     unix 0x0000000000000000       0t0    48830 type=STREAM
+firefox 4509 wiklam   11wW     REG              253,1         0 38797629 /home/wiklam/.mozilla/firefox/g41068qu.default/.parentlock
+firefox 4509 wiklam   12u  a_inode               0,13         0     9908 [eventpoll]
+firefox 4509 wiklam   13r     FIFO               0,12       0t0    42531 pipe
+firefox 4509 wiklam   14w     FIFO               0,12       0t0    42531 pipe
+firefox 4509 wiklam   15r     FIFO               0,12       0t0    42532 pipe
+firefox 4509 wiklam   16w     FIFO               0,12       0t0    42532 pipe
+firefox 4509 wiklam   17r      REG              253,1  18639197 20582674 /usr/lib/firefox/omni.ja
+firefox 4509 wiklam   18r      REG              253,1  43043814 20582629 /usr/lib/firefox/browser/omni.ja
+firefox 4509 wiklam   19r     FIFO               0,12       0t0    42533 pipe
+firefox 4509 wiklam   20w     FIFO               0,12       0t0    42533 pipe
+firefox 4509 wiklam   21r     FIFO               0,12       0t0    43256 pipe
+firefox 4509 wiklam   22w     FIFO               0,12       0t0    43256 pipe
+firefox 4509 wiklam   23u  netlink                          0t0    43257 ROUTE
+firefox 4509 wiklam   24r     FIFO               0,12       0t0    46331 pipe
+firefox 4509 wiklam   25w     FIFO               0,12       0t0    46331 pipe
+firefox 4509 wiklam   26r      CHR                1,9       0t0       11 /dev/urandom
+firefox 4509 wiklam   27u  a_inode               0,13         0     9908 [eventpoll]
+firefox 4509 wiklam   28r     FIFO               0,12       0t0    41857 pipe
+firefox 4509 wiklam   29w     FIFO               0,12       0t0    41857 pipe
+firefox 4509 wiklam   30u  a_inode               0,13         0     9908 [eventpoll]
+firefox 4509 wiklam   31r     FIFO               0,12       0t0    41858 pipe
+firefox 4509 wiklam   32w     FIFO               0,12       0t0    41858 pipe
+firefox 4509 wiklam   33r      REG              253,1    781997 40763551 /home/wiklam/.cache/mozilla/firefox/g41068qu.default/startupCache/scriptCache-child-current.bin
+firefox 4509 wiklam   34r      REG              253,1   5857856 40763546 /home/wiklam/.cache/mozilla/firefox/g41068qu.default/startupCache/startupCache.8.little
+firefox 4509 wiklam   35r      REG              253,1   8089892 40763499 /home/wiklam/.cache/mozilla/firefox/g41068qu.default/startupCache/scriptCache-current.bin
+firefox 4509 wiklam   36r      REG               0,26       308        3 /dev/shm/org.chromium.G95qtX (deleted)
+firefox 4509 wiklam   37r     FIFO               0,12       0t0    46332 pipe
+firefox 4509 wiklam   38w     FIFO               0,12       0t0    46332 pipe
+firefox 4509 wiklam   39r      REG               0,26    564048       26 /dev/shm/org.chromium.9Xqih9 (deleted)
+firefox 4509 wiklam   40r  a_inode               0,13         0     9908 inotify
+firefox 4509 wiklam   41uw     REG              253,1   1048576 38797639 /home/wiklam/.mozilla/firefox/g41068qu.default/cookies.sqlite
+firefox 4509 wiklam   42u     unix 0x0000000000000000       0t0    45203 type=STREAM
+firefox 4509 wiklam   43uw     REG              253,1     98304 38797646 /home/wiklam/.mozilla/firefox/g41068qu.default/permissions.sqlite
+firefox 4509 wiklam   44u     sock                0,9       0t0    43268 protocol: UNIX
+firefox 4509 wiklam   45u      REG              253,1    590288 38797644 /home/wiklam/.mozilla/firefox/g41068qu.default/cookies.sqlite-wal
+firefox 4509 wiklam   46rw     REG              253,1   5242880 38797647 /home/wiklam/.mozilla/firefox/g41068qu.default/places.sqlite
+firefox 4509 wiklam   47u     IPv4              65160       0t0      TCP wiklam-ThinkPad-T480s:51126->waw02s16-in-f4.1e100.net:https (ESTABLISHED)
+firefox 4509 wiklam   48u     IPv4              68307       0t0      TCP wiklam-ThinkPad-T480s:37760->waw02s13-in-f8.1e100.net:https (ESTABLISHED)
+firefox 4509 wiklam   49r      REG               0,26     22640        4 /dev/shm/org.chromium.Yjxpsk (deleted)
+firefox 4509 wiklam   50r      REG               0,26      1566        7 /dev/shm/org.chromium.jAOLhe (deleted)
+firefox 4509 wiklam   51r      REG               0,26    196546        8 /dev/shm/org.chromium.2X1xf8 (deleted)
+firefox 4509 wiklam   52r      REG               0,26      1120       12 /dev/shm/org.chromium.UhYFyW (deleted)
+firefox 4509 wiklam   53u     unix 0x0000000000000000       0t0    48838 type=STREAM
+firefox 4509 wiklam   54u     unix 0x0000000000000000       0t0    46378 type=SEQPACKET
+firefox 4509 wiklam   55u     unix 0x0000000000000000       0t0    46379 type=SEQPACKET
+firefox 4509 wiklam   56r     FIFO               0,12       0t0    46380 pipe
+firefox 4509 wiklam   57w     FIFO               0,12       0t0    46380 pipe
+firefox 4509 wiklam   58u     unix 0x0000000000000000       0t0    46381 type=SEQPACKET
+firefox 4509 wiklam   59u     unix 0x0000000000000000       0t0    46382 type=SEQPACKET
+firefox 4509 wiklam   60u     sock                0,9       0t0    46386 protocol: UNIX
+firefox 4509 wiklam   61uw     REG              253,1   5242880 38797647 /home/wiklam/.mozilla/firefox/g41068qu.default/places.sqlite
+firefox 4509 wiklam   62u     unix 0x0000000000000000       0t0    42534 type=STREAM
+firefox 4509 wiklam   63r      REG               0,26      5660       13 /dev/shm/org.chromium.f9HCMQ (deleted)
+firefox 4509 wiklam   64r     FIFO               0,12       0t0    41861 pipe
+firefox 4509 wiklam   65r      REG               0,26      2252       14 /dev/shm/org.chromium.eO8A0K (deleted)
+firefox 4509 wiklam   66r      REG               0,26      2748       15 /dev/shm/org.chromium.Pq3BeF (deleted)
+firefox 4509 wiklam   67u     unix 0x0000000000000000       0t0    44242 type=STREAM
+firefox 4509 wiklam   68r      REG               0,26     54026       16 /dev/shm/org.chromium.U4hLsz (deleted)
+firefox 4509 wiklam   69r      REG               0,26     21518       18 /dev/shm/org.chromium.HdeKIt (deleted)
+firefox 4509 wiklam   70r      REG               0,26       170       19 /dev/shm/org.chromium.6lOLYn (deleted)
+firefox 4509 wiklam   71r      REG               0,26      1910       20 /dev/shm/org.chromium.Rm8Oei (deleted)
+firefox 4509 wiklam   72r      REG               0,26      1772       21 /dev/shm/org.chromium.8GmUuc (deleted)
+firefox 4509 wiklam   73u     unix 0x0000000000000000       0t0    44244 type=STREAM
+firefox 4509 wiklam   74r      REG               0,26     18924       22 /dev/shm/org.chromium.bAk2K6 (deleted)
+firefox 4509 wiklam   75u     unix 0x0000000000000000       0t0    44246 type=STREAM
+firefox 4509 wiklam   76u     unix 0x0000000000000000       0t0    45274 type=STREAM
+firefox 4509 wiklam   77r      REG               0,26      4748       23 /dev/shm/org.chromium.0KUb10 (deleted)
+firefox 4509 wiklam   78u     unix 0x0000000000000000       0t0    44252 type=SEQPACKET
+firefox 4509 wiklam   79u     unix 0x0000000000000000       0t0    44253 type=SEQPACKET
+firefox 4509 wiklam   80r      REG              253,1   1225992 40111657 /home/wiklam/.mozilla/firefox/g41068qu.default/extensions/{d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}.xpi
+firefox 4509 wiklam   81u      REG              253,1   2525016 38809076 /home/wiklam/.mozilla/firefox/g41068qu.default/places.sqlite-wal
+firefox 4509 wiklam   82u     unix 0x0000000000000000       0t0    45276 type=STREAM
+firefox 4509 wiklam   83uw     REG              253,1   2392064 38797650 /home/wiklam/.mozilla/firefox/g41068qu.default/favicons.sqlite
+firefox 4509 wiklam   84u      REG              253,1   2098720 38813403 /home/wiklam/.mozilla/firefox/g41068qu.default/favicons.sqlite-wal
+firefox 4509 wiklam   85u      REG              253,1    360448 38797660 /home/wiklam/.mozilla/firefox/g41068qu.default/cert9.db
+firefox 4509 wiklam   86u      REG              253,1    294912 38797661 /home/wiklam/.mozilla/firefox/g41068qu.default/key4.db
+firefox 4509 wiklam   87u     sock                0,9       0t0    48835 protocol: UNIX
+firefox 4509 wiklam   88u     sock                0,9       0t0    46388 protocol: UNIX
+firefox 4509 wiklam   89u  a_inode               0,13         0     9908 [eventfd]
+firefox 4509 wiklam   90rw     REG              253,1   5242880 38797647 /home/wiklam/.mozilla/firefox/g41068qu.default/places.sqlite
+firefox 4509 wiklam   91u      REG              253,1   2525016 38809076 /home/wiklam/.mozilla/firefox/g41068qu.default/places.sqlite-wal
+firefox 4509 wiklam   92rw     REG              253,1   2392064 38797650 /home/wiklam/.mozilla/firefox/g41068qu.default/favicons.sqlite
+firefox 4509 wiklam   93u      REG              253,1   2098720 38813403 /home/wiklam/.mozilla/firefox/g41068qu.default/favicons.sqlite-wal
+firefox 4509 wiklam   94u      REG              253,1   2525016 38809076 /home/wiklam/.mozilla/firefox/g41068qu.default/places.sqlite-wal
+firefox 4509 wiklam   95uw     REG              253,1    262144 38797681 /home/wiklam/.mozilla/firefox/g41068qu.default/content-prefs.sqlite
+firefox 4509 wiklam   96rw     REG              253,1   5242880 38797647 /home/wiklam/.mozilla/firefox/g41068qu.default/places.sqlite
+firefox 4509 wiklam   97u      REG              253,1   2525016 38809076 /home/wiklam/.mozilla/firefox/g41068qu.default/places.sqlite-wal
+firefox 4509 wiklam   98rw     REG              253,1   2392064 38797650 /home/wiklam/.mozilla/firefox/g41068qu.default/favicons.sqlite
+firefox 4509 wiklam   99u      REG              253,1   2098720 38813403 /home/wiklam/.mozilla/firefox/g41068qu.default/favicons.sqlite-wal
+firefox 4509 wiklam  100rw     REG              253,1   2392064 38797650 /home/wiklam/.mozilla/firefox/g41068qu.default/favicons.sqlite
+firefox 4509 wiklam  101u     sock                0,9       0t0    51389 protocol: UNIX
+firefox 4509 wiklam  102u      REG              253,1   2098720 38813403 /home/wiklam/.mozilla/firefox/g41068qu.default/favicons.sqlite-wal
+firefox 4509 wiklam  103r      REG              253,1    648613 20582624 /usr/lib/firefox/browser/features/formautofill@mozilla.org.xpi
+firefox 4509 wiklam  104r      REG              253,1     93226 20582628 /usr/lib/firefox/browser/features/webcompat@mozilla.org.xpi
+firefox 4509 wiklam  105u     sock                0,9       0t0    69021 protocol: UNIX
+firefox 4509 wiklam  106u     sock                0,9       0t0    43296 protocol: UNIX
+firefox 4509 wiklam  107u     unix 0x0000000000000000       0t0    64204 type=STREAM
+firefox 4509 wiklam  108u     sock                0,9       0t0    66243 protocol: UNIX
+firefox 4509 wiklam  110u     unix 0x0000000000000000       0t0    69017 type=STREAM
+firefox 4509 wiklam  111uw     REG              253,1   3866624 38797653 /home/wiklam/.mozilla/firefox/g41068qu.default/webappsstore.sqlite
+firefox 4509 wiklam  113r     FIFO               0,12       0t0    70781 pipe
+firefox 4509 wiklam  115u     unix 0x0000000000000000       0t0    64187 type=STREAM
+firefox 4509 wiklam  116uw     REG              253,1    262144 38797688 /home/wiklam/.cache/mozilla/firefox/g41068qu.default/OfflineCache/index.sqlite
+firefox 4509 wiklam  117uw     REG              253,1     49152 38928405 /home/wiklam/.mozilla/firefox/g41068qu.default/storage/default/moz-extension+++bb6bc061-305f-481e-9106-26e4aff56133^userContextId=4294967295/idb/3647222921wleabcEoxlt-eengsairo.sqlite
+firefox 4509 wiklam  118u      REG              253,1    688664 38813853 /home/wiklam/.mozilla/firefox/g41068qu.default/webappsstore.sqlite-wal
+firefox 4509 wiklam  119u     unix 0x0000000000000000       0t0    64189 type=STREAM
+firefox 4509 wiklam  120rw     REG              253,1   3866624 38797653 /home/wiklam/.mozilla/firefox/g41068qu.default/webappsstore.sqlite
+firefox 4509 wiklam  122u      REG              253,1    688664 38813853 /home/wiklam/.mozilla/firefox/g41068qu.default/webappsstore.sqlite-wal
+firefox 4509 wiklam  123u     unix 0x0000000000000000       0t0    64191 type=STREAM
+firefox 4509 wiklam  124u     unix 0x0000000000000000       0t0    64199 type=STREAM
+firefox 4509 wiklam  125u     unix 0x0000000000000000       0t0    46402 type=SEQPACKET
+firefox 4509 wiklam  126u     sock                0,9       0t0    43316 protocol: UNIX
+firefox 4509 wiklam  128u     unix 0x0000000000000000       0t0    64197 type=SEQPACKET
+firefox 4509 wiklam  129u     unix 0x0000000000000000       0t0    64198 type=SEQPACKET
+firefox 4509 wiklam  130r      REG               0,26    564048       26 /dev/shm/org.chromium.9Xqih9 (deleted)
+firefox 4509 wiklam  131u      REG              253,1       527 38802611 /home/wiklam/.cache/mozilla/firefox/g41068qu.default/cache2/entries/90FEEB89373EF861ED67945094A317FEBC47C678
+firefox 4509 wiklam  132u     IPv4              65153       0t0      TCP wiklam-ThinkPad-T480s:42806->waw02s13-in-f14.1e100.net:https (ESTABLISHED)
+firefox 4509 wiklam  133u     IPv4              65154       0t0      TCP wiklam-ThinkPad-T480s:53148->waw02s07-in-f162.1e100.net:https (ESTABLISHED)
+firefox 4509 wiklam  134u     sock                0,9       0t0    46428 protocol: UNIX
+firefox 4509 wiklam  135r      REG              253,1     37176 38798813 /home/wiklam/.local/share/gvfs-metadata/home (deleted)
+firefox 4509 wiklam  136u     unix 0x0000000000000000       0t0    48899 type=STREAM
+firefox 4509 wiklam  137r      REG              253,1     26454 20582625 /usr/lib/firefox/browser/features/fxmonitor@mozilla.org.xpi
+firefox 4509 wiklam  138u     unix 0x0000000000000000       0t0    46431 type=STREAM
+firefox 4509 wiklam  139r      REG              253,1     32768 38802397 /home/wiklam/.local/share/gvfs-metadata/home-fc110923.log (deleted)
+firefox 4509 wiklam  140u     IPv4              65966       0t0      TCP wiklam-ThinkPad-T480s:35572->mil02s06-in-f1.1e100.net:https (ESTABLISHED)
+firefox 4509 wiklam  141u     sock                0,9       0t0    46426 protocol: UNIX
+firefox 4509 wiklam  142u     IPv4              65278       0t0      TCP wiklam-ThinkPad-T480s:42892->waw02s13-in-f14.1e100.net:https (ESTABLISHED)
+firefox 4509 wiklam  143r     FIFO               0,12       0t0    42748 pipe
+firefox 4509 wiklam  144r      REG              253,1     26292 41030068 /home/wiklam/.mozilla/firefox/g41068qu.default/features/{b8796b52-b581-4beb-95df-88210070291d}/doh-rollout@mozilla.org.xpi
+firefox 4509 wiklam  146u     unix 0x0000000000000000       0t0    43300 type=STREAM
+firefox 4509 wiklam  147u     sock                0,9       0t0    69785 protocol: UNIX
+firefox 4509 wiklam  148u     unix 0x0000000000000000       0t0    43302 type=STREAM
+firefox 4509 wiklam  149u     IPv4              44276       0t0      TCP wiklam-ThinkPad-T480s:43102->ec2-54-186-138-157.us-west-2.compute.amazonaws.com:https (ESTABLISHED)
+firefox 4509 wiklam  150u     unix 0x0000000000000000       0t0    43304 type=STREAM
+firefox 4509 wiklam  151u     unix 0x0000000000000000       0t0    43312 type=STREAM
+firefox 4509 wiklam  152u     sock                0,9       0t0    45317 protocol: UNIX
+firefox 4509 wiklam  153u     unix 0x0000000000000000       0t0    43310 type=SEQPACKET
+firefox 4509 wiklam  154u     unix 0x0000000000000000       0t0    43311 type=SEQPACKET
+firefox 4509 wiklam  155u     unix 0x0000000000000000       0t0    64201 type=STREAM
+firefox 4509 wiklam  156u     IPv4              63932       0t0      TCP wiklam-ThinkPad-T480s:53242->text-lb.esams.wikimedia.org:https (ESTABLISHED)
+firefox 4509 wiklam  157u     unix 0x0000000000000000       0t0    43314 type=STREAM
+firefox 4509 wiklam  158u     sock                0,9       0t0    64205 protocol: UNIX
+firefox 4509 wiklam  159u     unix 0x0000000000000000       0t0    45460 type=STREAM
+firefox 4509 wiklam  160u     IPv4              67526       0t0      TCP wiklam-ThinkPad-T480s:32936->waw02s16-in-f2.1e100.net:https (ESTABLISHED)
+firefox 4509 wiklam  161u     sock                0,9       0t0    65359 protocol: UNIX
+firefox 4509 wiklam  162u     IPv4              64168       0t0      TCP wiklam-ThinkPad-T480s:34848->sof01s12-in-f3.1e100.net:http (ESTABLISHED)
+firefox 4509 wiklam  163u     unix 0x0000000000000000       0t0    44330 type=STREAM
+firefox 4509 wiklam  164u      REG              253,1         0 38928703 /home/wiklam/.mozilla/firefox/g41068qu.default/storage/default/moz-extension+++bb6bc061-305f-481e-9106-26e4aff56133^userContextId=4294967295/idb/3647222921wleabcEoxlt-eengsairo.sqlite-wal
+firefox 4509 wiklam  165u     IPv4              65215       0t0      TCP wiklam-ThinkPad-T480s:38498->151.101.193.69:https (ESTABLISHED)
+firefox 4509 wiklam  166u     IPv4              68311       0t0      TCP wiklam-ThinkPad-T480s:55388->104.27.150.114:https (ESTABLISHED)
+firefox 4509 wiklam  167u     IPv4              64145       0t0      TCP wiklam-ThinkPad-T480s:49404->upload-lb.esams.wikimedia.org:https (ESTABLISHED)
+firefox 4509 wiklam  169u     sock                0,9       0t0    72015 protocol: UNIX
+firefox 4509 wiklam  170u     sock                0,9       0t0    44312 protocol: UNIX
+firefox 4509 wiklam  171u     unix 0x0000000000000000       0t0    68538 type=STREAM
+firefox 4509 wiklam  172u     unix 0x0000000000000000       0t0    44292 type=SEQPACKET
+firefox 4509 wiklam  173u     unix 0x0000000000000000       0t0    50267 type=STREAM
+firefox 4509 wiklam  174u     unix 0x0000000000000000       0t0    51394 type=SEQPACKET
+firefox 4509 wiklam  175u     sock                0,9       0t0    69791 protocol: UNIX
+firefox 4509 wiklam  176r     FIFO               0,12       0t0    45419 pipe
+firefox 4509 wiklam  177u     unix 0x0000000000000000       0t0    45456 type=STREAM
+firefox 4509 wiklam  178u     sock                0,9       0t0    68539 protocol: UNIX
+firefox 4509 wiklam  179u     unix 0x0000000000000000       0t0    64216 type=STREAM
+firefox 4509 wiklam  180u     unix 0x0000000000000000       0t0    45458 type=STREAM
+firefox 4509 wiklam  181u     IPv4              68900       0t0      TCP wiklam-ThinkPad-T480s:58382->93.184.220.29:http (ESTABLISHED)
+firefox 4509 wiklam  182u     unix 0x0000000000000000       0t0    51396 type=STREAM
+firefox 4509 wiklam  184r     FIFO               0,12       0t0    71764 pipe
+firefox 4509 wiklam  186u     unix 0x0000000000000000       0t0    51395 type=SEQPACKET
+firefox 4509 wiklam  187u     unix 0x0000000000000000       0t0    68521 type=STREAM
+firefox 4509 wiklam  188u      REG              253,1        93 38806604 /home/wiklam/.cache/mozilla/firefox/g41068qu.default/cache2/entries/66AE3D2DC0D2EAEF6876ADEFF478D886E0CC6AD4
+firefox 4509 wiklam  189u     unix 0x0000000000000000       0t0    51398 type=STREAM
+firefox 4509 wiklam  191u     unix 0x0000000000000000       0t0    68523 type=STREAM
+firefox 4509 wiklam  193u     unix 0x0000000000000000       0t0    68525 type=STREAM
+firefox 4509 wiklam  194u     unix 0x0000000000000000       0t0    68533 type=STREAM
+firefox 4509 wiklam  196u     unix 0x0000000000000000       0t0    51413 type=SEQPACKET
+firefox 4509 wiklam  197u     unix 0x0000000000000000       0t0    68531 type=SEQPACKET
+firefox 4509 wiklam  198u     unix 0x0000000000000000       0t0    68532 type=SEQPACKET
+firefox 4509 wiklam  199u     sock                0,9       0t0    69285 protocol: UNIX
+firefox 4509 wiklam  201u     unix 0x0000000000000000       0t0    68535 type=STREAM
+firefox 4509 wiklam  202u     sock                0,9       0t0    42966 protocol: UNIX
+firefox 4509 wiklam  206u     sock                0,9       0t0    44314 protocol: UNIX
+firefox 4509 wiklam  213u     unix 0x0000000000000000       0t0    45476 type=SEQPACKET
+firefox 4509 wiklam  229u     unix 0x0000000000000000       0t0    52238 type=SEQPACKET
+firefox 4509 wiklam  236u     sock                0,9       0t0    50372 protocol: UNIX
+firefox 4509 wiklam  243u     unix 0x0000000000000000       0t0    50341 type=SEQPACKET
+firefox 4509 wiklam  248r     FIFO               0,12       0t0    55380 pipe
+firefox 4509 wiklam  251u     IPv4              68803       0t0      TCP wiklam-ThinkPad-T480s:57086->waw02s16-in-f10.1e100.net:https (ESTABLISHED)
+firefox 4509 wiklam  256uw     REG              253,1     65536 38799595 /home/wiklam/.mozilla/firefox/g41068qu.default/protections.sqlite
+firefox 4509 wiklam  260r     FIFO               0,12       0t0    50400 pipe
+firefox 4509 wiklam  261r      REG              253,1   1101806 20582626 /usr/lib/firefox/browser/features/screenshots@mozilla.org.xpi
+firefox 4509 wiklam  262w     FIFO               0,12       0t0    50400 pipe
+firefox 4509 wiklam  265u  a_inode               0,13         0     9908 [eventfd]
+firefox 4509 wiklam  266u     unix 0x0000000000000000       0t0    50403 type=STREAM
+firefox 4509 wiklam  267u  a_inode               0,13         0     9908 [eventfd]
+firefox 4509 wiklam  268u      REG              253,1     20480 38797519 /home/wiklam/.cache/event-sound-cache.tdb.04c7fcb7cc4a4e1398a63240bacb9335.x86_64-pc-linux-gnu
+firefox 4509 wiklam  271w     FIFO               0,12       0t0    55380 pipe
+firefox 4509 wiklam  274u  a_inode               0,13         0     9908 [eventfd]
+firefox 4509 wiklam  275u     unix 0x0000000000000000       0t0    55383 type=STREAM
+firefox 4509 wiklam  278u  a_inode               0,13         0     9908 [eventfd]

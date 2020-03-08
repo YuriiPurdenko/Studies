@@ -1,0 +1,21 @@
+hard link - bezposrednio wskazuje na inode danego pliku
+
+symbolic link - posredni wskaznik na plik/katalog, specjalny typ pliku, który w zawartości przechowuje ścieżkę do innego pliku. System nie sprawdza poprawności tej ścieżki
+
+idea powstania
+    - hard linki tylko na tym samym systemie plikow
+    - tylko superuzytkownik moze stworzyc hardlinka do katalogu
+
+mkdir, mkfifo, mknod, and rmdir, fstat, fchmod - nie dzialaja na symlink
+
+mkdir foo
+touch foo/a
+ln -s ../foo foo/testdir
+
+mozna stworzyc loop dla hardlinkow, ale moze to stworzyc tylko supeuzytkownik, gdyz znacznie trudniej jest usunac taka petle (aby usunac katalog, musi byc pusty, a skoro katalogi zawieraja siebie nawzajem powstaje problem)
+
+
+
+    ELOOP Too many symbolic links were encountered in resolving newpath.
+
+Liczba dowiazan to 2 + n , gdzie 2 wynika z . i .. a n to liczba podkatalogow

@@ -1,0 +1,21 @@
+Problemem jest zmienianie mutexa w linijce 5, bo jesli wywlaszczymy porgram po jej wykonaniu, a nastepny proces przejdzie cale acquire bez problemu i nie mamy kolejnosci FIFO.
+
+Przyklad
+4 procesy wykonuja acquire w tym 4 zostaje wywlaszczony po linijce 5 nastepnie 5 proces wykonuje acquire i zatrzymuje sie na 6 linijce czeajac az block sie zmieni, nastepnie 
+na 3 pierwszych wykonujemy release. wtedy 5 moze kontynuowac i wyszedl z acquire szybciej od 4.
+
+Drugi przyklad polega na tym, ze 
+
+3 watki p1, p2, p3 sa w sekcji krytycznej czyli wykonali acquire
+
+Aktualny stan to must_wait = true, active = 3
+
+Dodajemy dodatkow p4, ktory wykonuje acquire i zatrzymuje sie w lini 6 block.wait
+
+Wykonujemy release dla p1,p2,p3
+
+p4 kontynuuje i zostaje wywlaszczony po wyjonanu waiting -= 1 w linii 8
+
+Znowu wykonujemy acquire dla p1,p2,p3
+
+Kontynyuujemy p4 i mamy 4 procesy w sekcji krytycznej :0

@@ -1,0 +1,61 @@
+Napisz program wypisujący liczbę legalnych ruchów gracza białego dla podanej pozycji szachowej.
+
+Na wejściu podana jest szachownica w postaci 8 wierszy po 8 znaków. Figury oznaczone są literami K (król), H (hetman), W (wieża), G (goniec), S (skoczek), P (pion). Duże litery oznaczają bierki gracza białego, a małe litery gracza czarnego. Kropka oznacza puste pole. Piony białego gracza idą do góry.
+
+Promocję piona na różne figury liczymy jako różne ruchy. Nie ma bicia w przelocie ani roszady. Podana pozycja nie musi być osiągalna w grze w szachy, ale można założyć, że jest poprawna (jest dokładnie jeden biały i jeden czarny król, piony nie występują na pierwszym ani ostatnim wierszu, czarny król nie jest atakowany). Pat lub mat gracza białego oznacza zero legalnych ruchów.
+
+Uwaga/podpowiedź: Z reguł wystarczy znajomość podstawowych ruchów i promocji piona:
+https://pl.wikipedia.org/wiki/Zasady_gry_w_szachy#Podstawowe_ruchy
+Ruch jest legalny, jeśli po jego wykonaniu biały król nie jest atakowany.
+
+Przykład 1 (pozycja początkowa):
+
+wsghkgsw
+pppppppp
+........
+........
+........
+........
+PPPPPPPP
+WSGHKGSW
+
+Wynik:
+
+20
+
+ 
+
+Przykład 2:
+
+........
+.....H..
+........
+....K.k.
+........
+.....Pg.
+....S...
+........
+
+Wynik:
+
+8
+
+(Można zasłonić się na 3 sposoby, zbić gońca, lub uciec królem na 4 sposoby.)
+
+
+Przykład 3:
+
+....k..g
+P.K...P.
+........
+........
+........
+........
+........
+G......W
+
+Wynik:
+
+36
+
+(12 ruchów z promocją piona, 6 ruchów królem, 5 ruchów gońcem i 13 ruchów wieżą.)

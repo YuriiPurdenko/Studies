@@ -1,0 +1,80 @@
+pledge - do operacji systemowych
+
+Uzywanie unveil
+    Pierwsze wywolanie unveil zaweza nam filesystem view.
+    Nastepne wywolanie rozszerzaja je
+
+    unveil(const char *path, const char *permissions);
+
+    permissions:
+        -r read
+        -w write
+        -e execute
+        -c create
+
+    unveil(NULL,NULL) - zapobiega rozszerzaniu widocznosci 
+    pledge moze byc uzyty, aby usunac niektore obietnice unveil
+
+Ogolny problem
+    Problem, przy inicjalizacji programu ladowane jest duzo rzeczy z bibliotek itp, do ktorych ma dostep, ale ten dostep jest aktualny przez cale zycie programu(nie potrzebuje tego po starcie)
+
+Nie rozumiem tego stwierdzenia
+Jest rozne od chroot bo musisz zmienic kod, aby program sam siebie ograniczal
+
+Cechy:
+    -Programista decyduje kiedy ustawiac ograniczenia
+    -Kazdy proces ma swoj unveil
+
+Problem:
+    unveil musi byc efektywne, poniewaz kernel nie patrzy na sciezki leczy na vnode oraz przystepne dla programisty (pledge - nieefektywny)
+
+Wlasnosci:  
+    -Zapamietuje vnode katalogu, dla plikow zapamietuje nazwe i vnode
+    -pliki mozna usuwac
+    -nie mozna usuwac katalogow
+    -wiekszosc "pracy" jest zrobiona przy unveil (pozniej juz nie)
+Roznica od pledge:
+    -jesli nastapi blad w pledge program umiera w unveil dostaje error
+    -roznica przy ograniczeniu uzywania unveil uveil(NULL,NULL) da na error, ze nie mozemy juz go uzywac jesli bysmy uzyli pledge zabilby program
+
+Bledy:
+    ENOENT - jesli nie ma w unveil
+    EACCES - jesli nie mam inne prawa do tego
+    E2BIG - jak juz nie mozemy wiecej unveilowac sciezek
+
+Niej jest uzyteczne dla plikow arbitralnych plikow
+
+Unveil dla nc (netcat):
+    - nc ma duzo "nozy" dla kazdego z nich jest specjalny unveil, w zaleznosci jak chcemy korzystac
+
+
+W Chrome, aby ustawic miejsce do pobierania np /home/beck/Downloads
+trzebazrobic
+stat("/")
+access("/") itd.. nieefektywne zmieniono tak, ze tworzy sciezke i ewentualnie otrzyma errora, omija to probelm TOCVSTOU w accessie i jest szybsze
+
+Jesli uzywam unveil(/home/beck/Downloads, "rwxc");
+    to /, /home, /home/beck moga byc inspektowane, czyli mozna uzyc na nich
+    a /home/beck/Downloads mozna "rwxc" 
+
+
+
+W OpenBSF chrome uzywa unveil i nie ma dostepu np do pliku .ssh, ma dostep tylko do Downloads i Uploads w $HOME
+
+Problem
+    - jesli uzywam symbolicznej sciezki to moge sie dowiedziec jakie katalogi istnieja
+
+Co jeszcze dodadza:
+    - nie mozna uzywac ../ na niedozwolonych sciezkach
+    - realpath dodac
+    - usunac readlink
+    - dziedziczenie w exec() 
+    - zachowac unveil pomiedzy forkami, ale nie exec 
+
+chroot nie dziala jako filesystem boxing lecz tylko jako rezolucja sciezek, kiedys demony korzystaly do sandboxingu, ale istnieje wiele sposobow, aby wyjsc spoza chroota np:
+
+    - jesli katalog zostanie przeniesiony poza chroota, a jego deskryptor pozostanie otwarty
+    - za pomoca chdir zrobionego poza chroota a pozniej po prostu ../../../etc/passwd
+    - mkdir foo; chroot foo 
+
+jesli chcemy uzywac do zabezpieczen trzeba zapewnic, zeby byc pewnym, ze nikt nie bedzie ingerowal w nasze katalogi
