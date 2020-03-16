@@ -1,0 +1,75 @@
+#lang racket
+
+;; definicja wyrażeń z let-wyrażeniami, i if-wyrażeniami
+
+(struct variable (x)        #:transparent)
+(struct const    (val)      #:transparent)
+(struct op       (symb l r) #:transparent)
+(struct let-expr (x e1 e2)  #:transparent)
+(struct if-expr  (b t e)    #:transparent)
+  
+;; wyszukiwanie wartości dla klucza na liście asocjacyjnej
+;; dwuelementowych list
+
+(define (lookup x xs)
+  (cond
+    [(null? xs)
+     (error x "unknown identifier :(")]
+    [(eq? (caar xs) x) (cadar xs)]
+    [else (lookup x (cdr xs))]))
+
+;; kilka operatorów do wykorzystania w interpreterze
+
+(define (op-to-proc x)
+  (lookup x `(
+              (+ ,+)
+              (* ,*)
+              (- ,-)
+              (/ ,/)
+              (> ,>)
+              (>= ,>=)
+              (< ,<)
+              (<= ,<=)
+              (= ,=)
+              )))
+
+;; interfejs o obsługi środowisk
+
+(define (env-empty) null)
+(define env-lookup lookup)
+(define (env-add x v env) (cons (list x v) env))
+
+;; interpretacja wyrażeń z leniwymi let-wyrażeniami
+
+(define (eval e env)
+  (match e
+    [(const n) n]
+    [(op s l r)
+     ((op-to-proc s) (eval l env)
+                     (eval r env))]
+    [(let-expr x e1 e2)
+     (let ((v1 e1))                              ; tu jest inaczej niż wcześniej
+       (eval e2 (env-add x v1 env)))]
+    [(variable x) (eval (env-lookup x env) env)] ; i tu
+    [(if-expr b t e) (if (eval b env)
+                         (eval t env)
+                         (eval e env))]))
+
+(define (run e)
+  (eval e (env-empty)))
+
+;; przykładowe wyrażenie, niby działa jak się spodziewamy
+
+(define ex1
+  (let-expr 'x (op '/ (const 3) (const 0))
+            (const 1)))
+
+;; kolejne przykładowe wyrażenie, widzimy dynamiczne wiązanie zmiennych :(
+
+(define ex2
+  (let-expr 'y (const 1)
+  (let-expr 'x (variable 'y)
+  (let-expr 'y (const 2)
+            (variable 'x)))))
+
+

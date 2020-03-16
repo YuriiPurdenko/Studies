@@ -1,0 +1,83 @@
+(cond
+	[(warunek) (zwraca)])
+
+(lambda (x) (f x))
+
+(require rackunit)
+
+cddar
+
+(define test
+  (test-suite
+    "Test of representation of data"
+       (check-equal? (data? d) true)
+       
+       (test-case
+	   "Selector-match"
+	   (check-equal? (ok? (ok d)) true)))
+	   
+append - łaczenie list O(n)
+
+map f xs - stosuje funkcje na kazdym elemencie lisy
+
+filter p? xs - wybiera elementy z listy, dla ktorych spelniony jest predykat
+
+
+display - słuzy to wypisywania
+
+
+FAKTY (udowodnione)
+
+Dla dowolnych xs ys
+
+	(list? xs) & (list? ys) => (list? (append xs ys))
+
+	(list? xs) & (list? ys) & (list? zs) => (append (append xs ys) zs) ≡ (append xs (append ys zs))
+	
+	(append xs null) ≡ xs
+	
+	(list? xs) & (list? ys) => (map f (append xs ys)) ≡ (append (map f xs) (map f ys))
+	
+	(list? xs) & (list? ys) => (filter p? (append xs ys)) ≡ (append (filter p? xs) (filet p? ys))
+	
+	
+'x ≡ (quote x)
+
+null ≡ '()
+
+(length xs)
+
+ROZNICA MIEDZY EQ A EQUAL ???
+
+(let [(x abx)
+      (y xD)]
+      zwracane wyrazenie(w ktorym x ≡ abx i y ≡ xD)
+      
+let* - pozwala wiazac juz poprzednio zdefiniowane zmienne w tym lecie  
+CONCAT Map
+
+append-map f xs ys - stosuje funkcje na listach i laczy je
+ 
+ormap
+
+andmap
+
+reverse 
+ 
+member x xs - czy x nalezy do xs 
+ 
+symbol?
+
+(struct node (v l r) #:transpatent)
+Struct tworzy nam własny predykat do struktury
+
+(match e		 jeśli e jest nodem to zwraca r
+    [(node v l r) (r)	 w p. p. zwraca false
+    [_ false])
+    
+    
+
+procedury anonimowe  - funkcja, ktora nie jest zwiazana z zadnym identyfikatorem
+
+DOWOLNIE DUZO ZMIENNYCH???????????????????????????????????????????????? LISTA 4 ZAD 1
+nieuzytki???????????

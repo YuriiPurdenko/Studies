@@ -1,0 +1,154 @@
+#lang racket
+
+;; używamy pakietu do budowania testów o nazwie rackunit
+(require rackunit)
+
+;; reprezentacja liczb wymiernych jako par (znormalizowanych) liczników i mianowników
+;; konstruktor
+(define (rat n d)
+  (let ((q (gcd n d)))
+    (cons (/ n q) (/ d q))))
+
+;; selektory
+(define (rat-num r)
+  (car r))
+
+(define (rat-den r)
+  (cdr r))
+
+;; predykat
+(define (rat? r)
+  (and
+   (pair? r)
+   (integer? (car r))
+   (natural? (cdr r))
+   (> (cdr r) 0)
+   (= (gcd (car r) (cdr r)) 1)))
+
+;; zestaw testów reprezentacji (niekompletny)
+;; podobny zestaw należałoby zbudować dla implementacji pakietu arytmetyki
+(define rat-repr-tests
+  (test-suite
+   "Tests of representation of rationals"
+   (check-equal? (rat? (rat 2 4)) true
+                 "Constructor returns a proper representation")
+
+   (test-case
+    "Selectors match"
+    (let ((r (rat 2 4)))
+      (check-equal? (rat-num r) 2)
+      (check-equal? (rat-den r) 2)))
+
+   (test-case
+    "Selectors match"
+    (let ((r (rat 3 4)))
+      (check-equal? (rat-num r) 3)
+      (check-equal? (rat-den r) 4)))
+   ))
+
+;; pakiet arytmetyki dla l. wymiernych (fragmenty)
+
+(define (int->rat n)
+  (rat n 1))
+
+(define (rat->int r)
+  (quotient (rat-num r) (rat-den r)))
+
+(define (rat-* r1 r2)
+  (rat (* (rat-num r1) (rat-num r2))
+       (* (rat-den r1) (rat-den r2))))
+
+;; cz. 2. listy
+
+;; predykat definiujący wybraną przez nas reprezentację list
+;; zwróć uwagę jak struktura zasady indukcji dla list odpowiada strukturze predykatu
+(define (list? xs)
+  (or (null? xs)
+      (and (cons? xs)
+           (list? (cdr xs)))))
+
+;; obliczanie długości listy, wersje rekurencyjna i iteracyjna
+(define (length xs)
+  (if (null? xs)
+      0
+      (+ 1 (length (cdr xs)))))
+
+(define (length-it xs)
+  (define (iter xs n)
+    (if (null? xs)
+        n
+        (iter (cdr xs) (+ n 1))))
+  (iter xs 0))
+
+;; konkatenacja (łączenie) pary list
+(define (append as bs)
+  (if (null? as)
+      bs
+      (cons (car as)
+            (append (cdr as) bs))))
+
+;;;; Dodatkowe przykłady, w tym ważne (map, filter)
+
+;; procedura accumulate (z ćwiczeń) jest skomplikowana: rozbijmy ją na mniejsze
+(define (accumulate op null-val term start next end)
+  (if (> start end)
+      null-val
+      (op (term start)
+          (accumulate op null-val term (next start) next end))))
+
+
+;; gen-sequence generuje ciąg liczb od start do end
+;; procedura next determinuje kolejny element ciągu
+(define (gen-sequence start next end)
+  (if (> start end)
+      null
+      (cons start (gen-sequence (next start) next end))))
+
+(define (square x) (* x x))
+
+;; podnoszenie wszystkich elementów listy do kwadratu
+(define (square-list xs)
+  ;; zamiast poniższego wystarczy napisać (map square xs)!
+  (if (null? xs)
+      null
+      (cons (square (car xs))
+            (square-list (cdr xs)))))
+
+;; i sumowanie wszystkich elementów listy
+(define (sumlist xs)
+  ;; zamiast poniższego wystarczy (fold_right + 0 xs)
+  ;; możemy też powiedzieć (apply + xs), gdyż + jest procedurą która działa dla
+  ;; dowolnej liczby argumentów. apply jest procedurą wbudowaną
+  (if (null? xs)
+      0
+      (+ (car xs) (sumlist (cdr xs)))))
+
+;; map aplikuje procedurę f do każdego z elementów listy i zwraca listę otrzymanych wyników
+;; (map square (list 1 2 3 4)) -> '(1 4 9 16)
+(define (map f xs)
+  (if (null? xs)
+      null
+      (cons (f (car xs))
+            (map f (cdr xs)))))
+
+;; filter wybiera te elementy listy dla których predykat jest spełniony (zachowując kolejność)
+;; (filter even? (list 1 2 3 4)) -> '(2 4)
+(define (filter p? xs)
+  (if (null? xs)
+      null
+      (if (p? (car xs))
+          (cons (car xs)
+                (filter p? (cdr xs)))
+          (filter p? (cdr xs)))))
+
+;; fold-right jest esencją accumulate z ćwiczeń: aplikuje operator op do
+;; elementu listy i wyniku swojego wywołania na reszcie ciągu — a w przypadku gdy
+;; ciąg się skończył zwraca nval
+(define (fold-right op nval xs)
+  (if (null? xs)
+      nval
+      (op (car xs)
+          (fold-right op nval (cdr xs)))))
+
+
+

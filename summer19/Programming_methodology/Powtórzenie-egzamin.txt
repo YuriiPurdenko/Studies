@@ -1,0 +1,177 @@
+;;KONSTRUOWANIE TESTÓW
+
+(define rat-repr-tests
+  (test-suite
+   "Tests of representation of rationals"
+   (check-equal? (rat? (rat 2 4)) true
+                 "Constructor returns a proper representation")
+
+   (test-case
+    "Selectors match"
+    (let ((r (rat 2 4)))
+      (check-equal? (rat-num r) 2)
+      (check-equal? (rat-den r) 2)))
+
+   (test-case
+    "Selectors match"
+    (let ((r (rat 3 4)))
+      (check-equal? (rat-num r) 3)
+      (check-equal? (rat-den r) 4)))
+   ))
+
+
+
+(define split-test
+  (test-suite
+   "Test of spliting list"
+   (check-equal? (list 1 2 3 4 5 6 7) (append (car (split (list 1 2 3 4 5 6 7))) (cdr (split (list 1 2 3 4 5 6 7))))
+                 "Split works correctly for odd list")
+   
+   (check-equal? (list 1 2 3 4 5 6) (append (car (split (list 1 2 3 4 5 6))) (cdr (split (list 1 2 3 4 5 6))))
+                 "Split works correctly for even list")
+   (check-equal? (list) (append (car (split (list))) (cdr (split (list))))
+                 "Split works correctly for empty list")
+   (test-case
+    "Type match"
+    (let ((r (split (list 1 2 3 4 5 6 7))))
+      (check-equal? (pair? r) true)
+      (check-equal? (list? (car r)) true)
+      (check-equal? (list? (cdr r)) true)))
+   
+   (test-case
+    "Type match"
+    (let ((r (split (list 1 2 3 4 5 6))))
+      (check-equal? (pair? r) true)
+      (check-equal? (list? (car r)) true)
+      (check-equal? (list? (cdr r)) true)))
+
+   (test-case
+    "Type match"
+    (let ((r (split (list))))
+      (check-equal? (pair? r) true)
+      (check-equal? (list? (car r)) true)
+      (check-equal? (list? (cdr r)) true)))))
+
+
+
+WIELO ARGUMENTOWE FUNKCJE
+
+CYTOWANIE - lista 6
+
+NIEużytki
+
+leniwe i gorliwe
+
+składnia konkretna
+
+skladnia abstakcyjna
+
+wyrazenia a wartosci
+
+parser/ pretty-printer/ kompilator/ ewaluator
+
+(require racket/contract)
+
+(define/contract foo number? 42)
+
+(define/contract (dist x y)
+  (-> number? number? number?)
+  (abs (- x y)))
+  
+
+;; definicje złożonych kontraktów
+(define natural/c (and/c integer? (not/c negative?)))
+
+(define/contract (id-weak x)
+  (-> any/c any/c)
+  x)
+
+;; kontrakt parametryczny daje lepsze gwarancje:
+(define/contract (id x)
+  (parametric->/c [a] (-> a a))
+  x)
+  
+;; kontrakt (listof c) wymaga listy elementów spełniających kontrakt c
+;; jeśli c jest predykatem, to (listof c) też jest
+
+
+;; prawidłowa wersja
+(define (treeof c)
+  (flat-rec-contract tree
+                     (struct/c leaf)
+                     (struct/c node c tree tree)))
+                     
+;; przykładowe drzewo
+(define/contract tree1
+  (treeof real?)
+  (node 2 (node 1 (leaf) (leaf)) (leaf)))
+
+(define (member/c l)
+  (flat-contract [lambda (e) (member e)]))
+
+(define expr/c
+  (flat-rec-contract a
+   [struct/c const number?]
+   [struct/c variable symbol?]
+   [struct/c op {member/c '(+ *)} a a]
+   [struct/c let-expr symbol? a a]))
+  
+(define (is-sorting s)
+  (property ([l (arbitrary-list arbitrary-integer)])
+            (let ((sl (s l)))
+              (and (sorted? sl) (permutation? l sl)))))
+              
+(quickcheck
+ (property ([x arbitrary-real]
+            [y arbitrary-real])
+           (==> (positive? x)
+                (==> (positive? y)
+                     (close-enough? (sqrt (* x y)) (* (sqrt x) (sqrt y)))))))
+                     
+(define-signature  monoid^
+  (( contracted
+     [elem?    (-> any/c  boolean?)]
+     [neutral  elem?]
+     [oper     (-> elem? elem? elem?)])))
+
+(define-unit monoid-int@
+  (import)
+  (export monoid^)
+  (define elem? integer?)
+  (define neutral 0)
+  (define oper +))
+  
+new-∀  
+  
+POLARYZACJA POMAGA OKRESLIC KTO JEST WINNY - programista/uzytkownik
+
+programista +
+uzytkownik -
+
+
+(define-type Leaf 'leaf)
+(define-type (Node a b) (List 'node a b b))
+(define-type (Tree a) (U Leaf (Node a (Tree a))))
+
+(define-predicate leaf? Leaf)
+(define-predicate node? (Node Any Any))
+(define-predicate tree? (Tree Any))
+
+
+(struct vector2 ([x : Real] [y : Real]) #:transparent)
+(struct vector3 ([x : Real] [y : Real] [z : Real]) #:transparent)
+
+
+(struct const    ([val : Number])      #:transparent)
+
+(struct (a b) op ([symb : a] [l : b] [r : b]) #:transparent)
+
+(struct variable ()        #:transparent)
+
+(define-type Expr (U const (op (U '+ '*) Expr ) variable))
+
+(define-predicate expr? Expr)
+
+zawężenie typu
+
+typ polimorficzny czyli typ z all;

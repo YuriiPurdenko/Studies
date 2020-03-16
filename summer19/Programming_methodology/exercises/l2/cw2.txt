@@ -1,0 +1,76 @@
+#lang racket
+
+;;ZAD 2 ----------------------------------------------------------------------------------------------------
+
+(define (square x) (* x x))
+
+(define (inc x) (+ x 1))
+
+(define (compose f g)
+  (lambda (x) (f (g x))))
+
+;;ZAD 3 ----------------------------------------------------------------------------------------------------
+
+(define (repeated p n)
+  (if (= n  0)
+      identity
+      (compose p (repeated p (- n 1)))))
+
+;;ZAD 4 ----------------------------------------------------------------------------------------------------
+
+(define (product val next start end)
+  (if (> start end)
+      1
+      (* (val start) (product val next next(start) end))))
+
+(define (product-it val next start end pro)
+  (if (> start end)
+      pro
+      (product val next next(start) end (* (val start) pro))))
+
+(define (product-iter val next start end)
+  (product-it val next start end 0))
+
+;;ZAD 5 ----------------------------------------------------------------------------------------------------
+                  +/*        0 1     wart
+(define (accumulate combiner null-value term a next b)
+  (if (> a b)
+      null-value
+      (combiner (term a) (accumulate combiner null-value term (next a) next b))))
+
+(define (accumulate-it combiner null-value term a next b temp)
+  (if (> a b)
+      null-value
+      (accumulate-it combiner null-value term (next a) next b (combiner temp (term a)))))
+
+;;ZAD 6 ---------------------------------------------------------------------------------------------------- 
+
+(define (cont-frac-it num den k val)
+  (if (< k 1)
+      val
+      (cont-frac-it num den (- k 1) (/ (num k) (+ (den k) val)))))
+
+(define (cont-frac num den k)
+  (cont-frac-it num den k 0))
+
+;;ZAD 7 ----------------------------------------------------------------------------------------------------
+
+(define (ni i) (square (+ 1 (* 2 (- i 1)))))
+(define (di i) 6.0)
+
+;;ZAD 8 ----------------------------------------------------------------------------------------------------
+
+(define (atan-cf x k)
+  (define (num k)
+    (square (* k x)))
+  (define (dem k)
+    (+ (* 2 k) 1))
+  (/ x (+ 1 (cont-frac num dem k))))
+
+;;ZAD 9 ----------------------------------------------------------------------------------------------------
+
+(define (repeated-build it n d b)
+        (define (build x)
+          (/ n (+ d x)))
+        ((repeated build it) b))
+        

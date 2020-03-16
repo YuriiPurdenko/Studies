@@ -1,0 +1,57 @@
+#lang racket
+(require quickcheck)
+(require racket/contract)
+
+(define (average z y)
+  (/ (+ z y) 2))
+
+(define (square x)
+  (* x x))
+
+(define (dist x y)
+  (abs (- x y)))
+
+(define (close-enough? x y) (< abs (- x y) 0.00001))
+
+(define (sqrt x)
+(->i ([x (and/c real? positive?)])
+      [result (x) (lambda (r) (close-enough? (* r r) x))])
+  ;; lokalne definicje
+  ;; poprawianie przybliżenia
+  (define (improve guess)
+    (average guess (/ x guess)))
+  ;; sprawdzanie czy przybliżenie jest wystarczająco dobre
+  (define (good-enough? g)
+    (< (dist x (square g))
+       0.0001))
+  ;; procedura iterująca poprawianie przybliżenia aż
+  ;; osiągniemy wystarczająco dobre przybliżenie
+  (define (iter guess)
+    (if (good-enough? guess)
+        guess
+        (iter (improve guess))))
+  
+  (iter 1.0))
+
+;ZAD 1 ------------------------------------------------------------------------------------------------------------------------------
+
+;;(->i ([x (and/c real? positive?)])
+;;      [result (x) (lambda (r) (close-enough? (* r r) x))])
+;;jest powyzej zaimplementowany
+
+;ZAD 2 ------------------------------------------------------------------------------------------------------------------------------
+
+(parametric/c (a) (->i (p? [-> a and]) (l [listof a]))
+              [res (p?) 
+
+
+;ZAD 3 ------------------------------------------------------------------------------------------------------------------------------
+
+
+;ZAD 4 ------------------------------------------------------------------------------------------------------------------------------
+
+
+;ZAD 5 ------------------------------------------------------------------------------------------------------------------------------
+
+
+;ZAD 6 ------------------------------------------------------------------------------------------------------------------------------
