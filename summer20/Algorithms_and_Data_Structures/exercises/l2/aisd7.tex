@@ -1,0 +1,72 @@
+\documentclass{article}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+%s\usepackage[margin=2.5cm]{geomtry}
+
+\usepackage{graphicx}    % Pakiet pozwalający ,,wklejać'' grafikę...
+\usepackage{subcaption}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+                               % Dołączamy zestaw różnych przydatnych znaczków ...
+\DeclareMathOperator{\arccosh}{arccosh}
+% dane autora
+\author{Wiktor Pilarczyk}
+\title{Lista 2 - AiSD\\\large{Zadanie: 7}\\\large{Prowadzący: Paweł Gawrychowski}}
+\date{\today}
+% początek dokumentu
+\begin{document}
+\maketitle
+\section{Wprowadzenie}
+W zadaniu mamy podane n zadań, wraz z czasami $a_{i} \ i \  b_{i}$ - czas wykonania zadania odpowiednio na komputerze A i B. Zadanie musi najpierw zostać wykonane na komputerze A, a następnie na B (komputery mogą działać równolegle). Chcemy zminimalizować czas wykonania ostatniego zadania na komputerze B.
+
+\section{Własności zadania}
+Oczywiste jest, że jesli możemy wybrać zadanie do wykonania na komputerze B to nie czekamy tylko wykonujemy dowolne z nich, a także przy wielu dostępnych zadaniach (ich część na komputerze A została zakończona) nie ma wpływu, które będziemy wykonywać w danym momencie, ponieważ i tak liczy się kiedy zostanie wykonane ostatnie zadanie, więc dla uproszczenia niech zadania wykonane na komputerze B będą w tej samej kolejności jak zadania na komputerze A.\\
+
+Stwórzmy funkcję $F(a_{1},...,a_{n}, b_{1}, ..., b_{n})$ która dla zadanych ciągów obliczy czas wykonania ostatniego zadania na komputerze B.\\
+
+$F(a_{1},...,a_{n}, b_{1}, ..., b_{n}) = \sum_{i=1}^{n} (b_{i} + t_{i}) = \sum_{i=1}^{n} b_{i} + \sum_{i=1}^{n} t_{i}$, gdzie $t_{i}$ oznacza długość przerwy pomiędzy wykonaniem zadania $b_{i-1}$, a rozpoczęciem wykonania zadania $b_{i}$ (czas bezczynności komputer B, więc w przypadku zadania $b_{1}$ jest to czas wykonanywania zadania $a_{1}$). Na $\sum_{i=1}^{n} b_{i}$ nie mamy wpływu więc chcemy zminimalizować $\sum_{i=1}^{n} t_{i}$.\\
+
+$t_{i} = max(0, \sum_{j=1}^{i} a_{j} - \sum_{j=1}^{i-1} (b_{j} + t_{j}))$, jest to maksimum z różnicy pomiędzy możliwym czasem rozpoczęcia zadania $b_{i}$, a czasem zakończenia zadania $b_{i-1}$, a 0, ponieważ jeśli  czas zakończenia zadania $b_{i-1}$ jest większy niż zakończenia zadania $a_{i}$ to nie musimy czekać więc $t_{i} = 0$.\\ \\ \\
+
+Teza: $\sum_{i=1}^{n} t_{i} = max_{i=1}^{n}(\sum_{j=1}^{i} a_{j} - \sum_{j=1}^{i-1} b_{j})$
+\begin{proof}
+Indukcyjnie po n.\\ \\
+Baza: $n = 1$\\
+Wtedy $$t_{1} = a_{1} = max(a_{1})$$spełnia tezę. \\ \\
+Założenie indukcyjne: $\sum_{i=1}^{n} t_{i} = max_{i=1}^{n}(\sum_{j=1}^{i} a_{j} - \sum_{j=1}^{i-1} b_{j})$\\
+Teza indukcyjna: $\sum_{i=1}^{n+1} t_{i} = max_{i=1}^{n+1}(\sum_{j=1}^{i} a_{j} - \sum_{j=1}^{i-1} b_{j})$
+
+$$\sum_{i=1}^{n+1} t_{i} = \sum_{i=1}^{n} t_{i} + t_{n+1} =^{z \ def} \sum_{i=1}^{n} t_{i} + max(0, \sum_{j=1}^{n+1} a_{j} - \sum_{j=1}^{n} (b_{j} + t_{j})) =$$ 
+$$max(\sum_{i=1}^{n} t_{i}, \sum_{j=1}^{n+1} a_{j} - \sum_{j=1}^{n} b_{j}) =^{ZI} max(max_{i=1}^{n}(\sum_{j=1}^{i} a_{j} - \sum_{j=1}^{i-1} b_{j}), \sum_{j=1}^{n+1} a_{j} - \sum_{j=1}^{n} b_{j}) =$$
+$$max_{i=1}^{n+1}(\sum_{j=1}^{i} a_{j} - \sum_{j=1}^{i-1} b_{j})$$
+
+Więc na mocy zasady o indukcji teza jest spełniona.
+\end{proof}
+\section{Algorytm}
+Należy podzielić zadania ze względu na znak $a_{i}-b_{i}$ ($\Theta(n)$). Zadania ze znakiem dodatnim należy posortować względem $b_{i}$, a pozsotałe posortować względem $a_{i}$ ($\Theta(n\log(n))$). Następnie należy wybrać zadania z drugiej puli wraz z rosnącym $a_{i}$, a później zadania z dodatnim znakiem wraz z malejącym $b_{i}$ ($\Theta(n)$). Więc algorytm działa w czasie $\Theta(n\log(n))$.
+
+\section{Uzasadnienie}
+Weźmy optymalne rozwiązanie (a i b) i spróbujmy sprowadzić je do naszego rozwiązania (a' i b'). Weźmy pierwsze zadanie z naszego rozwiązania - $a'_{i}$, które różni się miejscami (kolejnością wykonywania) z rozwiązaniem optymalnym. Skoro jest to pierwsze czyli prefiks kolejności zadań jest taki sam do tego miejsca, więc pozycja tego zadania w rozwiązaniu optymalnym jest większa - $a_{k}$, gdzie $k > i > 0$. Więc zamieńmy miejscami $a_{k}$ z $a_{k-1}$ i sprawdźmy jak to wpłynie na nasz wynik - $max_{i=1}^{n}(\sum_{j=1}^{i} a_{j} - \sum_{j=1}^{i-1} b_{j})$, interesuje nas jedynie zmiana sumy dla $i = k-1$ oraz $i = k$, ponieważ na poprzednie i następne $i$ nie ma to wpływu (nie ma tych wyrazów lub są one spermutowane tylko). 
+
+Chcę pokazać, że takie przestawienie nie pogarsza wyniku czyli po zredukowaniu wyrazów, które są w obu sumach otrzymujemy:
+
+$$ max(a_{k}, a_{k-1} + a_{k} - b_{k}) \leq max(a_{k-1}, a_{k-1} + a_{k} - b_{k-1}) $$
+
+(Wynik ten nie może być mniejszy bo zabraliśmy optymalny rozwiązanie, ale znak ten ułatwia rachunki).\\ \\
+Rozważmy przypadki:\\
+1. $a_{k} - b_{k} \leq 0$ \\
+
+a) $a_{k-1} - b_{k-1} \leq 0$
+
+    Więc wtedy $a_{k} \leq a_{k-1}$, ponieważ wpp. $a_{k-1}$ byłoby wcześniej w naszym rozwiązaniu. A także $a_{k-1} + a_{k} - b_{k} \leq a_{k-1}$, ponieważ $a_{k} - b_{k} \leq 0$, więc zachodzi nierówność. \\ \\
+    
+b) $a_{k-1} - b_{k-1} > 0$
+    Więc wtedy $a_{k} <  a_{k-1} + a_{k} - b_{k-1}$, ponieważ $a_{k-1} - b_{k-1} > 0$, a także $a_{k-1} + a_{k} - b_{k} \leq a_{k-1}$, ponieważ $a_{k} - b_{k} \leq 0$, więc zachodzi nierówność.
+\\ \\
+2. $a_{k} - b_{k} > 0$
+
+
+    Wtedy $a_{k-1} - b_{k-1} > 0$ oraz $b_{k} \geq b_{k-1}$, ponieważ wpp. $a_{k-1}$ byłoby wcześniej w naszym rozwiązaniu. $a_{k} \leq a_{k-1} + a_{k} - b_{k-1}$, ponieważ $a_{k-1} - b_{k-1} > 0$, a także $a_{k-1} + a_{k} - b_{k} \leq a_{k-1} + a_{k} - b_{k-1}$, ponieważ $b_{k} \geq b_{k-1}$
+\\ \\
+Mamy skończony ciąg więc za pomocą skonczeniu wielu takich operacji możemy otrzymać nasze rozwiązanie nie pogarszając wyniku, więc nasze rozwiązanie jest też rozwiązaniem optymalnym.
+\end{document}

@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+%s\usepackage[margin=2.5cm]{geomtry}
+
+\usepackage{graphicx}    % Pakiet pozwalający ,,wklejać'' grafikę...
+\usepackage{subcaption}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+                               % Dołączamy zestaw różnych przydatnych znaczków ...
+\DeclareMathOperator{\arccosh}{arccosh}
+% dane autora
+\author{Wiktor Pilarczyk}
+\title{Lista 3 - AiSD\\\large{Zadanie: 3}\\\large{Prowadzący: Paweł Gawrychowski}}
+\date{\today}
+% początek dokumentu
+\begin{document}
+\maketitle
+\section{Wprowadzenie}
+Kąt dodatni - od 0 do 180, kąt ujemny - od 180 do 360.
+Kąt wyliczany jest z iloczynu skalarnego wektorów.
+
+Definicja: otoczki wypukłej zbioru punktów $ P $ to najmniejszy wielokąt wypukły taki, że każdy punkt ze zbioru $ P $ leży albo na brzegu wielokąta albo w jego wnętrzu. Więc tworząc otoczkę wypukłą z dwóch mniejszych należy zagwarantować dwie rzeczy:
+
+a) zawiera cały zbiór $ P $
+
+b) najmniejszy wielokąt wypukły
+
+\section{Algorytm}
+Zakładam, że punkty mniejszych otoczek są w kolejności w jakiej tworzą wielokąt - "zgodnie ze wskazówkami zegara, a także że mniejsze otoczki są podzielone względem prostej równoległej do osi OY i nie ma 3 punktów współliniowych.
+\\ \\
+1. Z lewej otoczki wybierz najbardziej na prawo punkt - L1 (bez różnicy, który jeśli jest ich więcej. Podobnie z prawej otoczki wybierzmy punkt najbardziej na lewo P1.
+\\ \\
+2. Wykonujemy pętlę dopóki, oba warunki nie są spełnione.
+
+2a. Następnie w pętli zgodnie do wskazówek zegara bierzemy punkt z prawej strony $P_{i+1}$ i sprawdzamy czy kąt pomiędzy $P_{i}, L_{1} i P_{i+1}$ jest dodatni, jeśli tak to bierzemy ten punkt i kontynuujemy pętle. Punkt ten będę nazywał PG.
+
+2b. Następnie w pętli przeciwnie do wskazówek zegara bierzemy punkt z lewej strony $L_{j+1}$ i sprawdzamy czy kąt pomiędzy $L_{j}, P_{i} i L_{j+1}$ jest ujemny, jeśli tak to bierzemy ten punkt i kontynuujemy pętle. Punkt ten będę nazywał LG.
+\\ \\
+W taki sposób wyznaczyliśmy dwa punkty, które będą łączyły mniejsze otoczki tworząc większą. Należy jeszcze wyznaczyć następne dwa punkty, aby zamknąć wielokąt.
+\newpage
+Podobnie wyznaczamy dolne punkty zaczynając od skrajnych punktów.
+
+3. Wykonujemy pętlę dopóki, oba warunki nie są spełnione.
+
+3a. Następnie w pętli przeciwnie do wskazówek zegara bierzemy punkt z prawej strony $P_{i+1}$ i sprawdzamy czy kąt pomiędzy $P_{i}, L_{1} i P_{i+1}$ jest ujemny, jeśli tak to bierzemy ten punkt i kontynuujemy pętle. Punkt ten będę nazywał PD.
+
+3b. Następnie w pętli zgodnie do wskazówek zegara bierzemy punkt z lewej strony $L_{j+1}$ i sprawdzamy czy kąt pomiędzy $L_{j}, P_{i} i L_{j+1}$ jest dodatni, jeśli tak to bierzemy ten punkt i kontynuujemy pętle. Punkt ten będę nazywał LD.
+\\ \\
+4. Następnie punkty od PG do PD ze wskazówkami zegara, a następnie punkty LD do LG zgodnie ze wskazówkami zegara tworzą otoczkę wypukłą.
+
+\section{Uzasdnienie}
+Pętle w 2. i 3. są skończone, ponieważ w pewnym momencie nie zostaną spełnione własności, które zapewnia nam wielokąt/odcinek.
+\\ \\
+Adn b) Załóżmy nie wprost, ze nie jest to wielokąt wypukły wiemy że punkty od PG do PD oraz LD do LG tworzą kąty wypukłe ponieważ wcześniej należały do otoczek, interesują nas kąty powstałe w punktach PG, PD, LD i LG. Można zabrać dowolny punkt z wskazanych i jeśli tworzyłyby kąt wklęsły oznaczałoby, że w naszej pętli nie zabralibyśmy tego punktu np punkt PG, mamy kąt wklęsły LG, PG i  P, gdzie P jest następnym punktem zgodnie ze wskazówkami zegara to wtedy kąt PG, L i P jest dodatni więc zabralibyśmy punkt P zamiast PG.
+Podobnie z innymi punktami. Problem najmniejszego wielokątu rozwiązaliśmy przy założeniu, że do kątów ujemnych i dodatnich zalicza się kąt zerowy przez co zapewniamy, że nie będziemy mieć 3 współliniowych punktów.
+\\ \\
+Adn a), Skoro stworzymy otoczkę wypukłą z punktów tworzących dwie mniejsze otoczki zapewniamy, że każdy punkt ze zbioru $ P $ należy do tej otoczki, ponieważ punkt ten należał do mniejszej otoczki, które jest zawarta w większej lub tworzył mniejszą otoczkę, ale na podstawie tego punktu będzie tworzona większa. 
+
+Nie wprost punkt na podstawie, którego tworzyliśmy otoczkę nie należy do naszej otoczki oznacza to, że należy on do przedziału pomiędzy LG i PG na osi OX i powyżej minimum y z osi OY punktów LG i PG lub do przedziału pomiędzy LD i PD na osi OX i poniżej maksimum y z osi OY punktów LD i PD, ponieważ w przeciwnym przypadku należy do naszej figury (jeśli nie zawiera się w przedziałach OX wtedy został zawart przez "pozostałość" mniejszych otoczek, a OY ponieważ jeśli znajduje się poniżej dla LG i PG to dobrze ograniczają nasz wielokąt od "góry", podobnie LD i PD).
+
+I podobnie jak w Adn b) sprawdzamy np dla punktów LG i PG czy punkt X, który nie należy do naszej otoczki nie zostałby zabrany, okazuje się, że musiał on zostać wcześniej sprawdzony niż LG lub PG, w zależności do której otoczki należał, ponieważ kątowo byłby wcześniej zabrany i skoro nie należy do naszego wielokątu to nie zabralibyśmy odpowiednio LG lub PG, ponieważ nie zostałby spełniony warunek z pętli.
+
+\section{Złożoność}
+Złożoność wyszukiwania punktów PG, LG, PD, LD wynosi $\Theta(n)$, gdzie n oznacza liczbe punktów tworzące otoczki, ponieważ w najgorszym przypadku przeszukamy wszystkie punkty (przykład - dwa rozłączne odcinki, które nie są równoległe do osi OX i OY). Wybranie punktów należących do większej otoczki również ma złożoność $\Theta(n)$, więc złożoność łączenia otoczek wynosi $\Theta(n)$
+\end{document}

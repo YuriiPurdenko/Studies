@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        SJU 2020/04/29 - HackMD
+    </title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @charset "UTF-8";@import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{display:block;background:#fff;padding:.5em;color:#333;overflow-x:auto}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{color:#55a532;background-color:#eaffea}.hljs-deletion{color:#bd2c00;background-color:#ffecec}.hljs-link{text-decoration:underline}.markdown-body{font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0}.markdown-body blockquote{font-size:16px;padding:0 1em;color:#777;border-left:.25em solid #ddd}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid #ccc;border-bottom-color:#bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eee}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#777}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{padding:0;list-style-type:none}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}.markdown-body span.align-center{display:block;overflow:hidden;clear:both}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{display:block;overflow:hidden;clear:both}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{letter-spacing:-.2em;content:"\00a0"}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.markdown-body pre code,.markdown-body pre tt{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{padding:10px 8px 9px;text-align:right;background:#fff;border:0}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{font-weight:700;background:#f8f8f8;border-top:0}.news .alert .markdown-body blockquote{padding:0 0 0 40px;border:0 none}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle;cursor:default!important}.markdown-body{padding-top:40px;padding-bottom:40px;max-width:758px;overflow:visible!important;position:relative}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{text-align:right;position:relative;display:inline-block;cursor:default;z-index:4;padding:0 8px 0 0;min-width:20px;box-sizing:content-box;color:#afafaf!important;border-right:3px solid #6ce26c!important}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-left:none;border-top:none;border-bottom:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-spacing:0;border-collapse:inherit!important}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{overflow:unset;margin-bottom:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{text-align:center;background-color:inherit;border-radius:0;white-space:inherit;overflow:visible}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{max-width:100%;height:100%}.markdown-body pre>code.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.markdown-body .alert>p,.markdown-body .alert>ul{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{cursor:pointer;display:table;text-align:center;background-position:50%;background-repeat:no-repeat;background-size:contain;background-color:#000;overflow:hidden}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{width:100%;object-fit:contain;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{width:100%;height:100%;position:absolute;top:0;left:0}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{position:absolute;height:auto;width:auto;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.3;transition:opacity .2s;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{position:relative;z-index:2;max-width:760px;margin:25px auto -25px;color:#777}.toc .invisable-node{list-style-type:none}.ui-toc{position:fixed;bottom:20px;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{height:40px;padding:10px 4px;border-top-left-radius:0;border-bottom-left-radius:0}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{opacity:1;color:#fff;transition:opacity .2s}.ui-toc-label:focus{opacity:.3;background-color:#ccc;color:#000}.ui-toc-label:hover{opacity:1;background-color:#ccc;transition:opacity .2s}.ui-toc-dropdown{margin-top:20px;margin-bottom:20px;padding-left:10px;padding-right:10px;max-width:45vw;width:25vw;max-height:70vh;overflow:auto;text-align:inherit}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{padding-right:0;letter-spacing:.0029em}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}.ui-toc-dropdown .nav>li:first-child:last-child > ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{padding-left:19px;color:#000;text-decoration:none;background-color:transparent;border-left:1px solid #000}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{padding-right:19px;border-left:none;border-right:1px solid #000}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{padding-left:18px;font-weight:700;color:#000;background-color:transparent;border-left:2px solid #000}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{padding-right:18px;border-left:none;border-right:2px solid #000}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:40px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{padding-left:28px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{padding-left:38px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{position:fixed;top:0;max-width:15vw;max-height:70vh;overflow:auto}.back-to-top,.expand-toggle,.go-to-bottom{display:block;padding:4px 10px;margin-top:10px;margin-left:10px;font-size:12px;font-weight:500;color:#999}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{width:20px;height:20px;display:block;border-radius:3px;margin-top:2px;margin-bottom:2px;margin-right:5px;background-position:50%;background-repeat:no-repeat;background-size:cover}.ui-user-icon.small{width:18px;height:18px;display:inline-block;vertical-align:middle;margin:0 0 .2em}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-published-note{color:#337ab7}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{position:relative;z-index:1;color:#222}.markdown-body.slides:before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:currentColor;box-shadow:0 0 0 50vw}.markdown-body.slides section[data-markdown]{position:relative;margin-bottom:1.5em;background-color:#fff;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{position:absolute;top:50%;left:1em;right:1em;transform:translateY(-50%);max-height:100%;overflow:hidden}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{content:"";position:absolute;top:-1.5em;right:1em;height:1.5em;border:3px solid #777}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;text-shadow:0 0 1em transparent,1px 1px 1.2px rgba(0,0,0,.004);-webkit-overflow-scrolling:touch;letter-spacing:.025em;font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="SJU-20200429" data-id="SJU-20200429"><a class="anchor hidden-xs" href="#SJU-20200429" title="SJU-20200429"><span class="octicon octicon-link"></span></a><span>SJU 2020/04/29</span></h1><h2 id="Zadanie-3-wersja-2" data-id="Zadanie-3-wersja-2"><a class="anchor hidden-xs" href="#Zadanie-3-wersja-2" title="Zadanie-3-wersja-2"><span class="octicon octicon-link"></span></a><span>Zadanie 3. (wersja 2)</span></h2><p><span>Możemy sobie zażyczyć to poprzez ustawienie flagi </span><code>SA_RESTART</code><span> w wywołaniu </span><a href="https://netbsd.gw.com/cgi-bin/man-cgi?sigaction+2+NetBSD-current" target="_blank" rel="noopener"><span>sigaction</span></a><span>.</span></p><p><span>O co chodzi z restartowalnymi wywołaniami systemowymi?</span><br>
+<span>Normally, if a signal is caught during the system calls listed below, the call may be forced to terminate with the error EINTR, the call may return with a data transfer shorter than requested, or the call may be restarted. Restarting of pending calls is requested by setting the SA_RESTART bit in sa_flags.  The affected system calls include </span><strong><span>open(2), read(2), write(2), sendto(2), recvfrom(2), sendmsg(2)</span></strong><span> and </span><strong><span>recvmsg(2)</span></strong><span> on a communications channel or a slow device (such as a terminal, but not a regular file) and during a </span><strong><span>wait(2)</span></strong><span> or </span><strong><span>ioctl(2)</span></strong><span>.  However, calls that have already committed are not restarted, but instead return a partial success (for example, a short read count).</span></p><p><span>Implementacja syscall:</span></p><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1"></span>
+<span data-linenumber="2"></span>
+<span data-linenumber="3"></span>
+<span data-linenumber="4"></span>
+<span data-linenumber="5"></span>
+<span data-linenumber="6"></span>
+<span data-linenumber="7"></span>
+<span data-linenumber="8"></span>
+<span data-linenumber="9"></span>
+<span data-linenumber="10"></span>
+<span data-linenumber="11"></span>
+<span data-linenumber="12"></span>
+<span data-linenumber="13"></span>
+<span data-linenumber="14"></span>
+<span data-linenumber="15"></span>
+<span data-linenumber="16"></span>
+<span data-linenumber="17"></span>
+<span data-linenumber="18"></span>
+<span data-linenumber="19"></span>
+<span data-linenumber="20"></span>
+<span data-linenumber="21"></span>
+<span data-linenumber="22"></span>
+<span data-linenumber="23"></span>
+<span data-linenumber="24"></span>
+<span data-linenumber="25"></span>
+<span data-linenumber="26"></span>
+<span data-linenumber="27"></span>
+<span data-linenumber="28"></span>
+<span data-linenumber="29"></span>
+<span data-linenumber="30"></span>
+<span data-linenumber="31"></span>
+<span data-linenumber="32"></span>
+<span data-linenumber="33"></span>
+<span data-linenumber="34"></span>
+<span data-linenumber="35"></span>
+<span data-linenumber="36"></span>
+<span data-linenumber="37"></span>
+<span data-linenumber="38"></span>
+<span data-linenumber="39"></span>
+<span data-linenumber="40"></span>
+<span data-linenumber="41"></span>
+<span data-linenumber="42"></span>
+<span data-linenumber="43"></span>
+<span data-linenumber="44"></span>
+<span data-linenumber="45"></span>
+<span data-linenumber="46"></span>
+<span data-linenumber="47"></span>
+<span data-linenumber="48"></span>
+<span data-linenumber="49"></span>
+<span data-linenumber="50"></span>
+<span data-linenumber="51"></span>
+<span data-linenumber="52"></span>
+<span data-linenumber="53"></span>
+<span data-linenumber="54"></span>
+<span data-linenumber="55"></span>
+<span data-linenumber="56"></span>
+<span data-linenumber="57"></span>
+<span data-linenumber="58"></span>
+<span data-linenumber="59"></span>
+<span data-linenumber="60"></span>
+<span data-linenumber="61"></span>
+<span data-linenumber="62"></span>
+<span data-linenumber="63"></span>
+<span data-linenumber="64"></span>
+<span data-linenumber="65"></span>
+<span data-linenumber="66"></span>
+<span data-linenumber="67"></span>
+<span data-linenumber="68"></span>
+<span data-linenumber="69"></span>
+<span data-linenumber="70"></span>
+<span data-linenumber="71"></span>
+<span data-linenumber="72"></span>
+<span data-linenumber="73"></span>
+<span data-linenumber="74"></span>
+<span data-linenumber="75"></span>
+<span data-linenumber="76"></span>
+<span data-linenumber="77"></span>
+<span data-linenumber="78"></span>
+<span data-linenumber="79"></span>
+<span data-linenumber="80"></span>
+<span data-linenumber="81"></span>
+<span data-linenumber="82"></span>
+<span data-linenumber="83"></span>
+<span data-linenumber="84"></span>
+<span data-linenumber="85"></span>
+<span data-linenumber="86"></span>
+<span data-linenumber="87"></span>
+<span data-linenumber="88"></span>
+<span data-linenumber="89"></span>
+<span data-linenumber="90"></span>
+<span data-linenumber="91"></span>
+<span data-linenumber="92"></span>
+<span data-linenumber="93"></span>
+<span data-linenumber="94"></span>
+<span data-linenumber="95"></span>
+<span data-linenumber="96"></span>
+<span data-linenumber="97"></span>
+<span data-linenumber="98"></span>
+<span data-linenumber="99"></span>
+<span data-linenumber="100"></span>
+<span data-linenumber="101"></span>
+<span data-linenumber="102"></span></div><div class="code">
+<span class="token keyword">void</span>
+<span class="token function">EMULNAME</span><span class="token punctuation">(</span>syscall<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">struct</span> trapframe <span class="token operator">*</span>tf<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">struct</span> lwp <span class="token operator">*</span> <span class="token keyword">const</span> l <span class="token operator">=</span> curlwp<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> proc <span class="token operator">*</span> <span class="token keyword">const</span> p <span class="token operator">=</span> l<span class="token operator">-&gt;</span>l_proc<span class="token punctuation">;</span>
+	register_t rval<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	register_t args<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token keyword">int</span> error<span class="token punctuation">;</span>
+
+	<span class="token function">curcpu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span>ci_data<span class="token punctuation">.</span>cpu_nsyscall<span class="token operator">++</span><span class="token punctuation">;</span>
+
+	size_t code <span class="token operator">=</span> tf<span class="token operator">-&gt;</span>tf_esr <span class="token operator">&amp;</span> <span class="token number">0xffff</span><span class="token punctuation">;</span>
+	register_t <span class="token operator">*</span>params <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span><span class="token punctuation">)</span>tf<span class="token operator">-&gt;</span>tf_reg<span class="token punctuation">;</span>
+	size_t nargs <span class="token operator">=</span> NARGREG<span class="token punctuation">;</span>
+
+	<span class="token keyword">switch</span> <span class="token punctuation">(</span>code<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">case</span> <span class="token function">EMULNAMEU</span><span class="token punctuation">(</span>SYS_syscall<span class="token punctuation">)</span><span class="token punctuation">:</span>
+		code <span class="token operator">=</span> <span class="token operator">*</span>params<span class="token operator">++</span><span class="token punctuation">;</span>
+		nargs <span class="token operator">-</span><span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+		<span class="token keyword">break</span><span class="token punctuation">;</span>
+	<span class="token keyword">default</span><span class="token punctuation">:</span>
+		<span class="token keyword">break</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	code <span class="token operator">&amp;</span><span class="token operator">=</span> <span class="token function">EMULNAMEU</span><span class="token punctuation">(</span>SYS_NSYSENT<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token keyword">const</span> <span class="token keyword">struct</span> sysent <span class="token operator">*</span> <span class="token keyword">const</span> callp <span class="token operator">=</span> p<span class="token operator">-&gt;</span>p_emul<span class="token operator">-&gt;</span>e_sysent <span class="token operator">+</span> code<span class="token punctuation">;</span>
+
+	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">__predict_false</span><span class="token punctuation">(</span>callp<span class="token operator">-&gt;</span>sy_narg <span class="token operator">&gt;</span> nargs<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">const</span> size_t diff <span class="token operator">=</span> callp<span class="token operator">-&gt;</span>sy_narg <span class="token operator">-</span> nargs<span class="token punctuation">;</span>
+		<span class="token function">memcpy</span><span class="token punctuation">(</span>args<span class="token punctuation">,</span> params<span class="token punctuation">,</span> nargs <span class="token operator">*</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>params<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>params<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>REGISTER_T<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			error <span class="token operator">=</span> <span class="token function">copyin</span><span class="token punctuation">(</span><span class="token function">MOREARGS</span><span class="token punctuation">(</span>tf<span class="token operator">-&gt;</span>tf_sp<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>args<span class="token punctuation">[</span>nargs<span class="token punctuation">]</span><span class="token punctuation">,</span>
+			    diff <span class="token operator">*</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>register_t<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+				<span class="token keyword">goto</span> bad<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+			REGISTER_T args32<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+			error <span class="token operator">=</span> <span class="token function">copyin</span><span class="token punctuation">(</span><span class="token function">MOREARGS</span><span class="token punctuation">(</span>tf<span class="token operator">-&gt;</span>tf_sp<span class="token punctuation">)</span><span class="token punctuation">,</span> args32<span class="token punctuation">,</span>
+			    diff <span class="token operator">*</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>REGISTER_T<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+				<span class="token keyword">goto</span> bad<span class="token punctuation">;</span>
+			<span class="token keyword">for</span> <span class="token punctuation">(</span>size_t i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> diff<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				args<span class="token punctuation">[</span>nargs <span class="token operator">+</span> i<span class="token punctuation">]</span> <span class="token operator">=</span> args32<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+		params <span class="token operator">=</span> args<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">__predict_false</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>register_t<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>REGISTER_T<span class="token punctuation">)</span>
+			    <span class="token operator">&amp;&amp;</span> <span class="token function">SYCALL_NARGS64</span><span class="token punctuation">(</span>callp<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">for</span> <span class="token punctuation">(</span>size_t i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> callp<span class="token operator">-&gt;</span>sy_narg<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">,</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">SYCALL_ARG_64_P</span><span class="token punctuation">(</span>callp<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				register_t <span class="token operator">*</span>inp <span class="token operator">=</span> <span class="token operator">&amp;</span>params<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+				args<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">SYCALL_ARG_64</span><span class="token punctuation">(</span>inp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> inp<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				j<span class="token operator">++</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">!=</span> j<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				args<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> params<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+		params <span class="token operator">=</span> args<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	error <span class="token operator">=</span> <span class="token function">sy_invoke</span><span class="token punctuation">(</span>callp<span class="token punctuation">,</span> l<span class="token punctuation">,</span> params<span class="token punctuation">,</span> rval<span class="token punctuation">,</span> code<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">__predict_true</span><span class="token punctuation">(</span>error <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">__predict_false</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>register_t<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>REGISTER_T<span class="token punctuation">)</span>
+				    <span class="token operator">&amp;&amp;</span> <span class="token function">SYCALL_RET_64_P</span><span class="token punctuation">(</span>callp<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token macro property">#<span class="token directive keyword">ifdef</span> __AARCH64EB__</span>
+			tf<span class="token operator">-&gt;</span>tf_reg<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>uint32_t<span class="token punctuation">)</span> <span class="token punctuation">(</span>rval<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">&gt;&gt;</span> <span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			tf<span class="token operator">-&gt;</span>tf_reg<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>uint32_t<span class="token punctuation">)</span> <span class="token punctuation">(</span>rval<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">&gt;&gt;</span>  <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token macro property">#<span class="token directive keyword">else</span></span>
+			tf<span class="token operator">-&gt;</span>tf_reg<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>uint32_t<span class="token punctuation">)</span> <span class="token punctuation">(</span>rval<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">&gt;&gt;</span>  <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			tf<span class="token operator">-&gt;</span>tf_reg<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>uint32_t<span class="token punctuation">)</span> <span class="token punctuation">(</span>rval<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">&gt;&gt;</span> <span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token macro property">#<span class="token directive keyword">endif</span></span>
+		<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+			tf<span class="token operator">-&gt;</span>tf_reg<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> rval<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+			tf<span class="token operator">-&gt;</span>tf_reg<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> rval<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		tf<span class="token operator">-&gt;</span>tf_spsr <span class="token operator">&amp;</span><span class="token operator">=</span> <span class="token operator">~</span>NZCV_C<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+		<span class="token keyword">switch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">case</span> ERESTART<span class="token punctuation">:</span>
+			tf<span class="token operator">-&gt;</span>tf_pc <span class="token operator">-</span><span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+			<span class="token keyword">break</span><span class="token punctuation">;</span>
+		<span class="token keyword">case</span> EJUSTRETURN<span class="token punctuation">:</span>
+			<span class="token keyword">break</span><span class="token punctuation">;</span>
+		<span class="token keyword">default</span><span class="token punctuation">:</span>
+		bad<span class="token punctuation">:</span>
+<span class="token macro property">#<span class="token directive keyword">ifndef</span> __HAVE_MINIMAL_EMUL</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>p<span class="token operator">-&gt;</span>p_emul<span class="token operator">-&gt;</span>e_errno<span class="token punctuation">)</span>
+				error <span class="token operator">=</span> p<span class="token operator">-&gt;</span>p_emul<span class="token operator">-&gt;</span>e_errno<span class="token punctuation">[</span>error<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token macro property">#<span class="token directive keyword">endif</span></span>
+			tf<span class="token operator">-&gt;</span>tf_reg<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> error<span class="token punctuation">;</span>
+			tf<span class="token operator">-&gt;</span>tf_spsr <span class="token operator">|</span><span class="token operator">=</span> NZCV_C<span class="token punctuation">;</span>
+			<span class="token keyword">break</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token function">userret</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</div></div></code></pre><p><span>Co istotnego robimy?:</span><br>
+<strong><span>8</span></strong><span> : alokujemy miejsce na argumenty</span><br>
+<strong><span>13</span></strong><span> : odczytujemy numer syscalla z rejestru zapisanego w trapframe</span><br>
+<strong><span>14</span></strong><span> : tutaj się zaczynają rejestry, w których user przekazał argumenty</span><br>
+<strong><span>17-24</span></strong><span> : jeśli numer syscalla to 0 to wczytujemy prawidłowy numer z pierwszego argumentu</span><br>
+<strong><span>29-48</span></strong><span> : kopiujemy wszystkie argumenty. Najpierw te z rejestrów, a jeśli jest więcej to reszta znajduje się na stosie użytkownika. Zatem musimy użyć copyin, bo to jest inna przestrzeń adresowa. (Liczbę argumentów przekazywanych w rejestrach i ułożenie argumentów na stosie jest machine dependent i jest specyfikowane przez odpowiednie ABI).</span><br>
+<strong><span>50-62</span></strong><span> : tutaj obsługa sytuacji, w której wielkość rejestru użytkownika jest inna od tej używanej w jądrze</span><br>
+<strong><span>64</span></strong><span> : wołamy system call. Argumenty: </span><code>callp</code><span> - struktura zawierająca informacje o system callu (handler, liczba  i rozmiar argumentów, flagi), </span><code>l</code><span> - proces, </span><code>params</code><span> - argumenty dla systemcalla, </span><code>rval</code><span> - tutaj będzie wartość system calla, </span><code>code</code><span> - numer syscalla. Dodatkowo, w </span><code>error</code><span> znajduje się ewentualny kod błędu</span><br>
+<strong><span>66-81</span></strong><span> : jeśli nie było błędu to zwróconą wartość wpisujemy do rejestru zapisanego w trapframie usera</span><br>
+<strong><span>80</span></strong><span> : wyczyszczenie flagi Carry w status rejestrze</span><br>
+<strong><span>83</span></strong><span> : jeśli był błąd </span><code>ERESTART</code><span>, czyli nastąpił wcześniej opisany restart wywołania systemowego, to zmniejszamy program counter użytkownika o jedną instrukcję. Skutek będzie taki, że normalnie wrócimy do user-space tyle, że pierwszą instrukcją, którą wykonamy, to będzie ten sam systemcall.</span><br>
+<strong><span>86</span></strong><span> : błąd </span><code>EJUSTRETURN</code><span> wracamy bez reportowania błędu</span><br>
+<strong><span>89-96</span></strong><span> : jeśli inny błąd to wpisujemy numer błędu do rejestru wyniku i ustawiamy flagę Carry w status rejestze.</span><br>
+<strong><span>100</span></strong><span> - wracamy do user-space</span></p><h2 id="Zadanie-4-wersja-2" data-id="Zadanie-4-wersja-2"><a class="anchor hidden-xs" href="#Zadanie-4-wersja-2" title="Zadanie-4-wersja-2"><span class="octicon octicon-link"></span></a><span>Zadanie 4. (wersja 2)</span></h2><p><span>Zadanie procedury obsługi pułapki:</span></p><ol>
+<li><span>w zależności od typu pułapki róznie reagujemy:</span>
+<ul>
+<li><span>page fault - może strona nie jest zmapowana, a może było błędne odwołanie do pamięci</span></li>
+<li><span>nieobsługiwana przez procesor instrukcja - może można zaemulować ją programowo</span></li>
+<li><span>systemcall - po prostu należy obsłużyć</span></li>
+<li><span>trapy związane z debuggerem - również odpowiednio obsługujemy</span></li>
+</ul>
+</li>
+<li><span>jeśli to jest coś związanego z pamięcią to wskakujemy do </span><a href="http://bxr.su/NetBSD/sys/arch/aarch64/aarch64/fault.c#127" target="_blank" rel="noopener"><span>data_abort_handler()</span></a></li>
+<li><span>tam sprawdzamy czy błąd jest naprawialny, czy nie</span></li>
+<li><span>jeśli jest naprawialny to informujemy system </span><code>uvm</code><span>, że nastąpił błąd, jeśli on go naprawi to ok</span></li>
+<li><span>jeśli się nie uda naprawić, to zbieramy informacje o błędzie</span></li>
+<li><span>wysyłamy sygnał do programu poprzez </span><code>do_trapsignal()</code></li>
+</ol><p><strong><span>trapsignal(9)</span></strong><span> : Sends the signal ks-&gt;ksi_signo caused by a hardware trap to the current process.</span></p><p><span>Struktura </span><code>ksiginfo_t</code><span>:</span></p><pre><code class="c hljs"><span class="token keyword">struct</span> _ksiginfo <span class="token punctuation">{</span>
+	<span class="token keyword">int</span>	_signo<span class="token punctuation">;</span>
+	<span class="token keyword">int</span>	_code<span class="token punctuation">;</span>
+	<span class="token keyword">int</span>	_errno<span class="token punctuation">;</span>
+<span class="token macro property">#<span class="token directive keyword">ifdef</span> _LP64</span>
+	<span class="token comment">/* In _LP64 the union starts on an 8-byte boundary. */</span>
+	<span class="token keyword">int</span>	_pad<span class="token punctuation">;</span>
+<span class="token macro property">#<span class="token directive keyword">endif</span></span>
+	<span class="token keyword">union</span> <span class="token punctuation">{</span>
+		<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+	<span class="token punctuation">}</span> _reason<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><p><span>Struktura </span><code>siginfo_t</code><span>:</span></p><pre><code class="c hljs"><span class="token keyword">typedef</span> <span class="token keyword">union</span> siginfo <span class="token punctuation">{</span>
+	<span class="token keyword">char</span>	si_pad<span class="token punctuation">[</span><span class="token number">128</span><span class="token punctuation">]</span><span class="token punctuation">;</span>	<span class="token comment">/* Total size; for future expansion */</span>
+	<span class="token keyword">struct</span> _ksiginfo _info<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> siginfo_t<span class="token punctuation">;</span>
+</code></pre><p><span>Zatem pod spodem jest wykorzystywana ta sama struktura. Jedynie w </span><code>siginfo_t</code><span> są wykorzystywane specjalne gettery będące zgodne ze standardem POSIX</span></p><p><span>Dla przypomnienia: zawarte są tam dodatkowe informacje związane z sygnałem, który otrzymał proces, np. dokładna przyczyna </span><code>SIGSEGV</code><span>, informacja kto wysłał sygnał używając kill(2) itp. Wszystko ładnie opisane w </span><a href="https://netbsd.gw.com/cgi-bin/man-cgi?siginfo+2+NetBSD-current" target="_blank" rel="noopener"><span>manualu</span></a><span>.</span></p><h2 id="Zadanie-5-wersja-2" data-id="Zadanie-5-wersja-2"><a class="anchor hidden-xs" href="#Zadanie-5-wersja-2" title="Zadanie-5-wersja-2"><span class="octicon octicon-link"></span></a><span>Zadanie 5. (wersja 2)</span></h2><p><code>copyout</code><span>:</span></p><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="117"></span>
+<span data-linenumber="118"></span>
+<span data-linenumber="119"></span>
+<span data-linenumber="120"></span>
+<span data-linenumber="121"></span>
+<span data-linenumber="122"></span>
+<span data-linenumber="123"></span>
+<span data-linenumber="124"></span>
+<span data-linenumber="125"></span>
+<span data-linenumber="126"></span>
+<span data-linenumber="127"></span>
+<span data-linenumber="128"></span></div><div class="code"><span class="token function">ENTRY</span><span class="token punctuation">(</span>copyout<span class="token punctuation">)</span>
+	beqz	a2<span class="token punctuation">,</span> copyout_end	<span class="token comment">/* If len == 0 then skip loop */</span>
+	add	a3<span class="token punctuation">,</span> a1<span class="token punctuation">,</span> a2
+	li	a4<span class="token punctuation">,</span> VM_MAXUSER_ADDRESS
+	bgt	a3<span class="token punctuation">,</span> a4<span class="token punctuation">,</span> copyio_fault_nopcb
+
+	copycommon
+
+copyout_end<span class="token punctuation">:</span>
+	li	a0<span class="token punctuation">,</span> <span class="token number">0</span>		<span class="token comment">/* return 0 */</span>
+	ret
+<span class="token function">END</span><span class="token punctuation">(</span>copyout<span class="token punctuation">)</span>
+</div></div></code></pre><p><span>Exception handler:</span></p><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="47"></span>
+<span data-linenumber="48"></span>
+<span data-linenumber="49"></span>
+<span data-linenumber="50"></span>
+<span data-linenumber="51"></span>
+<span data-linenumber="52"></span>
+<span data-linenumber="53"></span></div><div class="code"><span class="token function">ENTRY</span><span class="token punctuation">(</span>copyio_fault<span class="token punctuation">)</span>
+	<span class="token function">SET_FAULT_HANDLER</span><span class="token punctuation">(</span>x0<span class="token punctuation">,</span> a1<span class="token punctuation">)</span> <span class="token comment">/* Clear the handler */</span>
+	<span class="token function">EXIT_USER_ACCESS</span><span class="token punctuation">(</span>a1<span class="token punctuation">)</span>
+copyio_fault_nopcb<span class="token punctuation">:</span>
+	li	a0<span class="token punctuation">,</span> EFAULT
+	ret
+<span class="token function">END</span><span class="token punctuation">(</span>copyio_fault<span class="token punctuation">)</span>
+</div></div></code></pre><p><code>copycommon</code><span>:</span></p><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="62"></span>
+<span data-linenumber="63"></span>
+<span data-linenumber="64"></span>
+<span data-linenumber="65"></span>
+<span data-linenumber="66"></span>
+<span data-linenumber="67"></span>
+<span data-linenumber="68"></span>
+<span data-linenumber="69"></span>
+<span data-linenumber="70"></span>
+<span data-linenumber="71"></span></div><div class="code">	<span class="token punctuation">.</span>macro copycommon
+	la	a6<span class="token punctuation">,</span> copyio_fault	<span class="token comment">/* Get the handler address */</span>
+	<span class="token function">SET_FAULT_HANDLER</span><span class="token punctuation">(</span>a6<span class="token punctuation">,</span> a7<span class="token punctuation">)</span>	<span class="token comment">/* Set the handler */</span>
+	<span class="token function">ENTER_USER_ACCESS</span><span class="token punctuation">(</span>a7<span class="token punctuation">)</span>
+
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+	
+<span class="token number">5</span><span class="token punctuation">:</span>	<span class="token function">EXIT_USER_ACCESS</span><span class="token punctuation">(</span>a7<span class="token punctuation">)</span>
+	<span class="token function">SET_FAULT_HANDLER</span><span class="token punctuation">(</span>x0<span class="token punctuation">,</span> a7<span class="token punctuation">)</span>	<span class="token comment">/* Clear the handler */</span>
+	<span class="token punctuation">.</span>endm
+</div></div></code></pre><p><span>Co się będzie działo:</span></p><ol>
+<li><span>Wszystko zaczyna się od wywołania </span><code>copyout</code><span>. Po sprawdzeniu prostego warunku na adres skaczemy do </span><code>copycommon</code></li>
+<li><span>Wpisujemy adres naszego customowego handlera na page fault do </span><a href="https://" target="_blank" rel="noopener"><span>struct pcb</span></a><span>:</span></li>
+</ol><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1"></span>
+<span data-linenumber="2"></span>
+<span data-linenumber="3"></span>
+<span data-linenumber="4"></span>
+<span data-linenumber="5"></span>
+<span data-linenumber="6"></span>
+<span data-linenumber="7"></span>
+<span data-linenumber="8"></span>
+<span data-linenumber="9"></span>
+<span data-linenumber="10"></span>
+<span data-linenumber="11"></span>
+<span data-linenumber="12"></span>
+<span data-linenumber="13"></span></div><div class="code"><span class="token keyword">struct</span> pcb <span class="token punctuation">{</span>
+	uint64_t	pcb_ra<span class="token punctuation">;</span>		<span class="token comment">/* Return address */</span>
+	uint64_t	pcb_sp<span class="token punctuation">;</span>		<span class="token comment">/* Stack pointer */</span>
+	uint64_t	pcb_gp<span class="token punctuation">;</span>		<span class="token comment">/* Global pointer */</span>
+	uint64_t	pcb_tp<span class="token punctuation">;</span>		<span class="token comment">/* Thread pointer */</span>
+	uint64_t	pcb_s<span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">]</span><span class="token punctuation">;</span>	<span class="token comment">/* Saved registers */</span>
+	uint64_t	pcb_x<span class="token punctuation">[</span><span class="token number">32</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>	<span class="token comment">/* Floating point registers */</span>
+	uint64_t	pcb_fcsr<span class="token punctuation">;</span>	<span class="token comment">/* Floating point control reg */</span>
+	uint64_t	pcb_fpflags<span class="token punctuation">;</span>	<span class="token comment">/* Floating point flags */</span>
+<span class="token macro property">#<span class="token directive keyword">define</span>	PCB_FP_STARTED	0x1</span>
+<span class="token macro property">#<span class="token directive keyword">define</span>	PCB_FP_USERMASK	0x1</span>
+	vm_offset_t	pcb_onfault<span class="token punctuation">;</span>	<span class="token comment">/* Copyinout fault handler */</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</div></div></code></pre><ol start="3">
+<li><span>Następnie zbijamy sobie uprawnienia procesora do trybu użytkownika i wykonujemy kod kopiujący pamięć</span></li>
+<li><span>Jeśli podczas kopiowania poleci jakiś page fault (spowodowany np. błędnym wskaźnikem podanym przez usera) to wskakujemy do procedury obsługi </span><a href="http://bxr.su/FreeBSD/sys/riscv/riscv/trap.c#167" target="_blank" rel="noopener"><span>trapa</span></a><span>.</span></li>
+<li><span>Próbujemy naprawić ten błąd. Jeśli się nie uda to wskakujemy do naszego specjalnego handlera w ten sposób, że ustawiamy program counter na nasz handler </span><code>copyio_fault</code></li>
+</ol><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="216"></span>
+<span data-linenumber="217"></span>
+<span data-linenumber="218"></span>
+<span data-linenumber="219"></span>
+<span data-linenumber="220"></span>
+<span data-linenumber="221"></span>
+<span data-linenumber="222"></span>
+<span data-linenumber="223"></span>
+<span data-linenumber="224"></span>
+<span data-linenumber="225"></span>
+<span data-linenumber="226"></span>
+<span data-linenumber="227"></span>
+<span data-linenumber="228"></span>
+<span data-linenumber="229"></span>
+<span data-linenumber="230"></span>
+<span data-linenumber="231"></span></div><div class="code">	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">pmap_fault_fixup</span><span class="token punctuation">(</span>map<span class="token operator">-&gt;</span>pmap<span class="token punctuation">,</span> va<span class="token punctuation">,</span> ftype<span class="token punctuation">)</span><span class="token punctuation">)</span>
+		<span class="token keyword">goto</span> done<span class="token punctuation">;</span>
+
+	error <span class="token operator">=</span> <span class="token function">vm_fault_trap</span><span class="token punctuation">(</span>map<span class="token punctuation">,</span> va<span class="token punctuation">,</span> ftype<span class="token punctuation">,</span> VM_FAULT_NORMAL<span class="token punctuation">,</span> <span class="token operator">&amp;</span>sig<span class="token punctuation">,</span> <span class="token operator">&amp;</span>ucode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>error <span class="token operator">!=</span> KERN_SUCCESS<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>usermode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token function">call_trapsignal</span><span class="token punctuation">(</span>td<span class="token punctuation">,</span> sig<span class="token punctuation">,</span> ucode<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span><span class="token punctuation">)</span>stval<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>pcb<span class="token operator">-&gt;</span>pcb_onfault <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				frame<span class="token operator">-&gt;</span>tf_a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> error<span class="token punctuation">;</span>
+				frame<span class="token operator">-&gt;</span>tf_sepc <span class="token operator">=</span> pcb<span class="token operator">-&gt;</span>pcb_onfault<span class="token punctuation">;</span>
+				<span class="token keyword">return</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+			<span class="token keyword">goto</span> fatal<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+</div></div></code></pre><ol start="6">
+<li><span>W pcb czyścimy wskaźnik na pcb, wychodzimy z trybu użytkownika i zwracamy błąd </span><code>EFAULT</code><span>.</span></li>
+</ol><h2 id="Zadanie-3" data-id="Zadanie-3"><a class="anchor hidden-xs" href="#Zadanie-3" title="Zadanie-3"><span class="octicon octicon-link"></span></a><span>Zadanie 3</span></h2><p><code>int sigaction(int sig, const struct sigaction * restrict act, struct sigaction * restrict oact);</code></p><p><code>struct sigaction</code><span> ma pole </span><code>int sa_flags</code><span> które może mieć flagę </span><code>SA_RESTART</code><span>.</span><br>
+<span>Możemy poprosić aby zamiast zabić syscalla </span><em><span>EINTR</span></em><span> to aby go zrestartować.</span></p><ul>
+<li><span>open(2), read(2), write(2), sendto(2), recvfrom(2), sendmsg(2), recvmsg(2) on a communications channel or a slow device (such as a terminal, but not a regular file)</span></li>
+<li><span>wait(2)</span></li>
+<li><span>ioctl(2)</span></li>
+</ul><pre><code class="C hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="89"></span>
+<span data-linenumber="90"></span>
+<span data-linenumber="91"></span>
+<span data-linenumber="92"></span>
+<span data-linenumber="93"></span>
+<span data-linenumber="94"></span>
+<span data-linenumber="95"></span>
+<span data-linenumber="96"></span>
+<span data-linenumber="97"></span>
+<span data-linenumber="98"></span>
+<span data-linenumber="99"></span>
+<span data-linenumber="100"></span>
+<span data-linenumber="101"></span>
+<span data-linenumber="102"></span>
+<span data-linenumber="103"></span>
+<span data-linenumber="104"></span>
+<span data-linenumber="105"></span>
+<span data-linenumber="106"></span>
+<span data-linenumber="107"></span>
+<span data-linenumber="108"></span>
+<span data-linenumber="109"></span>
+<span data-linenumber="110"></span>
+<span data-linenumber="111"></span>
+<span data-linenumber="112"></span>
+<span data-linenumber="113"></span>
+<span data-linenumber="114"></span>
+<span data-linenumber="115"></span>
+<span data-linenumber="116"></span>
+<span data-linenumber="117"></span>
+<span data-linenumber="118"></span>
+<span data-linenumber="119"></span>
+<span data-linenumber="120"></span>
+<span data-linenumber="121"></span>
+<span data-linenumber="122"></span>
+<span data-linenumber="123"></span>
+<span data-linenumber="124"></span>
+<span data-linenumber="125"></span>
+<span data-linenumber="126"></span>
+<span data-linenumber="127"></span>
+<span data-linenumber="128"></span>
+<span data-linenumber="129"></span>
+<span data-linenumber="130"></span>
+<span data-linenumber="131"></span>
+<span data-linenumber="132"></span>
+<span data-linenumber="133"></span>
+<span data-linenumber="134"></span>
+<span data-linenumber="135"></span>
+<span data-linenumber="136"></span>
+<span data-linenumber="137"></span>
+<span data-linenumber="138"></span>
+<span data-linenumber="139"></span>
+<span data-linenumber="140"></span>
+<span data-linenumber="141"></span>
+<span data-linenumber="142"></span>
+<span data-linenumber="143"></span>
+<span data-linenumber="144"></span>
+<span data-linenumber="145"></span>
+<span data-linenumber="146"></span>
+<span data-linenumber="147"></span>
+<span data-linenumber="148"></span>
+<span data-linenumber="149"></span>
+<span data-linenumber="150"></span>
+<span data-linenumber="151"></span>
+<span data-linenumber="152"></span>
+<span data-linenumber="153"></span>
+<span data-linenumber="154"></span>
+<span data-linenumber="155"></span>
+<span data-linenumber="156"></span>
+<span data-linenumber="157"></span>
+<span data-linenumber="158"></span>
+<span data-linenumber="159"></span>
+<span data-linenumber="160"></span>
+<span data-linenumber="161"></span>
+<span data-linenumber="162"></span>
+<span data-linenumber="163"></span>
+<span data-linenumber="164"></span>
+<span data-linenumber="165"></span>
+<span data-linenumber="166"></span>
+<span data-linenumber="167"></span>
+<span data-linenumber="168"></span>
+<span data-linenumber="169"></span>
+<span data-linenumber="170"></span>
+<span data-linenumber="171"></span>
+<span data-linenumber="172"></span>
+<span data-linenumber="173"></span>
+<span data-linenumber="174"></span>
+<span data-linenumber="175"></span>
+<span data-linenumber="176"></span>
+<span data-linenumber="177"></span>
+<span data-linenumber="178"></span>
+<span data-linenumber="179"></span>
+<span data-linenumber="180"></span>
+<span data-linenumber="181"></span>
+<span data-linenumber="182"></span>
+<span data-linenumber="183"></span>
+<span data-linenumber="184"></span>
+<span data-linenumber="185"></span>
+<span data-linenumber="186"></span>
+<span data-linenumber="187"></span>
+<span data-linenumber="188"></span>
+<span data-linenumber="189"></span>
+<span data-linenumber="190"></span>
+<span data-linenumber="191"></span>
+<span data-linenumber="192"></span>
+<span data-linenumber="193"></span>
+<span data-linenumber="194"></span>
+<span data-linenumber="195"></span>
+<span data-linenumber="196"></span>
+<span data-linenumber="197"></span>
+<span data-linenumber="198"></span>
+<span data-linenumber="199"></span>
+<span data-linenumber="200"></span>
+<span data-linenumber="201"></span>
+<span data-linenumber="202"></span>
+<span data-linenumber="203"></span>
+<span data-linenumber="204"></span>
+<span data-linenumber="205"></span>
+<span data-linenumber="206"></span>
+<span data-linenumber="207"></span>
+<span data-linenumber="208"></span>
+<span data-linenumber="209"></span>
+<span data-linenumber="210"></span>
+<span data-linenumber="211"></span>
+<span data-linenumber="212"></span>
+<span data-linenumber="213"></span>
+<span data-linenumber="214"></span>
+<span data-linenumber="215"></span>
+<span data-linenumber="216"></span>
+<span data-linenumber="217"></span>
+<span data-linenumber="218"></span>
+<span data-linenumber="219"></span>
+<span data-linenumber="220"></span></div><div class="code"><span class="hljs-function"><span class="hljs-keyword">void</span>
+<span class="hljs-title">EMULNAME</span>(<span class="hljs-params">syscall</span>)(<span class="hljs-params"><span class="hljs-keyword">struct</span> trapframe *tf</span>)
+</span>{
+    <span class="hljs-keyword">struct</span> lwp * <span class="hljs-keyword">const</span> l = curlwp;
+    <span class="hljs-keyword">struct</span> proc * <span class="hljs-keyword">const</span> p = l-&gt;l_proc;
+    register_t rval[<span class="hljs-number">2</span>];
+    register_t args[<span class="hljs-number">10</span>];
+    <span class="hljs-keyword">int</span> error;
+
+    LWP_CACHE_CREDS(l, p);
+
+    curcpu()-&gt;ci_data.cpu_nsyscall++;
+
+    size_t code = tf-&gt;tf_esr &amp; <span class="hljs-number">0xffff</span>;
+    register_t *<span class="hljs-keyword">params</span> = (<span class="hljs-keyword">void</span> *)tf-&gt;tf_reg;
+    size_t nargs = NARGREG;
+
+    <span class="hljs-keyword">switch</span> (code) {
+    <span class="hljs-function"><span class="hljs-keyword">case</span> <span class="hljs-title">EMULNAMEU</span>(<span class="hljs-params">SYS_syscall</span>):
+#<span class="hljs-keyword">if</span> !<span class="hljs-title">defined</span>(<span class="hljs-params">COMPAT_LINUX</span>)
+    <span class="hljs-keyword">case</span> <span class="hljs-title">EMULNAMEU</span>(<span class="hljs-params">SYS___syscall</span>):
+        code </span>= tf-&gt;tf_reg[<span class="hljs-number">17</span>];
+<span class="hljs-meta">#<span class="hljs-meta-keyword">else</span></span>
+        code = *<span class="hljs-keyword">params</span>++;
+        nargs -= <span class="hljs-number">1</span>;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+        <span class="hljs-comment">/*
+         * code is first argument,
+         * followed by actual args.
+         */</span>
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">default</span>:
+        <span class="hljs-keyword">break</span>;
+    }
+
+    code &amp;= EMULNAMEU(SYS_NSYSENT) - <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">struct</span> sysent * <span class="hljs-keyword">const</span> callp = p-&gt;p_emul-&gt;e_sysent + code;
+
+    <span class="hljs-keyword">if</span> (__predict_false(callp-&gt;sy_narg &gt; nargs)) {
+        <span class="hljs-keyword">const</span> size_t diff = callp-&gt;sy_narg - nargs;
+        memcpy(args, <span class="hljs-keyword">params</span>, nargs * <span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">params</span>[<span class="hljs-number">0</span>]));
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">params</span>[<span class="hljs-number">0</span>]) == <span class="hljs-keyword">sizeof</span>(REGISTER_T)) {
+            error = copyin(MOREARGS(tf-&gt;tf_sp), &amp;args[nargs],
+                diff * <span class="hljs-keyword">sizeof</span>(register_t));
+            <span class="hljs-keyword">if</span> (error)
+                <span class="hljs-keyword">goto</span> bad;
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">/*
+             * If the register_t used by the process isn't the
+             * as the one used by the kernel, we can't directly
+             * copy the arguments off the stack into args.  We
+             * need to buffer them in a REGISTER_T array and
+             * then move them individually into args.
+             */</span>
+            REGISTER_T args32[<span class="hljs-number">10</span>];
+            error = copyin(MOREARGS(tf-&gt;tf_sp), args32,
+                diff * <span class="hljs-keyword">sizeof</span>(REGISTER_T));
+            <span class="hljs-keyword">if</span> (error)
+                <span class="hljs-keyword">goto</span> bad;
+            <span class="hljs-keyword">for</span> (size_t i = <span class="hljs-number">0</span>; i &lt; diff; i++) {
+                args[nargs + i] = args32[i];
+            }
+        }
+        <span class="hljs-keyword">params</span> = args;
+    }
+
+<span class="hljs-meta">#ifdef __AARCH64EB__</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SYCALL_ARG_64(a, b) (((register_t) (a) &lt;&lt; 32) | (uint32_t)(b))</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">else</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SYCALL_ARG_64(a, b) (((register_t) (b) &lt;&lt; 32) | (uint32_t)(a))</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+
+    <span class="hljs-comment">/*
+     * If the syscall used a different (smaller) register size,
+     * reconstruct the 64-bit arguments from two 32-bit registers.
+     */</span>
+    <span class="hljs-keyword">if</span> (__predict_false(<span class="hljs-keyword">sizeof</span>(register_t) != <span class="hljs-keyword">sizeof</span>(REGISTER_T)
+                &amp;&amp; SYCALL_NARGS64(callp) &gt; <span class="hljs-number">0</span>)) {
+        <span class="hljs-keyword">for</span> (size_t i = <span class="hljs-number">0</span>, j = <span class="hljs-number">0</span>; i &lt; callp-&gt;sy_narg; i++, j++) {
+            <span class="hljs-keyword">if</span> (SYCALL_ARG_64_P(callp, i)) {
+                register_t *inp = &amp;<span class="hljs-keyword">params</span>[j];
+                args[i] = SYCALL_ARG_64(inp[<span class="hljs-number">0</span>], inp[<span class="hljs-number">1</span>]);
+                j++;
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (i != j) {
+                args[i] = <span class="hljs-keyword">params</span>[j];
+            }
+        }
+        <span class="hljs-keyword">params</span> = args;
+    }
+
+    error = sy_invoke(callp, l, <span class="hljs-keyword">params</span>, rval, code);
+
+    <span class="hljs-keyword">if</span> (__predict_true(error == <span class="hljs-number">0</span>)) {
+        <span class="hljs-keyword">if</span> (__predict_false(<span class="hljs-keyword">sizeof</span>(register_t) != <span class="hljs-keyword">sizeof</span>(REGISTER_T)
+                    &amp;&amp; SYCALL_RET_64_P(callp))) {
+<span class="hljs-meta">#ifdef __AARCH64EB__</span>
+            tf-&gt;tf_reg[<span class="hljs-number">0</span>] = (uint32_t) (rval[<span class="hljs-number">0</span>] &gt;&gt; <span class="hljs-number">32</span>);
+            tf-&gt;tf_reg[<span class="hljs-number">1</span>] = (uint32_t) (rval[<span class="hljs-number">0</span>] &gt;&gt;  <span class="hljs-number">0</span>);
+<span class="hljs-meta">#<span class="hljs-meta-keyword">else</span></span>
+            tf-&gt;tf_reg[<span class="hljs-number">0</span>] = (uint32_t) (rval[<span class="hljs-number">0</span>] &gt;&gt;  <span class="hljs-number">0</span>);
+            tf-&gt;tf_reg[<span class="hljs-number">1</span>] = (uint32_t) (rval[<span class="hljs-number">0</span>] &gt;&gt; <span class="hljs-number">32</span>);
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+        } <span class="hljs-keyword">else</span> {
+            tf-&gt;tf_reg[<span class="hljs-number">0</span>] = rval[<span class="hljs-number">0</span>];
+            tf-&gt;tf_reg[<span class="hljs-number">1</span>] = rval[<span class="hljs-number">1</span>];
+        }
+        tf-&gt;tf_spsr &amp;= ~NZCV_C;
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">switch</span> (error) {
+        <span class="hljs-keyword">case</span> ERESTART:
+            <span class="hljs-comment">/*
+             * Set user's pc back to redo the system call.
+             */</span>
+            tf-&gt;tf_pc -= <span class="hljs-number">4</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> EJUSTRETURN:
+            <span class="hljs-comment">/* nothing to do */</span>
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">default</span>:
+        bad:
+<span class="hljs-meta">#ifndef __HAVE_MINIMAL_EMUL</span>
+            <span class="hljs-keyword">if</span> (p-&gt;p_emul-&gt;e_errno)
+                error = p-&gt;p_emul-&gt;e_errno[error];
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+            tf-&gt;tf_reg[<span class="hljs-number">0</span>] = error;
+            tf-&gt;tf_spsr |= NZCV_C;
+            <span class="hljs-keyword">break</span>;
+        }
+    }
+
+    userret(l);
+}
+</div></div></code></pre><ul>
+<li><span>sprawdzamy czy mamy syscalla o podanym numerki</span></li>
+<li><span>pobieramy </span><code>sysent</code></li>
+<li><span>tworzymy argumenty dla wywołania</span></li>
+<li><span>obsługujemy syscalla</span></li>
+<li><span>jeśli mamy błąd to albo zwracamy go albo robimy restart</span></li>
+<li><span>wracamy do userspace</span></li>
+</ul><p><span>interesujący fragment</span></p><pre><code>switch (error) {
+case ERESTART:
+  /* Set user's pc back to redo the system call.  */
+  tf-&gt;tf_pc -= 4;
+  break;
+case EJUSTRETURN:
+  /* nothing to do */
+  break;
+default:
+bad:
+  tf-&gt;tf_reg[0] = error;
+  tf-&gt;tf_spsr |= NZCV_C;
+  break;
+}
+</code></pre><h2 id="Zadanie-4" data-id="Zadanie-4"><a class="anchor hidden-xs" href="#Zadanie-4" title="Zadanie-4"><span class="octicon octicon-link"></span></a><span>Zadanie 4</span></h2><p><span>Obsługa pułapki – sprwdzamy jaka jest klasa naszego problemu (rodzaj pułapki), wykonujemy odpowiednie akcje (każdy rodzaj powinien mieć jakąś akcję przypisaną), następnie zwracamy procesowi wynik (robimy mu dobrze albo bardzo nieprzyjemnie).</span></p><p><code>void trapsignal(struct lwp *l, const ksiginfo_t *ks);</code></p><blockquote>
+<p><span>Sends the signal ks-&gt;ksi_signo caused by a hardware trap to the current process.</span></p>
+</blockquote><h2 id="Zadanie-5" data-id="Zadanie-5"><a class="anchor hidden-xs" href="#Zadanie-5" title="Zadanie-5"><span class="octicon octicon-link"></span></a><span>Zadanie 5</span></h2><p><code>copyout</code><span> służy do przekopiowania danych z kernelspace do userspace.</span><br>
+<code>copycommon</code><span> to jakiś tam generyczny kod (makro) który zajmie się kopiowaniem z do.</span></p><pre><code class="asm hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="117"></span>
+<span data-linenumber="118"></span>
+<span data-linenumber="119"></span>
+<span data-linenumber="120"></span>
+<span data-linenumber="121"></span>
+<span data-linenumber="122"></span>
+<span data-linenumber="123"></span>
+<span data-linenumber="124"></span>
+<span data-linenumber="125"></span>
+<span data-linenumber="126"></span>
+<span data-linenumber="127"></span>
+<span data-linenumber="128"></span>
+<span data-linenumber="129"></span>
+<span data-linenumber="130"></span>
+<span data-linenumber="131"></span>
+<span data-linenumber="132"></span>
+<span data-linenumber="133"></span></div><div class="code"><span class="hljs-comment">/*
+ * Copies from a kernel to user address
+ *
+ * int copyout(const void *kaddr, void *udaddr, size_t len)
+ */</span>
+ENTRY(copyout)
+    beqz    a2, copyout_end <span class="hljs-comment">/* If len == 0 then skip loop */</span>
+    <span class="hljs-keyword">add</span> a3, a1, a2
+    li  a4, VM_MAXUSER_ADDRESS
+    bgt a3, a4, copyio_fault_nopcb
+
+    copycommon
+
+copyout_end:
+    li  a0, <span class="hljs-number">0</span>       <span class="hljs-comment">/* return 0 */</span>
+    <span class="hljs-function">ret
+<span class="hljs-title">END</span>(<span class="hljs-params">copyout</span>)
+</span></div></div></code></pre><p><span>W </span><code>copycommon</code><span> ustawiamy handler do obsługi błędu</span></p><pre><code class="asm hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="44"></span>
+<span data-linenumber="45"></span>
+<span data-linenumber="46"></span>
+<span data-linenumber="47"></span>
+<span data-linenumber="48"></span>
+<span data-linenumber="49"></span>
+<span data-linenumber="50"></span>
+<span data-linenumber="51"></span>
+<span data-linenumber="52"></span>
+<span data-linenumber="53"></span></div><div class="code"><span class="hljs-comment">/*
+ * Fault handler for the copy{in,out} functions below.
+ */</span>
+ENTRY(copyio_fault)
+    SET_FAULT_HANDLER(x0, a1) <span class="hljs-comment">/* Clear the handler */</span>
+    EXIT_USER_ACCESS(a1)
+copyio_fault_nopcb:
+    li  a0, EFAULT
+    ret
+<span class="hljs-keyword">END</span>(copyio_fault)
+</div></div></code></pre><p><span>Tutaj nic ciekawego się nie dzieje.</span></p><pre><code class="C hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="166"></span>
+<span data-linenumber="167"></span>
+<span data-linenumber="168"></span>
+<span data-linenumber="169"></span>
+<span data-linenumber="170"></span>
+<span data-linenumber="171"></span>
+<span data-linenumber="172"></span>
+<span data-linenumber="173"></span>
+<span data-linenumber="174"></span>
+<span data-linenumber="175"></span>
+<span data-linenumber="176"></span>
+<span data-linenumber="177"></span>
+<span data-linenumber="178"></span>
+<span data-linenumber="179"></span>
+<span data-linenumber="180"></span>
+<span data-linenumber="181"></span>
+<span data-linenumber="182"></span>
+<span data-linenumber="183"></span>
+<span data-linenumber="184"></span>
+<span data-linenumber="185"></span>
+<span data-linenumber="186"></span>
+<span data-linenumber="187"></span>
+<span data-linenumber="188"></span>
+<span data-linenumber="189"></span>
+<span data-linenumber="190"></span>
+<span data-linenumber="191"></span>
+<span data-linenumber="192"></span>
+<span data-linenumber="193"></span>
+<span data-linenumber="194"></span>
+<span data-linenumber="195"></span>
+<span data-linenumber="196"></span>
+<span data-linenumber="197"></span>
+<span data-linenumber="198"></span>
+<span data-linenumber="199"></span>
+<span data-linenumber="200"></span>
+<span data-linenumber="201"></span>
+<span data-linenumber="202"></span>
+<span data-linenumber="203"></span>
+<span data-linenumber="204"></span>
+<span data-linenumber="205"></span>
+<span data-linenumber="206"></span>
+<span data-linenumber="207"></span>
+<span data-linenumber="208"></span>
+<span data-linenumber="209"></span>
+<span data-linenumber="210"></span>
+<span data-linenumber="211"></span>
+<span data-linenumber="212"></span>
+<span data-linenumber="213"></span>
+<span data-linenumber="214"></span>
+<span data-linenumber="215"></span>
+<span data-linenumber="216"></span>
+<span data-linenumber="217"></span>
+<span data-linenumber="218"></span>
+<span data-linenumber="219"></span>
+<span data-linenumber="220"></span>
+<span data-linenumber="221"></span>
+<span data-linenumber="222"></span>
+<span data-linenumber="223"></span>
+<span data-linenumber="224"></span>
+<span data-linenumber="225"></span>
+<span data-linenumber="226"></span>
+<span data-linenumber="227"></span>
+<span data-linenumber="228"></span>
+<span data-linenumber="229"></span>
+<span data-linenumber="230"></span>
+<span data-linenumber="231"></span>
+<span data-linenumber="232"></span>
+<span data-linenumber="233"></span>
+<span data-linenumber="234"></span>
+<span data-linenumber="235"></span>
+<span data-linenumber="236"></span>
+<span data-linenumber="237"></span>
+<span data-linenumber="238"></span>
+<span data-linenumber="239"></span>
+<span data-linenumber="240"></span>
+<span data-linenumber="241"></span></div><div class="code">static void
+data_abort(<span class="hljs-keyword">struct</span> trapframe *frame, <span class="hljs-built_in">int</span> usermode)
+{
+    <span class="hljs-keyword">struct</span> vm_map *map;
+    uint64_t stval;
+    <span class="hljs-keyword">struct</span> thread *td;
+    <span class="hljs-keyword">struct</span> pcb *pcb;
+    vm_prot_t ftype;
+    vm_offset_t va;
+    <span class="hljs-keyword">struct</span> proc *p;
+    <span class="hljs-built_in">int</span> error, <span class="hljs-keyword">sig</span>, ucode;
+
+#ifdef <span class="hljs-type">KDB</span>
+    <span class="hljs-keyword">if</span> (kdb_active) {
+        kdb_reenter<span class="hljs-literal">()</span>;
+        return;
+    }
+#endif
+
+    td = curthread;
+    p = td-&gt;td_proc;
+    pcb = td-&gt;td_pcb;
+    stval = frame-&gt;tf_stval;
+
+    <span class="hljs-keyword">if</span> (td-&gt;td_critnest != <span class="hljs-number">0</span> || td-&gt;td_intr_nesting_level != <span class="hljs-number">0</span> ||
+        <span class="hljs-type">WITNESS_CHECK</span>(<span class="hljs-type">WARN_SLEEPOK</span> | <span class="hljs-type">WARN_GIANTOK</span>, <span class="hljs-type">NULL</span>,
+        <span class="hljs-string">"Kernel page fault"</span>) != <span class="hljs-number">0</span>)
+        goto fatal;
+
+    <span class="hljs-keyword">if</span> (usermode)
+        map = &amp;td-&gt;td_proc-&gt;p_vmspace-&gt;vm_map;
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (stval &gt;= <span class="hljs-type">VM_MAX_USER_ADDRESS</span>)
+        map = kernel_map;
+    <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">if</span> (pcb-&gt;pcb_onfault == <span class="hljs-number">0</span>)
+            goto fatal;
+        map = &amp;td-&gt;td_proc-&gt;p_vmspace-&gt;vm_map;
+    }
+
+    va = trunc_page(stval);
+
+    <span class="hljs-keyword">if</span> ((frame-&gt;tf_scause == <span class="hljs-type">EXCP_FAULT_STORE</span>) ||
+        (frame-&gt;tf_scause == <span class="hljs-type">EXCP_STORE_PAGE_FAULT</span>)) {
+        ftype = <span class="hljs-type">VM_PROT_WRITE</span>;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (frame-&gt;tf_scause == <span class="hljs-type">EXCP_INST_PAGE_FAULT</span>) {
+        ftype = <span class="hljs-type">VM_PROT_EXECUTE</span>;
+    } <span class="hljs-keyword">else</span> {
+        ftype = <span class="hljs-type">VM_PROT_READ</span>;
+    }
+
+    <span class="hljs-keyword">if</span> (pmap_fault_fixup(map-&gt;pmap, va, ftype))
+        goto <span class="hljs-keyword">done</span>;
+
+    error = vm_fault_trap(map, va, ftype, <span class="hljs-type">VM_FAULT_NORMAL</span>, &amp;<span class="hljs-keyword">sig</span>, &amp;ucode);
+    <span class="hljs-keyword">if</span> (error != <span class="hljs-type">KERN_SUCCESS</span>) {
+        <span class="hljs-keyword">if</span> (usermode) {
+            call_trapsignal(td, <span class="hljs-keyword">sig</span>, ucode, (void *)stval);
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">if</span> (pcb-&gt;pcb_onfault != <span class="hljs-number">0</span>) {
+                frame-&gt;tf_a[<span class="hljs-number">0</span>] = error;
+                frame-&gt;tf_sepc = pcb-&gt;pcb_onfault;
+                return;
+            }
+            goto fatal;
+        }
+    }
+
+<span class="hljs-keyword">done</span>:
+    <span class="hljs-keyword">if</span> (usermode)
+        userret(td, frame);
+    return;
+
+fatal:
+    dump_regs(frame);
+    panic(<span class="hljs-string">"Fatal page fault at %#lx: %#016lx"</span>, frame-&gt;tf_sepc, stval);
+}
+</div></div></code></pre><ul>
+<li><span>Sprawdzamy blokady, czy przyszliśmy z userspace, jaki to “dotyk” na pamięci etc…</span></li>
+<li><span>Potem podejmujemy akcje</span>
+<ul>
+<li><span>jeśli nie udało nam się obsłużyć problemu</span>
+<ul>
+<li><span>jeśli byliśmy w userspace to wysyłamy sygnał</span></li>
+<li><span>jeśli w kernelspace to ustawiamy jaki jest błąd i pc na dres </span><code>copyio_fault</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h2 id="Zadanie-6" data-id="Zadanie-6"><a class="anchor hidden-xs" href="#Zadanie-6" title="Zadanie-6"><span class="octicon octicon-link"></span></a><span>Zadanie 6</span></h2><pre><code class="C hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="127"></span>
+<span data-linenumber="128"></span>
+<span data-linenumber="129"></span>
+<span data-linenumber="130"></span>
+<span data-linenumber="131"></span>
+<span data-linenumber="132"></span>
+<span data-linenumber="133"></span>
+<span data-linenumber="134"></span>
+<span data-linenumber="135"></span>
+<span data-linenumber="136"></span>
+<span data-linenumber="137"></span>
+<span data-linenumber="138"></span>
+<span data-linenumber="139"></span>
+<span data-linenumber="140"></span>
+<span data-linenumber="141"></span>
+<span data-linenumber="142"></span>
+<span data-linenumber="143"></span>
+<span data-linenumber="144"></span>
+<span data-linenumber="145"></span>
+<span data-linenumber="146"></span></div><div class="code"><span class="hljs-keyword">struct</span> sleepqueue {
+    <span class="hljs-keyword">struct</span> threadqueue sq_blocked[NR_SLEEPQS]; <span class="hljs-comment">/* (c) Blocked threads. */</span>
+    u_int sq_blockedcnt[NR_SLEEPQS];    <span class="hljs-comment">/* (c) N. of blocked threads. */</span>
+    LIST_ENTRY(sleepqueue) sq_hash;     <span class="hljs-comment">/* (c) Chain and free list. */</span>
+    LIST_HEAD(, sleepqueue) sq_free;    <span class="hljs-comment">/* (c) Free queues. */</span>
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span>  *sq_wchan;      <span class="hljs-comment">/* (c) Wait channel. */</span>
+    <span class="hljs-keyword">int</span> sq_type;            <span class="hljs-comment">/* (c) Queue type. */</span>
+<span class="hljs-meta">#ifdef INVARIANTS</span>
+    <span class="hljs-keyword">struct</span> lock_object *sq_lock;        <span class="hljs-comment">/* (c) Associated lock. */</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+};
+
+<span class="hljs-keyword">struct</span> sleepqueue_chain {
+    LIST_HEAD(, sleepqueue) sc_queues;  <span class="hljs-comment">/* List of sleep queues. */</span>
+    <span class="hljs-keyword">struct</span> mtx sc_lock;         <span class="hljs-comment">/* Spin lock for this chain. */</span>
+<span class="hljs-meta">#ifdef SLEEPQUEUE_PROFILING</span>
+    u_int   sc_depth;           <span class="hljs-comment">/* Length of sc_queues. */</span>
+    u_int   sc_max_depth;           <span class="hljs-comment">/* Max length of sc_queues. */</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+} __aligned(CACHE_LINE_SIZE);
+</div></div></code></pre><pre><code class="C hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="302"></span>
+<span data-linenumber="303"></span>
+<span data-linenumber="304"></span>
+<span data-linenumber="305"></span>
+<span data-linenumber="306"></span>
+<span data-linenumber="307"></span>
+<span data-linenumber="308"></span>
+<span data-linenumber="309"></span>
+<span data-linenumber="310"></span>
+<span data-linenumber="311"></span>
+<span data-linenumber="312"></span>
+<span data-linenumber="313"></span>
+<span data-linenumber="314"></span>
+<span data-linenumber="315"></span>
+<span data-linenumber="316"></span>
+<span data-linenumber="317"></span>
+<span data-linenumber="318"></span>
+<span data-linenumber="319"></span>
+<span data-linenumber="320"></span>
+<span data-linenumber="321"></span>
+<span data-linenumber="322"></span>
+<span data-linenumber="323"></span>
+<span data-linenumber="324"></span>
+<span data-linenumber="325"></span>
+<span data-linenumber="326"></span>
+<span data-linenumber="327"></span>
+<span data-linenumber="328"></span>
+<span data-linenumber="329"></span>
+<span data-linenumber="330"></span>
+<span data-linenumber="331"></span>
+<span data-linenumber="332"></span>
+<span data-linenumber="333"></span>
+<span data-linenumber="334"></span>
+<span data-linenumber="335"></span>
+<span data-linenumber="336"></span>
+<span data-linenumber="337"></span>
+<span data-linenumber="338"></span>
+<span data-linenumber="339"></span>
+<span data-linenumber="340"></span>
+<span data-linenumber="341"></span>
+<span data-linenumber="342"></span>
+<span data-linenumber="343"></span>
+<span data-linenumber="344"></span>
+<span data-linenumber="345"></span>
+<span data-linenumber="346"></span>
+<span data-linenumber="347"></span>
+<span data-linenumber="348"></span>
+<span data-linenumber="349"></span>
+<span data-linenumber="350"></span>
+<span data-linenumber="351"></span>
+<span data-linenumber="352"></span>
+<span data-linenumber="353"></span>
+<span data-linenumber="354"></span>
+<span data-linenumber="355"></span>
+<span data-linenumber="356"></span>
+<span data-linenumber="357"></span>
+<span data-linenumber="358"></span>
+<span data-linenumber="359"></span>
+<span data-linenumber="360"></span>
+<span data-linenumber="361"></span>
+<span data-linenumber="362"></span>
+<span data-linenumber="363"></span>
+<span data-linenumber="364"></span>
+<span data-linenumber="365"></span>
+<span data-linenumber="366"></span>
+<span data-linenumber="367"></span>
+<span data-linenumber="368"></span>
+<span data-linenumber="369"></span>
+<span data-linenumber="370"></span>
+<span data-linenumber="371"></span>
+<span data-linenumber="372"></span>
+<span data-linenumber="373"></span>
+<span data-linenumber="374"></span>
+<span data-linenumber="375"></span>
+<span data-linenumber="376"></span>
+<span data-linenumber="377"></span>
+<span data-linenumber="378"></span>
+<span data-linenumber="379"></span>
+<span data-linenumber="380"></span>
+<span data-linenumber="381"></span>
+<span data-linenumber="382"></span>
+<span data-linenumber="383"></span>
+<span data-linenumber="384"></span>
+<span data-linenumber="385"></span>
+<span data-linenumber="386"></span>
+<span data-linenumber="387"></span>
+<span data-linenumber="388"></span></div><div class="code"><span class="hljs-comment">/*
+ * Places the current thread on the sleep queue for the specified wait
+ * channel.  If INVARIANTS is enabled, then it associates the passed in
+ * lock with the sleepq to make sure it is held when that sleep queue is
+ * woken up.
+ */</span>
+void
+sleepq_add(<span class="hljs-keyword">const</span> void *wchan, struct lock_object *lock, <span class="hljs-keyword">const</span> char *wmesg,
+    int flags, int queue)
+{
+    struct sleepqueue_chain *sc;
+    struct sleepqueue *sq;
+    struct thread *td;
+
+    td = curthread;
+    sc = SC_LOOKUP(wchan);
+    mtx_assert(&amp;sc-&gt;sc_lock, MA_OWNED);
+    MPASS(td-&gt;td_sleepqueue != <span class="hljs-keyword">NULL</span>);
+    MPASS(wchan != <span class="hljs-keyword">NULL</span>);
+    MPASS((queue &gt;= <span class="hljs-number">0</span>) &amp;&amp; (queue &lt; NR_SLEEPQS));
+
+    <span class="hljs-comment">/* If this thread is not allowed to sleep, die a horrible death. */</span>
+    <span class="hljs-keyword">if</span> (__predict_false(!THREAD_CAN_SLEEP())) {
+<span class="hljs-comment">#ifdef EPOCH_TRACE</span>
+        epoch_trace_list(curthread);
+<span class="hljs-comment">#endif</span>
+        KASSERT(<span class="hljs-number">1</span>,
+            (<span class="hljs-string">"%s: td %p to sleep on wchan %p with sleeping prohibited"</span>,
+            __func__, td, wchan));
+    }
+
+    <span class="hljs-comment">/* Look up the sleep queue associated with the wait channel 'wchan'. */</span>
+    sq = sleepq_lookup(wchan);
+
+    <span class="hljs-comment">/*
+     * If the wait channel does not already have a sleep queue, use
+     * this thread's sleep queue.  Otherwise, insert the current thread
+     * into the sleep queue already in use by this wait channel.
+     */</span>
+    <span class="hljs-keyword">if</span> (sq == <span class="hljs-keyword">NULL</span>) {
+<span class="hljs-comment">#ifdef INVARIANTS</span>
+        int i;
+
+        sq = td-&gt;td_sleepqueue;
+        <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; NR_SLEEPQS; i++) {
+            KASSERT(TAILQ_EMPTY(&amp;sq-&gt;sq_blocked[i]),
+                (<span class="hljs-string">"thread's sleep queue %d is not empty"</span>, i));
+            KASSERT(sq-&gt;sq_blockedcnt[i] == <span class="hljs-number">0</span>,
+                (<span class="hljs-string">"thread's sleep queue %d count mismatches"</span>, i));
+        }
+        KASSERT(LIST_EMPTY(&amp;sq-&gt;sq_free),
+            (<span class="hljs-string">"thread's sleep queue has a non-empty free list"</span>));
+        KASSERT(sq-&gt;sq_wchan == <span class="hljs-keyword">NULL</span>, (<span class="hljs-string">"stale sq_wchan pointer"</span>));
+        sq-&gt;sq_lock = lock;
+<span class="hljs-comment">#endif</span>
+<span class="hljs-comment">#ifdef SLEEPQUEUE_PROFILING</span>
+        sc-&gt;sc_depth++;
+        <span class="hljs-keyword">if</span> (sc-&gt;sc_depth &gt; sc-&gt;sc_max_depth) {
+            sc-&gt;sc_max_depth = sc-&gt;sc_depth;
+            <span class="hljs-keyword">if</span> (sc-&gt;sc_max_depth &gt; sleepq_max_depth)
+                sleepq_max_depth = sc-&gt;sc_max_depth;
+        }
+<span class="hljs-comment">#endif</span>
+        sq = td-&gt;td_sleepqueue;
+        LIST_INSERT_HEAD(&amp;sc-&gt;sc_queues, sq, sq_hash);
+        sq-&gt;sq_wchan = wchan;
+        sq-&gt;sq_type = flags &amp; SLEEPQ_TYPE;
+    } <span class="hljs-keyword">else</span> {
+        MPASS(wchan == sq-&gt;sq_wchan);
+        MPASS(lock == sq-&gt;sq_lock);
+        MPASS((flags &amp; SLEEPQ_TYPE) == sq-&gt;sq_type);
+        LIST_INSERT_HEAD(&amp;sq-&gt;sq_free, td-&gt;td_sleepqueue, sq_hash);
+    }
+    thread_lock(td);
+    TAILQ_INSERT_TAIL(&amp;sq-&gt;sq_blocked[queue], td, td_slpq);
+    sq-&gt;sq_blockedcnt[queue]++;
+    td-&gt;td_sleepqueue = <span class="hljs-keyword">NULL</span>;
+    td-&gt;td_sqqueue = queue;
+    td-&gt;td_wchan = wchan;
+    td-&gt;td_wmesg = wmesg;
+    <span class="hljs-keyword">if</span> (flags &amp; SLEEPQ_INTERRUPTIBLE) {
+        td-&gt;td_intrval = <span class="hljs-number">0</span>;
+        td-&gt;td_flags |= TDF_SINTR;
+    }
+    td-&gt;td_flags &amp;= ~TDF_TIMEOUT;
+    thread_unlock(td);
+}
+</div></div></code></pre><pre><code class="C hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="817"></span>
+<span data-linenumber="818"></span>
+<span data-linenumber="819"></span>
+<span data-linenumber="820"></span>
+<span data-linenumber="821"></span>
+<span data-linenumber="822"></span>
+<span data-linenumber="823"></span>
+<span data-linenumber="824"></span>
+<span data-linenumber="825"></span>
+<span data-linenumber="826"></span>
+<span data-linenumber="827"></span>
+<span data-linenumber="828"></span>
+<span data-linenumber="829"></span>
+<span data-linenumber="830"></span>
+<span data-linenumber="831"></span>
+<span data-linenumber="832"></span>
+<span data-linenumber="833"></span>
+<span data-linenumber="834"></span>
+<span data-linenumber="835"></span>
+<span data-linenumber="836"></span>
+<span data-linenumber="837"></span>
+<span data-linenumber="838"></span>
+<span data-linenumber="839"></span>
+<span data-linenumber="840"></span>
+<span data-linenumber="841"></span>
+<span data-linenumber="842"></span>
+<span data-linenumber="843"></span>
+<span data-linenumber="844"></span>
+<span data-linenumber="845"></span>
+<span data-linenumber="846"></span>
+<span data-linenumber="847"></span>
+<span data-linenumber="848"></span>
+<span data-linenumber="849"></span>
+<span data-linenumber="850"></span>
+<span data-linenumber="851"></span>
+<span data-linenumber="852"></span>
+<span data-linenumber="853"></span>
+<span data-linenumber="854"></span>
+<span data-linenumber="855"></span>
+<span data-linenumber="856"></span>
+<span data-linenumber="857"></span>
+<span data-linenumber="858"></span>
+<span data-linenumber="859"></span>
+<span data-linenumber="860"></span>
+<span data-linenumber="861"></span>
+<span data-linenumber="862"></span>
+<span data-linenumber="863"></span>
+<span data-linenumber="864"></span>
+<span data-linenumber="865"></span>
+<span data-linenumber="866"></span>
+<span data-linenumber="867"></span>
+<span data-linenumber="868"></span>
+<span data-linenumber="869"></span>
+<span data-linenumber="870"></span>
+<span data-linenumber="871"></span>
+<span data-linenumber="872"></span></div><div class="code"><span class="hljs-keyword">static</span> void
+sleepq_remove_thread(struct sleepqueue *sq, struct thread *td)
+{
+    struct sleepqueue_chain *sc __unused;
+
+    MPASS(td != <span class="hljs-keyword">NULL</span>);
+    MPASS(sq-&gt;sq_wchan != <span class="hljs-keyword">NULL</span>);
+    MPASS(td-&gt;td_wchan == sq-&gt;sq_wchan);
+    MPASS(td-&gt;td_sqqueue &lt; NR_SLEEPQS &amp;&amp; td-&gt;td_sqqueue &gt;= <span class="hljs-number">0</span>);
+    THREAD_LOCK_ASSERT(td, MA_OWNED);
+    sc = SC_LOOKUP(sq-&gt;sq_wchan);
+    mtx_assert(&amp;sc-&gt;sc_lock, MA_OWNED);
+
+    SDT_PROBE2(sched, , , wakeup, td, td-&gt;td_proc);
+
+    <span class="hljs-comment">/* Remove the thread from the queue. */</span>
+    sq-&gt;sq_blockedcnt[td-&gt;td_sqqueue]--;
+    TAILQ_REMOVE(&amp;sq-&gt;sq_blocked[td-&gt;td_sqqueue], td, td_slpq);
+
+    <span class="hljs-comment">/*
+     * Get a sleep queue for this thread.  If this is the last waiter,
+     * use the queue itself and take it out of the chain, otherwise,
+     * remove a queue from the free list.
+     */</span>
+    <span class="hljs-keyword">if</span> (LIST_EMPTY(&amp;sq-&gt;sq_free)) {
+        td-&gt;td_sleepqueue = sq;
+<span class="hljs-comment">#ifdef INVARIANTS</span>
+        sq-&gt;sq_wchan = <span class="hljs-keyword">NULL</span>;
+<span class="hljs-comment">#endif</span>
+<span class="hljs-comment">#ifdef SLEEPQUEUE_PROFILING</span>
+        sc-&gt;sc_depth--;
+<span class="hljs-comment">#endif</span>
+    } <span class="hljs-keyword">else</span>
+        td-&gt;td_sleepqueue = LIST_FIRST(&amp;sq-&gt;sq_free);
+    LIST_REMOVE(td-&gt;td_sleepqueue, sq_hash);
+
+    <span class="hljs-keyword">if</span> ((td-&gt;td_flags &amp; TDF_TIMEOUT) == <span class="hljs-number">0</span> &amp;&amp; td-&gt;td_sleeptimo != <span class="hljs-number">0</span>)
+        <span class="hljs-comment">/*
+         * We ignore the situation where timeout subsystem was
+         * unable to stop our callout.  The struct thread is
+         * type-stable, the callout will use the correct
+         * memory when running.  The checks of the
+         * td_sleeptimo value in this function and in
+         * sleepq_timeout() ensure that the thread does not
+         * get spurious wakeups, even if the callout was reset
+         * or thread reused.
+         */</span>
+        callout_stop(&amp;td-&gt;td_slpcallout);
+
+    td-&gt;td_wmesg = <span class="hljs-keyword">NULL</span>;
+    td-&gt;td_wchan = <span class="hljs-keyword">NULL</span>;
+    td-&gt;td_flags &amp;= ~(TDF_SINTR | TDF_TIMEOUT);
+
+    CTR3(KTR_PROC, <span class="hljs-string">"sleepq_wakeup: thread %p (pid %ld, %s)"</span>,
+        (void *)td, (long)td-&gt;td_proc-&gt;p_pid, td-&gt;td_name);
+}
+</div></div></code></pre><p><span>W </span><code>sleepq_add</code></p><ul>
+<li><span>wyszukujemy odpowiedni wpis w </span><code>sleepq_chains</code><span> – </span><code>SC_LOOKUP</code></li>
+<li><span>potem jak już mamy łańcuch to wyszukuejmy odpowiednią kolejkę – </span><code>sleepq_lookup</code></li>
+<li><span>jeśli jesteśmy pierwszym oczekującym na </span><code>wchan</code><span> to nasze </span><code>sleepq</code><span> przypisujemy do </span><code>wchan</code></li>
+<li><span>jeśli jesteśmy którymś to dodajemy </span><code>sleepq</code><span> do </span><code>sq_free</code></li>
+<li><span>dodajemy się do listy czekających dla </span><code>wchan</code></li>
+</ul><p><span>W </span><code>sleepq_remove_thread</code></p><ul>
+<li><span>usuwamy się z </span><code>sleepq</code><span> na której jesteśmy</span></li>
+<li><span>znajdujemy mu </span><code>sleepq</code><span> którą można mu oddać</span></li>
+<li><span>jeśli byliśmy ostatni to dostajemy kolejkę od </span><code>wwchan</code></li>
+<li><span>jeśli oprócz nas ktos jeszcze jest na </span><code>wchan</code><span> to dostajemy </span><code>sleepq</code><span> z </span><code>sq_free</code></li>
+</ul><h2 id="Zadanie-7" data-id="Zadanie-7"><a class="anchor hidden-xs" href="#Zadanie-7" title="Zadanie-7"><span class="octicon octicon-link"></span></a><span>Zadanie 7</span></h2><h6 id="Czemu-wystarczy-by-jądro-przypisało-po-jednym-rekordzie-sleepqueue-do-każdego-wątku" data-id="Czemu-wystarczy-by-jądro-przypisało-po-jednym-rekordzie-sleepqueue-do-każdego-wątku"><a class="anchor hidden-xs" href="#Czemu-wystarczy-by-jądro-przypisało-po-jednym-rekordzie-sleepqueue-do-każdego-wątku" title="Czemu-wystarczy-by-jądro-przypisało-po-jednym-rekordzie-sleepqueue-do-każdego-wątku"><span class="octicon octicon-link"></span></a><span>Czemu wystarczy, by jądro przypisało po jednym rekordzie sleepqueue do każdego wątku?</span></h6><p><span>Zauważmy, że dla każdego </span><code>wchanu</code><span> (który chcemy użyć w danej chwili) potrzebujemy </span><code>sleepq</code><span>. Ile jest maksymalnie </span><code>wchanów</code><span> których będziemy używać w jednym momencie? Tyle ile wątków. Nie potrzbujemy mieć żadnych dodatkowych </span><code>wchan</code><span>'ów ponieważ nie mamy wątków które by miały z nich skorzystać. Dlatego skoro </span><code>wchan</code><span>'ów może być w jednym momencie tyle co wątków, to </span><code>sleepq</code><span> tak samo.</span></p><h6 id="Jak-implementacja-sleepqueue-unika-problemu-zgubionej-pobudki" data-id="Jak-implementacja-sleepqueue-unika-problemu-zgubionej-pobudki"><a class="anchor hidden-xs" href="#Jak-implementacja-sleepqueue-unika-problemu-zgubionej-pobudki" title="Jak-implementacja-sleepqueue-unika-problemu-zgubionej-pobudki"><span class="octicon octicon-link"></span></a><span>Jak implementacja sleepqueue unika problemu zgubionej pobudki?</span></h6><p><span>Zanim wątek zostanie uśpiony jest sprawdzane czy posiada on swoje </span><code>sleepq</code><span>.</span><br>
+<code>sleepq_switch()</code><span>:</span></p><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="575"></span>
+<span data-linenumber="576"></span>
+<span data-linenumber="577"></span>
+<span data-linenumber="578"></span>
+<span data-linenumber="579"></span>
+<span data-linenumber="580"></span>
+<span data-linenumber="581"></span>
+<span data-linenumber="582"></span>
+<span data-linenumber="583"></span></div><div class="code">	<span class="token comment">/*
+	* If we have a sleep queue, then we've already been woken up, so
+	* just return.
+	*/</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>td<span class="token operator">-&gt;</span>td_sleepqueue <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token function">mtx_unlock_spin</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>sc<span class="token operator">-&gt;</span>sc_lock<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token function">thread_unlock</span><span class="token punctuation">(</span>td<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">return</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+</div></div></code></pre><p><span>Zauważmy, że podczas dodawania wątku do wątków zablokowanych na </span><code>sleepq</code><span> odbierana jest mu jego wolna </span><code>sleep</code><span>, a podczas usuwania dostaje wolną. W takim razie jeśli wątek dalej ma czekać to nie będzie miał wolnej </span><code>sleepq</code><span>. Wtedy od razu wracamy z procedury </span><a href="http://bxr.su/FreeBSD/sys/kern/subr_sleepqueue.c#669" target="_blank" rel="noopener"><code>sleepq_wait</code></a></p><h2 id="Zadanie-8" data-id="Zadanie-8"><a class="anchor hidden-xs" href="#Zadanie-8" title="Zadanie-8"><span class="octicon octicon-link"></span></a><span>Zadanie 8</span></h2><p><span>Najpierw przypomnimy sobie co to jest </span><em><span>swapping</span></em><span>.</span><br>
+<span>Jest to pewna “polityka” zarządzania pamięcią, gdzie cały proces może zostać przeniesiony do lub z </span><em><span>secondary storage</span></em><span> do głównej pamięci.</span></p><p><span>Stronicowalna pamięć wirtualna jądra jest alokowana przy użyciu </span><code>kmap_alloc_wait()</code><span>. Przydzielamy kawałki pamięci fizycznej na rządanie i ta pamięć może być zrzucona na chociażby dysk (</span><em><span>backing store</span></em><span>) przez </span><em><span>pageout daemon</span></em><span>. </span><code>kmap_alloc_wait()</code><span> czeka dopóki przestrzeń adresowana nie będzie dostępna. </span><code>kmap_free_wakeup()</code><span> dealokuje pamięć i budzi procesy które czekały na przestrzeń adresową w określonej mapie. Aktualnie ta pamięć jest używana jako tymczasowy pojemnik na argumenty </span><em><span>exec</span></em><span> i do buforowania </span><em><span>pipe</span></em><span>.</span></p><p><span>Zadrutowana pamięć to fizyczna pamięć która jest przypisana w momencie zawołania i nie podlega wymianie przez </span><em><span>pageout daemon</span></em><span>. Nigdy nie powoduje faulta. Jest alokowana przez </span><code>malloc()</code><span> lub przez </span><em><span>zone allocator</span></em><span>. Podczas takiej alokacji zazwyczaj czekamy tak długo, aż pamięć stanie się dostępna. Oczywiście mamy możliwość nieblokującej alokacji – wtedy możemy dostać faila i będzie nam smutno, ale czasem trzeba jak np. jesteśmy pod przerwaniem albo w innym krytycznym kawałku kodu. Możemy również poprosić aby kawałek pamięci (w </span><em><span>userspace</span></em><span>) nie mógł zostać wyswappowany </span><code>mlock</code><span>. Oczywiście możemy być egoistycznymi programistami i poprosić </span><code>mlock</code><span> o zablokowanie całej pamięci, jednak kernel trzyma pewien “limit” który zazwyczaj stanowi 1/3 fizycznej pamięci. Taką pamięć zwalniamy (pozwalamy na </span><em><span>swapping</span></em><span>) potem przy pomocy </span><code>munlock</code><span>.</span></p><p><span>Dlaczego mutex podczas dostępu do stronicowalnej pamięci jest słaby? Bo jeśli nasza pamieć została wyswappowana to trochę to potrwa. Wyboraźmy sobie, że robimy blokadę na jakąś istotną strukturę w jądrze np. coś co manipuluje procesami (jakieś przydzielanie asidów?) i robimy wtedy odczyt pamięci która została wyswappowana na plik siedzący na nfs? no to zabiliśmy dość ważny kawałek jądra na dłuuuugo.</span></p><p><span>Zgodnie z </span><a href="https://www.freebsd.org/cgi/man.cgi?locking(9)" target="_blank" rel="noopener"><span>locking(9)</span></a><span> podczas brania mutexa można wchodzić tylko w bounded sleep, a podczas spinlocka w żaden (a odczyt z dysku jest unbounded).</span></p></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li class=""><a href="#SJU-20200429" title="SJU 2020/04/29">SJU 2020/04/29</a><ul class="nav">
+<li><a href="#Zadanie-3-wersja-2" title="Zadanie 3. (wersja 2)">Zadanie 3. (wersja 2)</a></li>
+<li><a href="#Zadanie-4-wersja-2" title="Zadanie 4. (wersja 2)">Zadanie 4. (wersja 2)</a></li>
+<li><a href="#Zadanie-5-wersja-2" title="Zadanie 5. (wersja 2)">Zadanie 5. (wersja 2)</a></li>
+<li><a href="#Zadanie-3" title="Zadanie 3">Zadanie 3</a></li>
+<li><a href="#Zadanie-4" title="Zadanie 4">Zadanie 4</a></li>
+<li><a href="#Zadanie-5" title="Zadanie 5">Zadanie 5</a></li>
+<li><a href="#Zadanie-6" title="Zadanie 6">Zadanie 6</a></li>
+<li><a href="#Zadanie-7" title="Zadanie 7">Zadanie 7</a></li>
+<li><a href="#Zadanie-8" title="Zadanie 8">Zadanie 8</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+        <div class="toc"><ul class="nav">
+<li class=""><a href="#SJU-20200429" title="SJU 2020/04/29">SJU 2020/04/29</a><ul class="nav">
+<li><a href="#Zadanie-3-wersja-2" title="Zadanie 3. (wersja 2)">Zadanie 3. (wersja 2)</a></li>
+<li><a href="#Zadanie-4-wersja-2" title="Zadanie 4. (wersja 2)">Zadanie 4. (wersja 2)</a></li>
+<li><a href="#Zadanie-5-wersja-2" title="Zadanie 5. (wersja 2)">Zadanie 5. (wersja 2)</a></li>
+<li><a href="#Zadanie-3" title="Zadanie 3">Zadanie 3</a></li>
+<li><a href="#Zadanie-4" title="Zadanie 4">Zadanie 4</a></li>
+<li><a href="#Zadanie-5" title="Zadanie 5">Zadanie 5</a></li>
+<li><a href="#Zadanie-6" title="Zadanie 6">Zadanie 6</a></li>
+<li><a href="#Zadanie-7" title="Zadanie 7">Zadanie 7</a></li>
+<li><a href="#Zadanie-8" title="Zadanie 8">Zadanie 8</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{algorithmic}
+\usepackage{amssymb}
+
+\usepackage[margin=0.5in,headheight=48pt,top=78pt]{geometry}
+\frenchspacing
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0em}
+\def\N{\mathbb{N}}
+\def\R{\mathbb{R}}
+\newcommand{\zadanie}[1]{\par\textbf{Zadanie #1}}
+\newcommand{\odp}[1]{\textbf{Odpowiedź:} #1}
+
+\usepackage{tikz}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % clear all fields
+\fancyhead[C]{ \textbf{AISD} - Lista 1 Zadanie 5\ Wiktor Pilarczyk 308533}
+
+\begin{document}
+\section{Wstęp}
+Wiemy, że nasz graf jest acykliczny (czyli jest drzewem/lasem) i jest skierowany. Wiemy o tym, że możemy nasz graf posortować  topologiczne w czasie O(V+E) i oznaczmy wierzchołki $v_1, v_2, ..., v_n$, gdzie dzięki naszemu sortowaniu topologicznemu wiemy, że żadna krawędź nie wychodzi z $v_i$ do $v_j$, gdzie j > i (czyli do $v_n$ nie wchodzi żadna krawędź). 
+
+\section{Algorytm}
+Dla każdego wierzchołka mamy tablicę T, która będzie przechowywała wartość najdłuższej drogi wychodzącej z tego wierzchołka. 
+
+Nasz algorytm będzie iterował się po wierzchołkach od $v_1$, do $v_n$ i dla wierzchołka $v_i$, zabierze każdego jego sąsiad $v_j$, takiego że j > i (czyli z j wychodzi krawędź do i) i zaktualizuje wartość w tablicy T:
+$$ T[j] = max(T[j], T[i] + e(j,i))$$
+
+Po zakończeniu pętli bierzemy największą wartość z T, dzięki czemu znamy długość najdłuższej drogi oraz indeks oznacza gdzie taka droga może się zaczynac (może być ich wiele).
+
+Przypadek odzyskiwania drogi jest dosyć oczywisty ponieważ skoro znamy długość najdłuższej drogi wychodzącej z danego wierzchołka oraz podobnie dla jego sąsiadów to wiemy, że sąsiad (do którego wychodzi krawędź) dla którego suma krawędzi i jego najdłuższej drogi równa się długości naszej najdłuższej drogi może być elementem tej drogi i tak rekurencyjnie możemy odzyskać tą drogę. Ważne jest warunek, że graf jest acykliczny, ponieważ zapewnia nam to, że otrzymamy drogę.
+
+\section{Dowód}
+Teza: Nasz algorytm poprawnie obliczy wartość najdłuższej drogi wychodzącej z każdego wierzchołka.
+Przeprowadzę dowód indukcyjny po liczbie wierzchołków.
+
+Baza n = 1
+Oczywiste
+
+Założenie indukcyjne: teza jest spełniona dla dowolnego grafu o n wierzchołkach spełniającego założenia
+
+Teza indukcyjna: teza jest spełniona dla dowolnego grafu o n+1 wierzchołkach spełniającego założenia
+
+Weźmy dowolny graf o n+1 wierzchołkach posortujmy go topologicznie $v_1, v_2, ..., v_{n+1}$, weźmy podgraf bez $v_{n+1}$ jest on n elementowy i korzystając z ZI dla każdego wierzchołka $v_1, v_2, ..., v_n$ teza jest spełniona, ponieważ z wierzchołka $v_{n+1}$ tylko wychodzą krawędzie. Załóżmy nie wprost, że nasza wartość obliczona dla $v_{n+1}$ nie jest optymalna. Weźmy tą optymalną i należy do niej sąsiad $v_{n+1}$ - $v_i$, ale $T[i] + d(n+1, i)$ rozważaliśmy, więc otrzymujemy sprzeczność. Czyli dobrze obliczyliśmy najdłuższą drogę dla $v_{n+1}$.
+
+Na mocy zasady o indukcji teza zachodzi dla dowolnego grafu.
+
+\section{Złożoność}
+Wiemy już, że sortowanie topologiczne ma złożoność O(V+E). Obliczanie wartości najdłuższej drogi wychodzącej z wierzchołka kosztuje nas O(V+E), ponieważ odwiedzamy każdy wierzchołek iteracyjnie, a dla wierzchołka sprawdzamy krawędzie, które będą przechodzone dwukrotnie (dla wierzchołków połączonych tą krawędzią) i podobnie dla wypisywania tej ścieżki. Więc złożoność wynosi O(V+E).
+\end{document}

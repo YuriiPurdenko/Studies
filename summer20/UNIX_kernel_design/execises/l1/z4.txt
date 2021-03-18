@@ -1,0 +1,36 @@
+HAL - pozwala ukryć niskopozimowe szczegóły związane z działaniem sprzętu np. dostęp do rejestrów czy operacji DMA (Dirce Memory Access), a także odpowiada za sposób reprezentowania przez firmware BIOS-u informacji konfiguracyjnych i obslugi ukladow pomocniczych procesora np. kontrolera przerwan
+
+Sterowniki urządzeń stosuje sie dla wszystkich mechanizmow trybu jadra, ktore nie wchodza w sklad NTOS i HAL. Wiec sa niezbedne do wspolpracy z systemami plikow, stosami protokolow sieciowych i rozszerzeniami jadra jak programy antywirusowe itp, a takze do zarzadzania urzadzeniami fizycznymi, magistralami sprzetowymi itp
+
+przenosne - przenosne miedzy roznymi platforammi sprzetowymi.
+
+Wiekszosc NTOS napisana w C, a to utrudnia przenosnosc, poniewaz architektury maja rozne rodzaje rozkazow. 
+
+Pamiec wirtualna i NT silnie uzaleznione od szczegolow sprzetowych - pamieci podrecznej i lokalnosci pamieci. i wiele wiele innych przykladow
+
+Dlatego pracownicy Microsoft wlozyli wiele trudu w HAL, aby ukryc roznice sprzetowe/architektury.
+
+Zadanie HAL jest udostepnianie pozostalym składnikom SO abstrakcyjnego sprzetu, ktory ukrywa szczegoly prawdziwego sprzetu. HAL -> NTOS + sterowniki
+Dzieki temu w jadrze i sterownikach przy przenosinach wymaggana jest mniejsza liczba zmian. Niemal we wszystkich przypadkach moga wspolpracowac z tymi samymi architekutami pomimo roznych wersji procesorow i chipow pomocniczych.
+
+HAL nie zapewnia abstrakcji ani uslugi dla urzadzen I/O np klawiatury myszy czy jednostki zarzadzania pamieci MMU
+
+Przyklady
+	-odwzorowanie plikow w pamiec i porty
+	-adresowanie urzadzen I/O na magistrlaach
+	-obsluga przerwan (zalezna od magistrali)
+	-obsluga i zarzadzanie przesylaniem danych w trybie DMA
+	-zarzadzanie zegarami i licznikami czasowymi
+	-komunikuje sie z BIOSem i uzyskuje konfiguracje systemu (informacje o magistralach i urzadzeniach I/O i ich ustawieniach)
+	-Blokady petlowe
+	-Firmware
+	-rejestry urzadzen
+
+Sterowniki urzadzen - maja postac bibliotek dolaczanych dynamicznie, wykorzystuje sie do obslugi konkretnych urzadzen sprzetowych (urzadzen fizycznych, magistali I/O), uzywany do rozszerzania mozliwosci trybu jadra.
+Menadzer wejscia i wyjscia wyznacza sciezke przeplywu danych. Sterowniki czasami filtruja operacje I/O aby :
+	-tworzenie bardziej przejrzystych architektur
+	-pozwala obejsc problem braku kodu zrodlowego sterownika lub praw do jego modyfikacji?
+	-przeksztlacac dyski w partycje
+Przyklady:
+	-system plikow jest ladowany w formie sterownikow
+	-protokoly sieciowe sa ladowane jako sterowniki

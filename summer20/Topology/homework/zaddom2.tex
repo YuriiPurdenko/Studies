@@ -1,0 +1,291 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{algorithmic}
+\usepackage{amssymb}
+
+\usepackage[margin=0.5in,headheight=48pt,top=78pt]{geometry}
+\frenchspacing
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0em}
+\def\N{\mathbb{N}}
+\def\R{\mathbb{R}}
+\newcommand{\zadanie}[1]{\par\textbf{Zadanie #1}}
+\newcommand{\odp}[1]{\textbf{Odpowiedź:} #1}
+
+\usepackage{tikz}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % clear all fields
+\fancyhead[C]{ \textbf{Topologia} - Zadanie domowe 2\ Wiktor Pilarczyk 308533}
+
+\begin{document}
+
+\zadanie{1}
+Mamy przestrzenie metryczne ($X_1$, $\rho_1$) i ($X_2$, $\rho_2$).
+
+Definicja jednostajnej ciągłości dla f: $X_1 -> X_2$
+$$(\forall \epsilon > 0) (\exists \delta > 0) (\forall x, x' \in X) \hspace{10.} \rho_1(x,x') < \delta \implies \rho_2(f(x),f(x')) < \epsilon$$
+Warunek Lipschitza:
+$$(\exists L > 0) (\forall x,x' \in X)  \hspace{10.} \rho_2(f(x),f(x')) \leq L \rho_1(x,x')$$
+\begin{enumerate}
+    \item Teza: Warunek Lipschitza implikuje jednostajną ciągłość
+
+    Załóżmy, że f spełnia warunek Lipschitza i pokażmy, że jest jednostajnie ciągłą.
+    
+    Weźmy dowolne $\epsilon > 0$ i L > 0 z warunku Lipschitza. Niech nasza $\delta < \frac{\epsilon}{L}$, wtedy $ L\rho_1(x,x') < \epsilon$, a "dokładając" tą nierówność do warunku Lipschitza otrzymujemy:
+    $$\rho_2(f(x),f(x')) \leq L \rho_1(x,x')  < \epsilon$$ Czyli funkcja jest jednostajnie ciągła.
+    
+    Teza jest prawdziwa.
+    \item Teza: Jednostajna ciągłość implikuje ciągłość
+    
+    Załóżmy, że f jest jednostajnie ciągła i pokażmy, że jest ciągła. (Wynika to z samej definicji ciągłości, która jest słabsza).
+    Więc weźmy dowolnego $x \in X$ i dowolne $\epsilon$, i chcemy pokazać, że istniej $\delta$, że $\forall x' \in X$ zachodzi 
+    $$\rho_1(x,x') < \delta \implies \rho_2(f(x),f(x')) < \epsilon$$
+    korzystając z jednostajnej ciągłości dla $\epsilon$ istnieje taka $\delta$, a ponieważ warunek spełniony jest $\forall x, x' \in X$ to tym bardziej dla wcześniej ustalonego x i dowolnego x'.
+    
+    Teza jest prawdziwa.
+\end{enumerate}
+
+Kontrprzykłady:
+\begin{enumerate}
+    \item Jest jednostajnie ciągła, ale nie spełnia warunku Lipschitza.
+    
+    W przestrzeniach metrycznych $([0,1], d_e)$ i $([0,1], d_e)$ funkcja $f(x) = \sqrt{x}$ jest jednostajnie ciągła, ale nie jest Lipschitzowska.
+    
+    Warunek Lipschitza jest równoważny, że pochodna jest ograniczona, ale w pobliży 0 pochodna funkcji nie jest ograniczona, z czego wynika, że nie jest Lipschitzowska.
+    
+    Pozostało pokazać, że jest JC, ale z analizy wiemy, że funkcja ciągła na przedziale naszym przedziale (domkniętym) jest jednostajnie ciągła.
+    
+    \item Jest ciągła, ale nie jest jednostajnie ciągła.
+    
+    W przestrzeniach metrycznych $(\R, d_e)$ i $(\R, d_e)$ funkcja $f(x) = x^2$ jest ciągła, ale nie jest jednostajnie ciągła.
+    
+    Dowód nie wprost, załóżmy że jest jednostajnie ciągła.
+    
+    Weźmy $\epsilon > 0$ oraz $\delta > 0$ dla których warunek JC jest spełniony.
+    
+    Weźmy $x = \frac{\epsilon}{\delta} + \frac{\delta}{2}$ i $x' = \frac{\epsilon}{\delta}$ wtedy $x - x' = \frac{\delta}{2} < \delta$ oraz zakładamy, że $f(x) - f(x)' = x^2 - x'^2 = (x-x')(x+x') = \frac{\delta}{2}(\frac{2\epsilon}{\delta} + \frac{\delta}{2}) = \epsilon + \frac{\delta^2}{4} > \epsilon$, więc otrzymujemy sprzeczność ponieważ $d_e(f(x), f(x')) > \epsilon$.
+    
+    
+\end{enumerate}
+\zadanie{2}
+Przestrzeń X nazywamy lokalnie zwartą jeśli $(\forall x \in X) (\exists$ otwarte U) t. że $x \in U \subseteq X$ i cl(U) jest zwarte. 
+
+A) Chcemy pokazać, że domknięte i otwarte podprzestrzeni lokalnie zwartej przestrzeni Hausdorffa są lokalnie zwarte.
+
+Niech naszą przestrzenią topologiczna (X,T), gdzie X jest zbiorem, a T jest topologią na X, gdzie X będzie lokalnie zwartą przestrzenią Hausdorffa
+
+\begin{enumerate}
+    \item Podprzestrzenie domknięte
+    
+    Niech A będzie dowolnym zbiorem domkniętym w X i weźmy dowolne $x \in A$. Z lokalnej zwartości X wiemy, że istnieje otwarte U, dla którego cl(U) jest zwarte i $x \in U$. 
+    
+    Korzystając z wskazówski, że przestrzeń X jest normalna, a to implikuje, że jest regularna i wiemy, że podprzestrzenie przestrzeni regularnej też są regularne. Czyli A jest regularne.
+    
+    Wiemy, że $X \setminus U$ jest domknięte bo U jest otwarte oraz $(X \setminus U) \cap A \subseteq A$ jest domknięte bo iloczyn zbiorów domkniętych jest zbiorem domkniętym. Korzystając z regularności A mamy dwa zbiory otwarte $x \in V \subseteq A$ oraz  $(X \setminus U) \cap A \subseteq O \subseteq A$, które są rozłączne.
+    
+    Więc wiemy, że $x \in V \cap U \subseteq A$ jest zbiorem otwartym (skończony iloczyn zbiorów otwartych oraz $cl(V \cap U) \subseteq cl(U)$, a ponieważ $cl(V \cap U)$ jest domkniętym podzbiorem zbioru zwartego oznacza to, że też jest zwarty czyli pokazaliśmy, że dla dowolnego zbioru domkniętego A, możemy znaleźć zbiór otwarty $V \cap U $, takie że $cl(V \cap U )$ jest zwarty, czyli dowolna podprzestrzeń domknięta lokalnie zwartej przestrzeni Hausdorffa jest lokalnie zwarta.
+    
+    \item Podprzestrzenie otwarte
+    
+    Niech B będzie dowolnym zbiorem otwartym w X i weźmy dowolne $x \in B$.
+    Z lokalnej zwartości X weźmy otwarte U, dla którego cl(U) jest zwarte i $x \in U$. Wiemy, że:
+    $$ x \in U \cap B \subseteq cl(U\cap B) \subseteq cl(U) $$
+    Skoro U i B są otwarte to $U \cap B \subseteq B$ jest otwarty, oraz otrzymaliśmy $cl(U\cap B)$ jest zbiorem zwartym, ponieważ jest domkniętym podzbiorem zbioru zwartego $cl(U)$, więc pokazaliśmy, że zbiór B jest lokalnie zwarty. Czyli pokazaliśmy, że każda otwarta podprzestrzeń lokalnie zwartej przestrzeni Hausdorffa jest lokalnie zwarta.
+\end{enumerate}
+
+B) Lokalna zwartość $\R^n$
+
+Weźmy dowolny $x \in \R$ i przedział (x-1, x+1), który jest zbiorem otwartym zawierającym x. $cl((x-1, x+1)) = [x-1, x+1]$ jest zwarty, ponieważ jest domknięty i ograniczony, więc z każdego ciągu możemy wybrać podciąg zbieżny. Czyli pokazaliśmy, że $\R$ jest lokalnie zwarty.
+
+Korzystając z udowodnienia  lokalnej zwartości dla $\R$ pokażemy, że $\R^n$ tez jest lokalnie zwarte dla dowolnego $n \in \N$. Weźmy dowolne $x \in \R^n$. Wtedy $x = (x_1, x_2, ..., x_n)$ gdzie, $x_i \in \R$. Wtedy $x \in (x_1 - 1, x_1 +1) \times ... \times (x_n -1, x_n +1)$ czyli x należy do iloczynu kartezjanskiego przedziałów, podany zbiór jest otwarty więc korzystając z własności domknięcia iloczynu skalarnych $cl((x_1 - 1, x_1 +1) \times ... \times (x_n -1, x_n +1)) = [x_1 - 1, x_1 +1] \times ... \times [x_n -1, x_n +1].$ Korzystając z twierdzenia 2.4.2 iloczyn kartezjański skończeniu wielu przestrzeni zwartych jest zbiore zwartym oraz dowodu, że w $\R$ każdy przedział postaci $[x-1,x+1]$ jest zwarty wnioskujemy, że $cl((x_1 - 1, x_1 +1) \times ... \times (x_n -1, x_n +1))$ jest zwarte czyli $\R^n$ jest lokalnie zwarte.
+
+C) $\mathbf Q$ nie jest lokalnie zwarta
+
+Aby pokazać, że $\mathbf Q$ nie jest lokalnie zwarta pokaże, że dla x=0 nie istniej zbiór otwarty, spełniający tą własność.
+
+Nie wprost zakładam, że istnieje taki zbiór otwarty z definicji, (ma on postać $(-a, \epsilon) \cap \mathbf Q$ lub $(-\epsilon, a) \cap \mathbf Q$, gdzie $a, \epsilon > 0$ oraz $\epsilon \leq a$) zabiorę przedział $(-\epsilon, \epsilon) \cap \mathbf Q$ (ponieważ jest on zawarty w tym większym zbiorze otwartym, który spełnia definicje, więc on też ją spełnia i zawiera 0). $cl((-\epsilon, \epsilon) \cap \mathbf Q) = [-\epsilon, \epsilon] \cap \mathbf Q \subseteq cl((-a, \epsilon) \cap \mathbf Q)$, czyli  $cl((-\epsilon, \epsilon) \cap \mathbf Q)$ jest zbiorem zwartym, ponieważ jest domkniętym podzbiorem zbioru zwartego. Z własności $\mathbf Q$ możemy wybrać nieskończony ciąg zbieżny do liczby niewymiernej, a ona nie należy do $\mathbf Q$, więc otrzymyjemy sprzeczność z założeniem, czyli $\mathbf Q$ nie jest przestrzenią lokalnie zwartą.
+
+Przykładowy ciąg to kolejne rozwinięcia dziesiętne liczby niewymiernej $\frac{\sqrt{3}}{k}$ dla takiego $k \in \N$, że $\frac{\sqrt{3}}{k} < \epsilon$.
+
+\zadanie{3}
+Niech Y zbiorem niepustym i $\infty \notin Y$.
+Rozważamy przestrzeń $X = Y \cup \{\infty\}$ oraz każdy podzbiór Y jest domknięty oraz zbiory postaci $\{\infty\} \cup (Y\setminus I)$ gdzie I jest skończonym podzbiorem Y.
+
+A) Czy zdefiniowaliśmy topologię na X, niech T oznacza tą topologię.
+\begin{enumerate}
+    \item Teza: $\emptyset$ i X należą do tej topologi, czyli są zbiorami pustymi.
+    
+    $\emptyset \subseteq Y$ więc $\emptyset$ jest otwarte, więc należy do naszej topologii.
+    
+    $X = \{\infty\} \cup (Y\setminus I)$ gdzie $I = \emptyset$ więc X jest otwarte czyli należy do naszej topologii.
+    
+    Teza jest prawdziwa.
+    \item Teza: Przecięcie skończenie wielu elementów z T jest elementem w T
+    
+    Dowód indukcyjny:
+    
+    Baza indukcji N = 1
+        Oczywiste.
+    
+    Założenie indukcyjne: przecięcie dowolnych N elemementów z T jest elementem w T
+    
+    Teza indukcyjna: przecięcie dowolnych N+1 elemementów z T jest elementem w T
+    
+    Chcemy  udowodnić tezę indukcyjną, że $(X_1 \cap X_2 \cap ... \cap X_{N+1}) \in T$, korzystając z założenia indukcyjnego wiemy, że $(X_1 \cap X_2 \cap ... \cap X_{N}) \in T$ czyli możemy zabrać $Z \in T$ t. że $(X_1 \cap X_2 \cap ... \cap X_{N}) = Z$. Więc pozostało nam udowodnić $(Z \cap X_{N+1}) \in T$
+    Rozważmy przypadki:
+    \begin{enumerate}
+        \item $Z \subseteq Y$ i $X_{N+1} \subseteq Y$ 
+        
+        Więc $(Z\cap X_{n+1}) \subseteq Y$ czyli przecięcie jest otwarte, więc $(Z\cap X_{n+1}) \in T$
+        
+        \item b.s.o $Z \subseteq Y$ i $X_{N+1} = \{\infty\} \cup (Y\setminus I)$ gdzie $I\subseteq Y$ skończone.
+        
+        Wtedy $Z\cap X_{n+1}= Z\cap (\{\infty\} \cup (Y\setminus I)) = Z\cap (Y\setminus I) = Z\setminus I \subseteq Y$ więc jest otwarte, czyli $Z\cap X_{n+1} \in T$.
+        
+        \item $Z =  \{\infty\} \cup (Y\setminus I_z)$ i $X_{N+1} = \{\infty\} \cup (Y\setminus I_x)$ gdzie $I_z, I_x\subseteq Y$ skończone.
+        
+        Wtedy $Z\cap X_{n+1}= (\{\infty\} \cup (Y\setminus I_z)) \cap (\{\infty\} \cup (Y\setminus I_x)) = \{\infty\} \cup ((Y\setminus I_z)) \cap (Y\setminus I_x))) = \{\infty\} \cup (Y\setminus (I_z \cup I_x)) = \{\infty\} \cup (Y\setminus I)$, gdzie $I = I_z \cup I_x$, a ponieważ $I_z$ i $I_x$ są skończone to $I$ jest skończone czyli mamy zbiór otwarty, więc $Z\cap X_{n+1} \in T$
+    \end{enumerate}
+    
+    Teza indukcyjna została spełniona, więc na mocy zasady o indukcji teza jest spełniona.
+    \newpage
+    \item Teza: Suma dowolnie wielu elementów T jest elementem w T.
+    Rozważmy dwa przypadki sum:
+    \begin{enumerate}
+        \item Każdy zbiór sumy nie zawiera $\infty$
+        
+        Wtedy każdy zbiór z sumy $\bigcup X$ jest podzbiorem Y, więc $\bigcup X \subseteq Y$ czyli jest otwarty więc $\bigcup X \in T$.
+        
+        \item Istnieje zbiór Z w naszej sumie, któty zawiera $\infty$
+        
+        Zbiór ten ma postać $Z = \{\infty\} \cup (Y\setminus I)$ gdzie $I\subseteq Y$ skończone.
+        
+        Więc $\bigcup X = \bigcup X' \cup Z = \bigcup X' \cup \{\infty\} \cup (Y\setminus I)$, ponieważ mamy $\{\infty\}$ to możemy z naszej sumy "usunąć" ten element i zabrać $\bigcup X'' = (\bigcup X') \setminus \infty$ czyli nasze $X'' \subseteq Y$.
+        
+        Korzystając z poprzedniego podpunktu istnieje $A \subseteq Y$ i $A \in T$ takie, że  $A = \bigcup X''$ czyli mamy $\bigcup X' \cup \{\infty\} \cup (Y\setminus I) = \bigcup X'' \cup \{\infty\} \cup (Y\setminus I) = \{\infty\} \cup A \cup (Y\setminus I) = \{\infty\} \cup (Y\setminus I')$, gdzie $I' \subseteq I$, a ponieważ I ograniczone to tym bardzie I', więc nasza suma jest zbiorem otwartym, czyli $\bigcup X \in T$.
+    \end{enumerate}
+\end{enumerate}
+    Teza jest prawdziwa.
+    
+D) Wykazać, że X jest przestrzenią normalną
+    \begin{enumerate}
+        \item Przestrzeń jest $T_1$ czyli $\forall x \in X$  $\{x\}$ jest zbiorem domkniętym.
+        
+        Weźmy $x\in Y$, wtedy $\{x\} = X \setminus (\{\infty\} \cup (Y\setminus \{x\}))$, a $(\{\infty\} \cup (Y\setminus \{x\}))$ jest otwarty bo $\{x\} \subseteq Y$ skończone, więc $\{x\}$ jest domknięte.
+        
+        Weźmy $\{\infty\} = X \setminus Y$, a $Y\subseteq Y$ więc jest zbiorem otwartym czyli $\{\infty\}$ jest domknięte.
+        
+        Więc pokazaliśmy, że nasza przestrzeń jest $T_1$
+    \item $\forall A, B$ domknięte i rozłączne $\exists$ U i V otwarte takie, że $A \subseteq U$ i $B \subseteq V$ oraz $U \cap V = \emptyset$
+    
+    Korzystając z własności, że A jest domknięte wtedy i tylko wtedy, kiedy dopełnienie A jest otwarte otrzymujemy 2 rodzaje zbiorów domkniętych w naszej topologii
+    \begin{enumerate}
+        \item Skończone podzbiory Y. (Nie mogą być nieskończone z własności, że I skończone).
+        \item Dowolne podzbiory z $\{\infty\}$ (ponieważ ich dopełnienie jest podzbiorem Y, czyli jest otwarte)
+    \end{enumerate}
+    Należy rozważyć teraz przypadki:
+    \begin{enumerate}
+        \item Weźmy dowolne rozłączna A i B typa a) wtedy oba są podzbiorami Y, więc oba są otwarte, czyli istinieje U = A i V = B, a ponieważ A i B rozłączne to U i V też.
+        \item B.S.O. Weźmy dowolne rozłączna A (typ a) i B (typ B), ponieważ A jest skończonym podzbiorem Y to istnieje U = A i $V = \{\infty\} \cup (Y \setminus A)$, oczywiste jest, że U i V są rozłączna, a $B \subseteq V$, ponieważ A i B rozłączne.
+        \item Weźmy dowolne rozłączna A (typ b) i B (typ B), ale nie ma takich, ponieważ $\{\infty\} \in A$ oraz $\{\infty\} \in B$.
+        \end{enumerate} 
+    Więc pokazaliśmy, że nasza przestrzeń jest normalna.
+    
+    \end{enumerate}
+
+C) Podać wzór na domknięcie i wnętrze dowolnego zbioru $A \subseteq X$
+
+    W podpunkcie D zdefiniowaliśmy, które podzbiory są domknięte, więc opierając się na tym
+    $$
+    cl(A) = \left\{
+            \begin{array}{ll}
+                \{\infty\} \cup A \hspace{30} & A\subseteq Y \hspace{10.} i \hspace{10.} A \hspace{10.}  nieskonczony \\
+                A &  wpp
+            \end{array}
+        \right.
+    $$
+    Argumentacja dla pierwszego przypadku wynika z tego, że skoro A jest nieskończone i jest podzbiorem Y to większy podzbiór Y nadal nie będzie domknięty, bo będzie nieskończony, więc jedynie dodanie elemntu $\{\infty\}$ pomoże, a z warunku, że musi być najmniejsze i zawierać A otrzymujemy $\{\infty\} \cup A$, a dla drugiego przypadku po prostu są to już zbiory domknięte więc cl(A) = A.
+    $$
+    int(A) = \left\{
+            \begin{array}{ll}
+                A\setminus\{\infty\}  \hspace{30} & dla A = \{\infty\} \cup (Y\setminus I), gdzie \hspace{10.} I \hspace{10.} nieskonczone \\
+                A &  wpp
+            \end{array}
+        \right.
+    $$
+    Argumentacja dla pierwszego przypadku (przypadku zbiorów, które nie są otwarte), że z definicji wnętrza jest to największy zbiór otwarty w A, więc jest to albo zbiór otwarty, który jest podzbiotem Y lub zbiór otwarty zawierający $\{\infty\}$, ale drugi przypadke nie jest możliwy do osiągnięcia, ponieważ musielibyśmy sprowadzić I do zbioru skończonego, więc musielibyśmy "dodać" nieskończenie wiele elementów, ale to nie byłoby zawarte w A, więc dlatego "usuwamy" $\{\infty\}$, a drugi przypadek jest oczywisty bo zbiór A jest otwarty.
+    
+B) Kiedy topologia ma bazę przeliczalną i kiedy jest ośrodkowa.
+
+    Definicja bazy przeliczalnej $\bigcup_{i=1}^{\infty}X_i = X$, gdzie $X_i$otwarte oraz dowolny zbiór otwarty w T można przedstawić za pomocą sumy elementów naszej bazy.
+    
+    Wiemy, że dowolny podzbiór Y jest zbiorem otwartym szczególnie pojedyńcze elementy. 
+    Wieć jeśli Y jest skończone to X jest skończone, więc nasza baza będzie skończona czyli przeliczalna.
+
+    Jeśli Y jest przeliczalnie duży wtedy do baza może się składać z zbiorów jednoelemntowych z Y (przeliczalnie wiele), które będą nam generowały Y, a w przypadku generowania zbiorów otwartych postaci $\{\infty\} \cup (X\setminus I)$, jedyne od czego zależne są te zbiory otwarte to I, który jest skończonym podzbiorem zbioru przeliczalnego. Korzystając z twierdzenia, które pojawiło się na logice wiemy, że zbiór skończonych podzbiorów zbioru przeliczalnego jest zbiorem przeliczalnym, więc w naszym przypadku zbiór wyszstkich możliwych I jest przeliczalnie wiele, ponieważ Y jest przeliczalne. Więc kolejnymi elementami bazy, będą wszystkie zbiory otwarte postaci  $\{\infty\} \cup (X\setminus\I)$, których jest przeliczalnie wiele (bo I przeliczalnie wiele), a więc cała nasza baza jest przeliczalna.
+    (Powyżej w każdym przypadku zakładaliśmy, że I jest ograniczony.)
+    
+    Jeśli Y jest nieprzeliczalnie duży wtedy mamy nieprzeliczalnie wiele zbiorów jednoelementowych, które są zbiorami otwartymi, a muszą być w naszej bazie, aby pokryć każdy element z Y. Więc nasza baza nie może być przeliczalna.
+    
+    Przestrzeń jest ośrodkowa tylko dla przeliczalnego nieskończonego Y, ponieważ cl(A) = X tylko dla A = Y, uzasadnione w podpunkcie C).
+\zadanie{4}
+Wiemy, że (X,d) jest przestrzenią metryczną zupełną, $f: Y -> \R$, gdzie $Y \subseteq X$ i $d_f(x,y) = d(x,y) + |f(x)-f(y)|$.
+
+\begin{enumerate}
+    \item $(Y,d_f)$ jest zupełna $\implies$ wykres f jest domknięty
+    
+    Oznaczmy wykres f jako W i załóżmy nie wprost, że nie jest domknięty, czyli $\exists (x,y) \in cl(W)$ taki, że $(x,y) \notin W$. Weźmy takie (x,y) i skorzystajmy z definicji zbioru domkniętego w przestrzeni metrycznej, czyli istnieje  ciąg $(x_n,y_n) \in W$, taki że $(x_n, y_n) -> (x,y)$. Skoro $(x_n, y_n) \in W$ oznacza to, że $(x_n, y_n) = (x_n, f(x_n))$, a skoro $x_n$ jest zbieżny  to jest też ciągiem Cauchy'ego, więc korzystamy z tego, że $(Y,d_f)$ jest zupełne czyli $d_f(x_n,x) -> 0$ czyli $(d(x_n, x) + |f(x_n) - f(x)|)-> 0$ , korzystając z tego, że (X,d) jest zupełna wiemy, że $d(x_n,x) -> 0$, więc $|f(x_n) - f(x)| -> 0$, a z tego wynika, że $x_n - > x$ i $f(x_n) -> f(x)$, czyli $(x_n, y_n) -> (x,f(x))$. a wiemy że $(x, f(x)) \in W$, czyli otrzymujemy sprzeczność, więc wykres f jest domknięty.
+    
+    \item wykres f jest domknięty $\implies$ $(Y,d_f)$ jest zupełna
+    
+    Załóżmy nie wprost, że $(Y,d_f)$ nie jest zupełna, czyli istnieje ciąg Cauchy'ego $x_n$, który nie jest zbieżny. Wiemy o tym, że ten ciąg jest zbieżny w przestrzeni (X,d), więc $d(x_n, x) -> 0$, a ponieważ f jest domknięte to ciąg $(x_n,f(x_n)) -> (x, f(x))$ czyli $|f(x_n) - f(x)| -> 0$, a z tych dwóch granic wynika, że $d_f(x_n, x) -> 0$ czyli otrzymujemy sprzeczność, więc $(Y,d_f)$ jest zupełna.
+\end{enumerate}
+\zadanie{5}
+A) Korzystając z twierdzenie 1.2.6 pokażę, że zbiory podanej postaci stanowią bazę pewnej topologi K(X).
+\begin{enumerate}
+    \item $\bigcup B = K(X)$
+    Załóżmy nie wprost, że istnieje zbiór $F \in K(X)$, taki że dla każdego elementu $B \in BASE$ $F \notin B$.
+    
+    Wiemy, że $F \subseteq X$ oraz F jest domknięte wiemy, że X jest zwarte więc F ma skończone pokrycie zbiorami otwartymi. Niech $U_i$ będzie tym pokryciem dla i > 0, a $U_0 = \bigcup U_i$, a dla takich ustalonych U, $F \in B_k$ dla pewnego k, ponieważ $F \subseteq U_0$ oraz dla dowolnego i $F \cap U_i \neq \emptyset$ Czyli otrzymujemy sprzeczność, więc nasza teza $\bigcup B = K(X)$ jest prawdziwa.
+    
+    \item Jeśli $B_1, B_2 \in BASE$ i $X \in B_1$ i $X \in B_2$ to istnieje $B_3 \in BASE$, taki że $X \in B_3 \subseteq B_1 \cap B_2$
+    
+    Więc weźmy dowolne $B_1$ i $B_2$, które nie kroją się pusto (wpp pierwsze część implikacji fałszywa) wtedy otrzymujemy pewien zbiór zbiorów domkniętych w X. Załóżmy, że zbiory otwarte $U_i$ generowały $B_1$, a $V_j$ generowały $B_2$ (b.s.o. możemy założyć, że jest ich tyle same - n, w przypadku kiedy dla któregoś było ich mniej, można sztucznie zwiększyć ich liczbę poprzez wielokrotne użycie, któregoś zbioru np. $U_0$ lub $V_0$). 
+    
+    Więc zbiory P należące do przecięcia spełniają $P \subseteq (U_0 \cap V_0)$ oraz $P \cap U_i \neq \emptyset$ i $P \cap V_i \neq \emptyset$. Więc mogę wygenerować $B_3$ z 2n zbiorami otwartymi $O_i$, gdzie $O_i = U_i$ i $O_{i+n} = V_i$ dla $0< i <n+1$, a $O_0 = V_0 \cap U_0$, oczywiste jest że $B_1 \cap B_2 \subseteq B_3$.
+    
+    Nie wprost załóżmy, że istnieje element $L \in B_3$ taki, że $L \notin B_1 \cap B_2$, ale sprawdzając warunki, które zdefiniowaliśmy dla $B_3$ okazuje się, że $L \in B_1$ oraz $L \in B_1$, więc otrzymujemy sprzeczność, czyli pokazaliśmy coś silniejszego niż była teza, bo zdefiniowaliśmy od razu zbiór $B_3$, który zawiera każdy element z $B_1 \cap B_2$ oraz $B_3 \subseteq B_1 \cap B_2$
+\end{enumerate}
+
+B) Topologia generowana przez metryke $(K(X), d_h)$ zadana jest przez zadaną bazę.
+
+Abu udowodnić ten fakt, pokaże że bazy są równoważne czyli obie można przedstawić za pomocą drugiej. Więc wystarczy, że dowolny element z bazy mogę przedstawić za pomocą drugiej bazy tak, aby ta druga baza się zawierała w tej pierwszej.
+\begin{enumerate}
+    \item Najpierw pokażę, że dla dowolnego elementu x dowolnej kuli $O(K,r) \subseteq (K(x),d_h)$ (r > 0), istnieje element bazy $B \in BASE$, taki że $x \in B \subseteq O(K,r)$. Weźmy taki dowolny element i dowolną kulę. Wiemy o tym, że $d_h(K,x) = \epsilon$, więc jeśli dla dowolnego element $F \in B$ $d_h(F, x) < r - \epsilon$ oznacza to, że $d_h(K,F) < r$ (nierówność trójkąta). Czyli spełnione byłoby kryterium $B \subseteq O(K,r)$. 
+
+    Aby spełnić to kryterium  $F \in B$ $d_h(F, x) < r - \epsilon$ chcemy, aby dowolny element z B nie był oddalony od x o przynajmniej $ r - \epsilon$, więc zabierzmy pokrycie x kulami o promieniu  $r - \epsilon$ i srodkach $a\in x$*, wtedy zapewnimy, że dowolny element spełni nam tą odległość. Ponieważ nasza przestrzeń jest zwarta to możemy wybrać skończone pokrycie tych kul $V_i$, gdzie (0 < i < n+1). Wygenerujemy nasze B:
+    
+    $U_0 = \bigcup V_i$ oraz $U_i = V_i$, więc oczywiste jest, że x należy do naszego B. Więc spełniliśmy $x \in B \subseteq O(K,r)$.
+    
+    *To, że możemy pokryć zbiór takimi kulami jest oczywiste, ponieważ można założyć nie wprost, że nie możemy, a to oznacza, że istniej punkt $w \in x$, taki że nie należy do żadnej kuli, ale przecież zabraliśmy kulę o środku w tym punkcie, więc otrzymujemy sprzeczność.
+
+    \item Pozostało pokazanie, że dla dowolnego elementu x dowolnego elementu bazy, taki że $x \in B \subseteq BASE$ istnieje kula $O(x,r) \subseteq (K(X), d_h)$, taka że $x \in O(x,r) \subseteq B$ (r > 0).
+    Weźmy dowolny element i dowolny element bazy. Oczywiste jest, że $x \in O(x,r)$.
+    
+    Chcemy pokazać, że istnieje r takie, że $O(x,r) \subseteq B$. Wiemt o tym, że $X\U_0$ jest zbiorem domkniętym, ponieważ $U_0$ jest otwarte oraz x jest zwarte bo jest domkniętym podzbiorem zbioru zwartego X. Więc z list 4 zad 4, wiemy, że odległość, pomiędzy dowolnymi $a \in x$ oraz $b \in X\U_0$ jest ograniczona z dołu przez pewną stałą $d_h(a,b) \geq \epsilon$, więc mamy już taki promień dla którego $a \in O(k,\epsilon)$ zachodzi, że $a \subseteq U_0$.
+    
+    Może się okazać, że elementy naszego okręgu kroją się pusto z zbiorami otwartymi $U_i$. Więc musimy zapewnić, że nasz promień nie dopuści do takiej sytuacji. Ponieważ $U_i \cap x \neq \emptyset$ oznacza to, że istnieje kula $o(y,r'_i) \subseteq (X,d)$, gdzie $o(y,r'_i) \subseteq U_i \cap x$, wynika to z faktu, że $U_i$ jest otwarte. Jeśli promień r kuli O, będzie $r \leq r'_i$ będzie oznaczało, że w dowolnym elemencie $F \in O(x,R)$ istnieje punkt, który nie jest $z \in F$, taki że $d(z,y) \leq r'_i$ więc zapewniliśmy, że dowolny element z kuli będzie kroił się niepusto z $U_i$, a ponieważ $U_i$ jest skończone to możemy zabrać minimum z $r' = min(r_i)$ wtedy będziemy mieć zapewnione to, że nie kroi się pusto z zbiorami $U_i$.
+    
+    Więc znaleźliśmy promień $r = min(r', \epsilon)$, który spełnia nam $x \in O(x,r) \subseteq B$
+    \end{enumerate}
+    Więc pokazaliśmy, że topologia $(K(X), d_h)$ jest zadana przez bazę.
+
+\end{document}

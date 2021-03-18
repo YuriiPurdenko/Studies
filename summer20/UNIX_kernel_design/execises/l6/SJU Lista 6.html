@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        SJU Lista 6 - HackMD
+    </title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @charset "UTF-8";@import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{display:block;background:#fff;padding:.5em;color:#333;overflow-x:auto}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{color:#55a532;background-color:#eaffea}.hljs-deletion{color:#bd2c00;background-color:#ffecec}.hljs-link{text-decoration:underline}.markdown-body{font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0}.markdown-body blockquote{font-size:16px;padding:0 1em;color:#777;border-left:.25em solid #ddd}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid #ccc;border-bottom-color:#bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eee}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#777}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{padding:0;list-style-type:none}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}.markdown-body span.align-center{display:block;overflow:hidden;clear:both}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{display:block;overflow:hidden;clear:both}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{letter-spacing:-.2em;content:"\00a0"}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.markdown-body pre code,.markdown-body pre tt{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{padding:10px 8px 9px;text-align:right;background:#fff;border:0}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{font-weight:700;background:#f8f8f8;border-top:0}.news .alert .markdown-body blockquote{padding:0 0 0 40px;border:0 none}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle;cursor:default!important}.markdown-body{padding-top:40px;padding-bottom:40px;max-width:758px;overflow:visible!important;position:relative}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{text-align:right;position:relative;display:inline-block;cursor:default;z-index:4;padding:0 8px 0 0;min-width:20px;box-sizing:content-box;color:#afafaf!important;border-right:3px solid #6ce26c!important}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-left:none;border-top:none;border-bottom:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-spacing:0;border-collapse:inherit!important}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{overflow:unset;margin-bottom:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{text-align:center;background-color:inherit;border-radius:0;white-space:inherit;overflow:visible}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{max-width:100%;height:100%}.markdown-body pre>code.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.markdown-body .alert>p,.markdown-body .alert>ul{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{cursor:pointer;display:table;text-align:center;background-position:50%;background-repeat:no-repeat;background-size:contain;background-color:#000;overflow:hidden}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{width:100%;object-fit:contain;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{width:100%;height:100%;position:absolute;top:0;left:0}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{position:absolute;height:auto;width:auto;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.3;transition:opacity .2s;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{position:relative;z-index:2;max-width:760px;margin:25px auto -25px;color:#777}.toc .invisable-node{list-style-type:none}.ui-toc{position:fixed;bottom:20px;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{height:40px;padding:10px 4px;border-top-left-radius:0;border-bottom-left-radius:0}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{opacity:1;color:#fff;transition:opacity .2s}.ui-toc-label:focus{opacity:.3;background-color:#ccc;color:#000}.ui-toc-label:hover{opacity:1;background-color:#ccc;transition:opacity .2s}.ui-toc-dropdown{margin-top:20px;margin-bottom:20px;padding-left:10px;padding-right:10px;max-width:45vw;width:25vw;max-height:70vh;overflow:auto;text-align:inherit}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{padding-right:0;letter-spacing:.0029em}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}.ui-toc-dropdown .nav>li:first-child:last-child > ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{padding-left:19px;color:#000;text-decoration:none;background-color:transparent;border-left:1px solid #000}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{padding-right:19px;border-left:none;border-right:1px solid #000}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{padding-left:18px;font-weight:700;color:#000;background-color:transparent;border-left:2px solid #000}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{padding-right:18px;border-left:none;border-right:2px solid #000}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:40px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{padding-left:28px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{padding-left:38px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{position:fixed;top:0;max-width:15vw;max-height:70vh;overflow:auto}.back-to-top,.expand-toggle,.go-to-bottom{display:block;padding:4px 10px;margin-top:10px;margin-left:10px;font-size:12px;font-weight:500;color:#999}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{width:20px;height:20px;display:block;border-radius:3px;margin-top:2px;margin-bottom:2px;margin-right:5px;background-position:50%;background-repeat:no-repeat;background-size:cover}.ui-user-icon.small{width:18px;height:18px;display:inline-block;vertical-align:middle;margin:0 0 .2em}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-published-note{color:#337ab7}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{position:relative;z-index:1;color:#222}.markdown-body.slides:before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:currentColor;box-shadow:0 0 0 50vw}.markdown-body.slides section[data-markdown]{position:relative;margin-bottom:1.5em;background-color:#fff;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{position:absolute;top:50%;left:1em;right:1em;transform:translateY(-50%);max-height:100%;overflow:hidden}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{content:"";position:absolute;top:-1.5em;right:1em;height:1.5em;border:3px solid #777}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;text-shadow:0 0 1em transparent,1px 1px 1.2px rgba(0,0,0,.004);-webkit-overflow-scrolling:touch;letter-spacing:.025em;font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="false"><h1 id="SJU-Lista-6" data-id="SJU-Lista-6"><a class="anchor hidden-xs" href="#SJU-Lista-6" title="SJU-Lista-6"><span class="octicon octicon-link"></span></a><span>SJU Lista 6</span></h1><h2 id="Zadanie-3" data-id="Zadanie-3"><a class="anchor hidden-xs" href="#Zadanie-3" title="Zadanie-3"><span class="octicon octicon-link"></span></a><span>Zadanie 3</span></h2><p><strong><span>Czemu wybudzanie wielu wątków jest wydajniejsze niż wybudzanie jednego?</span></strong></p><h2 id="Zadanie-4" data-id="Zadanie-4"><a class="anchor hidden-xs" href="#Zadanie-4" title="Zadanie-4"><span class="octicon octicon-link"></span></a><span>Zadanie 4</span></h2><p><span>Struktura z mipsa:</span></p><pre><code class="c hljs"><span class="token keyword">struct</span> kmutex <span class="token punctuation">{</span>
+    <span class="token keyword">volatile</span> uintptr_t  mtx_owner<span class="token punctuation">;</span> <span class="token comment">/* właściciel */</span>
+    ipl_cookie_t        mtx_ipl<span class="token punctuation">;</span>   <span class="token comment">/* */</span>
+    __cpu_simple_lock_t mtx_lock<span class="token punctuation">;</span>  <span class="token comment">/* */</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><h2 id="Zadanie-5" data-id="Zadanie-5"><a class="anchor hidden-xs" href="#Zadanie-5" title="Zadanie-5"><span class="octicon octicon-link"></span></a><span>Zadanie 5</span></h2><h4 id="Działanie-mutex_vector_enter" data-id="Działanie-mutex_vector_enter"><a class="anchor hidden-xs" href="#Działanie-mutex_vector_enter" title="Działanie-mutex_vector_enter"><span class="octicon octicon-link"></span></a><span>Działanie </span><code>mutex_vector_enter()</code><span>:</span></h4><p><span>Gdy spinlock:</span></p><ol>
+<li><span>W zasadzie tylko się kręcimy. Nic ciekawego się nie dzieje.</span></li>
+</ol><p><span>Gdy adaptive mutex:</span></p><ol>
+<li><span>Jeśli właściciel się wykonuje na innym procesorze, to kręcimy się czekając aż skończy. (lub przestanie się wykonywać. Wtedy pkt 2)</span></li>
+<li><span>Próbujemy się dodać na rogatkę. (w między czasie sprawdzamy parę razy czy może blokada się nie zwolniła)</span></li>
+</ol><details><summary>Kod</summary>
+<pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1"></span>
+<span data-linenumber="2"></span>
+<span data-linenumber="3"></span>
+<span data-linenumber="4"></span>
+<span data-linenumber="5"></span>
+<span data-linenumber="6"></span>
+<span data-linenumber="7"></span>
+<span data-linenumber="8"></span>
+<span data-linenumber="9"></span>
+<span data-linenumber="10"></span>
+<span data-linenumber="11"></span>
+<span data-linenumber="12"></span>
+<span data-linenumber="13"></span>
+<span data-linenumber="14"></span>
+<span data-linenumber="15"></span>
+<span data-linenumber="16"></span>
+<span data-linenumber="17"></span>
+<span data-linenumber="18"></span>
+<span data-linenumber="19"></span>
+<span data-linenumber="20"></span>
+<span data-linenumber="21"></span>
+<span data-linenumber="22"></span>
+<span data-linenumber="23"></span>
+<span data-linenumber="24"></span>
+<span data-linenumber="25"></span>
+<span data-linenumber="26"></span>
+<span data-linenumber="27"></span>
+<span data-linenumber="28"></span>
+<span data-linenumber="29"></span>
+<span data-linenumber="30"></span>
+<span data-linenumber="31"></span>
+<span data-linenumber="32"></span>
+<span data-linenumber="33"></span>
+<span data-linenumber="34"></span>
+<span data-linenumber="35"></span>
+<span data-linenumber="36"></span>
+<span data-linenumber="37"></span>
+<span data-linenumber="38"></span>
+<span data-linenumber="39"></span>
+<span data-linenumber="40"></span>
+<span data-linenumber="41"></span>
+<span data-linenumber="42"></span>
+<span data-linenumber="43"></span>
+<span data-linenumber="44"></span>
+<span data-linenumber="45"></span>
+<span data-linenumber="46"></span>
+<span data-linenumber="47"></span>
+<span data-linenumber="48"></span>
+<span data-linenumber="49"></span>
+<span data-linenumber="50"></span>
+<span data-linenumber="51"></span>
+<span data-linenumber="52"></span>
+<span data-linenumber="53"></span>
+<span data-linenumber="54"></span>
+<span data-linenumber="55"></span>
+<span data-linenumber="56"></span>
+<span data-linenumber="57"></span>
+<span data-linenumber="58"></span>
+<span data-linenumber="59"></span>
+<span data-linenumber="60"></span>
+<span data-linenumber="61"></span>
+<span data-linenumber="62"></span>
+<span data-linenumber="63"></span>
+<span data-linenumber="64"></span>
+<span data-linenumber="65"></span>
+<span data-linenumber="66"></span>
+<span data-linenumber="67"></span>
+<span data-linenumber="68"></span>
+<span data-linenumber="69"></span>
+<span data-linenumber="70"></span>
+<span data-linenumber="71"></span>
+<span data-linenumber="72"></span>
+<span data-linenumber="73"></span>
+<span data-linenumber="74"></span>
+<span data-linenumber="75"></span>
+<span data-linenumber="76"></span>
+<span data-linenumber="77"></span>
+<span data-linenumber="78"></span>
+<span data-linenumber="79"></span>
+<span data-linenumber="80"></span>
+<span data-linenumber="81"></span>
+<span data-linenumber="82"></span>
+<span data-linenumber="83"></span>
+<span data-linenumber="84"></span>
+<span data-linenumber="85"></span>
+<span data-linenumber="86"></span>
+<span data-linenumber="87"></span>
+<span data-linenumber="88"></span>
+<span data-linenumber="89"></span>
+<span data-linenumber="90"></span>
+<span data-linenumber="91"></span>
+<span data-linenumber="92"></span>
+<span data-linenumber="93"></span>
+<span data-linenumber="94"></span>
+<span data-linenumber="95"></span>
+<span data-linenumber="96"></span>
+<span data-linenumber="97"></span>
+<span data-linenumber="98"></span>
+<span data-linenumber="99"></span>
+<span data-linenumber="100"></span>
+<span data-linenumber="101"></span>
+<span data-linenumber="102"></span>
+<span data-linenumber="103"></span>
+<span data-linenumber="104"></span>
+<span data-linenumber="105"></span>
+<span data-linenumber="106"></span>
+<span data-linenumber="107"></span>
+<span data-linenumber="108"></span>
+<span data-linenumber="109"></span>
+<span data-linenumber="110"></span>
+<span data-linenumber="111"></span>
+<span data-linenumber="112"></span>
+<span data-linenumber="113"></span>
+<span data-linenumber="114"></span>
+<span data-linenumber="115"></span>
+<span data-linenumber="116"></span>
+<span data-linenumber="117"></span>
+<span data-linenumber="118"></span>
+<span data-linenumber="119"></span>
+<span data-linenumber="120"></span></div><div class="code"><span class="token comment">/*
+ * mutex_vector_enter:
+ *
+ *  Support routine for mutex_enter() that must handle all cases.  In
+ *  the LOCKDEBUG case, mutex_enter() is always aliased here, even if
+ *  fast-path stubs are available.  If a mutex_spin_enter() stub is
+ *  not available, then it is also aliased directly here.
+ */</span>
+<span class="token keyword">void</span> <span class="token function">mutex_vector_enter</span><span class="token punctuation">(</span>kmutex_t <span class="token operator">*</span>mtx<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    uintptr_t owner<span class="token punctuation">,</span> curthread<span class="token punctuation">;</span>
+    turnstile_t <span class="token operator">*</span>ts<span class="token punctuation">;</span>
+    u_int count<span class="token punctuation">;</span>
+    <span class="token comment">/*
+     * Handle spin mutexes.
+     */</span>
+    owner <span class="token operator">=</span> mtx<span class="token operator">-&gt;</span>mtx_owner<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">MUTEX_SPIN_P</span><span class="token punctuation">(</span>owner<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">MUTEX_SPIN_SPLRAISE</span><span class="token punctuation">(</span>mtx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">MUTEX_SPINBIT_LOCK_TRY</span><span class="token punctuation">(</span>mtx<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        count <span class="token operator">=</span> SPINLOCK_BACKOFF_MIN<span class="token punctuation">;</span>
+
+        <span class="token comment">/*
+         * Spin testing the lock word and do exponential backoff
+         * to reduce cache line ping-ponging between CPUs.
+         */</span>
+        <span class="token keyword">do</span> <span class="token punctuation">{</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token function">MUTEX_SPINBIT_LOCKED_P</span><span class="token punctuation">(</span>mtx<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">SPINLOCK_BACKOFF</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">MUTEX_SPINBIT_LOCK_TRY</span><span class="token punctuation">(</span>mtx<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    curthread <span class="token operator">=</span> <span class="token punctuation">(</span>uintptr_t<span class="token punctuation">)</span>curlwp<span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>panicstr <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">KDASSERT</span><span class="token punctuation">(</span><span class="token function">pserialize_not_in_read_section</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/*
+     * Adaptive mutex; spin trying to acquire the mutex.  If we
+     * determine that the owner is not running on a processor,
+     * then we stop spinning, and sleep instead.
+     */</span>
+    <span class="token function">KPREEMPT_DISABLE</span><span class="token punctuation">(</span>curlwp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">;</span><span class="token punctuation">;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">MUTEX_OWNED</span><span class="token punctuation">(</span>owner<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">/*
+             * Mutex owner clear could mean two things:
+             *
+             *  * The mutex has been released.
+             *  * The owner field hasn't been set yet.
+             *
+             * Try to acquire it again.  If that fails,
+             * we'll just loop again.
+             */</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">MUTEX_ACQUIRE</span><span class="token punctuation">(</span>mtx<span class="token punctuation">,</span> curthread<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            owner <span class="token operator">=</span> mtx<span class="token operator">-&gt;</span>mtx_owner<span class="token punctuation">;</span>
+            <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">__predict_false</span><span class="token punctuation">(</span><span class="token function">MUTEX_OWNER</span><span class="token punctuation">(</span>owner<span class="token punctuation">)</span> <span class="token operator">==</span> curthread<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">MUTEX_ABORT</span><span class="token punctuation">(</span>mtx<span class="token punctuation">,</span> <span class="token string">"locking against myself"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">/*
+         * Check to see if the owner is running on a processor.
+         * If so, then we should just spin, as the owner will
+         * likely release the lock very soon.
+         */</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">mutex_oncpu</span><span class="token punctuation">(</span>owner<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            count <span class="token operator">=</span> SPINLOCK_BACKOFF_MIN<span class="token punctuation">;</span>
+            <span class="token keyword">do</span> <span class="token punctuation">{</span>
+                <span class="token function">KPREEMPT_ENABLE</span><span class="token punctuation">(</span>curlwp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token function">SPINLOCK_BACKOFF</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token function">KPREEMPT_DISABLE</span><span class="token punctuation">(</span>curlwp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                owner <span class="token operator">=</span> mtx<span class="token operator">-&gt;</span>mtx_owner<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token function">mutex_oncpu</span><span class="token punctuation">(</span>owner<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">MUTEX_OWNED</span><span class="token punctuation">(</span>owner<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        ts <span class="token operator">=</span> <span class="token function">turnstile_lookup</span><span class="token punctuation">(</span>mtx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">/*
+         * Once we have the turnstile chain interlock, mark the
+         * mutex as having waiters.  If that fails, spin again:
+         * chances are that the mutex has been released.
+         */</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">MUTEX_SET_WAITERS</span><span class="token punctuation">(</span>mtx<span class="token punctuation">,</span> owner<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">turnstile_exit</span><span class="token punctuation">(</span>mtx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            owner <span class="token operator">=</span> mtx<span class="token operator">-&gt;</span>mtx_owner<span class="token punctuation">;</span>
+            <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token function">membar_consumer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">mutex_oncpu</span><span class="token punctuation">(</span>owner<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">turnstile_exit</span><span class="token punctuation">(</span>mtx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            owner <span class="token operator">=</span> mtx<span class="token operator">-&gt;</span>mtx_owner<span class="token punctuation">;</span>
+            <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">membar_consumer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">MUTEX_HAS_WAITERS</span><span class="token punctuation">(</span>mtx<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">turnstile_exit</span><span class="token punctuation">(</span>mtx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            owner <span class="token operator">=</span> mtx<span class="token operator">-&gt;</span>mtx_owner<span class="token punctuation">;</span>
+            <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+
+        <span class="token function">turnstile_block</span><span class="token punctuation">(</span>ts<span class="token punctuation">,</span> TS_WRITER_Q<span class="token punctuation">,</span> mtx<span class="token punctuation">,</span> <span class="token operator">&amp;</span>mutex_syncobj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        owner <span class="token operator">=</span> mtx<span class="token operator">-&gt;</span>mtx_owner<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">KPREEMPT_ENABLE</span><span class="token punctuation">(</span>curlwp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</div></div></code></pre>
+</details><h4 id="Działanie-mutex_vector_exit" data-id="Działanie-mutex_vector_exit"><a class="anchor hidden-xs" href="#Działanie-mutex_vector_exit" title="Działanie-mutex_vector_exit"><span class="octicon octicon-link"></span></a><span>Działanie </span><code>mutex_vector_exit()</code><span>:</span></h4><p><span>Gdy spinlock:</span></p><ol>
+<li><span>Po prostu zwalniamy mutex.</span></li>
+</ol><p><span>Gdy adaptive mutex:</span></p><ol>
+<li><span>Szukamy rogatki przypisanej do naszego mutexa.</span></li>
+<li><span>Zwalniamy mutex.</span></li>
+<li><span>Budzimy wątki czekające na danej rogatce (jeśli takie istnieją).</span></li>
+</ol><details><summary>Kod</summary>
+<pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1"></span>
+<span data-linenumber="2"></span>
+<span data-linenumber="3"></span>
+<span data-linenumber="4"></span>
+<span data-linenumber="5"></span>
+<span data-linenumber="6"></span>
+<span data-linenumber="7"></span>
+<span data-linenumber="8"></span>
+<span data-linenumber="9"></span>
+<span data-linenumber="10"></span>
+<span data-linenumber="11"></span>
+<span data-linenumber="12"></span>
+<span data-linenumber="13"></span>
+<span data-linenumber="14"></span>
+<span data-linenumber="15"></span>
+<span data-linenumber="16"></span>
+<span data-linenumber="17"></span>
+<span data-linenumber="18"></span>
+<span data-linenumber="19"></span>
+<span data-linenumber="20"></span>
+<span data-linenumber="21"></span>
+<span data-linenumber="22"></span>
+<span data-linenumber="23"></span>
+<span data-linenumber="24"></span>
+<span data-linenumber="25"></span>
+<span data-linenumber="26"></span>
+<span data-linenumber="27"></span>
+<span data-linenumber="28"></span>
+<span data-linenumber="29"></span>
+<span data-linenumber="30"></span>
+<span data-linenumber="31"></span>
+<span data-linenumber="32"></span>
+<span data-linenumber="33"></span>
+<span data-linenumber="34"></span>
+<span data-linenumber="35"></span>
+<span data-linenumber="36"></span>
+<span data-linenumber="37"></span>
+<span data-linenumber="38"></span>
+<span data-linenumber="39"></span>
+<span data-linenumber="40"></span>
+<span data-linenumber="41"></span></div><div class="code"><span class="token comment">/*
+ * mutex_vector_exit:
+ *
+ *  Support routine for mutex_exit() that handles all cases.
+ */</span>
+<span class="token keyword">void</span> <span class="token function">mutex_vector_exit</span><span class="token punctuation">(</span>kmutex_t <span class="token operator">*</span>mtx<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    turnstile_t <span class="token operator">*</span>ts<span class="token punctuation">;</span>
+    uintptr_t curthread<span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">MUTEX_SPIN_P</span><span class="token punctuation">(</span>mtx<span class="token operator">-&gt;</span>mtx_owner<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">__predict_false</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">MUTEX_SPINBIT_LOCKED_P</span><span class="token punctuation">(</span>mtx<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">MUTEX_ABORT</span><span class="token punctuation">(</span>mtx<span class="token punctuation">,</span> <span class="token string">"exiting unheld spin mutex"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token function">MUTEX_SPINBIT_LOCK_UNLOCK</span><span class="token punctuation">(</span>mtx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">MUTEX_SPIN_SPLRESTORE</span><span class="token punctuation">(</span>mtx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token comment">//#ifndef __HAVE_MUTEX_STUBS</span>
+
+    curthread <span class="token operator">=</span> <span class="token punctuation">(</span>uintptr_t<span class="token punctuation">)</span>curlwp<span class="token punctuation">;</span>
+
+    <span class="token comment">/*
+     * Get this lock's turnstile.  This gets the interlock on
+     * the sleep queue.  Once we have that, we can clear the
+     * lock.  If there was no turnstile for the lock, there
+     * were no waiters remaining.
+     */</span>
+    ts <span class="token operator">=</span> <span class="token function">turnstile_lookup</span><span class="token punctuation">(</span>mtx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>ts <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">MUTEX_RELEASE</span><span class="token punctuation">(</span>mtx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">turnstile_exit</span><span class="token punctuation">(</span>mtx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token function">MUTEX_RELEASE</span><span class="token punctuation">(</span>mtx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">turnstile_wakeup</span><span class="token punctuation">(</span>ts<span class="token punctuation">,</span> TS_WRITER_Q<span class="token punctuation">,</span>
+            <span class="token function">TS_WAITERS</span><span class="token punctuation">(</span>ts<span class="token punctuation">,</span> TS_WRITER_Q<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</div></div></code></pre>
+</details><h4 id="Zadanie-procedury-mutex_oncpu" data-id="Zadanie-procedury-mutex_oncpu"><a class="anchor hidden-xs" href="#Zadanie-procedury-mutex_oncpu" title="Zadanie-procedury-mutex_oncpu"><span class="octicon octicon-link"></span></a><span>Zadanie procedury </span><code>mutex_oncpu()</code><span>:</span></h4><ul>
+<li><span>Sprawdza ona czy właściciel mutexa wykonuje się na procesorze.</span></li>
+<li><span>Jeśli właściciel się wykonuje to jest szansa, że niedługo skończy, więc nie musimy się usypiać, wystarczy się trochę pokręcić.</span></li>
+</ul><p><em><span>A do czego służy funkcja MUTEX_SPIN_SPLRESTORE()?</span></em></p><h2 id="Zadanie-6" data-id="Zadanie-6"><a class="anchor hidden-xs" href="#Zadanie-6" title="Zadanie-6"><span class="octicon octicon-link"></span></a><span>Zadanie 6</span></h2><h4 id="W-jakim-celu-rogatka-śledzi-właściciela-ts_owner-blokady" data-id="W-jakim-celu-rogatka-śledzi-właściciela-ts_owner-blokady"><a class="anchor hidden-xs" href="#W-jakim-celu-rogatka-śledzi-właściciela-ts_owner-blokady" title="W-jakim-celu-rogatka-śledzi-właściciela-ts_owner-blokady"><span class="octicon octicon-link"></span></a><span>W jakim celu rogatka śledzi właściciela </span><code>ts_owner</code><span> blokady?</span></h4><p><span>Znając właściciela blokady, gdy na turnstile’u zacznie czekać wątek o wyższym priorytecie, to będziemy wiedzieć komu należy pożyczyć priorytet.</span></p><h4 id="Czemu-istnieją-dwie-listy-wątków-zablokowanych-ts_blocked-na-danej-rogatce" data-id="Czemu-istnieją-dwie-listy-wątków-zablokowanych-ts_blocked-na-danej-rogatce"><a class="anchor hidden-xs" href="#Czemu-istnieją-dwie-listy-wątków-zablokowanych-ts_blocked-na-danej-rogatce" title="Czemu-istnieją-dwie-listy-wątków-zablokowanych-ts_blocked-na-danej-rogatce"><span class="octicon octicon-link"></span></a><span>Czemu istnieją dwie listy wątków zablokowanych </span><code>ts_blocked</code><span> na danej rogatce?</span></h4><p><span>Dwie listy są używane przez implementację niektórych środków synchroniezcji (co zobaczymy w implementacji </span><code>rwlock</code><span>)</span></p><h4 id="Względem-jakiego-parametru-posortowane-są-listy-ts_blocked-i-dlaczego" data-id="Względem-jakiego-parametru-posortowane-są-listy-ts_blocked-i-dlaczego"><a class="anchor hidden-xs" href="#Względem-jakiego-parametru-posortowane-są-listy-ts_blocked-i-dlaczego" title="Względem-jakiego-parametru-posortowane-są-listy-ts_blocked-i-dlaczego"><span class="octicon octicon-link"></span></a><span>Względem jakiego parametru posortowane są listy </span><code>ts_blocked</code><span> i dlaczego?</span></h4><p><span>Listy są posortowane względem priorytetu, aby ułatwić wyszukanie priorytetu, który chcemy pożyczyć wątkowi, który trzyma blokadę.</span><br>
+<span>Aby ustalić priorytet, który należy wziąc wystarczy spojrzeć na pierwszy element listy i nie trzeba po niej całej przechodzić.</span></p><h4 id="W-jakim-celu-wątek-przechowuje-listę-rogatek-td_contested-wszystkich-posiadanych-blokad-o-które-istnieje-współzawodnictwo" data-id="W-jakim-celu-wątek-przechowuje-listę-rogatek-td_contested-wszystkich-posiadanych-blokad-o-które-istnieje-współzawodnictwo"><a class="anchor hidden-xs" href="#W-jakim-celu-wątek-przechowuje-listę-rogatek-td_contested-wszystkich-posiadanych-blokad-o-które-istnieje-współzawodnictwo" title="W-jakim-celu-wątek-przechowuje-listę-rogatek-td_contested-wszystkich-posiadanych-blokad-o-które-istnieje-współzawodnictwo"><span class="octicon octicon-link"></span></a><span>W jakim celu wątek przechowuje listę rogatek </span><code>td_contested</code><span> wszystkich posiadanych blokad, o które istnieje współzawodnictwo?</span></h4><p><span>Aby móc wyznaczyć priorytet wątku po zwolnieniu jednej z trzymanych blokad. Wystarczy wtedy przejść po liście </span><code>td_contested</code><span> i wziąć z niej najwyższy priorytet.</span></p><h4 id="Czy-wybudzanie-wątków-byłyby-prostsze-gdyby-rogatki-były-przypisane-na-stałe-do-wątków" data-id="Czy-wybudzanie-wątków-byłyby-prostsze-gdyby-rogatki-były-przypisane-na-stałe-do-wątków"><a class="anchor hidden-xs" href="#Czy-wybudzanie-wątków-byłyby-prostsze-gdyby-rogatki-były-przypisane-na-stałe-do-wątków" title="Czy-wybudzanie-wątków-byłyby-prostsze-gdyby-rogatki-były-przypisane-na-stałe-do-wątków"><span class="octicon octicon-link"></span></a><span>Czy wybudzanie wątków byłyby prostsze, gdyby rogatki były przypisane na stałe do wątków?</span></h4><p><span>Problem powstaje, gdy chcemy wybudzić wszystkich czekających na tej rogatce, ale w między czasie przyjdzie ktoś nowy, kto się zablokuje.</span></p><ol>
+<li><span>Przenosimy wszystkie czekające wątki na kolejkę pending.</span></li>
+<li><span>Przychodzi nowy wątek który już nie zostanie przeniesiony.</span></li>
+<li><span>Trzeba przepiąć jakoś turnstile, bo wątek który jest właścicielem aktualnego ucieka sobie. (ten punkt może być bardzo pokręcony)</span></li>
+</ol><p><img src="https://i.imgur.com/qZG7JFE.jpg" alt=""></p><h2 id="Zadanie-7" data-id="Zadanie-7"><a class="anchor hidden-xs" href="#Zadanie-7" title="Zadanie-7"><span class="octicon octicon-link"></span></a><span>Zadanie 7</span></h2><h4 id="Struktura-krwlock" data-id="Struktura-krwlock"><a class="anchor hidden-xs" href="#Struktura-krwlock" title="Struktura-krwlock"><span class="octicon octicon-link"></span></a><span>Struktura </span><code>krwlock</code></h4><pre><code class="c hljs"><span class="token keyword">struct</span> krwlock <span class="token punctuation">{</span>
+  <span class="token keyword">volatile</span> uintptr_t  rw_owner<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><pre><code>  N                     5        4        3        2        1        0
+ +------------------------------------------------------------------+
+ | owner or read count | nodbug | &lt;free&gt; | wrlock | wrwant |  wait  |
+ +------------------------------------------------------------------+
+</code></pre><p><code>wait</code><span> – czy ktoś czeka na blokadę</span><br>
+<code>wrwant</code><span> – czy ktoś czeka na pisanie</span><br>
+<code>wrlock</code><span> – czy jest blokada jst trzymana przez pisarza</span><br>
+<code>owner</code><span> – gdy </span><code>wrlock == 1</code><span> to jest to wskaźnik na pisarza</span><br>
+<code>read count</code><span> – gdy </span><code>wrlock == 0</code><span> jest to liczba czytelników aktualnie czytających</span></p><p><span>Kod do tych operacji jest w assemblerze, więc omawiam na podstawie książki o Solarisie.</span></p><h4 id="Jak-wygląda-zakładanie-blokady" data-id="Jak-wygląda-zakładanie-blokady"><a class="anchor hidden-xs" href="#Jak-wygląda-zakładanie-blokady" title="Jak-wygląda-zakładanie-blokady"><span class="octicon octicon-link"></span></a><span>Jak wygląda zakładanie blokady?</span></h4><p><span>Czytelnik:</span></p><ul>
+<li><span>Jeśli czeka pisarz, to się blokuje.</span></li>
+</ul><p><span>Pisarz:</span></p><ul>
+<li><span>Jeśli ktoś jest ma blokadę, to zasypia.</span></li>
+</ul><p><em><span>Podczas zasypiania sprawdzamy wiele razy czy blokada się nie zwolniła, aby uniknąć niepotrzebnego zasypiania oraz nie zgubić pobudki.</span></em></p><h4 id="Jak-wygląda-zwalnianie-blokady" data-id="Jak-wygląda-zwalnianie-blokady"><a class="anchor hidden-xs" href="#Jak-wygląda-zwalnianie-blokady" title="Jak-wygląda-zwalnianie-blokady"><span class="octicon octicon-link"></span></a><span>Jak wygląda zwalnianie blokady?</span></h4><p><span>Czytelnik:</span></p><ul>
+<li><span>Zawsze wybudza jednego z pisarzy. (nawet jeśli czekają ważniejśi od niego czytelnicy)</span></li>
+</ul><p><span>Pisarz:</span></p><ul>
+<li><span>Sprawdza, czy czekają czytelnicy o priorytecie większym równym priorytetowi czekających pisarzy. Jeśli tak, to ci czytelnicy wchodzą do sekcji krytycznej, oraz pożyczają priorytet wątku, który je wybudził. (czyli większy równy priorytetowi czekających pisarzy)</span></li>
+</ul><p><span>Taka polityka zwalniania zapobiega głodzeniu zarówno pisarzy, jak i czytelników. (Ale czy czytelnicy o niskim priorytecie nie mogą być głodzeni?)</span></p><p><em><span>Wątek który jest wybudzany posiada już blokadę, i nie musi nic więcej sprawdzać.</span></em></p><h2 id="Zadanie-8" data-id="Zadanie-8"><a class="anchor hidden-xs" href="#Zadanie-8" title="Zadanie-8"><span class="octicon octicon-link"></span></a><span>Zadanie 8</span></h2><h4 id="Działanie-rwlock_vector_enter" data-id="Działanie-rwlock_vector_enter"><a class="anchor hidden-xs" href="#Działanie-rwlock_vector_enter" title="Działanie-rwlock_vector_enter"><span class="octicon octicon-link"></span></a><span>Działanie </span><code>rwlock_vector_enter()</code><span>:</span></h4><h4 id="Działanie-rwlock_vector_exit" data-id="Działanie-rwlock_vector_exit"><a class="anchor hidden-xs" href="#Działanie-rwlock_vector_exit" title="Działanie-rwlock_vector_exit"><span class="octicon octicon-link"></span></a><span>Działanie </span><code>rwlock_vector_exit()</code><span>:</span></h4><h4 id="Różnice-z-algorytmem-podanym-w-książce" data-id="Różnice-z-algorytmem-podanym-w-książce"><a class="anchor hidden-xs" href="#Różnice-z-algorytmem-podanym-w-książce" title="Różnice-z-algorytmem-podanym-w-książce"><span class="octicon octicon-link"></span></a><span>Różnice z algorytmem podanym w książce</span></h4></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li class=""><a href="#SJU-Lista-6" title="SJU Lista 6">SJU Lista 6</a><ul class="nav">
+<li><a href="#Zadanie-3" title="Zadanie 3">Zadanie 3</a></li>
+<li><a href="#Zadanie-4" title="Zadanie 4">Zadanie 4</a></li>
+<li><a href="#Zadanie-5" title="Zadanie 5">Zadanie 5</a><ul class="nav">
+<li><a href="#Działanie-mutex_vector_enter" title="Działanie mutex_vector_enter():">Działanie mutex_vector_enter():</a></li>
+<li><a href="#Działanie-mutex_vector_exit" title="Działanie mutex_vector_exit():">Działanie mutex_vector_exit():</a></li>
+<li><a href="#Zadanie-procedury-mutex_oncpu" title="Zadanie procedury mutex_oncpu():">Zadanie procedury mutex_oncpu():</a></li>
+</ul>
+</li>
+<li><a href="#Zadanie-6" title="Zadanie 6">Zadanie 6</a><ul class="nav">
+<li><a href="#W-jakim-celu-rogatka-śledzi-właściciela-ts_owner-blokady" title="W jakim celu rogatka śledzi właściciela ts_owner blokady?">W jakim celu rogatka śledzi właściciela ts_owner blokady?</a></li>
+<li><a href="#Czemu-istnieją-dwie-listy-wątków-zablokowanych-ts_blocked-na-danej-rogatce" title="Czemu istnieją dwie listy wątków zablokowanych ts_blocked na danej rogatce?">Czemu istnieją dwie listy wątków zablokowanych ts_blocked na danej rogatce?</a></li>
+<li><a href="#Względem-jakiego-parametru-posortowane-są-listy-ts_blocked-i-dlaczego" title="Względem jakiego parametru posortowane są listy ts_blocked i dlaczego?">Względem jakiego parametru posortowane są listy ts_blocked i dlaczego?</a></li>
+<li><a href="#W-jakim-celu-wątek-przechowuje-listę-rogatek-td_contested-wszystkich-posiadanych-blokad-o-które-istnieje-współzawodnictwo" title="W jakim celu wątek przechowuje listę rogatek td_contested wszystkich posiadanych blokad, o które istnieje współzawodnictwo?">W jakim celu wątek przechowuje listę rogatek td_contested wszystkich posiadanych blokad, o które istnieje współzawodnictwo?</a></li>
+<li><a href="#Czy-wybudzanie-wątków-byłyby-prostsze-gdyby-rogatki-były-przypisane-na-stałe-do-wątków" title="Czy wybudzanie wątków byłyby prostsze, gdyby rogatki były przypisane na stałe do wątków?">Czy wybudzanie wątków byłyby prostsze, gdyby rogatki były przypisane na stałe do wątków?</a></li>
+</ul>
+</li>
+<li><a href="#Zadanie-7" title="Zadanie 7">Zadanie 7</a><ul class="nav">
+<li><a href="#Struktura-krwlock" title="Struktura krwlock">Struktura krwlock</a></li>
+<li><a href="#Jak-wygląda-zakładanie-blokady" title="Jak wygląda zakładanie blokady?">Jak wygląda zakładanie blokady?</a></li>
+<li><a href="#Jak-wygląda-zwalnianie-blokady" title="Jak wygląda zwalnianie blokady?">Jak wygląda zwalnianie blokady?</a></li>
+</ul>
+</li>
+<li><a href="#Zadanie-8" title="Zadanie 8">Zadanie 8</a><ul class="nav">
+<li><a href="#Działanie-rwlock_vector_enter" title="Działanie rwlock_vector_enter():">Działanie rwlock_vector_enter():</a></li>
+<li><a href="#Działanie-rwlock_vector_exit" title="Działanie rwlock_vector_exit():">Działanie rwlock_vector_exit():</a></li>
+<li><a href="#Różnice-z-algorytmem-podanym-w-książce" title="Różnice z algorytmem podanym w książce">Różnice z algorytmem podanym w książce</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+        <div class="toc"><ul class="nav">
+<li class=""><a href="#SJU-Lista-6" title="SJU Lista 6">SJU Lista 6</a><ul class="nav">
+<li><a href="#Zadanie-3" title="Zadanie 3">Zadanie 3</a></li>
+<li><a href="#Zadanie-4" title="Zadanie 4">Zadanie 4</a></li>
+<li><a href="#Zadanie-5" title="Zadanie 5">Zadanie 5</a><ul class="nav">
+<li><a href="#Działanie-mutex_vector_enter" title="Działanie mutex_vector_enter():">Działanie mutex_vector_enter():</a></li>
+<li><a href="#Działanie-mutex_vector_exit" title="Działanie mutex_vector_exit():">Działanie mutex_vector_exit():</a></li>
+<li><a href="#Zadanie-procedury-mutex_oncpu" title="Zadanie procedury mutex_oncpu():">Zadanie procedury mutex_oncpu():</a></li>
+</ul>
+</li>
+<li><a href="#Zadanie-6" title="Zadanie 6">Zadanie 6</a><ul class="nav">
+<li><a href="#W-jakim-celu-rogatka-śledzi-właściciela-ts_owner-blokady" title="W jakim celu rogatka śledzi właściciela ts_owner blokady?">W jakim celu rogatka śledzi właściciela ts_owner blokady?</a></li>
+<li><a href="#Czemu-istnieją-dwie-listy-wątków-zablokowanych-ts_blocked-na-danej-rogatce" title="Czemu istnieją dwie listy wątków zablokowanych ts_blocked na danej rogatce?">Czemu istnieją dwie listy wątków zablokowanych ts_blocked na danej rogatce?</a></li>
+<li><a href="#Względem-jakiego-parametru-posortowane-są-listy-ts_blocked-i-dlaczego" title="Względem jakiego parametru posortowane są listy ts_blocked i dlaczego?">Względem jakiego parametru posortowane są listy ts_blocked i dlaczego?</a></li>
+<li><a href="#W-jakim-celu-wątek-przechowuje-listę-rogatek-td_contested-wszystkich-posiadanych-blokad-o-które-istnieje-współzawodnictwo" title="W jakim celu wątek przechowuje listę rogatek td_contested wszystkich posiadanych blokad, o które istnieje współzawodnictwo?">W jakim celu wątek przechowuje listę rogatek td_contested wszystkich posiadanych blokad, o które istnieje współzawodnictwo?</a></li>
+<li><a href="#Czy-wybudzanie-wątków-byłyby-prostsze-gdyby-rogatki-były-przypisane-na-stałe-do-wątków" title="Czy wybudzanie wątków byłyby prostsze, gdyby rogatki były przypisane na stałe do wątków?">Czy wybudzanie wątków byłyby prostsze, gdyby rogatki były przypisane na stałe do wątków?</a></li>
+</ul>
+</li>
+<li><a href="#Zadanie-7" title="Zadanie 7">Zadanie 7</a><ul class="nav">
+<li><a href="#Struktura-krwlock" title="Struktura krwlock">Struktura krwlock</a></li>
+<li><a href="#Jak-wygląda-zakładanie-blokady" title="Jak wygląda zakładanie blokady?">Jak wygląda zakładanie blokady?</a></li>
+<li><a href="#Jak-wygląda-zwalnianie-blokady" title="Jak wygląda zwalnianie blokady?">Jak wygląda zwalnianie blokady?</a></li>
+</ul>
+</li>
+<li><a href="#Zadanie-8" title="Zadanie 8">Zadanie 8</a><ul class="nav">
+<li><a href="#Działanie-rwlock_vector_enter" title="Działanie rwlock_vector_enter():">Działanie rwlock_vector_enter():</a></li>
+<li><a href="#Działanie-rwlock_vector_exit" title="Działanie rwlock_vector_exit():">Działanie rwlock_vector_exit():</a></li>
+<li><a href="#Różnice-z-algorytmem-podanym-w-książce" title="Różnice z algorytmem podanym w książce">Różnice z algorytmem podanym w książce</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>

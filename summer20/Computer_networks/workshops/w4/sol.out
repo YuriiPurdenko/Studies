@@ -1,0 +1,8 @@
+\BOOKMARK [1][-]{section.1}{Wstepna konfiguracja sieci}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Ustawienia virtualbox'a}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Ustawienia sieci}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Ustawianie domyslnej trasy}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{Odpowiedzi}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{Jaka jest sugerowana przez maszyne Virbian2 modyfikacja tablicy routingu na maszynie Virbian1?}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.2}{Dlaczego taka zmiana ma sens?}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.3}{W jaki spos\363b maszyna Virbian2 mog\233a wykryc powyzszy problem?}{section.2}% 8

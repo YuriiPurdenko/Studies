@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        SJU 2020/05/06 - HackMD
+    </title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @charset "UTF-8";@import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{display:block;background:#fff;padding:.5em;color:#333;overflow-x:auto}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{color:#55a532;background-color:#eaffea}.hljs-deletion{color:#bd2c00;background-color:#ffecec}.hljs-link{text-decoration:underline}.markdown-body{font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0}.markdown-body blockquote{font-size:16px;padding:0 1em;color:#777;border-left:.25em solid #ddd}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid #ccc;border-bottom-color:#bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eee}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#777}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{padding:0;list-style-type:none}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}.markdown-body span.align-center{display:block;overflow:hidden;clear:both}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{display:block;overflow:hidden;clear:both}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{letter-spacing:-.2em;content:"\00a0"}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.markdown-body pre code,.markdown-body pre tt{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{padding:10px 8px 9px;text-align:right;background:#fff;border:0}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{font-weight:700;background:#f8f8f8;border-top:0}.news .alert .markdown-body blockquote{padding:0 0 0 40px;border:0 none}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle;cursor:default!important}.markdown-body{padding-top:40px;padding-bottom:40px;max-width:758px;overflow:visible!important;position:relative}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{text-align:right;position:relative;display:inline-block;cursor:default;z-index:4;padding:0 8px 0 0;min-width:20px;box-sizing:content-box;color:#afafaf!important;border-right:3px solid #6ce26c!important}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-left:none;border-top:none;border-bottom:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-spacing:0;border-collapse:inherit!important}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{overflow:unset;margin-bottom:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{text-align:center;background-color:inherit;border-radius:0;white-space:inherit;overflow:visible}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{max-width:100%;height:100%}.markdown-body pre>code.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.markdown-body .alert>p,.markdown-body .alert>ul{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{cursor:pointer;display:table;text-align:center;background-position:50%;background-repeat:no-repeat;background-size:contain;background-color:#000;overflow:hidden}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{width:100%;object-fit:contain;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{width:100%;height:100%;position:absolute;top:0;left:0}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{position:absolute;height:auto;width:auto;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.3;transition:opacity .2s;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{position:relative;z-index:2;max-width:760px;margin:25px auto -25px;color:#777}.toc .invisable-node{list-style-type:none}.ui-toc{position:fixed;bottom:20px;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{height:40px;padding:10px 4px;border-top-left-radius:0;border-bottom-left-radius:0}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{opacity:1;color:#fff;transition:opacity .2s}.ui-toc-label:focus{opacity:.3;background-color:#ccc;color:#000}.ui-toc-label:hover{opacity:1;background-color:#ccc;transition:opacity .2s}.ui-toc-dropdown{margin-top:20px;margin-bottom:20px;padding-left:10px;padding-right:10px;max-width:45vw;width:25vw;max-height:70vh;overflow:auto;text-align:inherit}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{padding-right:0;letter-spacing:.0029em}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}.ui-toc-dropdown .nav>li:first-child:last-child > ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{padding-left:19px;color:#000;text-decoration:none;background-color:transparent;border-left:1px solid #000}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{padding-right:19px;border-left:none;border-right:1px solid #000}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{padding-left:18px;font-weight:700;color:#000;background-color:transparent;border-left:2px solid #000}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{padding-right:18px;border-left:none;border-right:2px solid #000}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:40px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{padding-left:28px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{padding-left:38px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{position:fixed;top:0;max-width:15vw;max-height:70vh;overflow:auto}.back-to-top,.expand-toggle,.go-to-bottom{display:block;padding:4px 10px;margin-top:10px;margin-left:10px;font-size:12px;font-weight:500;color:#999}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{width:20px;height:20px;display:block;border-radius:3px;margin-top:2px;margin-bottom:2px;margin-right:5px;background-position:50%;background-repeat:no-repeat;background-size:cover}.ui-user-icon.small{width:18px;height:18px;display:inline-block;vertical-align:middle;margin:0 0 .2em}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-published-note{color:#337ab7}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{position:relative;z-index:1;color:#222}.markdown-body.slides:before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:currentColor;box-shadow:0 0 0 50vw}.markdown-body.slides section[data-markdown]{position:relative;margin-bottom:1.5em;background-color:#fff;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{position:absolute;top:50%;left:1em;right:1em;transform:translateY(-50%);max-height:100%;overflow:hidden}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{content:"";position:absolute;top:-1.5em;right:1em;height:1.5em;border:3px solid #777}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;text-shadow:0 0 1em transparent,1px 1px 1.2px rgba(0,0,0,.004);-webkit-overflow-scrolling:touch;letter-spacing:.025em;font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="SJU-20200506" data-id="SJU-20200506"><a class="anchor hidden-xs" href="#SJU-20200506" title="SJU-20200506"><span class="octicon octicon-link"></span></a><span>SJU 2020/05/06</span></h1><h2 id="Zadanie-1" data-id="Zadanie-1"><a class="anchor hidden-xs" href="#Zadanie-1" title="Zadanie-1"><span class="octicon octicon-link"></span></a><span>Zadanie 1.</span></h2><p><span>Wieloprocesorowość symetryczna, przetwarzanie symetryczne </span><strong><span>(Symmetric MultiProcessing, SMP)</span></strong><span> – architektura komputerowa, która wykorzystuje większą liczbę procesorów (CPU) do jednoczesnego wykonywania zadań. W architekturze SMP procesory współdzielą zasoby pamięci oraz urządzenia wejścia/wyjścia przy pomocy magistrali systemowej.</span></p><p><strong><span>cache ping-pong</span></strong><span>- występuje wtedy, gdy dwa (lub więcej) procesory jednocześnie modyfikują jedną linie pamięci podręcznej. Gdy 1. procesor zmodyfikuje pewien blok to musi poinformować inne procesory o zmianie. Wtedy inne procesory muszą zaciągnąć nową wersję tej pamięci. Jeśli procesor 2. zmodyfikuje pamięć to analogiczna sytuacja. Zatem pisanie przez kilka procesorów do jednej linii cache powoduje dużo ruchu na magistrali.</span></p><p><strong><span>false sharing</span></strong><span>- występuje wtedy, gdy dwa procesory korzystają (jako pisarze) z pamięci leżącej bardzo blisko siebie (nawet rozłącznej), a dokładniej, to leżącej w tej samej linii cache. Wtedy każda operacja zapisu będzie się wiązała z powiadomieniem drugiego procesora, żeby zaaktualizował sobie zawartość tej linii.</span><br>
+<img src="https://i.imgur.com/jzFlKsp.png" alt=""></p><p><span>Operacje atomowe wykonują dwie istotne operacje: odczyt z pamięci oraz zapis do pamięci. Te operacje przechodzą pojedynczo przez magistralę, więc istnieje potrzeba zapewnienia jakoś atomowści. Rozwiązuje się to tak, że procesor wykonujący atomową instrukcję blokuje magistralę, wykonuje dwa zapytania i odblokowuje. Więc to, że blokujemy magistralę może być jednym z problemów. Drugi jest taki, że procesor oczekujący na spin-locku będzie generował dużo ruchu na magistrali zwalniając procesory wykonujące sensowny kod.</span></p><p><span>Jeśli w jednej linii cache znajdzie się kilka spin-locków to może dochodzić do cache ping-pong, z tego powodu, że spin-lock będzie wykonywał potencjalnie wiele zapisów, np. instrukcją (Test and Set Lock).</span></p><p><strong><span>exponential backoff</span></strong><span> to algorytm ograniczający liczbę dostępów do pamięci przez procesory czekające na spin-locku. Polega to na tym, że kolejno próbujemy zabrać blokadę i jeśli się nie uda to czekamy instrukcję. Potem znów sprawdzamy i ewentualnie czekamy dwie instrukcję; potem cztery i tak dalej mnożymy przez 2 to pewnego maksimum.</span></p><p><span>Implementacja w NetBSD:</span></p><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1"></span>
+<span data-linenumber="2"></span>
+<span data-linenumber="3"></span>
+<span data-linenumber="4"></span>
+<span data-linenumber="5"></span></div><div class="code"><span class="token keyword">do</span> <span class="token punctuation">{</span>
+	<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token function">MUTEX_SPINBIT_LOCKED_P</span><span class="token punctuation">(</span>mtx<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token function">SPINLOCK_BACKOFF</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">MUTEX_SPINBIT_LOCK_TRY</span><span class="token punctuation">(</span>mtx<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</div></div></code></pre><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1"></span>
+<span data-linenumber="2"></span>
+<span data-linenumber="3"></span>
+<span data-linenumber="4"></span>
+<span data-linenumber="5"></span>
+<span data-linenumber="6"></span>
+<span data-linenumber="7"></span>
+<span data-linenumber="8"></span>
+<span data-linenumber="9"></span></div><div class="code"><span class="token macro property">#<span class="token directive keyword">define</span>	SPINLOCK_BACKOFF(count)					\
+do {								\
+	int __i;						\
+	for (__i = (count); __i != 0; __i--) {			\
+		SPINLOCK_BACKOFF_HOOK;				\
+	}							\
+	if ((count) &lt; SPINLOCK_BACKOFF_MAX)			\
+		(count) += (count);				\
+} while (</span><span class="token comment">/* CONSTCOND */</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</div></div></code></pre><h2 id="Zadanie-2" data-id="Zadanie-2"><a class="anchor hidden-xs" href="#Zadanie-2" title="Zadanie-2"><span class="octicon octicon-link"></span></a><span>Zadanie 2.</span></h2><p><span>Kiedy wątek zwolni pewnien zasób to budzi on pozostałe wątki czekające na tenże zasób. Jeden z tych wątków może założyć blokadę, lecz reszta zobaczy, że zasób jest zablokowany i pójdzie dalej spać. To może powodować duży narzut poprzez budzenie i zmiane kontekstu.</span></p><p><span>Problem ten nie występuje na maszynach z jednym procesorem, gdyż gdy pewnien wątek czekający na zasób dostaje kontrolę to znaczy, że zasób na pewno będzie wolny. Na wieloprocesorowej maszynie zaś, jeśli wiele wątków czeka na jeden zasób to wybudzenie wszystkich może spowodować ich jednoczesne zaschedulowanie na różnych rdzeniach i wtedy będą walczyć o zasób. To nazywa się właśnie problem </span><em><span>wygłodniałej hordy (thundering herd)</span></em><span>. Od wybudzenia do działania mija pewien czas, w którym ktoś inny może zabrać zasób. Jeśli to się będzie zdarzało często to może dojść do głodzenia.</span></p><p><span>A short-term lock is managed by a </span><strong><span>turnstile</span></strong><span> data structure. The turnstile tracks the current owner of the lock and the list of threads waiting for access to the lock. Across the top of the figure is a set of hash headers that allow a quick lookup to find a lock with waiting threads. If a turnstile is found, it provides a pointer to the thread that currently owns the lock and lists of the threads that are waiting for exclusive and shared access. The most important use of the turnstile is to quickly find the threads that need to be awakened when a lock is released.</span></p><p><span>A turnstile is needed each time a thread blocks on a contested lock. Because blocking is common, it would be prohibitively slow to allocate and free a turnstile every time one is needed. So each thread allocates a turnstile when it is created. As a thread may only be blocked on one lock at any point in time, it will never need more than one turnstile. Turnstiles are allocated by threads rather than being incorporated into each lock structure because there are far more locks in the kernel than there are threads. Allocating one turnstile per thread rather than one per lock results in lower memory utilization in the kernel.</span></p><p><span>When a thread is about to block on a short-term lock, it provides its turnstile to be used to track the lock. If it is the first thread to block on the lock, its turnstile is used. If it is not the first thread to block, then an earlier thread’s turnstile will be in use to do the tracking. The additional turnstiles that are provided are kept on a free list whose head is the turnstile being used to track the lock. When a thread is awakened and is being made runnable, it is given a turnstile from the free list (which may not be the same one that it originally provided). When the last thread is awakened, the free list will be empty and the turnstile no longer needed, so it can be taken by the awakening thread.</span></p><p><span>W bramkach obrotowych wykorzystuje się mechanizm dziedziczenia piorytetów.</span></p><p><span>Implementacja </span><code>turnstile_broadcast()</code><span> w Mimikerze (w FreeBSD idea jest ta sama):</span></p><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="356"></span>
+<span data-linenumber="357"></span>
+<span data-linenumber="358"></span>
+<span data-linenumber="359"></span>
+<span data-linenumber="360"></span>
+<span data-linenumber="361"></span>
+<span data-linenumber="362"></span>
+<span data-linenumber="363"></span>
+<span data-linenumber="364"></span></div><div class="code"><span class="token keyword">void</span> <span class="token function">turnstile_broadcast</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span>wchan<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  turnstile_chain_t <span class="token operator">*</span>tc <span class="token operator">=</span> <span class="token function">TC_LOOKUP</span><span class="token punctuation">(</span>wchan<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  turnstile_t <span class="token operator">*</span>ts <span class="token operator">=</span> <span class="token function">turnstile_lookup</span><span class="token punctuation">(</span>wchan<span class="token punctuation">,</span> tc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>ts <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">give_back_turnstiles</span><span class="token punctuation">(</span>ts<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">unlend_self</span><span class="token punctuation">(</span>ts<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">wakeup_blocked</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>ts<span class="token operator">-&gt;</span>ts_blocked<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</div></div></code></pre><p><span>Co robimy:</span></p><ol>
+<li><span>zwracamy bramki obrotowe do zablokowanych wątków</span></li>
+<li><span>przywracamy piorytety</span></li>
+<li><span>budzimy każdy zablokowany wątek</span></li>
+</ol><p><span>Zatem podczas zwalniania blokady wszystkie wątki są budzone. Jednak warto wspomnieć o tym, że zablokowane wątki są posortowane po piorytecie i w takiej też kolejności będą budzone, więc najprawdopodobniej wątek o najwyższym piorytecie dostanie zasób. Jednak nic nas nie zabezpiecza przed tym, że przyjdzie jakiś nowy wątek i zabierze zasób.</span></p><p><img src="https://i.imgur.com/whEs2I3.png" alt=""></p><h2 id="Zadanie-3" data-id="Zadanie-3"><a class="anchor hidden-xs" href="#Zadanie-3" title="Zadanie-3"><span class="octicon octicon-link"></span></a><span>Zadanie 3.</span></h2><p><span>Przypomnijmy, że propagacja piorytetów występuje wtedy, gdy pewien wątek założył blokadę na zasób i wątek o wyższym piorytecie również chce dostępu do tego zasobu. Wtedy ten działający wątek ma podwyższany piorytet do najwyższej wartości spośród wątków oczekujących na zasób.</span></p><p><span>Podczas zwalaniania blokady z użyciem </span><code>turnstile_broadcast()</code><span> wszystkie zablokowane wątki są budze w kolejności od najwyższego piorytetu. To implikuje, że najprawdopodobniej (a na maszynach jednoprocesorowych na pewno) blokadę założy wątek o najwyższym piorytecie. Zatem nie nastąpi propagacja piorytetu, gdyż właśnie działający wątek ma najwyższy piorytet.</span><br>
+<span>Zwalnianie blokady:</span></p><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1014"></span>
+<span data-linenumber="1015"></span>
+<span data-linenumber="1016"></span>
+<span data-linenumber="1017"></span>
+<span data-linenumber="1018"></span>
+<span data-linenumber="1019"></span>
+<span data-linenumber="1020"></span>
+<span data-linenumber="1021"></span>
+<span data-linenumber="1022"></span>
+<span data-linenumber="1023"></span>
+<span data-linenumber="1024"></span>
+<span data-linenumber="1025"></span>
+<span data-linenumber="1026"></span>
+<span data-linenumber="1027"></span>
+<span data-linenumber="1028"></span>
+<span data-linenumber="1029"></span>
+<span data-linenumber="1030"></span>
+<span data-linenumber="1031"></span>
+<span data-linenumber="1032"></span>
+<span data-linenumber="1033"></span>
+<span data-linenumber="1034"></span>
+<span data-linenumber="1035"></span>
+<span data-linenumber="1036"></span></div><div class="code"><span class="token keyword">void</span>
+<span class="token function">__mtx_unlock_sleep</span><span class="token punctuation">(</span><span class="token keyword">volatile</span> uintptr_t <span class="token operator">*</span>c<span class="token punctuation">,</span> uintptr_t v<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">struct</span> mtx <span class="token operator">*</span>m<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> turnstile <span class="token operator">*</span>ts<span class="token punctuation">;</span>
+	uintptr_t tid<span class="token punctuation">;</span>
+
+	tid <span class="token operator">=</span> <span class="token punctuation">(</span>uintptr_t<span class="token punctuation">)</span>curthread<span class="token punctuation">;</span>
+	m <span class="token operator">=</span> <span class="token function">mtxlock2mtx</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">__predict_false</span><span class="token punctuation">(</span>v <span class="token operator">==</span> tid<span class="token punctuation">)</span><span class="token punctuation">)</span>
+		v <span class="token operator">=</span> <span class="token function">MTX_READ_VALUE</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>v <span class="token operator">==</span> tid <span class="token operator">&amp;&amp;</span> <span class="token function">_mtx_release_lock</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span> tid<span class="token punctuation">)</span><span class="token punctuation">)</span>
+		<span class="token keyword">return</span><span class="token punctuation">;</span>
+
+	<span class="token function">turnstile_chain_lock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>m<span class="token operator">-&gt;</span>lock_object<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">_mtx_release_lock_quick</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	ts <span class="token operator">=</span> <span class="token function">turnstile_lookup</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>m<span class="token operator">-&gt;</span>lock_object<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">turnstile_broadcast</span><span class="token punctuation">(</span>ts<span class="token punctuation">,</span> TS_EXCLUSIVE_QUEUE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">turnstile_unpend</span><span class="token punctuation">(</span>ts<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">turnstile_chain_unlock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>m<span class="token operator">-&gt;</span>lock_object<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</div></div></code></pre><p><a href="http://bxr.su/FreeBSD/sys/kern/subr_turnstile.c#881" target="_blank" rel="noopener"><span>turnstile_broadcast()</span></a><span> przenosi po prostu wątki z listy zablokowanych na listę oczekujących.</span></p><p><span>W </span><a href="http://bxr.su/FreeBSD/sys/kern/subr_turnstile.c#949" target="_blank" rel="noopener"><span>turnstile_unpend()</span></a><span> przechodzimi po liście blokad, które odblokowywany wątek posiadał i liczymy minimum piorytetów spośród wątków będących pierwszymi na liście zablokowanych wątków tychże blokad.</span></p><p><img src="https://i.imgur.com/whEs2I3.png" alt=""></p><h2 id="Zadanie-4" data-id="Zadanie-4"><a class="anchor hidden-xs" href="#Zadanie-4" title="Zadanie-4"><span class="octicon octicon-link"></span></a><span>Zadanie 4.</span></h2><p><span>Jak jest w książce:</span></p><pre><code class="C hljs">typedef union mutex_impl {
+     <span class="hljs-comment">/*
+     * Adaptive mutex.
+     */</span>
+     <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">adaptive_mutex</span> </span>{
+         uintptr_t _m_owner; <span class="hljs-comment">/* 0-3/0-7 owner and waiters bit */</span>
+     } m_adaptive;
+     
+     <span class="hljs-comment">/*
+     * Spin Mutex.
+     */</span>
+     <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">spin_mutex</span> </span>{
+         lock_t m_dummylock; <span class="hljs-comment">/* 0 dummy lock (always set) */</span>
+         lock_t m_spinlock; <span class="hljs-comment">/* 1 real lock */</span>
+         ushort_t m_filler; <span class="hljs-comment">/* 2-3 unused */</span>
+         ushort_t m_oldspl; <span class="hljs-comment">/* 4-5 old pil value */</span>
+         ushort_t m_minspl; <span class="hljs-comment">/* 6-7 min pil val if lock held */</span>
+     } m_spin;
+} mutex_impl_t;
+o
+</code></pre><p><span>pil – priority interrupt level</span></p><p><span>Więc WAITERS bit jest ustawiony wg książki, jeżeli ktoś próbuje wziąć mutex, gdy on już jest wzięty.</span></p><p><span>Definicja </span><code>kmutex_t</code><span> z arm:</span></p><pre><code class="C hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="49"></span>
+<span data-linenumber="50"></span>
+<span data-linenumber="51"></span>
+<span data-linenumber="52"></span>
+<span data-linenumber="53"></span>
+<span data-linenumber="54"></span>
+<span data-linenumber="55"></span>
+<span data-linenumber="56"></span>
+<span data-linenumber="57"></span>
+<span data-linenumber="58"></span>
+<span data-linenumber="59"></span>
+<span data-linenumber="60"></span>
+<span data-linenumber="61"></span>
+<span data-linenumber="62"></span>
+<span data-linenumber="63"></span>
+<span data-linenumber="64"></span>
+<span data-linenumber="65"></span>
+<span data-linenumber="66"></span>
+<span data-linenumber="67"></span>
+<span data-linenumber="68"></span>
+<span data-linenumber="69"></span></div><div class="code"><span class="hljs-keyword">struct</span> kmutex {
+    union {
+        <span class="hljs-comment">/* Adaptive mutex */</span>
+        <span class="hljs-keyword">volatile</span> uintptr_t  mtxa_owner; <span class="hljs-comment">/* 0-3 */</span>
+
+<span class="hljs-meta">#ifdef _KERNEL</span>
+        <span class="hljs-comment">/* Spin mutex */</span>
+        <span class="hljs-keyword">struct</span> {
+            <span class="hljs-comment">/*
+             * Since the low bit of mtxa_owner is used to flag this
+             * mutex as a spin mutex, we can't use the first byte
+             * or the last byte to store the ipl or lock values.
+             */</span>
+            <span class="hljs-keyword">volatile</span> uint8_t    mtxs_dummy;
+            ipl_cookie_t        mtxs_ipl;
+            __cpu_simple_lock_t mtxs_lock;
+            <span class="hljs-keyword">volatile</span> uint8_t    mtxs_unused;
+        } s;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+    } u;
+};
+</div></div></code></pre><pre><code class="C hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="226"></span>
+<span data-linenumber="227"></span>
+<span data-linenumber="228"></span>
+<span data-linenumber="229"></span>
+<span data-linenumber="230"></span>
+<span data-linenumber="231"></span>
+<span data-linenumber="232"></span>
+<span data-linenumber="233"></span>
+<span data-linenumber="234"></span>
+<span data-linenumber="235"></span>
+<span data-linenumber="236"></span></div><div class="code"><span class="hljs-function"><span class="hljs-keyword">static</span> inline <span class="hljs-keyword">int</span>
+<span class="hljs-title">MUTEX_ACQUIRE</span>(<span class="hljs-params">kmutex_t *mtx, uintptr_t curthread</span>)
+</span>{
+    <span class="hljs-keyword">int</span> rv;
+    uintptr_t oldown = <span class="hljs-number">0</span>;
+    uintptr_t newown = curthread;
+
+    rv = MUTEX_CAS(&amp;mtx-&gt;mtx_owner, oldown, newown);
+    MUTEX_MEMBAR_ENTER();
+    <span class="hljs-keyword">return</span> rv;
+}
+</div></div></code></pre><p><span>No to pobranie mutexa wygląda na sprawdzeniu, czy aktualnie nikt nie jest właścicielem mutexa i podmianie na nas w takim wypadku przy pomocy atomowej funkcji compare and swap. Robimy barierę pamięciową i zwracamy czy nam się powiodło.</span></p><pre><code class="C hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="249"></span>
+<span data-linenumber="250"></span>
+<span data-linenumber="251"></span>
+<span data-linenumber="252"></span>
+<span data-linenumber="253"></span>
+<span data-linenumber="254"></span>
+<span data-linenumber="255"></span>
+<span data-linenumber="256"></span>
+<span data-linenumber="257"></span></div><div class="code"><span class="hljs-function"><span class="hljs-keyword">static</span> inline <span class="hljs-keyword">void</span>
+<span class="hljs-title">MUTEX_RELEASE</span>(<span class="hljs-params">kmutex_t *mtx</span>)
+</span>{
+    uintptr_t newown;
+
+    MUTEX_MEMBAR_EXIT();
+    newown = <span class="hljs-number">0</span>;
+    mtx-&gt;mtx_owner = newown;
+}
+</div></div></code></pre><p><span>Tutaj po prostu ustawiamy ownera na 0.</span></p><p><span>Bit </span><strong><span>WAITERS</span></strong><span> na podstawie następnego zadania służy zapewne sprawdzaniu, czy ktokolwiek oczekuje na wzięcie mutexa, jeśli był zablokowany.</span></p><blockquote>
+<p><span>Memory barriers</span><br>
+<span>The memory barriers can be used to control the order in which memory</span><br>
+<span>accesses occur, and thus the order in which those accesses become visible</span><br>
+<span>to other processors.  They can be used to implement ``lockless’’ access</span><br>
+<span>to data structures where the necessary barrier conditions are well under-</span><br>
+<span>stood.</span></p>
+</blockquote><p><span>No i wydaje się, że my chcemy tutaj rozpropagować informację na pozostałe CPU o tym, że coś się stało z mutexem, bo zapewne dość częstą sytuacją będzie, że wiele programów, które się odpalą na wielu procesorach będzie chciało coś od mutexa – wtedy czekanie “bo 0 się nie rozpropagowało” jest głupie, analogicznie jakyśmy nie rozpropagowali, że wzięliśmy mutexa i nagle dwa CPU go zajęły to generalnie przypał.</span></p><h2 id="Zadanie-5" data-id="Zadanie-5"><a class="anchor hidden-xs" href="#Zadanie-5" title="Zadanie-5"><span class="octicon octicon-link"></span></a><span>Zadanie 5.</span></h2><p><a href="http://bxr.su/NetBSD/sys/kern/kern_mutex.c#mutex_vector_enter" target="_blank" rel="noopener"><code>mutex_vector_enter</code></a></p><blockquote>
+<p><span>Support routine for mutex_enter() that must handle all cases.  In</span><br>
+<span>the LOCKDEBUG case, mutex_enter() is always aliased here, even if</span><br>
+<span>fast-path stubs are available.  If a mutex_spin_enter() stub is</span><br>
+<span>not available, then it is also aliased directly here.</span></p>
+</blockquote><p><span>Definicja </span><code>kmutex_t</code><span> z arm:</span></p><pre><code class="C hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="49"></span>
+<span data-linenumber="50"></span>
+<span data-linenumber="51"></span>
+<span data-linenumber="52"></span>
+<span data-linenumber="53"></span>
+<span data-linenumber="54"></span>
+<span data-linenumber="55"></span>
+<span data-linenumber="56"></span>
+<span data-linenumber="57"></span>
+<span data-linenumber="58"></span>
+<span data-linenumber="59"></span>
+<span data-linenumber="60"></span>
+<span data-linenumber="61"></span>
+<span data-linenumber="62"></span>
+<span data-linenumber="63"></span>
+<span data-linenumber="64"></span>
+<span data-linenumber="65"></span>
+<span data-linenumber="66"></span>
+<span data-linenumber="67"></span>
+<span data-linenumber="68"></span>
+<span data-linenumber="69"></span></div><div class="code"><span class="hljs-keyword">struct</span> kmutex {
+    union {
+        <span class="hljs-comment">/* Adaptive mutex */</span>
+        <span class="hljs-keyword">volatile</span> uintptr_t  mtxa_owner; <span class="hljs-comment">/* 0-3 */</span>
+
+<span class="hljs-meta">#ifdef _KERNEL</span>
+        <span class="hljs-comment">/* Spin mutex */</span>
+        <span class="hljs-keyword">struct</span> {
+            <span class="hljs-comment">/*
+             * Since the low bit of mtxa_owner is used to flag this
+             * mutex as a spin mutex, we can't use the first byte
+             * or the last byte to store the ipl or lock values.
+             */</span>
+            <span class="hljs-keyword">volatile</span> uint8_t    mtxs_dummy;
+            ipl_cookie_t        mtxs_ipl;
+            __cpu_simple_lock_t mtxs_lock;
+            <span class="hljs-keyword">volatile</span> uint8_t    mtxs_unused;
+        } s;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+    } u;
+};
+</div></div></code></pre><p><span>Książka:</span></p><pre><code>mutex_vector_enter()
+    if (lock is a spin lock)
+        lock_set_spl() /* enter spin-lock specific code path */
+     increment cpu_sysinfo.ademters.
+spin_loop:
+    if (lock is not owned)
+        mutex_trylock() /* try to acquire the lock */
+        if (lock acquired)
+            goto bottom
+        else
+            continue /* lock being held */
+    if (lock owner is running on a processor)
+        goto spin_loop
+    else
+        lookup turnstile for the lock
+        set waiters bit
+        if (lock owner is running on a processor)
+            drop turnstile
+            goto spin_loop
+        else
+            block /* the sleep queue associated with the turnstile */
+bottom:
+    update lockstat statistics
+</code></pre><pre><code class="C hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="442"></span>
+<span data-linenumber="443"></span>
+<span data-linenumber="444"></span>
+<span data-linenumber="445"></span>
+<span data-linenumber="446"></span>
+<span data-linenumber="447"></span>
+<span data-linenumber="448"></span>
+<span data-linenumber="449"></span>
+<span data-linenumber="450"></span>
+<span data-linenumber="451"></span>
+<span data-linenumber="452"></span>
+<span data-linenumber="453"></span>
+<span data-linenumber="454"></span>
+<span data-linenumber="455"></span>
+<span data-linenumber="456"></span>
+<span data-linenumber="457"></span>
+<span data-linenumber="458"></span>
+<span data-linenumber="459"></span>
+<span data-linenumber="460"></span>
+<span data-linenumber="461"></span>
+<span data-linenumber="462"></span>
+<span data-linenumber="463"></span>
+<span data-linenumber="464"></span>
+<span data-linenumber="465"></span>
+<span data-linenumber="466"></span>
+<span data-linenumber="467"></span>
+<span data-linenumber="468"></span>
+<span data-linenumber="469"></span>
+<span data-linenumber="470"></span>
+<span data-linenumber="471"></span>
+<span data-linenumber="472"></span>
+<span data-linenumber="473"></span>
+<span data-linenumber="474"></span>
+<span data-linenumber="475"></span>
+<span data-linenumber="476"></span>
+<span data-linenumber="477"></span>
+<span data-linenumber="478"></span>
+<span data-linenumber="479"></span>
+<span data-linenumber="480"></span>
+<span data-linenumber="481"></span>
+<span data-linenumber="482"></span>
+<span data-linenumber="483"></span>
+<span data-linenumber="484"></span>
+<span data-linenumber="485"></span>
+<span data-linenumber="486"></span>
+<span data-linenumber="487"></span>
+<span data-linenumber="488"></span>
+<span data-linenumber="489"></span>
+<span data-linenumber="490"></span>
+<span data-linenumber="491"></span>
+<span data-linenumber="492"></span>
+<span data-linenumber="493"></span>
+<span data-linenumber="494"></span>
+<span data-linenumber="495"></span>
+<span data-linenumber="496"></span>
+<span data-linenumber="497"></span>
+<span data-linenumber="498"></span>
+<span data-linenumber="499"></span>
+<span data-linenumber="500"></span>
+<span data-linenumber="501"></span>
+<span data-linenumber="502"></span>
+<span data-linenumber="503"></span>
+<span data-linenumber="504"></span>
+<span data-linenumber="505"></span>
+<span data-linenumber="506"></span>
+<span data-linenumber="507"></span>
+<span data-linenumber="508"></span>
+<span data-linenumber="509"></span>
+<span data-linenumber="510"></span>
+<span data-linenumber="511"></span>
+<span data-linenumber="512"></span>
+<span data-linenumber="513"></span>
+<span data-linenumber="514"></span>
+<span data-linenumber="515"></span>
+<span data-linenumber="516"></span>
+<span data-linenumber="517"></span>
+<span data-linenumber="518"></span>
+<span data-linenumber="519"></span>
+<span data-linenumber="520"></span>
+<span data-linenumber="521"></span>
+<span data-linenumber="522"></span>
+<span data-linenumber="523"></span>
+<span data-linenumber="524"></span>
+<span data-linenumber="525"></span>
+<span data-linenumber="526"></span>
+<span data-linenumber="527"></span>
+<span data-linenumber="528"></span>
+<span data-linenumber="529"></span>
+<span data-linenumber="530"></span>
+<span data-linenumber="531"></span>
+<span data-linenumber="532"></span>
+<span data-linenumber="533"></span>
+<span data-linenumber="534"></span>
+<span data-linenumber="535"></span>
+<span data-linenumber="536"></span>
+<span data-linenumber="537"></span>
+<span data-linenumber="538"></span>
+<span data-linenumber="539"></span></div><div class="code">void
+mutex_vector_enter(kmutex_t *mtx)
+{
+    uintptr_t owner, curthread;
+    turnstile_t *ts;
+    u_int count;
+
+    owner = mtx-&gt;mtx_owner;
+    <span class="hljs-keyword">if</span> (MUTEX_SPIN_P(owner)) {
+        MUTEX_SPIN_SPLRAISE(mtx);
+        MUTEX_WANTLOCK(mtx);
+<span class="hljs-comment">#ifdef FULL</span>
+        <span class="hljs-keyword">if</span> (MUTEX_SPINBIT_LOCK_TRY(mtx)) {
+            MUTEX_LOCKED(mtx);
+            <span class="hljs-keyword">return</span>;
+        }
+        MUTEX_ABORT(mtx, <span class="hljs-string">"locking against myself"</span>);
+
+        count = SPINLOCK_BACKOFF_MIN;
+
+        <span class="hljs-keyword">do</span> {
+            <span class="hljs-keyword">while</span> (MUTEX_SPINBIT_LOCKED_P(mtx)) {
+                SPINLOCK_BACKOFF(count);
+            }
+        } <span class="hljs-keyword">while</span> (!MUTEX_SPINBIT_LOCK_TRY(mtx));
+
+        <span class="hljs-keyword">if</span> (count != SPINLOCK_BACKOFF_MIN) {
+        }
+<span class="hljs-comment">#endif  /* FULL */</span>
+        MUTEX_LOCKED(mtx);
+        <span class="hljs-keyword">return</span>;
+    }
+
+    curthread = (uintptr_t)curlwp;
+
+    MUTEX_DASSERT(mtx, MUTEX_ADAPTIVE_P(owner));
+    MUTEX_ASSERT(mtx, curthread != <span class="hljs-number">0</span>);
+    MUTEX_ASSERT(mtx, !cpu_intr_p());
+    MUTEX_WANTLOCK(mtx);
+
+    <span class="hljs-keyword">if</span> (panicstr == <span class="hljs-keyword">NULL</span>) {
+        KDASSERT(pserialize_not_in_read_section());
+    }
+
+    KPREEMPT_DISABLE(curlwp);
+    <span class="hljs-keyword">for</span> (;;) {
+        <span class="hljs-keyword">if</span> (!MUTEX_OWNED(owner)) {
+            <span class="hljs-keyword">if</span> (MUTEX_ACQUIRE(mtx, curthread))
+                <span class="hljs-keyword">break</span>;
+            owner = mtx-&gt;mtx_owner;
+            <span class="hljs-keyword">continue</span>;
+        }
+        <span class="hljs-keyword">if</span> (__predict_false(MUTEX_OWNER(owner) == curthread)) {
+            MUTEX_ABORT(mtx, <span class="hljs-string">"locking against myself"</span>);
+        }
+        
+        <span class="hljs-keyword">if</span> (mutex_oncpu(owner)) {
+            count = SPINLOCK_BACKOFF_MIN;
+            <span class="hljs-keyword">do</span> {
+                KPREEMPT_ENABLE(curlwp);
+                SPINLOCK_BACKOFF(count);
+                KPREEMPT_DISABLE(curlwp);
+                owner = mtx-&gt;mtx_owner;
+            } <span class="hljs-keyword">while</span> (mutex_oncpu(owner));
+            <span class="hljs-keyword">if</span> (!MUTEX_OWNED(owner))
+                <span class="hljs-keyword">continue</span>;
+        }
+
+        ts = turnstile_lookup(mtx);
+
+        <span class="hljs-keyword">if</span> (!MUTEX_SET_WAITERS(mtx, owner)) {
+            turnstile_exit(mtx);
+            owner = mtx-&gt;mtx_owner;
+            <span class="hljs-keyword">continue</span>;
+        }
+
+        membar_consumer();
+        <span class="hljs-keyword">if</span> (mutex_oncpu(owner)) {
+            turnstile_exit(mtx);
+            owner = mtx-&gt;mtx_owner;
+            <span class="hljs-keyword">continue</span>;
+        }
+        membar_consumer();
+        <span class="hljs-keyword">if</span> (!MUTEX_HAS_WAITERS(mtx)) {
+            turnstile_exit(mtx);
+            owner = mtx-&gt;mtx_owner;
+            <span class="hljs-keyword">continue</span>;
+        }
+
+        turnstile_block(ts, TS_WRITER_Q, mtx, &amp;mutex_syncobj);
+
+        owner = mtx-&gt;mtx_owner;
+    }
+    KPREEMPT_ENABLE(curlwp);
+
+    MUTEX_DASSERT(mtx, MUTEX_OWNER(mtx-&gt;mtx_owner) == curthread);
+    MUTEX_LOCKED(mtx);
+}
+</div></div></code></pre><ul>
+<li><span>najpierw sprawdzamy czy mamy ustawiony bit na </span><code>MUTEX_SPIN</code>
+<ul>
+<li><span>potem mamy pętlę w której kręcimy się i sprawdzamy, czy można założyć mutex</span></li>
+<li><span>i kończymy jak się skończy</span></li>
+</ul>
+</li>
+<li><span>w innym wypadku jesteśmy adaptacyjnym mutexem</span>
+<ul>
+<li><span>wyłączamy wywłaszczanko</span></li>
+<li><span>i się kręcimy</span>
+<ul>
+<li><span>jeśli mutex nie ma ownera</span>
+<ul>
+<li><span>próbujemy go zablokować – mógł zostać własnie zwolniony albo dopiero jest zkaładany</span></li>
+</ul>
+</li>
+<li><span>jeśli jesteśmy właścicielem to jesteśmy głupi – po co blokować samych siebie?</span></li>
+<li><span>jeżeli właściciel mutexa robi coś na jakimś procesorze (wykonuje się) to będziemy się kręcić (spinlock) – zauważmy, że jak nie złapiemy mutexa w tym momencie, to poleci </span><code>continue</code><span> i pętla wróci do początku więc najwyżej znów tutaj wpadniemy</span></li>
+<li><span>szukamy sobie chaina z turnstile</span></li>
+<li><span>jeśli nie uda nam się powiedzieć, że czekamy na mutexa, to kręcimy się znów </span><code>continue</code></li>
+<li><span>robimy bariery pamięciowe</span></li>
+<li><span>jeśli właściciel się kręci na CPU lub nie ma żadnych czekających na mutexie to abortujemy operację na turnstile i kręcimy się dalej</span></li>
+<li><span>jeśli nic się nie udało to robimy turnstile_block</span></li>
+</ul>
+</li>
+<li><span>włączamy wywłaszczanko</span></li>
+</ul>
+</li>
+</ul><p><a href="http://bxr.su/NetBSD/sys/kern/kern_mutex.c#mutex_vector_exit" target="_blank" rel="noopener"><code>mutex_vector_exit</code></a></p><pre><code class="C hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="713"></span>
+<span data-linenumber="714"></span>
+<span data-linenumber="715"></span>
+<span data-linenumber="716"></span>
+<span data-linenumber="717"></span>
+<span data-linenumber="718"></span>
+<span data-linenumber="719"></span>
+<span data-linenumber="720"></span>
+<span data-linenumber="721"></span>
+<span data-linenumber="722"></span>
+<span data-linenumber="723"></span>
+<span data-linenumber="724"></span>
+<span data-linenumber="725"></span>
+<span data-linenumber="726"></span>
+<span data-linenumber="727"></span>
+<span data-linenumber="728"></span>
+<span data-linenumber="729"></span>
+<span data-linenumber="730"></span>
+<span data-linenumber="731"></span>
+<span data-linenumber="732"></span>
+<span data-linenumber="733"></span>
+<span data-linenumber="734"></span>
+<span data-linenumber="735"></span>
+<span data-linenumber="736"></span>
+<span data-linenumber="737"></span>
+<span data-linenumber="738"></span>
+<span data-linenumber="739"></span>
+<span data-linenumber="740"></span>
+<span data-linenumber="741"></span>
+<span data-linenumber="742"></span>
+<span data-linenumber="743"></span>
+<span data-linenumber="744"></span>
+<span data-linenumber="745"></span>
+<span data-linenumber="746"></span>
+<span data-linenumber="747"></span>
+<span data-linenumber="748"></span>
+<span data-linenumber="749"></span>
+<span data-linenumber="750"></span>
+<span data-linenumber="751"></span>
+<span data-linenumber="752"></span>
+<span data-linenumber="753"></span>
+<span data-linenumber="754"></span>
+<span data-linenumber="755"></span></div><div class="code"><span class="hljs-function"><span class="hljs-keyword">void</span>
+<span class="hljs-title">mutex_vector_exit</span>(<span class="hljs-params">kmutex_t *mtx</span>)
+</span>{
+    turnstile_t *ts;
+    uintptr_t curthread;
+
+    <span class="hljs-keyword">if</span> (MUTEX_SPIN_P(mtx-&gt;mtx_owner)) {
+<span class="hljs-meta">#ifdef FULL</span>
+        <span class="hljs-keyword">if</span> (__predict_false(!MUTEX_SPINBIT_LOCKED_P(mtx))) {
+            MUTEX_ABORT(mtx, <span class="hljs-string">"exiting unheld spin mutex"</span>);
+        }
+        MUTEX_UNLOCKED(mtx);
+        MUTEX_SPINBIT_LOCK_UNLOCK(mtx);
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+        MUTEX_SPIN_SPLRESTORE(mtx);
+        <span class="hljs-keyword">return</span>;
+    }
+
+<span class="hljs-meta">#ifndef __HAVE_MUTEX_STUBS</span>
+    <span class="hljs-keyword">if</span> (__predict_false(cold)) {
+        MUTEX_UNLOCKED(mtx);
+        MUTEX_RELEASE(mtx);
+        <span class="hljs-keyword">return</span>;
+    }
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+
+    curthread = (uintptr_t)curlwp;
+    MUTEX_DASSERT(mtx, curthread != <span class="hljs-number">0</span>);
+    MUTEX_ASSERT(mtx, MUTEX_OWNER(mtx-&gt;mtx_owner) == curthread);
+    MUTEX_UNLOCKED(mtx);
+    __USE(curthread);
+
+    ts = turnstile_lookup(mtx);
+
+    <span class="hljs-keyword">if</span> (ts == NULL) {
+        MUTEX_RELEASE(mtx);
+        turnstile_exit(mtx);
+    } <span class="hljs-keyword">else</span> {
+        MUTEX_RELEASE(mtx);
+        turnstile_wakeup(ts, TS_WRITER_Q,
+            TS_WAITERS(ts, TS_WRITER_Q), NULL);
+    }
+}
+</div></div></code></pre><ul>
+<li><span>jeśli byliśmy spinlockiem to po prostu czyścimy z mutexa informacje o tym, że był zajęty + bariery pamięciowe i koniec</span></li>
+<li><span>potem mamy jakiegoś ifa na </span><code>MUTEX_STUBS</code><span> no i tam po prostu zwalniamy mutex i koniec</span></li>
+<li><span>szukamy łańcucha turnstile</span></li>
+<li><span>jak nic nie znaleźlismy to zwalniamy mutex i idziemy</span></li>
+<li><span>jak coś znaleźliśmy to zwalniamy mutex i robimy wakeupa z łańcucha (sleepqueue)</span></li>
+</ul></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li class=""><a href="#SJU-20200506" title="SJU 2020/05/06">SJU 2020/05/06</a><ul class="nav">
+<li class=""><a href="#Zadanie-1" title="Zadanie 1.">Zadanie 1.</a></li>
+<li><a href="#Zadanie-2" title="Zadanie 2.">Zadanie 2.</a></li>
+<li><a href="#Zadanie-3" title="Zadanie 3.">Zadanie 3.</a></li>
+<li><a href="#Zadanie-4" title="Zadanie 4.">Zadanie 4.</a></li>
+<li><a href="#Zadanie-5" title="Zadanie 5.">Zadanie 5.</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+        <div class="toc"><ul class="nav">
+<li class=""><a href="#SJU-20200506" title="SJU 2020/05/06">SJU 2020/05/06</a><ul class="nav">
+<li class=""><a href="#Zadanie-1" title="Zadanie 1.">Zadanie 1.</a></li>
+<li><a href="#Zadanie-2" title="Zadanie 2.">Zadanie 2.</a></li>
+<li><a href="#Zadanie-3" title="Zadanie 3.">Zadanie 3.</a></li>
+<li><a href="#Zadanie-4" title="Zadanie 4.">Zadanie 4.</a></li>
+<li><a href="#Zadanie-5" title="Zadanie 5.">Zadanie 5.</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>

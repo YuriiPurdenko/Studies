@@ -1,0 +1,75 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{algorithmic}
+
+\usepackage[margin=0.5in,headheight=48pt,top=78pt]{geometry}
+\frenchspacing
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0em}
+\def\N{\mathbb{N}}
+\def\R{\mathbb{R}}
+\newcommand{\zadanie}[1]{\par\textbf{Zadanie #1}}
+\newcommand{\odp}[1]{\textbf{Odpowiedź:} #1}
+
+
+\usepackage{tikz}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % clear all fields
+\fancyhead[C]{ \textbf{AISD} - Lista 5 Zadanie 4\ Wiktor Pilarczyk}
+
+\begin{document}
+\section{Wprowadzenie}
+Chcemy pokazać, że aby scalić dwa posortowane ciągi $a_i$ i $b_i$ w modelu drzew decyzyjnych trzeba wykonać 2n-1 porównań. Jedyną operacją jest porównywanie między sobą liczb i warto zawuważyć, że porównywanie liczb z tego samego ciągu nic nam nie daje, gdyż wiemy, że są posortowane, więc rozpatrujemy porównania między wyrazami ciągu $a_i$ i $b_i$,
+
+\section{Dowód}
+Nasz dowód oprzemy na zasadach gry z adwersarzem, gdzie adwersarz przygotuje 2n zestawów danych i pokazując, że nie jesteśmy w stanie wyeliminować więcej niż jednego zestawu jednym porównaniem udowodnimy, że potrzeba 2n-1 porównań, ponieważ gra się kończy gdy zostanie jeden zestaw.
+
+Podstawowy zestaw, będą dwa ciągi liczb (parzystych i nieparzystych) z przedziału [1,2n]:
+$$ A_0 = 1, 3, 5, 7 ..., 2n - 1$$
+$$ B_0 = 2, 4, 6, 8, 10 ..., 2n$$
+Następnie na podstawie ciągu $A_0$ i $B_0$, będziemy tworzyli zestawy $A_j$ i $B_j$ poprzez zamianę $a_i$ z $b_i$ dla j nieparzystych (gdzie i = j/2), a dla parzystych j zamianę $a_i$ z $b_{i-1}$ gdzie (i = j/2).
+Pierwsze dwa ciągi powstałe przez takie zamiany:
+$$ A_1 = 2, 3, 5, 7 ..., 2n - 1$$
+$$ B_1 = 1, 4, 6, 8, 10 ..., 2n$$
+oraz
+$$ A_2 = 1, 2, 5, 7 ..., 2n - 1$$
+$$ B_2 = 3, 4, 6, 8, 10 ..., 2n$$
+
+Ostatni ciąg będzie postaci:
+$$A_{2n-1} = 1, 3, ... , 2n-3, 2n$$
+$$A_{2n-1} = 2, 4, ... , 2n-2, 2n-1$$
+
+Teraz weźmy dowolne porównanie $a_i$ z $b_j$ i rozważmy przypadki:
+\begin{itemize}
+    \item[1] Jeśli $|i-j| > 1$ to  dla większego i spełnione jest $a_i > b_j$, a wpp. $a_i < b_j$, wynika to z tego, że w naszych zestawach dokonujemy tylko zamiany z wyrazami ciągu, których indeks nie różni się, więcej niż 1. Więc takie porównanie nie eliminuje żadnego zestawu.
+    \item[2] Jeśli $i = j$ wtedy w każdym zestawie, w którym nie zmienialiśmy tych wyrazów wiemy, że $b_i > a_i$ zostały jeszcze 3 zestawy do rozpatrzenia
+    \begin{itemize}
+        \item W przypadku, w którym zmieniliśmy $a_i$ z $b_{i-1}$ równość nadal jest spełniona, ponieważ w podstawowym ciągu $b_i > b_{i-1}$
+        \item W przypadku, w którym zmieniliśmy $b_{i}$ z $a_{i+1}$ równość nadal jest spełniona, ponieważ w podstawowym ciągu $a_i > a_{i-1}$
+        \item W przypadku, w którym zmieniliśmy $a_i$ z $b_i$ równość nie jest spełniona, ponieważ wiem, że w podstawowym ciągu $a_i < b_i$ czyli jest to jeden zestaw, który zostanie wyeliminowany
+    \end{itemize}
+    \item[3] Jeśli i = j+1 wtedy w przypadku kiedy nic nie zmienialiśmy $a_i > b_j$, lecz pozostały 3 przypadki.
+    \begin{itemize}
+        \item W przypadku, w którym zmieniliśmy $a_i$ z $b_{i-1}$ równość nie jest spełniona, ponieważ w podstawowym ciągu $a_i > b_{i-1}$ czyli jest to jeden zestaw, który zostanie wyeliminowany.
+        \item W przypadku, w którym zmieniliśmy $a_{i}$ z $b_i$ równość nadal jest spełniona, ponieważ w podstawowym ciągu $b_{i+1} > b_i$
+        \item W przypadku, w którym zmieniliśmy $b_j$ z $a_j$ równość jest spełniona, ponieważ wiem, że w podstawowym ciągu $a_j > a_{j-1}$
+    \end{itemize}
+    \item[4] Jeśli i = j-1 wtedy w przypadku kiedy nic nie zmienialiśmy $b_j > a_i$, lecz pozostały 4 przypadki.
+    \begin{itemize}
+        \item W przypadku, w którym zmieniliśmy $a_i$ z $b_{i-1}$ równość jest spełniona, ponieważ w podstawowym ciągu $b_{i+1} > b_{i-1}$
+        \item W przypadku, w którym zmieniliśmy $a_{i}$ z $b_i$ równość nadal jest spełniona, ponieważ w podstawowym ciągu $b_{i+1} > b_i$
+        \item W przypadku, w którym zmieniliśmy $b_j$ z $a_j$ równość jest spełniona, ponieważ wiemy, że w podstawowym ciągu $a_j > a_{j-1}$ 
+        \item W przypadku, w którym zmieniliśmy $b_j$ z $a_{j+1}$ równość jest spełniona, ponieważ wiemy, że w podstawowym ciągu $a_{j+1} > a_{j-1}$ 
+    \end{itemize}
+\end{itemize}
+Czyli dla dowolnego porównania eliminujemy maksymalnie 1 zestaw z czego wynika, że aby pozostał tylko jeden trzeba wykonać przynajmniej 2n-1 porównań.
+\end{document}
+

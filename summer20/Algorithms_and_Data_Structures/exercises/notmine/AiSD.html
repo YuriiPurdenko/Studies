@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        AiSD - HackMD
+    </title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @charset "UTF-8";@import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{display:block;background:#fff;padding:.5em;color:#333;overflow-x:auto}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{color:#55a532;background-color:#eaffea}.hljs-deletion{color:#bd2c00;background-color:#ffecec}.hljs-link{text-decoration:underline}.markdown-body{font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0}.markdown-body blockquote{font-size:16px;padding:0 1em;color:#777;border-left:.25em solid #ddd}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid #ccc;border-bottom-color:#bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eee}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#777}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{padding:0;list-style-type:none}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}.markdown-body span.align-center{display:block;overflow:hidden;clear:both}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{display:block;overflow:hidden;clear:both}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{letter-spacing:-.2em;content:"\00a0"}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.markdown-body pre code,.markdown-body pre tt{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{padding:10px 8px 9px;text-align:right;background:#fff;border:0}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{font-weight:700;background:#f8f8f8;border-top:0}.news .alert .markdown-body blockquote{padding:0 0 0 40px;border:0 none}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle;cursor:default!important}.markdown-body{padding-top:40px;padding-bottom:40px;max-width:758px;overflow:visible!important;position:relative}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{text-align:right;position:relative;display:inline-block;cursor:default;z-index:4;padding:0 8px 0 0;min-width:20px;box-sizing:content-box;color:#afafaf!important;border-right:3px solid #6ce26c!important}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-left:none;border-top:none;border-bottom:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-spacing:0;border-collapse:inherit!important}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{overflow:unset;margin-bottom:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{text-align:center;background-color:inherit;border-radius:0;white-space:inherit;overflow:visible}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{max-width:100%;height:100%}.markdown-body pre>code.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.markdown-body .alert>p,.markdown-body .alert>ul{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{cursor:pointer;display:table;text-align:center;background-position:50%;background-repeat:no-repeat;background-size:contain;background-color:#000;overflow:hidden}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{width:100%;object-fit:contain;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{width:100%;height:100%;position:absolute;top:0;left:0}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{position:absolute;height:auto;width:auto;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.3;transition:opacity .2s;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{position:relative;z-index:2;max-width:760px;margin:25px auto -25px;color:#777}.toc .invisable-node{list-style-type:none}.ui-toc{position:fixed;bottom:20px;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{height:40px;padding:10px 4px;border-top-left-radius:0;border-bottom-left-radius:0}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{opacity:1;color:#fff;transition:opacity .2s}.ui-toc-label:focus{opacity:.3;background-color:#ccc;color:#000}.ui-toc-label:hover{opacity:1;background-color:#ccc;transition:opacity .2s}.ui-toc-dropdown{margin-top:20px;margin-bottom:20px;padding-left:10px;padding-right:10px;max-width:45vw;width:25vw;max-height:70vh;overflow:auto;text-align:inherit}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{padding-right:0;letter-spacing:.0029em}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}.ui-toc-dropdown .nav>li:first-child:last-child > ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{padding-left:19px;color:#000;text-decoration:none;background-color:transparent;border-left:1px solid #000}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{padding-right:19px;border-left:none;border-right:1px solid #000}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{padding-left:18px;font-weight:700;color:#000;background-color:transparent;border-left:2px solid #000}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{padding-right:18px;border-left:none;border-right:2px solid #000}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:40px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{padding-left:28px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{padding-left:38px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{position:fixed;top:0;max-width:15vw;max-height:70vh;overflow:auto}.back-to-top,.expand-toggle,.go-to-bottom{display:block;padding:4px 10px;margin-top:10px;margin-left:10px;font-size:12px;font-weight:500;color:#999}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{width:20px;height:20px;display:block;border-radius:3px;margin-top:2px;margin-bottom:2px;margin-right:5px;background-position:50%;background-repeat:no-repeat;background-size:cover}.ui-user-icon.small{width:18px;height:18px;display:inline-block;vertical-align:middle;margin:0 0 .2em}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-published-note{color:#337ab7}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{position:relative;z-index:1;color:#222}.markdown-body.slides:before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:currentColor;box-shadow:0 0 0 50vw}.markdown-body.slides section[data-markdown]{position:relative;margin-bottom:1.5em;background-color:#fff;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{position:absolute;top:50%;left:1em;right:1em;transform:translateY(-50%);max-height:100%;overflow:hidden}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{content:"";position:absolute;top:-1.5em;right:1em;height:1.5em;border:3px solid #777}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;text-shadow:0 0 1em transparent,1px 1px 1.2px rgba(0,0,0,.004);-webkit-overflow-scrolling:touch;letter-spacing:.025em;font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="Algorytmy-i-struktury-danych" data-id="Algorytmy-i-struktury-danych"><a class="anchor hidden-xs" href="#Algorytmy-i-struktury-danych" title="Algorytmy-i-struktury-danych"><span class="octicon octicon-link"></span></a><span>Algorytmy i struktury danych</span></h1><p><span>Jeśli ktoś ma zastrzeżenia co do poprawności rozwiązań lub chciałby pomóc w rozwijaniu tej strony proszę pisać na </span><a href="https://www.messenger.com/t/100003293885149" target="_blank" rel="noopener"><span>messenger</span></a><span> lub maila </span><a href="mailto:bajgrowiczp@gmail.com" target="_blank" rel="noopener"><span>bajgrowiczp@gmail.com</span></a></p><p><strong><span>Wizualizacje algorytmów</span></strong></p><ul>
+<li><a href="https://www.cs.usfca.edu/~galles/visualization/Algorithms.html" target="_blank" rel="noopener"><span>https://www.cs.usfca.edu/~galles/visualization/Algorithms.html</span></a></li>
+<li><a href="https://graphonline.ru/en/" target="_blank" rel="noopener"><span>https://graphonline.ru/en/</span></a></li>
+<li><a href="https://algorithm-visualizer.org" target="_blank" rel="noopener"><span>https://algorithm-visualizer.org</span></a></li>
+<li><a href="https://visualgo.net/en" target="_blank" rel="noopener"><span>https://visualgo.net/en</span></a></li>
+<li><a href="https://rosulek.github.io/vamonos/demos/index.html" target="_blank" rel="noopener"><span>https://rosulek.github.io/vamonos/demos/index.html</span></a></li>
+</ul><p><a href="https://drive.google.com/drive/folders/1eiO0eVoxAKAhwgPH-zwNZOH7yFXUc1MH" target="_blank" rel="noopener"><strong><span>Dysk Ani Karaś</span></strong></a></p><p><strong><span>Repozytoria innych studentów</span></strong><span>:</span></p><ul>
+<li><a href="https://github.com/Arsenicro/University/tree/master/Materia%C5%82y/aisd" target="_blank" rel="noopener"><span>Arsenicro</span></a></li>
+<li><a href="https://github.com/mbronek7/hycaisd" target="_blank" rel="noopener"><span>Mbronek7</span></a></li>
+<li><a href="https://github.com/0sk4r/Uwr/tree/master/Algorytmy_i_struktury_danych" target="_blank" rel="noopener"><span>0sk4r</span></a></li>
+<li><a href="https://hackmd.io/@bsobocki/aisd" target="_blank" rel="noopener"><span>Bartek Sobocki</span></a></li>
+</ul><p><strong><span>Egzaminy</span></strong><span>:</span></p><ul>
+<li><a href="https://drive.google.com/drive/folders/13_d1B33rIPlc-vErGRRN2Dplmrn1vvzf" target="_blank" rel="noopener"><span>część 1</span></a></li>
+<li><a href="https://drive.google.com/drive/folders/1s50TwB5A82Kfowdh1baA0nBexSEn7RN3" target="_blank" rel="noopener"><span>część 2</span></a></li>
+</ul><h3 id="Powtórki-do-egzaminu-2020" data-id="Powtórki-do-egzaminu-2020"><a class="anchor hidden-xs" href="#Powtórki-do-egzaminu-2020" title="Powtórki-do-egzaminu-2020"><span class="octicon octicon-link"></span></a><a href="https://hackmd.io/Tl_3U77xR5GNjEzxU-Csmg" target="_blank" rel="noopener"><span>Powtórki do egzaminu 2020</span></a></h3><h3 id="Rozwiązania-zadań-z-ćwiczeń-2020" data-id="Rozwiązania-zadań-z-ćwiczeń-2020"><a class="anchor hidden-xs" href="#Rozwiązania-zadań-z-ćwiczeń-2020" title="Rozwiązania-zadań-z-ćwiczeń-2020"><span class="octicon octicon-link"></span></a><a href="https://hackmd.io/-0_Y49V2R-m7W0_vL38TyA" target="_blank" rel="noopener"><span>Rozwiązania zadań z ćwiczeń 2020</span></a></h3><h2 id="Preliminaria" data-id="Preliminaria"><a class="anchor hidden-xs" href="#Preliminaria" title="Preliminaria"><span class="octicon octicon-link"></span></a><span>Preliminaria</span></h2><p><a href="https://github.com/ithrasil/AiSD/blob/master/material/Notatki%20KLo/0%20preliminaria.pdf" target="_blank" rel="noopener"><span>Notatka KLo</span></a></p><p><span>Tematy</span></p><ul>
+<li><span>Algorytm Kruskala [</span><a href="https://pl.wikipedia.org/wiki/Algorytm_Kruskala" target="_blank" rel="noopener"><span>Wikipedia</span></a><span>, ]</span></li>
+<li><span>Algorytm Prima [</span><a href="https://pl.wikipedia.org/wiki/Algorytm_Prima" target="_blank" rel="noopener"><span>Wikipedia</span></a><span>, ]</span></li>
+<li><span>Algorytm Dijkstry [</span><a href="https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif" target="_blank" rel="noopener"><span>Przykład działania algorytmu</span></a><span>, ]</span></li>
+<li><span>Algorytm Forda-Bellmana</span></li>
+<li><span>Alg. Warshalla-Floyda (najkrótsze ścieżki między wszystkimi parami wierzch.)</span></li>
+<li><span>Alg. Forda-Fulkersona (maks. przepływ sieci)</span></li>
+<li><span>Topologiczne sortowanie</span></li>
+</ul><p><span>Zadania z egzaminów </span><strong><span>Część 1</span></strong></p><ul>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2010/zasadniczy/2.md" target="_blank" rel="noopener"><span>2010 Z Z2</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2010/zasadniczy/6.png" target="_blank" rel="noopener"><span>2010 Z Z6</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2010/zasadniczy/18.png" target="_blank" rel="noopener"><span>2010 Z Z18</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2010/zasadniczy/25.png" target="_blank" rel="noopener"><span>2010 Z Z25</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/zasadniczy/15.md" target="_blank" rel="noopener"><span>2018 Z Z15</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/poprawkowy/16.md" target="_blank" rel="noopener"><span>2018 P Z16</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/zasadniczy/4.md" target="_blank" rel="noopener"><span>2019 Z Z4</span></a><span> </span><code>InsertSort</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/poprawkowy/4.md" target="_blank" rel="noopener"><span>2019 P Z4</span></a><span> </span><code>SelectSort</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/poprawkowy/16.md" target="_blank" rel="noopener"><span>2019 P Z16</span></a><span> </span><code>Kruskal</code></li>
+</ul><h2 id="Kopiec-binarny" data-id="Kopiec-binarny"><a class="anchor hidden-xs" href="#Kopiec-binarny" title="Kopiec-binarny"><span class="octicon octicon-link"></span></a><span>Kopiec binarny</span></h2><p><a href="https://github.com/ithrasil/AiSD/blob/master/material/Notatki%20KLo/1%20kopce.pdf" target="_blank" rel="noopener"><span>Notatka KLo</span></a><br>
+<a href="https://github.com/ithrasil/AiSD/blob/master/material/notatki%20Macieja%20Dragu%C5%82y%20(2018)/1%20kopce.pdf" target="_blank" rel="noopener"><span>Wykład 2018, notatki Macieja Draguły</span></a><br>
+<a href="https://drive.google.com/file/d/18MlhKdrQjVWzMdUHt6Jkd2F19hhQKImM/view?usp=sharing" target="_blank" rel="noopener"><span>Wykład 2019, notatki Wojtka Jasińskiego</span></a><br>
+<a href="https://visualgo.net/en/heap" target="_blank" rel="noopener"><span>Wizualizacja wszystkich operacji na kopcu</span></a><br>
+<a href="https://www.growingwiththeweb.com/data-structures/binary-heap/overview/" target="_blank" rel="noopener"><span>GrowinghWithTheWeb</span></a><br>
+<a href="https://hackmd.io/_76DTW1vRxewe-M3eBSjpA?view" target="_blank" rel="noopener"><span>Notka Bartka Sobockiego</span></a></p><p><span>Tematy</span></p><ul>
+<li><span>Ulepszony deletemin [</span><a href="https://lh3.googleusercontent.com/2G0XamAB1TJ55wC13bPuuWzhk0vv06fv-5InP2lHCOnWfejMgH7LYTb38Xfsj0tDYJMAIX3WV_eDgJwMbUVSiNldd5fGPZqGUM-mFCO7lQNjKhPQhpaPw3IB15-Ag0x8FgtKTdnhDA=w2400" target="_blank" rel="noopener"><span>algorytm + przykłady</span></a><span>, ]</span></li>
+<li><span>Analiza złożoności wolnej i szybkiej budowy kopca [</span><a href="https://www.growingwiththeweb.com/data-structures/binary-heap/build-heap-proof/" target="_blank" rel="noopener"><span>Dowód liniowego czasu budowania kopca szybkim algorytmem z wykładu</span></a><span>]</span></li>
+</ul><p><span>Zadania z egzaminów </span><strong><span>Część 1</span></strong></p><ul>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2014/poprawkowy/11.md" target="_blank" rel="noopener"><span>2014 P Z11</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2016/zasadniczy/17.md" target="_blank" rel="noopener"><span>2016 Z Z17</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/zasadniczy/8.md" target="_blank" rel="noopener"><span>2018 Z Z8</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/poprawkowy/20.md" target="_blank" rel="noopener"><span>2018 P Z20</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/zasadniczy/6.md" target="_blank" rel="noopener"><span>2019 Z Z6</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/zasadniczy/19.md" target="_blank" rel="noopener"><span>2019 Z Z19</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/poprawkowy/6.md" target="_blank" rel="noopener"><span>2019 P Z6</span></a></li>
+</ul><h2 id="Algorytmy-zachłanne" data-id="Algorytmy-zachłanne"><a class="anchor hidden-xs" href="#Algorytmy-zachłanne" title="Algorytmy-zachłanne"><span class="octicon octicon-link"></span></a><span>Algorytmy zachłanne</span></h2><p><a href="https://github.com/ithrasil/AiSD/blob/master/material/Notatki%20KLo/2%20algorytmy%20zachlanne.pdf" target="_blank" rel="noopener"><span>Notatka KLo</span></a><br>
+<a href="https://github.com/ithrasil/AiSD/blob/master/material/notatki%20Macieja%20Dragu%C5%82y%20(2018)/2%20algorytmy%20zachlanne.pdf" target="_blank" rel="noopener"><span>Wykład 2018, notatki Macieja Draguły</span></a><br>
+<a href="https://drive.google.com/file/d/1tOSs7wf_PniHTZeEr4TfjoGkzAUj0hvq/view?usp=sharing" target="_blank" rel="noopener"><span>Wykład 2019, notatki Wojtka Jasińskiego</span></a></p><p><span>Tematy</span></p><ul>
+<li><span>Algorytm Boruvki [</span><a href="https://www.geeksforgeeks.org/boruvkas-algorithm-greedy-algo-9/" target="_blank" rel="noopener"><span>GeeksForGeeks</span></a><span>, ]</span></li>
+<li><span>Set Cover [</span><a href="https://www2.cs.duke.edu/courses/fall17/compsci632/scribing/scribe2.pdf" target="_blank" rel="noopener"><span>Dowód aproksymacji OPT * logn rozwiązania zachłannego</span></a><span>]</span></li>
+<li><span>Szeregowanie zadań</span></li>
+<li><span>Alg. wydawania reszty</span></li>
+</ul><p><span>Zadania z egzaminów </span><strong><span>Część 1</span></strong></p><ul>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2009/zasadniczy/1.md" target="_blank" rel="noopener"><span>2009 Z Z1</span></a><span> </span><code>Set Cover</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2010/zasadniczy/1.md" target="_blank" rel="noopener"><span>2010 Z Z1</span></a><span> </span><code>Algorytm Boruvki</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2010/zasadniczy/11.png" target="_blank" rel="noopener"><span>2010 Z Z11</span></a><span> </span><code>Set Cover</code><br>
+<strong><code>Identyczne z [2009 Z Z1]</code></strong></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2014/poprawkowy/20.md" target="_blank" rel="noopener"><span>2014 P Z20</span></a><span> </span><code>Algorytm Boruvki</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/poprawkowy/20.md" target="_blank" rel="noopener"><span>2017 P Z20</span></a><span> </span><code>Algorytm Boruvki</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/zasadniczy/16.md" target="_blank" rel="noopener"><span>2019 Z Z16</span></a><span> </span><code>Algorytm Boruvki</code></li>
+</ul><h2 id="Algorytmy-“dziel-i-zwyciężaj”" data-id="Algorytmy-“dziel-i-zwyciężaj”"><a class="anchor hidden-xs" href="#Algorytmy-“dziel-i-zwyciężaj”" title="Algorytmy-“dziel-i-zwyciężaj”"><span class="octicon octicon-link"></span></a><span>Algorytmy “dziel i zwyciężaj”</span></h2><p><a href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=Y3MudW5pLndyb2MucGx8YWlzZHxneDo3ZjAwYmMzZmQwYTk0NWEw" target="_blank" rel="noopener"><span>Notatka KLo</span></a><br>
+<a href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=Y3MudW5pLndyb2MucGx8YWlzZHxneDoyY2U1ODE3M2YwMjcxMWVm" target="_blank" rel="noopener"><span>Notatka KLo cd</span></a><br>
+<a href="https://github.com/ithrasil/AiSD/blob/master/material/notatki%20Macieja%20Dragu%C5%82y%20(2018)/3%20dziel%20i%20zwyciezaj.pdf" target="_blank" rel="noopener"><span>Wykład 2018, notatki Macieja Draguły</span></a><br>
+<a href="https://drive.google.com/file/d/1lFSQMQmrJh5VG9CzgJy3juZqLEG2FOv4/view?usp=sharing" target="_blank" rel="noopener"><span>Wykład 2019, notatki Wojtka Jasińskiego - Prostokąty ortogonalne</span></a><br>
+<a href="https://drive.google.com/file/d/1-8GjMI32DWf5UQY67yJF8UouYwg18rTZ/view?usp=sharing" target="_blank" rel="noopener"><span>Wykład 2019, notatki Wojtka Jasińskiego - Karatsuba</span></a><br>
+<a href="https://drive.google.com/file/d/1oaiVRHTDwnl5oYH90qtQRqsvhhQomP7X/view?usp=sharing" target="_blank" rel="noopener"><span>Wykład 2019, notatki Wojtka Jasińskiego - Sieci przełączników</span></a></p><p><span>Tematy</span></p><ul>
+<li><span>Mnożenie liczb (Algorytm Karatsuby) [</span><a href="https://photos.app.goo.gl/cNUAvPCMyQUuULwY6" target="_blank" rel="noopener"><span>Uproszczony opis algorytmu</span></a><span>, ]</span></li>
+<li><span>Sieci przełączników oraz konstrukcja sieci Benesa-Waksmana</span></li>
+<li><span>Para najbliżej położonych punktów</span></li>
+<li><span>Jednoczesne znajdowanie min i max</span></li>
+</ul><p><span>Zadania z egzaminów </span><strong><span>Część 1</span></strong></p><ul>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2014/poprawkowy/9.md" target="_blank" rel="noopener"><span>2014 P Z9</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2016/zasadniczy/2.md" target="_blank" rel="noopener"><span>2016 Z Z2</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2016/zasadniczy/3.md" target="_blank" rel="noopener"><span>2016 Z Z3</span></a><span> </span><code>Sieci przełączników</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/zasadniczy/20.md" target="_blank" rel="noopener"><span>2017 Z Z20</span></a><span> </span><code>Para najbliżej położonych punktów</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/poprawkowy/2.md" target="_blank" rel="noopener"><span>2018 P Z2</span></a><span> </span><code>Algorytm Karatsuby</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/poprawkowy/8.md" target="_blank" rel="noopener"><span>2018 P Z8</span></a><span> </span><code>Jednoczesne znajdowanie min i max</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/poprawkowy/11.md" target="_blank" rel="noopener"><span>2018 P Z11</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/zasadniczy/5.md" target="_blank" rel="noopener"><span>2019 Z Z5</span></a><span> </span><code>Sieci przełączników</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/poprawkowy/5.md" target="_blank" rel="noopener"><span>2019 P Z5</span></a><span> </span><code>Jednoczesne znajdowanie min i max</code></li>
+</ul><h2 id="Programowanie-dynamiczne" data-id="Programowanie-dynamiczne"><a class="anchor hidden-xs" href="#Programowanie-dynamiczne" title="Programowanie-dynamiczne"><span class="octicon octicon-link"></span></a><span>Programowanie dynamiczne</span></h2><p><a href="https://941613e9-a-e73d4388-s-sites.googlegroups.com/a/cs.uni.wroc.pl/aisd/aisd20/wyklady/wyklad2503/Notatka%206%20Programowanie%20Dynamiczne.pdf?attachauth=ANoY7cpWIAmraiqtpoKMyi5ySUUwvG77IzDJ77uPwVf9ggUtfZaA1vSj7ygVG7I-c1EQCuvkfF5NYSpBAGJNLNb33N6PvDIdB7uadKgM5zBYKgxIck8Pi8dsHN9HgoTstJNeMxw5G1h_5TJyIQQvb_NHPV15raIb0UOWERe1o8RAsYHEVnujAdNY7ceR6-kR1nXtiQueYS51hCBNecJGHe4wGjy2c2ZTt2djMJYAIzl3VoX72oL6jcoBAR7H9MgegO7OaodGDEoClLVvqixhE4gD7Wt_vTEtPQ%3D%3D&amp;attredirects=0" target="_blank" rel="noopener"><span>Notatka KLo</span></a><br>
+<a href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=Y3MudW5pLndyb2MucGx8YWlzZHxneDozMDI0YTkwYzkzZDczZGJk" target="_blank" rel="noopener"><span>Notatka KLo cd</span></a><br>
+<a href="https://github.com/ithrasil/AiSD/blob/master/material/notatki%20Macieja%20Dragu%C5%82y%20(2018)/4%20programowanie%20dynamiczne.pdf" target="_blank" rel="noopener"><span>Wykład 2018, notatki Macieja Draguły</span></a><br>
+<a href="https://drive.google.com/file/d/1JBuq92fV4aaudZmKGQo51cEgepFKeQoA/view?usp=sharing" target="_blank" rel="noopener"><span>Wykład 2019, notatki Wojtka Jasińskiego - przejście przez tablicę, LCS</span></a></p><p><span>Tematy</span></p><ul>
+<li><span>Obliczanie dwumianu Newtona</span></li>
+<li><span>Przejście po tablicy (najbardziej optymalna trasa po kosztach)</span></li>
+<li><span>LCS (najdłuższy wspólny podciąg)[</span><a href="https://hackmd.io/@bsobocki/subsequences" target="_blank" rel="noopener"><span>Opracowanie Bartka Sobockiego</span></a><span>]</span></li>
+<li><span>Optymalna kolejność mnożenia macierzy [</span><a href="https://youtu.be/ocZMDMZwhCY?t=444" target="_blank" rel="noopener"><span>MiT</span></a><span>, </span><a href="https://www.geeksforgeeks.org/matrix-chain-multiplication-dp-8/" target="_blank" rel="noopener"><span>GeekForGeeks</span></a><span>, </span><a href="https://rosulek.github.io/vamonos/demos/matrix-chain.html" target="_blank" rel="noopener"><span>Wizualizacja</span></a><span>]</span></li>
+<li><span>Problem plecakowy (2 wersje: z powtórzeniami i bez)</span></li>
+<li><span>Przynależność do języka bezkontekstowego [</span><a href="https://www.xarg.org/tools/cyk-algorithm/" target="_blank" rel="noopener"><span>Wizualizacja algorytmu CYK</span></a><span>, </span><a href="https://www.youtube.com/watch?v=VTH1k-xiswM&amp;t=617s" target="_blank" rel="noopener"><span>Wytłumaczenie budowy macierzy w CYK</span></a><span>, </span><a href="https://web.cs.ucdavis.edu/~rogaway/classes/120/winter12/CYK" target="_blank" rel="noopener"><span>Paper z wytłumaczeniem</span></a><span>]</span></li>
+<li><span>Drzewa rozpinające drabin</span></li>
+<li><span>Problemy NP(NP-trudność, NP-zupełność, redukcje)</span></li>
+</ul><p><span>Zadania z egzaminów </span><strong><span>Część 1</span></strong></p><ul>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2014/poprawkowy/13.md" target="_blank" rel="noopener"><span>2014 P Z13</span></a><span> </span><code>Rozkład liczby na czynniki pierwsze</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2014/poprawkowy/15.md" target="_blank" rel="noopener"><span>2014 P Z15</span></a><span> </span><code>LCS</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2016/zasadniczy/12.md" target="_blank" rel="noopener"><span>2016 Z Z12</span></a><span> </span><code>Optymalna kolejność mnożenia macierzy</code><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2016/zasadniczy/15.md" target="_blank" rel="noopener"><span>2016 Z Z15</span></a><span> </span><code>Problem plecakowy</code><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/zasadniczy/1.md" target="_blank" rel="noopener"><span>2017 Z Z1</span></a><span> </span><code>Optymalna kolejność mnożenia macierzy</code><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/poprawkowy/1.md" target="_blank" rel="noopener"><span>2017 P Z1</span></a><span> </span><code>LCS</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/poprawkowy/10.md" target="_blank" rel="noopener"><span>2017 P Z10</span></a><span> </span><code>Problem plecakowy</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/zasadniczy/1.md" target="_blank" rel="noopener"><span>2018 Z Z1</span></a><span> </span><code>Przynalezność do języka bezkontekstowego</code><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/zasadniczy/10.md" target="_blank" rel="noopener"><span>2018 Z Z10</span></a><span> </span><code>Problem plecakowy</code><br>
+<strong><code>Niemal identyczne z [2017 P Z10]</code></strong></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/poprawkowy/10.md" target="_blank" rel="noopener"><span>2018 P Z10</span></a><span> </span><code>Problem plecakowy</code><br>
+<strong><code>Identyczne z [2017 P Z10]</code></strong><br>
+<strong><code>Niemal identyczne z [2018 Z Z10]</code></strong></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/poprawkowy/14.md" target="_blank" rel="noopener"><span>2018 P Z14</span></a><span> </span><code>Optymalna kolejność mnożenia macierzy</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/poprawkowy/19.md" target="_blank" rel="noopener"><span>2019 P Z19</span></a><span> </span><code>Optymalna kolejność mnożenia macierzy</code></li>
+</ul><h2 id="Dolne-granice" data-id="Dolne-granice"><a class="anchor hidden-xs" href="#Dolne-granice" title="Dolne-granice"><span class="octicon octicon-link"></span></a><span>Dolne granice</span></h2><p><a href="https://941613e9-a-e73d4388-s-sites.googlegroups.com/a/cs.uni.wroc.pl/aisd/aisd20/wyklady/wyklad204/Notatka%208%20Dolne%20Granice.pdf?attachauth=ANoY7cpVAv_KMMqbRPVqjUubPYO7d2zCBelYL7vMM4r28q_aMDAWTwhQgyGBjQBqpK794qmUTVnPc5vyViqL1_fcQR5QXcuGCSgxP0nJzAcU13aVXfn4P6BeReFIzIhAlm4Qkjyptzx9Xjm8eyz911Okev2kiVGSZ81lJBc6_POAthrWB_qxnqSXe1nmOdm_yK1FSN7CouorCq_gw_k3miVl_EttToui9WaO_5NPF_VYXg5iOpVjLBZ10wxtU_uhh8bkwACfo2DY&amp;attredirects=0" target="_blank" rel="noopener"><span>Notatka KLo</span></a><br>
+<a href="https://github.com/ithrasil/AiSD/blob/master/material/notatki%20Macieja%20Dragu%C5%82y%20(2018)/5%20dolne%20granice.pdf" target="_blank" rel="noopener"><span>Wykład 2018, notatki Macieja Draguły</span></a><br>
+<a href="https://drive.google.com/file/d/1oWx0hx7VpkaHIQIxJU5-BuCj6mY6hv_k/view?usp=sharing" target="_blank" rel="noopener"><span>Wykład 2019, notatki Wojtka Jasińskiego - Model drzew decyzyjnych, różność elementów, liniowe drzewa decyzyjne</span></a><br>
+<a href="https://drive.google.com/file/d/1tTFpe9FPzUARnkeiLRj5akPpFXJD51Mz/view?usp=sharing" target="_blank" rel="noopener"><span>Wykład 2019, notatki Wojtka Jasińskiego - Gra z adwersarzem</span></a><br>
+<a href="https://www.youtube.com/watch?v=32RY1jV4hB8" target="_blank" rel="noopener"><span>Element Uniqueness</span></a></p><p><span>Tematy</span></p><ul>
+<li><span>min i max (gra z adwersarzem)</span></li>
+<li><span>Drzewa decyzyjne</span></li>
+<li><span>Element Uniqueness</span></li>
+</ul><p><span>Zadania z egzaminów </span><strong><span>Część 1</span></strong></p><ul>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/zasadniczy/5.md" target="_blank" rel="noopener"><span>2017 Z Z5</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/poprawkowy/5.md" target="_blank" rel="noopener"><span>2017 P Z5</span></a><span> </span><code>Liniowe drzewa decyzyjne</code></li>
+</ul><h2 id="Sortowanie" data-id="Sortowanie"><a class="anchor hidden-xs" href="#Sortowanie" title="Sortowanie"><span class="octicon octicon-link"></span></a><span>Sortowanie</span></h2><p><a href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=Y3MudW5pLndyb2MucGx8YWlzZHxneDoyMTU4NmQ0MTVlMjEzYmJm" target="_blank" rel="noopener"><span>Notatka KLo</span></a><br>
+<a href="https://github.com/ithrasil/AiSD/blob/master/material/notatki%20Macieja%20Dragu%C5%82y%20(2018)/6%20sortowanie.pdf" target="_blank" rel="noopener"><span>Wykład 2018, notatki Macieja Draguły</span></a><br>
+<a href="https://drive.google.com/file/d/1cysTChGBHrvHkXOcISPbobqgpR5Rtq1m/view?usp=sharing" target="_blank" rel="noopener"><span>Wykład 2019, notatki Wojtka Jasińskiego - CountSort, BucketSort, sortowanie leksykograficzne</span></a><br>
+<a href="https://drive.google.com/file/d/1v9OdqVn1CwF5ciXRJAfDEurBRIJS8owd/view?usp=sharing" target="_blank" rel="noopener"><span>Wykład 2019, notatki Wojtka Jasińskiego - przykład sortowania leksykograficznego, Quicksort</span></a></p><p><span>Tematy</span></p><ul>
+<li><span>Przez zliczanie (counting sort)</span></li>
+<li><span>Kubełkowe (bucket sort)</span></li>
+<li><span>Leksykograficzne ciągów jednakowej długości</span></li>
+<li><span>Leksykograficzne ciągów niejednakowej długości.</span><br>
+<span>przykład zastosowania: sprawdzanie czy ukorzenione drzewa są izomorficzne (jak sprawdzić dla nieukorzenionych do zastanowienia)</span></li>
+</ul><p><span>Zadania z egzaminów </span><strong><span>Część 1</span></strong></p><ul>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2010/zasadniczy/7.png" target="_blank" rel="noopener"><span>2010 Z Z7</span></a><span> </span><code>Quicksort</code><span> </span><code>Mergesort</code><span> </span><code>Insertsort</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2013/zasadniczy/2.md" target="_blank" rel="noopener"><span>2013 Z Z2</span></a><span> </span><code>Izomorfizm drzew</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2016/zasadniczy/13.md" target="_blank" rel="noopener"><span>2016 Z Z13</span></a><span> </span><code>Izomorfizm drzew</code><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/zasadniczy/10.md" target="_blank" rel="noopener"><span>2017 Z Z10</span></a><span> </span><code>Izomorfizm drzew</code><span> </span><mark><span>TODO</span></mark></li>
+</ul><h2 id="Quicksort" data-id="Quicksort"><a class="anchor hidden-xs" href="#Quicksort" title="Quicksort"><span class="octicon octicon-link"></span></a><span>Quicksort</span></h2><p><a href="https://941613e9-a-e73d4388-s-sites.googlegroups.com/a/cs.uni.wroc.pl/aisd/aisd20/wyklady/wyklad1604/Quicksort.pdf?attachauth=ANoY7crmR1w4OaFdF911cCq49xPBxEpXmQFdqcBAnbugOO-4TcRWcEkHhepNs-KglAZ12zg3bH2wTg2RfPLfPKWyl59PT6BlwtijjLZAsy9vQSwh4ZbUnRuGX_n6YLXbOeIg3-P_VbWh_VtTyN7HupmvuuxGaxoqSAYtZD8_XazhcM_5mWqqTtXToy-MZCTBB3dxRNL0pRwEAFXnM-YvFMehilOOZcUbQ8WGnWQkyYMUHhuHt-Cr4_sjXBALKfp_PeJgr8x9eFOH&amp;attredirects=0" target="_blank" rel="noopener"><span>Notatka KLo</span></a><br>
+<a href="https://github.com/ithrasil/AiSD/blob/master/material/notatki%20Macieja%20Dragu%C5%82y%20(2018)/7%20quicksort.pdf" target="_blank" rel="noopener"><span>Wykład 2018, notatki Macieja Draguły</span></a></p><p><span>Tematy</span></p><ul>
+<li><span>Procedura partition</span></li>
+<li><span>Wybór pivota (deterministyczny i zrandomizowany)</span></li>
+<li><span>Średni koszt algorytmu</span></li>
+</ul><p><span>Zadania z egzaminów </span><strong><span>Część 1</span></strong></p><ul>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2010/zasadniczy/9.png" target="_blank" rel="noopener"><span>2010 Z Z9</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/poprawkowy/7.md" target="_blank" rel="noopener"><span>2017 P Z7</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/zasadniczy/15.md" target="_blank" rel="noopener"><span>2019 Z Z15</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/poprawkowy/15.md" target="_blank" rel="noopener"><span>2019 P Z15</span></a></li>
+</ul><h2 id="Problem-selekcji-wybór-k-tego-elementu" data-id="Problem-selekcji-wybór-k-tego-elementu"><a class="anchor hidden-xs" href="#Problem-selekcji-wybór-k-tego-elementu" title="Problem-selekcji-wybór-k-tego-elementu"><span class="octicon octicon-link"></span></a><span>Problem selekcji (wybór k-tego elementu)</span></h2><p><a href="https://sites.google.com/a/cs.uni.wroc.pl/aisd/aisd20/wyklady/wyklad2204/Selekcja.pdf" target="_blank" rel="noopener"><span>Notatka KLo</span></a><br>
+<a href="http://wazniak.mimuw.edu.pl/index.php?title=Algorytmy_i_struktury_danych/Selekcja" target="_blank" rel="noopener"><span>MIMUW</span></a><br>
+<a href="https://github.com/ithrasil/AiSD/blob/master/material/notatki%20Macieja%20Dragu%C5%82y%20(2018)/8%20selekcja.pdf" target="_blank" rel="noopener"><span>Wykład 2018, notatki Macieja Draguły</span></a><br>
+<a href="https://drive.google.com/file/d/1JevZsMAGZ7iDobbfN64ugnFTmsZofOhO/view?usp=sharing" target="_blank" rel="noopener"><span>Wykład 2019, notatki Wojtka Jasińskiego - Alg. magicznych piątek</span></a><br>
+<a href="https://drive.google.com/file/d/1c5v3s8s4E6ppNHgTHfMQ-b4CJ7ogQHRR/view?usp=sharing" target="_blank" rel="noopener"><span>Wykład 2019, notatki Wojtka Jasińskiego - Selekcja przez próbkowanie losowe(LazySelect)</span></a><br>
+<a href="https://www.ceid.upatras.gr/webpages/courses/randalgs/slides/lesson4.pdf" target="_blank" rel="noopener"><span>Paper o LazySelect</span></a></p><p><span>Tematy</span></p><ul>
+<li><span>Wybór drugiego elementu</span></li>
+<li><span>Algorytm hoare’a</span></li>
+<li><span>Algorytm magicznych piątek</span></li>
+<li><span>LazySelect (zrandomizowany algorytm wyznaczania mediany) [</span><a href="https://codepen.io/Ithrasil/full/XWraBrW" target="_blank" rel="noopener"><span>Wizualizacja</span></a><span>, ]</span></li>
+</ul><p><span>Zadania z egzaminów </span><strong><span>Część 1</span></strong></p><ul>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2010/zasadniczy/8.png" target="_blank" rel="noopener"><span>2010 Z Z8</span></a><span> </span><code>Algorytm magicznych piątek</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2014/poprawkowy/19.md" target="_blank" rel="noopener"><span>2014 P Z19</span></a><span> </span><code>Algorytm magicznych piątek</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2016/zasadniczy/7.md" target="_blank" rel="noopener"><span>2016 Z Z7</span></a><span> </span><code>LazySelect</code><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/zasadniczy/7.md" target="_blank" rel="noopener"><span>2017 Z Z7</span></a><span> </span><code>LazySelect</code><span> </span><code>Algorytm Hoare'a</code><span> </span><code>Algorytm magicznych piątek</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/zasadniczy/3.md" target="_blank" rel="noopener"><span>2018 Z Z3</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/poprawkowy/1.md" target="_blank" rel="noopener"><span>2018 P Z1</span></a><span> </span><code>LazySelect</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/poprawkowy/12.md" target="_blank" rel="noopener"><span>2018 P Z12</span></a><span> </span><code>Algorytm magicznych piątek</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/zasadniczy/2.md" target="_blank" rel="noopener"><span>2019 Z Z2</span></a><span> </span><code>LazySelect</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/poprawkowy/2.md" target="_blank" rel="noopener"><span>2019 P Z2</span></a><span> </span><code>Algorytm magicznych piątek</code></li>
+</ul><h2 id="Drzewa-AVL" data-id="Drzewa-AVL"><a class="anchor hidden-xs" href="#Drzewa-AVL" title="Drzewa-AVL"><span class="octicon octicon-link"></span></a><span>Drzewa AVL</span></h2><p><a href="https://941613e9-a-e73d4388-s-sites.googlegroups.com/a/cs.uni.wroc.pl/aisd/aisd20/wyklady/wyklad2304/Drzewa%20Avl.pdf?attachauth=ANoY7cpEWvGbXkC6XUE8s1bszG8EFVPHonuf-tIBkD2SFHJUnssXFQO3GBWg5epiB3PI-1g0lETEtMi6U4PxMlRWBC7GfeIPEcUzE4fYfGzBhCOc3cYcXNlOvzZ-wdKzwkxZyQKlg1EkdtWBCnYIMdSHJGErjIF2dA8nIgxfrdkzNOzHJcXXUNye6a6eU869_Ahj3pTyhIhJbgtQkr7JUaHCh4h2bafwhC8QJ4DiygwYTOFpKn2wdVlaytASBEGuJxYX8jQV58qa&amp;attredirects=0" target="_blank" rel="noopener"><span>Notatka KLo</span></a><br>
+<a href="https://github.com/ithrasil/AiSD/blob/master/material/notatki%20Macieja%20Dragu%C5%82y%20(2018)/9%20avl.pdf" target="_blank" rel="noopener"><span>Wykład 2018, notatki Macieja Draguły</span></a><br>
+<a href="https://www.cs.usfca.edu/~galles/visualization/AVLtree.html" target="_blank" rel="noopener"><span>Wizualizacja operacji w drzewie AVL</span></a><br>
+<a href="https://hackmd.io/@bsobocki/AVLtree" target="_blank" rel="noopener"><span>Opracowanie Bartka Sobockiego</span></a></p><p><span>Tematy</span></p><ul>
+<li><span>Ograniczenie wysokości (dowód, że jest O(logn))</span></li>
+<li><span>Operacja insert (rotacje) [</span><a href="https://www.geeksforgeeks.org/avl-tree-set-1-insertion/" target="_blank" rel="noopener"><span>GeeksForGeeks</span></a><span>, ]</span></li>
+<li><span>Operacja delete (rotacje) [</span><a href="https://www.geeksforgeeks.org/avl-tree-set-2-deletion/" target="_blank" rel="noopener"><span>GeeksForGeeks</span></a><span>, ]</span></li>
+<li><span>Drzewo AVL jako lista (logarytmiczny dostęp do każdego elementy)</span></li>
+</ul><p><span>Zadania z egzaminów </span><strong><span>Część 1</span></strong></p><ul>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2010/zasadniczy/10.png" target="_blank" rel="noopener"><span>2010 Z Z10</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2013/zasadniczy/3.md" target="_blank" rel="noopener"><span>2013 Z Z3</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2014/poprawkowy/14.md" target="_blank" rel="noopener"><span>2014 P Z14</span></a><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2016/zasadniczy/19.md" target="_blank" rel="noopener"><span>2016 Z Z19</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/zasadniczy/12.md" target="_blank" rel="noopener"><span>2017 Z Z12</span></a><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/poprawkowy/12.md" target="_blank" rel="noopener"><span>2017 P Z12</span></a><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/zasadniczy/1.md" target="_blank" rel="noopener"><span>2019 Z Z1</span></a></li>
+</ul><h2 id="Drzewa-czerwono-czarne" data-id="Drzewa-czerwono-czarne"><a class="anchor hidden-xs" href="#Drzewa-czerwono-czarne" title="Drzewa-czerwono-czarne"><span class="octicon octicon-link"></span></a><span>Drzewa czerwono-czarne</span></h2><p><a href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=Y3MudW5pLndyb2MucGx8YWlzZHxneDo2ZjNkNzFhMjc4MzYyZTI3" target="_blank" rel="noopener"><span>Notatka KLo</span></a><br>
+<a href="https://github.com/ithrasil/AiSD/blob/master/material/notatki%20Macieja%20Dragu%C5%82y%20(2018)/10%20drzewa%20czerwono-czarne.pdf" target="_blank" rel="noopener"><span>Wykład 2018, notatki Macieja Draguły</span></a></p><p><span>Tematy</span></p><ul>
+<li><span>Definicja</span></li>
+<li><span>Ograniczenie wysokości (dowód, że jest O(logn))</span></li>
+<li><span>Rotacje</span></li>
+<li><span>Wstawianie elementu (przywracanie własności drzewa czerwono-czarnego)[</span><a href="https://photos.app.goo.gl/Q75RHaiVvSovQiHs7" target="_blank" rel="noopener"><span>Graficzne przedstawienie zmian podczas przywracania własności drzewa</span></a><span>, ]</span></li>
+</ul><p><span>Zadania z egzaminów </span><strong><span>Część 1</span></strong></p><ul>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/poprawkowy/1.md" target="_blank" rel="noopener"><span>2019 P Z1</span></a><span> </span><code>Drzewa czerwono-czarne</code><span> </span><mark><span>TODO</span></mark></li>
+</ul><h2 id="B-drzewa" data-id="B-drzewa"><a class="anchor hidden-xs" href="#B-drzewa" title="B-drzewa"><span class="octicon octicon-link"></span></a><span>B-drzewa</span></h2><p><a href="https://941613e9-a-e73d4388-s-sites.googlegroups.com/a/cs.uni.wroc.pl/aisd/aisd20/wyklady/wyklad2904/B%20Drzewa.pdf?attachauth=ANoY7cr_XkUk9Rqall5zcLTUtoAM9YCP6vylsiyOvZTesHmiyO48EcNaOBdhXzE_0_ac7Ilck9ns902Yc3EoImaPGwW4NBzhxdmsSF98XTDqUnxG6MeJlTDQ6PxGoLEs97TgvppCaXfxMlxXxh55aL1aOwYs11X8dgDdRRfiwxwlIDmH1wI45g9-aguDFyV7tPlrKRoB4IlOlQgF3H2qFX__pd5VNXbnS9vIuBuF5QCBrNUD3FFjbE5Q1PhXgp43IdWDO9sfeAMY&amp;attredirects=0" target="_blank" rel="noopener"><span>Notatka KLo</span></a><br>
+<a href="https://github.com/ithrasil/AiSD/blob/master/material/notatki%20Macieja%20Dragu%C5%82y%20(2018)/11%20b-drzewa.pdf" target="_blank" rel="noopener"><span>Wykład 2018, notatki Macieja Draguły</span></a></p><p><span>Tematy</span></p><ul>
+<li><span>Definicja/struktura</span></li>
+<li><span>Operacja insert</span></li>
+<li><span>Koszt operacji</span></li>
+<li><span>Związek między B-drzewami a drzewami czerwono-czarnymi (z 2-3-4 B-drzewa stworzyć drzewo czerwono-czarne) [</span><a href="https://hackmd.io/TQ-718rFSveHJ9NtwobWoA" target="_blank" rel="noopener"><span>Przekształcenie 2-3-4 drzewo -&gt; drzewo czerwono-czarne</span></a><span>, ]</span></li>
+</ul><p><span>Zadania z egzaminów </span><strong><span>Część 1</span></strong></p><ul>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2007/zasadniczy/5.md" target="_blank" rel="noopener"><span>2007 Z Z5</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2013/zasadniczy/13.md" target="_blank" rel="noopener"><span>2013 Z Z13</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/zasadniczy/9.md" target="_blank" rel="noopener"><span>2017 Z Z9</span></a><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/poprawkowy/9.md" target="_blank" rel="noopener"><span>2017 P Z9</span></a></li>
+</ul><h2 id="Kopce-dwumianowe" data-id="Kopce-dwumianowe"><a class="anchor hidden-xs" href="#Kopce-dwumianowe" title="Kopce-dwumianowe"><span class="octicon octicon-link"></span></a><span>Kopce dwumianowe</span></h2><p><a href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=Y3MudW5pLndyb2MucGx8YWlzZHxneDozM2UxMzFiMzdjY2M0YzRk" target="_blank" rel="noopener"><span>Notatka KLo</span></a><br>
+<a href="https://github.com/ithrasil/AiSD/blob/master/material/notatki%20Macieja%20Dragu%C5%82y%20(2018)/12%20kopce%20dwumianowe.pdf" target="_blank" rel="noopener"><span>Wykład 2018, notatki Macieja Draguły</span></a><br>
+<a href="https://www.geeksforgeeks.org/binomial-heap-2/" target="_blank" rel="noopener"><span>GeeksForGeeks</span></a><br>
+<a href="https://brilliant.org/wiki/binomial-heap/" target="_blank" rel="noopener"><span>Brilliant</span></a></p><p><span>Tematy</span></p><ul>
+<li><span>Drzewa dwumianowe</span></li>
+<li><span>Uwagi implementacyjne</span></li>
+<li><span>Rząd</span></li>
+<li><span>Drzewo B_i ma 2^i wierzchołków (indukcja)</span></li>
+<li><span>Wersja eager i lazy (jak działają, meld, deletemin)</span></li>
+<li><span>Operacje typu insert, join</span></li>
+<li><span>Zamortyzowany koszt procedury insert (wersja eager)</span></li>
+<li><span>Zamortyzowany koszt procedury deletemin (wersja lazy)</span></li>
+</ul><p><span>Zadania z egzaminów </span><strong><span>Część 1</span></strong></p><ul>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2010/zasadniczy/12.png" target="_blank" rel="noopener"><span>2010 Z Z12</span></a><span> </span><code>Kopce dwumianowe</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2010/zasadniczy/16.png" target="_blank" rel="noopener"><span>2010 Z Z16</span></a><span> </span><code>Kopce dwumianowe</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2013/zasadniczy/6.md" target="_blank" rel="noopener"><span>2013 Z Z6</span></a><span> </span><code>Kopce dwumianowe</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2013/zasadniczy/10.md" target="_blank" rel="noopener"><span>2013 Z Z10</span></a><span> </span><code>Kopce dwumianowe</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2014/poprawkowy/17.md" target="_blank" rel="noopener"><span>2014 P Z17</span></a><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/zasadniczy/2.md" target="_blank" rel="noopener"><span>2017 Z Z2</span></a><span> </span><code>Kopce dwumianowe</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/poprawkowy/13.md" target="_blank" rel="noopener"><span>2017 P Z13</span></a><span> </span><code>Kopce dwumianowe</code><span> </span><mark><span>TODO</span></mark></li>
+</ul><h2 id="Kopce-Fibbonaciego" data-id="Kopce-Fibbonaciego"><a class="anchor hidden-xs" href="#Kopce-Fibbonaciego" title="Kopce-Fibbonaciego"><span class="octicon octicon-link"></span></a><span>Kopce Fibbonaciego</span></h2><p><a href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=Y3MudW5pLndyb2MucGx8YWlzZHxneDoyMjJlZDliZWRhMTlkZDQ3" target="_blank" rel="noopener"><span>Notatka KLo</span></a><br>
+<a href="https://github.com/ithrasil/AiSD/blob/master/material/notatki%20Macieja%20Dragu%C5%82y%20(2018)/13%20kopce%20fibonacciego.pdf" target="_blank" rel="noopener"><span>Wykład 2018, notatki Macieja Draguły</span></a><br>
+<a href="https://www.youtube.com/watch?v=nZ0nFTvQez0" target="_blank" rel="noopener"><span>Kanał yt “Foundations of Data Science”</span></a><br>
+<a href="https://brilliant.org/wiki/fibonacci-heap/" target="_blank" rel="noopener"><span>Brilliant</span></a><br>
+<a href="https://kbaile03.github.io/projects/fibo_dijk/fibo_dijk.html" target="_blank" rel="noopener"><span>Notka i wizualizacja algorytmu</span></a></p><p><span>Tematy</span></p><ul>
+<li><span>Przykład zastosowania (Dijkstra)</span></li>
+<li><span>Struktura</span></li>
+<li><span>Operacja decrement, cut (kaskadowy)</span></li>
+<li><span>Zamortyzowany koszt (decrement)</span></li>
+<li><span>Operacja deletemin(h) (dowód, że dla każdego wierzchołka x kopca Fibb o rzędzie k, drzewko zakorzenione w x ma rozmiar wykładniczy względem k, wniosek o maksymalnym rzędzie w kopcu fibb)</span></li>
+</ul><p><span>Zadania z egzaminów </span><strong><span>Część 1</span></strong></p><ul>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2010/zasadniczy/4.md" target="_blank" rel="noopener"><span>2010 Z Z4</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2010/zasadniczy/15.png" target="_blank" rel="noopener"><span>2010 Z Z15</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2013/zasadniczy/18.md" target="_blank" rel="noopener"><span>2013 Z Z18</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2014/poprawkowy/10.md" target="_blank" rel="noopener"><span>2014 P Z10</span></a><span> </span><code>Kopce dwumianowe</code><span> </span><code>Kopce fibonacciego</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2014/poprawkowy/18.md" target="_blank" rel="noopener"><span>2014 P Z18</span></a><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2016/zasadniczy/11.md" target="_blank" rel="noopener"><span>2016 Z Z11</span></a><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2016/zasadniczy/18.md" target="_blank" rel="noopener"><span>2016 Z Z18</span></a><span>  </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/poprawkowy/19.md" target="_blank" rel="noopener"><span>2018 P Z19</span></a><br>
+<strong><code>Identyczne z [2010 Z Z15]</code></strong></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/zasadniczy/9.md" target="_blank" rel="noopener"><span>2018 Z Z9</span></a><span> </span><code>Kopce dwumianowe</code><span> </span><code>Kopce fibonacciego</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/zasadniczy/12.md" target="_blank" rel="noopener"><span>2019 Z Z12</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/poprawkowy/12.md" target="_blank" rel="noopener"><span>2019 P Z12</span></a><span> </span><code>Kopce dwumianowe</code><span> </span><code>Kopce fibonacciego</code></li>
+</ul><h2 id="Drzewa-Splay" data-id="Drzewa-Splay"><a class="anchor hidden-xs" href="#Drzewa-Splay" title="Drzewa-Splay"><span class="octicon octicon-link"></span></a><span>Drzewa Splay</span></h2><p><a href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=Y3MudW5pLndyb2MucGx8YWlzZHxneDoyZmU4M2UwMjNhNGM4NWNm" target="_blank" rel="noopener"><span>Notatka KLo</span></a><br>
+<a href="https://github.com/ithrasil/AiSD/blob/master/material/notatki%20Macieja%20Dragu%C5%82y%20(2018)/14%20drzewa%20splay.pdf" target="_blank" rel="noopener"><span>Wykład 2018, notatki Macieja Draguły</span></a><br>
+<a href="https://drive.google.com/file/d/1QNr4TSS52xWiunKE1owV7fIxRCk0Dsw9/view?usp=sharing" target="_blank" rel="noopener"><span>Wykład 2019, notatki Wojtka Jasińskiego - cz1</span></a><br>
+<a href="https://drive.google.com/file/d/10AN5xtTLVitf0dMxF1OE13RL8WKXuDD9/view?usp=sharing" target="_blank" rel="noopener"><span>Wykład 2019, notatki Wojtka Jasińskiego - cz2</span></a></p><p><span>Tematy</span></p><ul>
+<li><span>Operacje na drzewach samoorganizujących się (join, split, splay)</span></li>
+<li><span>Implementacja splay (odpowiednie rotacje)</span></li>
+<li><span>Analiza zamortyzowana operacji splay</span></li>
+</ul><p><span>Zadania z egzaminów </span><strong><span>Część 1</span></strong></p><ul>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2014/poprawkowy/7.md" target="_blank" rel="noopener"><span>2014 P Z7</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2016/zasadniczy/6.md" target="_blank" rel="noopener"><span>2016 Z Z6</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/zasadniczy/3.md" target="_blank" rel="noopener"><span>2017 Z Z3</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/poprawkowy/3.md" target="_blank" rel="noopener"><span>2017 P Z3</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/zasadniczy/10.md" target="_blank" rel="noopener"><span>2019 Z Z10</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/poprawkowy/10.md" target="_blank" rel="noopener"><span>2019 P Z10</span></a><span>  </span><mark><span>TODO</span></mark></li>
+</ul><h2 id="Union-Find" data-id="Union-Find"><a class="anchor hidden-xs" href="#Union-Find" title="Union-Find"><span class="octicon octicon-link"></span></a><span>Union Find</span></h2><p><a href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=Y3MudW5pLndyb2MucGx8YWlzZHxneDoyNGNlMzVmMjMwZjEwZjU0" target="_blank" rel="noopener"><span>Notatka KLo</span></a><br>
+<a href="https://github.com/ithrasil/AiSD/blob/master/material/notatki%20Macieja%20Dragu%C5%82y%20(2018)/16%20union-find.pdf" target="_blank" rel="noopener"><span>Wykład 2018, notatki Macieja Draguły</span></a><br>
+<a href="https://drive.google.com/file/d/1mdyD7_hUEyFRmClV2lVWraVA27fz8pBn/view?usp=sharing" target="_blank" rel="noopener"><span>Wykład 2019, notatki Wojtka Jasińskiego - cz1</span></a><br>
+<a href="https://drive.google.com/file/d/1A4xD0CSIMR6yvg-Gz2QY4UXqH2RVGF7B/view?usp=sharing" target="_blank" rel="noopener"><span>Wykład 2019, notatki Wojtka Jasińskiego - cz2, haszowanie</span></a><br>
+<a href="https://www.geeksforgeeks.org/union-find/" target="_blank" rel="noopener"><span>Geeks for geeks</span></a></p><p><span>Tematy</span></p><ul>
+<li><span>Przykład zastosowania [</span><a href="https://youtu.be/JZBQLXgSGfs?t=115" target="_blank" rel="noopener"><span>Kruskal</span></a><span>, ]</span></li>
+<li><span>Definicja jak działa union i find</span></li>
+<li><span>Proste rozwiązania (naiwne)</span></li>
+<li><strong><span>Struktura drzewiasta</span></strong>
+<ul>
+<li><span>Sposób zbalansowany Union</span></li>
+<li><span>Kompresja ścieżek Find</span></li>
+</ul>
+</li>
+<li><span>Szacowanie czasu wykonywania ciągu operacji union i find (definicje rzędu wierzchołka i rzędu grupy i parę faktów, wszystko dotyczy tego dowodu)</span></li>
+<li><span>Szacowanie czasu wykonywania ciągu operacji union i find gdy wierzchołki przy kompresji ścieżek nie byłyby podpinane pod korzeń, tylko pod swojego dziadka</span></li>
+</ul><p><span>Zadania z egzaminów </span><strong><span>Część 1</span></strong></p><ul>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2010/zasadniczy/23.png" target="_blank" rel="noopener"><span>2010 Z Z23</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2014/poprawkowy/6.md" target="_blank" rel="noopener"><span>2014 P Z6</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2016/zasadniczy/14.md" target="_blank" rel="noopener"><span>2016 Z Z14</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/zasadniczy/18.md" target="_blank" rel="noopener"><span>2017 Z Z18</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/poprawkowy/18.md" target="_blank" rel="noopener"><span>2017 P Z18</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/zasadniczy/12.md" target="_blank" rel="noopener"><span>2018 Z Z12</span></a><br>
+<strong><code>Niemal identyczne z [2017 P Z18]</code></strong></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/poprawkowy/4.md" target="_blank" rel="noopener"><span>2018 P Z4</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/zasadniczy/17.md" target="_blank" rel="noopener"><span>2019 Z Z17</span></a><br>
+<strong><code>Identyczne z [2017 Z Z18]</code></strong></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/poprawkowy/17.md" target="_blank" rel="noopener"><span>2019 P Z17</span></a><span> </span><mark><span>TODO</span></mark></li>
+</ul><h2 id="Hashowanie" data-id="Hashowanie"><a class="anchor hidden-xs" href="#Hashowanie" title="Hashowanie"><span class="octicon octicon-link"></span></a><span>Hashowanie</span></h2><p><a href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=Y3MudW5pLndyb2MucGx8YWlzZHxneDoxOGMyZmFmNWQ1MGI3YzU0" target="_blank" rel="noopener"><span>Notatka KLo</span></a><br>
+<a href="https://github.com/ithrasil/AiSD/blob/master/material/notatki%20Macieja%20Dragu%C5%82y%20(2018)/18%20haszowanie.pdf" target="_blank" rel="noopener"><span>Wykład 2018, notatki Macieja Draguły</span></a><br>
+<a href="https://drive.google.com/file/d/1XQ142edzbD-9kIpPD3dR0SYng3Dc-UOs/view?usp=sharing" target="_blank" rel="noopener"><span>Wykład 2019, notatki Wojtka Jasińskiego - Uniwersalne rodziny f. haszujących, słownik statyczny</span></a></p><p><span>Tematy</span></p><ul>
+<li>
+<p><strong><span>Funkcje hashujące i metody hashowania</span></strong></p>
+<ul>
+<li><span>Warunek dobrej funkcji hashującej</span></li>
+<li><span>Listy elementów i adresowanie otwarte</span></li>
+<li><span>Warunek funkcji hashującej w adresowaniu otwartym</span></li>
+<li><span>Oczekiwana liczba prób zakończonych fiaskiem</span></li>
+<li><span>Oczekiwana liczba prób w poszukiwaniu zakończonym sukcesem</span></li>
+</ul>
+</li>
+<li>
+<p><strong><span>Rodzina funkcji uniwersalnych</span></strong></p>
+<ul>
+<li><span>Definicja funkcji uniwersalnej</span></li>
+<li><span>Przykład funkcji uniwersalnej</span></li>
+</ul>
+</li>
+<li>
+<p><strong><span>Słownik statyczny</span></strong><span> [</span><a href="https://user-images.githubusercontent.com/11476062/61911012-76ef4d80-af36-11e9-9d33-71e7c55efd80.jpg" target="_blank" rel="noopener"><span>Nieformalny opis budowy struktury</span></a><span>, ]</span></p>
+<ul>
+<li><span>Szacowanie prawdopodobieństwa funkcji wybieranej losowo z rodziny uniwersalnej, która umieści bezkonfliktowo n = sqrt(m) kluczy w tablicy m elementowej</span></li>
+<li><span>Szacowanie prawdopodobieństwa losowej funkcji z rodziny uniwersalnej, która rozrzuca n kluczy do tablicy n elementowej, tak że zachodzi suma(n_i^2) &lt; 4n</span></li>
+</ul>
+</li>
+</ul><p><span>Zadania z egzaminów </span><strong><span>Część 1</span></strong></p><ul>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2010/zasadniczy/13.png" target="_blank" rel="noopener"><span>2010 Z Z13</span></a><span> </span><code>Rodzina funkcji uniwersalnych</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2010/zasadniczy/19.png" target="_blank" rel="noopener"><span>2010 Z Z19</span></a><span> </span><code>Słownik statyczny</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2013/zasadniczy/4.md" target="_blank" rel="noopener"><span>2013 Z Z4</span></a><span> </span><code>Funkcje hashujące i metody hashowania</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2013/zasadniczy/12.md" target="_blank" rel="noopener"><span>2013 Z Z12</span></a><span> </span><code>Funkcje hashujące i metody hashowania</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2014/poprawkowy/12.md" target="_blank" rel="noopener"><span>2014 P Z12</span></a><span> </span><code>Oczekiwana liczba kolizji</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2016/zasadniczy/20.md" target="_blank" rel="noopener"><span>2016 Z Z20</span></a><span> </span><code>Oczekiwana liczba kolizji</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/zasadniczy/6.md" target="_blank" rel="noopener"><span>2017 Z Z6</span></a><span> </span><code>Funkcje hashujące i metody hashowania</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/zasadniczy/15.md" target="_blank" rel="noopener"><span>2017 Z Z15</span></a><span> </span><code>Słownik statyczny</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/zasadniczy/16.md" target="_blank" rel="noopener"><span>2017 Z Z16</span></a><span> </span><code>Rodzina funkcji uniwersalnych</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/poprawkowy/6.md" target="_blank" rel="noopener"><span>2017 P Z6</span></a><span> </span><code>Funkcje hashujące i metody hashowania</code><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/poprawkowy/15.md" target="_blank" rel="noopener"><span>2017 P Z15</span></a><span> </span><code>Słownik statyczny</code><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/poprawkowy/16.md" target="_blank" rel="noopener"><span>2017 P Z16</span></a><span> </span><code>Oczekiwana liczba kolizji</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/zasadniczy/17.md" target="_blank" rel="noopener"><span>2018 Z Z17</span></a><span> </span><code>Oczekiwana liczba kolizji</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/zasadniczy/19.md" target="_blank" rel="noopener"><span>2018 Z Z19</span></a><span> </span><code>Funkcje hashujące i metody hashowania</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/poprawkowy/9.md" target="_blank" rel="noopener"><span>2018 P Z9</span></a><span> </span><code>Funkcje hashujące i metody hashowania</code><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/zasadniczy/3.md" target="_blank" rel="noopener"><span>2019 Z Z3</span></a><span> </span><code>Słownik statyczny</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/zasadniczy/11.md" target="_blank" rel="noopener"><span>2019 Z Z11</span></a><span> </span><code>Oczekiwana liczba kolizji</code><br>
+<strong><code>Identyczne z [2018 Z Z17]</code></strong></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/zasadniczy/13.md" target="_blank" rel="noopener"><span>2019 Z Z13</span></a><span> </span><code>Funkcje hashujące i metody hashowania</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/poprawkowy/3.md" target="_blank" rel="noopener"><span>2019 P Z3</span></a><span> </span><code>Słownik statyczny</code><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/poprawkowy/11.md" target="_blank" rel="noopener"><span>2019 P Z11</span></a><span> </span><code>Oczekiwana liczba kolizji</code><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/poprawkowy/13.md" target="_blank" rel="noopener"><span>2019 P Z13</span></a><span> </span><code>Funkcje hashujące i metody hashowania</code></li>
+</ul><h2 id="Drzewce-Treaps" data-id="Drzewce-Treaps"><a class="anchor hidden-xs" href="#Drzewce-Treaps" title="Drzewce-Treaps"><span class="octicon octicon-link"></span></a><span>Drzewce (Treaps)</span></h2><p><span>Połączenie drzew BST oraz kopca binarnego. W każdym węźle znajduje się klucz oraz priorytet.</span><br>
+<a href="https://github.com/ithrasil/AiSD/blob/master/material/Notatki%20KLo/15%20drzewce%20(treaps).pdf" target="_blank" rel="noopener"><span>Notatka z książki</span></a><br>
+<a href="https://drive.google.com/file/d/1dMlSz5mLZkAtHmTd69Fnk55Tfv_MeGoa/view?usp=sharing" target="_blank" rel="noopener"><span>Ta sama notatka co powyżej tylko po polsku</span></a><br>
+<a href="https://github.com/ithrasil/AiSD/blob/master/material/notatki%20Macieja%20Dragu%C5%82y%20(2018)/15%20drzewce%20(treaps).pdf" target="_blank" rel="noopener"><span>Wykład 2018, notatki Macieja Draguły</span></a><br>
+<a href="https://drive.google.com/file/d/1vCMM5bajcVC7GDzachjaHcL7cDbmRy8U/view?usp=sharing" target="_blank" rel="noopener"><span>Wykład 2019, notatki Wojtka Jasińskiego</span></a><br>
+<span style="font-size: 10px"><a href="https://drive.google.com/file/d/1hkYfnRuqFhKnkjmLeAysXBCybfznSLeY/view?usp=sharing" target="_blank" rel="noopener"><span>Drzewiec xD</span></a></span></p><p><span>Tematy</span></p><ul>
+<li><span>Dowód, że dla każdego zbioru elementów typu </span><code>&lt;klucz, priorytet&gt;</code><span> można utworzyć drzewiec (zakładamy, że priorytety są różne, warto też wiedzieć co jeśli wystąpią takie same)</span></li>
+<li><span>Losowy drzewiec</span></li>
+<li><span>Operacje insert, delete [</span><a href="https://photos.app.goo.gl/Go26g3JkTvPnKn557" target="_blank" rel="noopener"><span>przykład delete</span></a><span>, ]</span></li>
+<li><span>Oczekiwany koszt delete</span></li>
+</ul><p><span>Zadania z egzaminów </span><strong><span>Część 1</span></strong></p><ul>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2010/zasadniczy/14.md" target="_blank" rel="noopener"><span>2010 Z Z14</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2013/zasadniczy/8.md" target="_blank" rel="noopener"><span>2013 Z Z8</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2014/poprawkowy/8.md" target="_blank" rel="noopener"><span>2014 P Z8</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2015/zasadniczy/8.md" target="_blank" rel="noopener"><span>2015 Z Z8</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2015/poprawkowy/9.md" target="_blank" rel="noopener"><span>2015 P Z9</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2016/zasadniczy/4.md" target="_blank" rel="noopener"><span>2016 Z Z4</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/zasadniczy/4.md" target="_blank" rel="noopener"><span>2017 Z Z4</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/poprawkowy/4.md" target="_blank" rel="noopener"><span>2017 P Z4</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/poprawkowy/6.md" target="_blank" rel="noopener"><span>2018 P Z6</span></a><br>
+<strong><code>Podobne do [2015 Z Z8]</code></strong></li>
+</ul><h2 id="Wyszukiwanie-wzorców-w-tekście" data-id="Wyszukiwanie-wzorców-w-tekście"><a class="anchor hidden-xs" href="#Wyszukiwanie-wzorców-w-tekście" title="Wyszukiwanie-wzorców-w-tekście"><span class="octicon octicon-link"></span></a><span>Wyszukiwanie wzorców w tekście</span></h2><p><a href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=Y3MudW5pLndyb2MucGx8YWlzZHxneDo2MzBhZGFjMzk2YzhjMDk" target="_blank" rel="noopener"><span>Notatka KLo</span></a><br>
+<a href="https://drive.google.com/file/d/1dR4pXjf7zLf0uWEuQnAhxWeEwVEUdr8N/view?usp=sharing" target="_blank" rel="noopener"><span>Wykład 2019, notatki Wojtka Jasińskiego - cz1</span></a><br>
+<a href="https://drive.google.com/file/d/1FHZLLoYeXAoM8NJ4l4iyKaNys82-6nHN/view?usp=sharing" target="_blank" rel="noopener"><span>Wykład 2019, notatki Wojtka Jasińskiego - cz2</span></a></p><p><span>Tematy</span></p><ul>
+<li><span>Ogólne przedstawienie problemu i alg. naiwny</span></li>
+<li><span>Algorytm </span><strong><span>Karpa-Robina</span></strong><span> [</span><a href="https://brilliant.org/wiki/rabin-karp-algorithm/" target="_blank" rel="noopener"><span>Brilliant</span></a><span>, ]</span></li>
+<li><span>Algorytm wyszukiwania wzorca </span><strong><span>automatami skończonymi</span></strong></li>
+<li><span>Algorytm </span><strong><span>Boyera-Moore’a</span></strong><span> [</span><a href="https://www.youtube.com/watch?v=4Xyhb72LCX4" target="_blank" rel="noopener"><span>Heurystyki algorytmu - przykłady</span></a><span>, ]</span></li>
+<li><span>Algorytm </span><strong><span>Knutha-Morrisa-Pratta(KMP)</span></strong><span> i funkcja π [</span><a href="https://people.ok.ubc.ca/ylucet/DS/KnuthMorrisPratt.html" target="_blank" rel="noopener"><span>Wizualizacja algorytmu</span></a><span>, ]</span><br>
+<span>Dane na których dobrze widać działanie algorytmu:</span><br>
+<span>T=</span><code>ABC ABCDAB ABCDABCDABDE</code><br>
+<span>P=</span><code>ABCDABD</code></li>
+<li><span>Algorytm </span><strong><span>Karpa-Millera-Rosenberga (KMR)</span></strong></li>
+<li><span>Algorytm </span><strong><span>Shift-And</span></strong><span> [</span><a href="http://alvaro-videla.com/2014/01/shift-and-visualization.html" target="_blank" rel="noopener"><span>Wytłumaczenie i animacja</span></a><span>, ]</span></li>
+</ul><p><span>Zadania z egzaminów </span><strong><span>Część 1</span></strong></p><ul>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2010/zasadniczy/21.png" target="_blank" rel="noopener"><span>2010 Z Z21</span></a><span> </span><code>KMP(Funkcja π)</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2010/zasadniczy/22.png" target="_blank" rel="noopener"><span>2010 Z Z22</span></a><span> </span><code>Algorytm wyszukiwania wzorca automatami skończonymi</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2013/zasadniczy/1.md" target="_blank" rel="noopener"><span>2013 Z Z1</span></a><span> </span><code>KMR</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2013/zasadniczy/5.md" target="_blank" rel="noopener"><span>2013 Z Z5</span></a><span> </span><code>KMP(Funkcja π)</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2014/poprawkowy/1.md" target="_blank" rel="noopener"><span>2014 P Z1</span></a><span> </span><code>Shift-And</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2014/poprawkowy/2.md" target="_blank" rel="noopener"><span>2014 P Z2</span></a><span> </span><code>KMR</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2014/poprawkowy/4.md" target="_blank" rel="noopener"><span>2014 P Z4</span></a><span> </span><code>KMP(Funkcja π)</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2016/zasadniczy/8.md" target="_blank" rel="noopener"><span>2016 Z Z8</span></a><span> </span><code>Shift-And</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2016/zasadniczy/10.md" target="_blank" rel="noopener"><span>2016 Z Z10</span></a><span> </span><code>KMP(Funkcja π)</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/zasadniczy/8.md" target="_blank" rel="noopener"><span>2017 Z Z8</span></a><span> </span><code>KMP(Funkcja π)</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/zasadniczy/11.md" target="_blank" rel="noopener"><span>2017 Z Z11</span></a><span> </span><code>Shift-and</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/poprawkowy/8.md" target="_blank" rel="noopener"><span>2017 P Z8</span></a><span> </span><code>KMP(Funkcja π)</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/poprawkowy/11.md" target="_blank" rel="noopener"><span>2017 P Z11</span></a><span> </span><code>Shift-and</code><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/zasadniczy/2.md" target="_blank" rel="noopener"><span>2018 Z Z2</span></a><span> </span><code>Shift-And</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/zasadniczy/5.md" target="_blank" rel="noopener"><span>2018 Z Z5</span></a><span> </span><code>KMR</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/zasadniczy/16.md" target="_blank" rel="noopener"><span>2018 Z Z16</span></a><span> </span><code>KMP(Funkcja π)</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/poprawkowy/13.md" target="_blank" rel="noopener"><span>2018 P Z13</span></a><span> </span><code>KMP</code><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/poprawkowy/15.md" target="_blank" rel="noopener"><span>2018 P Z15</span></a><span> </span><code>KMR</code><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/poprawkowy/18.md" target="_blank" rel="noopener"><span>2018 P Z18</span></a><span> </span><code>Algorytm Karpa-Rabina</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/zasadniczy/18.md" target="_blank" rel="noopener"><span>2019 Z Z18</span></a><span> </span><code>KMP(Funkcja π)</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/zasadniczy/20.md" target="_blank" rel="noopener"><span>2019 Z Z20</span></a><span> </span><code>Shift-And</code><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/poprawkowy/18.md" target="_blank" rel="noopener"><span>2019 P Z18</span></a><span> </span><code>KMP(Funkcja π)</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/poprawkowy/20.md" target="_blank" rel="noopener"><span>2019 P Z20</span></a><span> </span><code>Algorytm Karpa-Rabina</code><span> </span><code>KMP</code></li>
+</ul><h2 id="FFT" data-id="FFT"><a class="anchor hidden-xs" href="#FFT" title="FFT"><span class="octicon octicon-link"></span></a><span>FFT</span></h2><p><a href="https://github.com/ithrasil/AiSD/blob/master/material/Notatki%20KLo/17%20fft.pdf" target="_blank" rel="noopener"><span>Notatka KLo</span></a><br>
+<a href="https://github.com/ithrasil/AiSD/blob/master/material/notatki%20Macieja%20Dragu%C5%82y%20(2018)/17%20fft.pdf" target="_blank" rel="noopener"><span>Wykład 2018, notatki Macieja Draguły</span></a><br>
+<a href="https://drive.google.com/file/d/1111Qlbm1_18Lfk5OgW65BDpsIFutdDK1/view?usp=sharing" target="_blank" rel="noopener"><span>Wykład 2019, notatki Wojtka Jasińskiego</span></a><br>
+<a href="https://www.youtube.com/watch?v=EWUq_qEi4vg" target="_blank" rel="noopener"><span>Wrocławskie sparingi informatyczne</span></a></p><p><span>Tematy</span></p><ul>
+<li><span>Ogólna idea mnożenia przy użyciu FFT (zamiana reprezentacji, mnożenie w postaci wartości w punktach, zamiana reprezentacji)</span></li>
+<li><span>Pierwiastki jedności w ciele zespolonym</span></li>
+<li><span>Własności tych pierwiastków [</span><a href="https://hackmd.io/jqs6AuVwSaiUxL7P-tvj-w?view" target="_blank" rel="noopener"><span>notka</span></a><span>, ]</span></li>
+<li><span>Idea algorytmu (dziel i zwyciężaj)</span></li>
+<li><span>Przedstawienie macierzowe (zamiana z reprezentacji współczynnikowej na reprezentację wartości w punktach)</span></li>
+<li><span>Znajomość faktu, że macierz można odwrócić (ponieważ jest macierzą Vandermonda) [i jawny wzór na to] - dzięki czemu można FFT wykorzystać również na zamianę reprezentacji wartości na reprezentację współczynnikowej</span></li>
+</ul><p><span>Zadania z egzaminów </span><strong><span>Część 1</span></strong></p><ul>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2010/zasadniczy/26.png" target="_blank" rel="noopener"><span>2010 Z Z26</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2013/zasadniczy/9.md" target="_blank" rel="noopener"><span>2013 Z Z9</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2014/poprawkowy/5.md" target="_blank" rel="noopener"><span>2014 P Z5</span></a><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2016/zasadniczy/16.md" target="_blank" rel="noopener"><span>2016 Z Z16</span></a><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/zasadniczy/17.md" target="_blank" rel="noopener"><span>2017 Z Z17</span></a><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/poprawkowy/17.md" target="_blank" rel="noopener"><span>2017 P Z17</span></a><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/zasadniczy/8.md" target="_blank" rel="noopener"><span>2019 Z Z8</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/poprawkowy/8.md" target="_blank" rel="noopener"><span>2019 P Z8</span></a><span> </span><mark><span>TODO</span></mark></li>
+</ul><h2 id="Sieci-sortujące-TEGO-NIE-BĘDZIE-W-roku-2020" data-id="Sieci-sortujące-TEGO-NIE-BĘDZIE-W-roku-2020"><a class="anchor hidden-xs" href="#Sieci-sortujące-TEGO-NIE-BĘDZIE-W-roku-2020" title="Sieci-sortujące-TEGO-NIE-BĘDZIE-W-roku-2020"><span class="octicon octicon-link"></span></a><span>Sieci sortujące  (</span><mark><span>TEGO NIE BĘDZIE W roku 2020</span></mark><span>)</span></h2><p><a href="https://github.com/ithrasil/AiSD/blob/master/material/Notatki%20KLo/19%20sieci%20sortujace.pdf" target="_blank" rel="noopener"><span>Notatka KLo</span></a><br>
+<a href="https://drive.google.com/file/d/1yKXNcWdLQMXYOSXzs8zm7dxq64XLn8TE/view?usp=sharing" target="_blank" rel="noopener"><span>Wykład 2019, notatki Wojtka Jasińskiego</span></a></p><p><span>Tematy</span></p><ul>
+<li><span>Ogólna idea</span></li>
+<li><span>Lemat (o tym, że jeśli sieć komparatorów dla ciągu wejść. a_1…a_n wyznacza ciąg b_1…b_n to dla dow. funkcji niemalejącej f ta sama sieć dla ciągu f(a_1) … f(a_n) wyznaczy ciąg f(b_1)…f(b_n) [</span><a href="https://hackmd.io/XKLXTLiLT-uzsH-TLW3O3A?both" target="_blank" rel="noopener"><span>Pełna treść lematu</span></a><span>, ]</span></li>
+<li><span>Zasada zero-jedynkowa [</span><a href="https://hackmd.io/h0w0vJIpSGSTNoOgSaw7RQ?view" target="_blank" rel="noopener"><span>notka</span></a><span>, ]</span></li>
+<li><span>Konstrukcja sieci bitonicznej [</span><a href="https://hackmd.io/r9lQ_2AVTR2EGhjnZb1SWw?view" target="_blank" rel="noopener"><span>notka</span></a><span>, ]</span>
+<ul>
+<li><span>Sieć półczyszcząca (lemat o tym, że jeśli na wejściu jest ciąg bitoniczny to na wyjściu będą dwa ciągi bitoniczne itd.) [</span><a href="https://hackmd.io/L06vh5pURQmTHzxOmiwrYg?view" target="_blank" rel="noopener"><span>notka</span></a><span>, ]</span></li>
+<li><span>Sieć sortująca ciągi bitoniczne [</span><a href="https://hackmd.io/0Ix6k23QREmzkF4hHWnwYg?view" target="_blank" rel="noopener"><span>notka</span></a><span>, ]</span></li>
+<li><span>Sieć scalająca</span></li>
+</ul>
+</li>
+</ul><p><span>Zadania z egzaminów </span><strong><span>Część 1</span></strong></p><ul>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2010/zasadniczy/20.png" target="_blank" rel="noopener"><span>2010 Z Z20</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2014/poprawkowy/3.md" target="_blank" rel="noopener"><span>2014 P Z3</span></a><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/zasadniczy/14.md" target="_blank" rel="noopener"><span>2018 Z Z14</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/poprawkowy/3.md" target="_blank" rel="noopener"><span>2018 P Z3</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/poprawkowy/7.md" target="_blank" rel="noopener"><span>2018 P Z7</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/zasadniczy/14.md" target="_blank" rel="noopener"><span>2019 Z Z14</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/poprawkowy/14.md" target="_blank" rel="noopener"><span>2019 P Z14</span></a><span>  </span><mark><span>TODO</span></mark></li>
+</ul><h2 id="Drzewa-Van-Emde-Boasa-TEGO-NIE-BĘDZIE-W-roku-2020" data-id="Drzewa-Van-Emde-Boasa-TEGO-NIE-BĘDZIE-W-roku-2020"><a class="anchor hidden-xs" href="#Drzewa-Van-Emde-Boasa-TEGO-NIE-BĘDZIE-W-roku-2020" title="Drzewa-Van-Emde-Boasa-TEGO-NIE-BĘDZIE-W-roku-2020"><span class="octicon octicon-link"></span></a><span>Drzewa Van Emde Boasa  (</span><mark><span>TEGO NIE BĘDZIE W roku 2020</span></mark><span>)</span></h2><p><a href="https://drive.google.com/file/d/1nhk_FDbrj5Pi5_9lUIYsgkYPYy3nJ2lF/view" target="_blank" rel="noopener"><span>Wykład 2019, notatki</span></a><br>
+<a href="https://drive.google.com/file/d/1-HN3Zlqr46qkptp4K5Mp8lKvake-Xmgn/view?usp=sharing" target="_blank" rel="noopener"><span>Wykład 2019, notatki Wojtka Jasińskiego</span></a><br>
+<a href="https://github.com/ithrasil/AiSD/blob/master/material/Cormen/21%20drzewa%20van%20emde%20boasa.pdf" target="_blank" rel="noopener"><span>Cormen</span></a><br>
+<a href="https://youtu.be/ZrV7GiuMNo4?t=741" target="_blank" rel="noopener"><span>Idea tych drzew, same podstawy, jest tłumaczone krok po kroku</span></a><br>
+<a href="https://www.ii.uni.wroc.pl/~prz/2010zima/zsd/zasoby/DrzewaVEB.pdf" target="_blank" rel="noopener"><span>Zaawansowane Struktury Danych ii</span></a><br>
+<a href="chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/http://courses.csail.mit.edu/6.897/spring03/scribe_notes/L1/lecture1.pdf" target="_blank" rel="noopener"><span>Ciekawa notatka</span></a><br>
+<a href="https://codepen.io/Ithrasil/full/yLBVmWL" target="_blank" rel="noopener"><span>Implementacja w CoffeeScript</span></a></p><p><span>Tematy</span></p><ul>
+<li><span>Przedstawienie problemu i naiwne rozwiązania (tych naiwnych raczej nie trzeba znać)</span></li>
+<li><span>Wstępna struktura dla drzew, ale jeszcze nie idealna (to już być może warto znać)</span></li>
+<li><span>Usprawnienia wyżej wymienionej struktury -&gt; pseudokod insert i succ (na pamięć!)[</span><a href="https://user-images.githubusercontent.com/11476062/62319066-722e1a80-b49d-11e9-8649-190248a3b807.png" target="_blank" rel="noopener"><span>Przykład zmiany vEB po operacjach insert</span></a><span>, </span><a href="https://hackmd.io/XPZrX4ppS6ymVaLVg9HWug?view" target="_blank" rel="noopener"><span>notka na podstawie Cormena</span></a><span>, ]</span></li>
+<li><span>Rozwiązanie rekurencyjne złożoności (często się powtarzało, czasami w lekkich modyfikacjach)</span></li>
+</ul><p><span>Zadania z egzaminów </span><strong><span>Część 1</span></strong></p><ul>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2016/zasadniczy/9.md" target="_blank" rel="noopener"><span>2016 Z Z9</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/zasadniczy/19.md" target="_blank" rel="noopener"><span>2017 Z Z19</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/poprawkowy/19.md" target="_blank" rel="noopener"><span>2017 P Z19</span></a><br>
+<strong><code>Niemal identyczne z [2017 Z Z19]</code></strong></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/zasadniczy/13.md" target="_blank" rel="noopener"><span>2018 Z Z13</span></a><br>
+<strong><code>Niemal identyczne z [2016 Z Z9]</code></strong></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/poprawkowy/5.md" target="_blank" rel="noopener"><span>2018 P Z5</span></a></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/zasadniczy/7.md" target="_blank" rel="noopener"><span>2019 Z Z7</span></a><br>
+<strong><code>Niemal identyczne z [2018 Z Z13]</code></strong></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/poprawkowy/7.md" target="_blank" rel="noopener"><span>2019 P Z7</span></a><span> </span><mark><span>TODO</span></mark></li>
+</ul><h2 id="Algorytmy-równoległe-TEGO-NIE-BĘDZIE-W-roku-2020" data-id="Algorytmy-równoległe-TEGO-NIE-BĘDZIE-W-roku-2020"><a class="anchor hidden-xs" href="#Algorytmy-równoległe-TEGO-NIE-BĘDZIE-W-roku-2020" title="Algorytmy-równoległe-TEGO-NIE-BĘDZIE-W-roku-2020"><span class="octicon octicon-link"></span></a><span>Algorytmy równoległe (</span><mark><span>TEGO NIE BĘDZIE W roku 2020</span></mark><span>)</span></h2><p><a href="https://drive.google.com/file/d/1Mvb-YJJUQKo3vZJBi9S-Wz2SOS2j5aXb/view?usp=sharing" target="_blank" rel="noopener"><span>Wykład 2019, notatki Wojtka Jasińskiego</span></a></p><p><span>Tematy</span></p><ul>
+<li><span>Ogólnie o PRAM (typy działania EREW itd.) [</span><a href="http://wazniak.mimuw.edu.pl/index.php?title=Zaawansowane_algorytmy_i_struktury_danych/Wyk%C5%82ad_13" target="_blank" rel="noopener"><span>MIMUW</span></a><span>, </span><a href="http://pages.cs.wisc.edu/~tvrdik/2/html/Section2.html" target="_blank" rel="noopener"><span>WISC</span></a><span>, ]</span></li>
+<li><span>Suma logiczna bitów (prosty przykład jak działa)</span></li>
+<li><span>Dodawanie dwóch liczb (binarnych)</span></li>
+<li><span>Mnożenie dwóch liczb (binarnych)</span>
+<ul>
+<li><span>Redukcja dodawanych liczb (dzięki czemu czasowo wyjdzie O(log n)</span></li>
+</ul>
+</li>
+<li><span>Pokolorować wierzchołki w grafie (który jest cyklem) [ostatecznie będzie to prawidłowe 3-kolorowanie]</span></li>
+</ul><p><span>Zadania z egzaminów </span><strong><span>Część 1</span></strong></p><ul>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/zasadniczy/9.md" target="_blank" rel="noopener"><span>2019 Z Z9</span></a><span> </span><code>Mnożenie dwóch liczb</code><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2019/poprawkowy/9.md" target="_blank" rel="noopener"><span>2019 Z Z9</span></a><span> </span><code>Sumy prefiksowe</code><span> </span><mark><span>TODO</span></mark></li>
+</ul><h2 id="Zadania-egzaminacyjne-bardziej-ogólne" data-id="Zadania-egzaminacyjne-bardziej-ogólne"><a class="anchor hidden-xs" href="#Zadania-egzaminacyjne-bardziej-ogólne" title="Zadania-egzaminacyjne-bardziej-ogólne"><span class="octicon octicon-link"></span></a><span>Zadania egzaminacyjne bardziej ogólne</span></h2><ul>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2010/zasadniczy/5.png" target="_blank" rel="noopener"><span>2010 Z Z5</span></a><span> </span><code>Drzewa BST</code><span> </span><code>Drzewa AVL</code><span> </span><code>Kopce dwumianowe</code><span> </span><code>Kopce fibonacciego</code><span> </span><code>Drzewa czerwono czarne</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2014/zasadniczy/7.md" target="_blank" rel="noopener"><span>2014 Z Z7</span></a><span> </span><code>Drzewa BST</code><span> </span><code>Kopce binarne</code><span> </span><code>Kopce dwumianowe</code><span> </span><code>B-drzewa</code><span> </span><code>Drzewa czerwono-czarne</code><span>  </span><code>Drzewce</code><span> </span><code>Drzewa splay</code></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2016/zasadniczy/1.md" target="_blank" rel="noopener"><span>2016 Z Z1</span></a><span> </span><code>Kopce binarne</code><span> </span><code>Kopce dwumianowe</code><span> </span><code>Kopce Fibonacciego</code><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2016/zasadniczy/5.md" target="_blank" rel="noopener"><span>2016 Z Z5</span></a><span> </span><code>Klasy algorytmów</code><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/zasadniczy/14.md" target="_blank" rel="noopener"><span>2017 Z Z14</span></a><span> </span><code>Iloczyn wektorowy</code><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2017/poprawkowy/14.md" target="_blank" rel="noopener"><span>2017 P Z14</span></a><span> </span><code>NP-zupełność</code><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/zasadniczy/7.md" target="_blank" rel="noopener"><span>2018 Z Z7</span></a><span> </span><code>Klasy funkcji</code><span> </span><mark><span>TODO</span></mark></li>
+<li><a href="https://github.com/ithrasil/AiSD/blob/master/egzaminy/CZ%201/2018/zasadniczy/18.md" target="_blank" rel="noopener"><span>2018 Z Z18</span></a><span> </span><code>Drzewa BST</code><span> </span><code>Kopce dwumianowe</code></li>
+</ul></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li class=""><a href="#Algorytmy-i-struktury-danych" title="Algorytmy i struktury danych">Algorytmy i struktury danych</a><ul class="nav">
+<li class="invisable-node"><ul class="nav">
+<li><a href="#Powtórki-do-egzaminu-2020" title="Powtórki do egzaminu 2020">Powtórki do egzaminu 2020</a></li>
+<li><a href="#Rozwiązania-zadań-z-ćwiczeń-2020" title="Rozwiązania zadań z ćwiczeń 2020">Rozwiązania zadań z ćwiczeń 2020</a></li>
+</ul>
+</li>
+<li><a href="#Preliminaria" title="Preliminaria">Preliminaria</a></li>
+<li><a href="#Kopiec-binarny" title="Kopiec binarny">Kopiec binarny</a></li>
+<li><a href="#Algorytmy-zachłanne" title="Algorytmy zachłanne">Algorytmy zachłanne</a></li>
+<li><a href="#Algorytmy-“dziel-i-zwyciężaj”" title="Algorytmy “dziel i zwyciężaj”">Algorytmy “dziel i zwyciężaj”</a></li>
+<li><a href="#Programowanie-dynamiczne" title="Programowanie dynamiczne">Programowanie dynamiczne</a></li>
+<li><a href="#Dolne-granice" title="Dolne granice">Dolne granice</a></li>
+<li><a href="#Sortowanie" title="Sortowanie">Sortowanie</a></li>
+<li><a href="#Quicksort" title="Quicksort">Quicksort</a></li>
+<li><a href="#Problem-selekcji-wybór-k-tego-elementu" title="Problem selekcji (wybór k-tego elementu)">Problem selekcji (wybór k-tego elementu)</a></li>
+<li><a href="#Drzewa-AVL" title="Drzewa AVL">Drzewa AVL</a></li>
+<li><a href="#Drzewa-czerwono-czarne" title="Drzewa czerwono-czarne">Drzewa czerwono-czarne</a></li>
+<li><a href="#B-drzewa" title="B-drzewa">B-drzewa</a></li>
+<li><a href="#Kopce-dwumianowe" title="Kopce dwumianowe">Kopce dwumianowe</a></li>
+<li><a href="#Kopce-Fibbonaciego" title="Kopce Fibbonaciego">Kopce Fibbonaciego</a></li>
+<li><a href="#Drzewa-Splay" title="Drzewa Splay">Drzewa Splay</a></li>
+<li><a href="#Union-Find" title="Union Find">Union Find</a></li>
+<li><a href="#Hashowanie" title="Hashowanie">Hashowanie</a></li>
+<li><a href="#Drzewce-Treaps" title="Drzewce (Treaps)">Drzewce (Treaps)</a></li>
+<li><a href="#Wyszukiwanie-wzorców-w-tekście" title="Wyszukiwanie wzorców w tekście">Wyszukiwanie wzorców w tekście</a></li>
+<li><a href="#FFT" title="FFT">FFT</a></li>
+<li><a href="#Sieci-sortujące-TEGO-NIE-BĘDZIE-W-roku-2020" title="Sieci sortujące  (TEGO NIE BĘDZIE W roku 2020)">Sieci sortujące  (TEGO NIE BĘDZIE W roku 2020)</a></li>
+<li><a href="#Drzewa-Van-Emde-Boasa-TEGO-NIE-BĘDZIE-W-roku-2020" title="Drzewa Van Emde Boasa  (TEGO NIE BĘDZIE W roku 2020)">Drzewa Van Emde Boasa  (TEGO NIE BĘDZIE W roku 2020)</a></li>
+<li><a href="#Algorytmy-równoległe-TEGO-NIE-BĘDZIE-W-roku-2020" title="Algorytmy równoległe (TEGO NIE BĘDZIE W roku 2020)">Algorytmy równoległe (TEGO NIE BĘDZIE W roku 2020)</a></li>
+<li><a href="#Zadania-egzaminacyjne-bardziej-ogólne" title="Zadania egzaminacyjne bardziej ogólne">Zadania egzaminacyjne bardziej ogólne</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+        <div class="toc"><ul class="nav">
+<li class=""><a href="#Algorytmy-i-struktury-danych" title="Algorytmy i struktury danych">Algorytmy i struktury danych</a><ul class="nav">
+<li class="invisable-node"><ul class="nav">
+<li><a href="#Powtórki-do-egzaminu-2020" title="Powtórki do egzaminu 2020">Powtórki do egzaminu 2020</a></li>
+<li><a href="#Rozwiązania-zadań-z-ćwiczeń-2020" title="Rozwiązania zadań z ćwiczeń 2020">Rozwiązania zadań z ćwiczeń 2020</a></li>
+</ul>
+</li>
+<li><a href="#Preliminaria" title="Preliminaria">Preliminaria</a></li>
+<li><a href="#Kopiec-binarny" title="Kopiec binarny">Kopiec binarny</a></li>
+<li><a href="#Algorytmy-zachłanne" title="Algorytmy zachłanne">Algorytmy zachłanne</a></li>
+<li><a href="#Algorytmy-“dziel-i-zwyciężaj”" title="Algorytmy “dziel i zwyciężaj”">Algorytmy “dziel i zwyciężaj”</a></li>
+<li><a href="#Programowanie-dynamiczne" title="Programowanie dynamiczne">Programowanie dynamiczne</a></li>
+<li><a href="#Dolne-granice" title="Dolne granice">Dolne granice</a></li>
+<li><a href="#Sortowanie" title="Sortowanie">Sortowanie</a></li>
+<li><a href="#Quicksort" title="Quicksort">Quicksort</a></li>
+<li><a href="#Problem-selekcji-wybór-k-tego-elementu" title="Problem selekcji (wybór k-tego elementu)">Problem selekcji (wybór k-tego elementu)</a></li>
+<li><a href="#Drzewa-AVL" title="Drzewa AVL">Drzewa AVL</a></li>
+<li><a href="#Drzewa-czerwono-czarne" title="Drzewa czerwono-czarne">Drzewa czerwono-czarne</a></li>
+<li><a href="#B-drzewa" title="B-drzewa">B-drzewa</a></li>
+<li><a href="#Kopce-dwumianowe" title="Kopce dwumianowe">Kopce dwumianowe</a></li>
+<li><a href="#Kopce-Fibbonaciego" title="Kopce Fibbonaciego">Kopce Fibbonaciego</a></li>
+<li><a href="#Drzewa-Splay" title="Drzewa Splay">Drzewa Splay</a></li>
+<li><a href="#Union-Find" title="Union Find">Union Find</a></li>
+<li><a href="#Hashowanie" title="Hashowanie">Hashowanie</a></li>
+<li><a href="#Drzewce-Treaps" title="Drzewce (Treaps)">Drzewce (Treaps)</a></li>
+<li><a href="#Wyszukiwanie-wzorców-w-tekście" title="Wyszukiwanie wzorców w tekście">Wyszukiwanie wzorców w tekście</a></li>
+<li><a href="#FFT" title="FFT">FFT</a></li>
+<li><a href="#Sieci-sortujące-TEGO-NIE-BĘDZIE-W-roku-2020" title="Sieci sortujące  (TEGO NIE BĘDZIE W roku 2020)">Sieci sortujące  (TEGO NIE BĘDZIE W roku 2020)</a></li>
+<li><a href="#Drzewa-Van-Emde-Boasa-TEGO-NIE-BĘDZIE-W-roku-2020" title="Drzewa Van Emde Boasa  (TEGO NIE BĘDZIE W roku 2020)">Drzewa Van Emde Boasa  (TEGO NIE BĘDZIE W roku 2020)</a></li>
+<li><a href="#Algorytmy-równoległe-TEGO-NIE-BĘDZIE-W-roku-2020" title="Algorytmy równoległe (TEGO NIE BĘDZIE W roku 2020)">Algorytmy równoległe (TEGO NIE BĘDZIE W roku 2020)</a></li>
+<li><a href="#Zadania-egzaminacyjne-bardziej-ogólne" title="Zadania egzaminacyjne bardziej ogólne">Zadania egzaminacyjne bardziej ogólne</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>

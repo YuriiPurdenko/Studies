@@ -1,0 +1,50 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{algorithmic}
+\usepackage{amssymb}
+
+\usepackage[margin=0.5in,headheight=48pt,top=78pt]{geometry}
+\frenchspacing
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0em}
+\def\N{\mathbb{N}}
+\def\R{\mathbb{R}}
+\newcommand{\zadanie}[1]{\par\textbf{Zadanie #1}}
+\newcommand{\odp}[1]{\textbf{Odpowiedź:} #1}
+
+\usepackage{tikz}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % clear all fields
+\fancyhead[C]{ \textbf{AISD} - Lista 7 Zadanie 3\ Wiktor Pilarczyk 308533}
+
+\begin{document}
+\section{Wstęp}
+Interesuje nas oczekiwana liczba pustych list po umieszczeniu n kluczy w tablicy haszującej $T$ o n elementach. Czyli oznacza to, że w elemencie tablicy może być wiele kluczy. Więc jeśli funkcja haszująca f dla klucza x zwróci wartość $i$ = f(x) to do elementu tablicy T[i], będzie należał $x \in T[i]$, zazwyczaj element tablicy jest listą klucz, które zostały w nim umieszczone. Zakładamy, że nasza funkcja haszująca f z tym samym prawdopodobieństwem dla każdego klucza przydziela elemnt tablicy T.
+
+\section{Obliczanie prawdopodobieństwa}
+Chcemy sprawdzić z jakim prawdopodobieństwem element tablicy $T[i]$ jest pusty, niech $P(T[i])$ będzie oznaczało, że prawdopodobieństwem element tablicy $T[i]$ jest pusty, a skoro prawdopodobieństwo, że klucz wyląduje w $T[i]$ wynosi $\frac{1}{n}$ dla każdego klucza. Biorąc zdarzenie przeciwne otrzymujemy wzór:
+$$ P(T[i]) = (\frac{n-1}{n})^n$$
+\section{Wartość oczekiwana}
+Chcemy obliczyć wartość oczekiwaną pustych elementów tablicy T. Najpierw obliczmy wartość oczekiwaną pojedyńczego elemntu:
+$$ E(T[i]) = P(T[i]) * 1 + (1 - P(T[i])) * 0 = P(T[i])$$
+Mnożymy razy 1, ponieważ jest to przypadek kiedy nasza lista jest pusta, a razy 0 wpp.
+
+
+Korzystając z liniowości wartości oczekiwanej
+$$ E(\sum_{i=0}^n T[i]) = \sum_{i=0}^n E(T[i]) = \sum_{i=0}^n (\frac{n-1}{n})^n = n * (\frac{n-1}{n})^n $$
+
+Wiemy o tym, że dla odpowiednio dużego n:
+$$(\frac{n-1}{n})^n -> \frac{1}{e}$$
+
+Więc naszą wartość oczekiwaną możemy oszacować jako:
+$$ E(\sum_{i=0}^n T[i]) = \frac{n}{e}$$
+
+\end{document}

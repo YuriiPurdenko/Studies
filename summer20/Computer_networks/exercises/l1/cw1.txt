@@ -1,0 +1,307 @@
+Wiktor Pilarczyk 308533
+
+Zad 1
+
+    a) 10.1.2.3/8 - adres komputera
+       10.0.0.0/8 - adres sieci
+       10.0.0.1/8 - adres innego komputera
+       10.255.255.255/8 - adres rozgłoszeniowy
+       
+
+    b) 156.17.0.0/16 - adres sieci
+       156.17.0.0/16 - adres sieci
+       156.17.0.1/16 - adres innego komputera
+       156.17.255.255/16 - adres rozgłoszeniowy
+
+    c) 99.99.99.99/27 - adres komputera
+       99.99.99.96/27 - adres sieci
+       99.99.99.97/27  - adres innego komputera
+       99.99.99.127/27 - adres rozgłoszeniowy
+
+    d) 156.17.64.4/30 - adres sieci
+       156.17.64.4/30 - adres sieci
+       156.17.64.5/30 - adres innego komputera
+       156.17.64.7/30 - adres rozgłoszeniowy
+
+    3) 123.123.123.123/32 - adres sieci, komputera i rozgłoszeniowy
+
+Zad 2
+
+    Podsieć 1:    10.0.0.0/17
+    Podsieć 2:    10.0.128.0/18
+    Podsieć 3:    10.0.192.0/19
+    Podsieć 4:    10.0.224.0/20
+    Podsieć 5:    10.0.240.0/20
+
+        Liczba adresów możliwych do użycia przy adresowanie komputera zmalała o 8 adresów, które służą jako adresy sieci i rozgłoszeniowe. Minimalny rozmiar podsieci, będzie dla sieci o masce /20 czyli 4094 unikalnych adresów dla komputerów, rozmiar tej sieci wynika z tego, że tworzymy sieć dwukrotnie mniejszą (patrząc na zakresy adresów) za każdym razem, lecz ostatnia sieć musi być takiej samej wielkości jak poprzednia, aby pokryła cały przedział (przykład u góry).
+
+
+
+
+
+
+
+
+
+
+
+
+Zad 3
+
+    Wpis    Router  Wpisy           Przedziały adresów
+    1       A       0.0.0.0/0       0.0.0.0 - 255.255.255.255
+    2       B       10.0.0.0/23     10.0.0.0 - 10.0.1.255
+    3       B       10.0.2.0/24     10.0.2.0 - 10.0.2.255
+    4       B       10.0.3.0/24     10.0.3.0 - 10.0.3.255
+    5       C       10.0.1.0/24     10.0.1.0 - 10.0.1.255
+    6       B       10.0.0.128/25   10.0.0.128 - 10.0.0.255
+    7       B       10.0.1.8/29     10.0.1.8 - 10.0.1.15
+    8       B       10.0.1.16/29    10.0.1.16 - 10.0.1.23
+    9       B       10.0.1.24/29    10.0.1.24 - 10.0.1.31
+
+    Można połączyć przedziały, które mają ten sam priorytet (maskę) i stanowią ciągłość no przedziale adresów wpis 7, 8 i 9, a także 3 i 4
+
+    Wpisy   Router  Priorytet       Przedziały adresów
+    1       A       0               0.0.0.0 - 255.255.255.255
+    2       B       23              10.0.0.0 - 10.0.1.255
+    3 4     B       24              10.0.2.0 - 10.0.3.255
+    5       C       24              10.0.1.0 - 10.0.1.255
+    6       B       25              10.0.0.128 - 10.0.0.255
+    7 8 9   B       29              10.0.1.8 - 10.0.1.31
+
+    Przy okazji można zauważyć, że wpisy 3, 4 i 6 nie pokrywają się z C, a także 6 jest zawarte w wpisie 2, a 3 i 4 można zmniejszyć priorytet o jeden (nie wpływa na A i C) i dzięki temu rozszerzyć przedział dla priorytetu 23.
+
+    Wpisy   Router  Priorytet       Przedziały adresów
+    1       A       0               0.0.0.0 - 255.255.255.255
+    2 3 4 6 B       23              10.0.0.0 - 10.0.3.255
+    5       C       24              10.0.1.0 - 10.0.1.255
+    7 8 9   B       29              10.0.1.8 - 10.0.1.31
+
+    Na podstawie powyższej tableki otrzymujemy równoważną tablice routingu, która jest ponieżej ostatnie 3 wpisy (7, 8, 9) nie jesteśmy w stanie trzymać za pomocą jednego wpisu (przedziały adresów), dlatego otrzymujemy z nich dwa wpisy.
+
+    Równoważna tablica routingu:
+        0.0.0.0/0 -> do routera A
+        10.0.0.0/22 -> do routera B
+        10.0.1.0/24 -> do routera C
+        10.0.1.8/28 -> do routera B
+        10.0.1.16/29 -> do routera B
+
+
+
+
+
+
+
+
+Zad 4
+    
+    Wpis    Router  Wpisy           Przedziały adresów
+    1       A       0.0.0.0/0       0.0.0.0 - 255.255.255.255
+    2       B       10.0.0.0/8      10.0.0.0 - 10.255.255.255
+    3       C       10.3.0.0/24     10.3.0.0 - 10.3.0.255
+    4       B       10.3.0.32/27    10.3.0.32 - 10.3.0.63
+    5       B       10.3.0.64/27    10.3.0.64 - 10.3.0.95
+    6       B       10.3.0.96/27    10.3.0.96 - 10.3.0.127
+    
+    Podobnie jak w zadaniu powyżej łączymy wpisy o tym samym priorytecie - 4, 5 i 6
+
+    Wpisy   Router  Priorytet     Przedziały adresów
+    1       A       0             0.0.0.0 - 255.255.255.255
+    2       B       8             10.0.0.0 - 10.255.255.255
+    3       C       24            10.3.0.0 - 10.3.0.255
+    4 5 6   B       27            10.3.0.32 - 10.3.0.127
+    
+    Więc moglibyśmy stworzyć na tej podstawie tablice routingu, lecz 4, 5 i 6 musielibyśmy trzymać jako 2 wpisy, a można zauważyć, że 4,5 i 6 pokrywa część przedziału 2 i 3, tak samo 3 pokrywa część przedziału 2. Lepszą opcją jest rozbić wpis 3 na 2 części tak, aby nie pokrywał się z 4,5 i 6, dzięki temu 4,5 i 6 będą już zawarte we wpisie dla wpisu 2, i dodając jeden dodatkowy wpis dla przedziały z wpisu 3, likwidujemy potrzebe przechowywania dwóch wpisów dla wpisów  4,5 i 6, więc oszczędzamy 1 wpis w naszej nowej tablicy routingu.
+
+    Równoważna tablica routingu:
+        0.0.0.0/0 -> do routera A
+        10.0.0.0/8 -> do routera B
+        10.3.0.128/25 -> do routera C
+        10.3.0.0/27 -> do routera C
+
+Zad 5
+
+    Zasada najlepszego dopasowanie polega na tym, że wybierana jest opcja z najdłuższym pasującym prefiksem, więc jeśli tablica routingu zostanie posortowana malejąco po długościach prefiksów (masek), wtedy pierwszy pasujący wybór będzie równoważny zasadzie najlepszego dopasowania.
+
+    Dowód
+        Załóżmy nie wprost, że rozwiązanie nie daje najlepszej opcji - najdłużczego prefiksu, czyli istnieje dłuższy pasujący prefiks
+        a) był przed naszym rozwiązaniem w naszej tablicy - sprzeczność, ponieważ wtedy zostałby wybrany ten wcześniejszy
+        b) jest po naszym rozwiązaniu w naszej tablicy - sprzeczność, ponieważ wtedy elementy w tablicy byłyby nie posortowane
+        Więc nasz algorytm spełnia zasadę najlepszego dopasowania.
+
+
+
+
+
+Zad 6
+
+        Krok 0
+            Z
+    Do      |   A   |   B   |   C   |   D   |   E   |   F   |
+         A  |   *   |   1   |       |       |       |       |
+         B  |   1   |   *   |   1   |       |       |       |
+         C  |       |   1   |   *   |       |   1   |   1   |
+         D  |       |       |       |   *   |   1   |       |
+         E  |       |       |   1   |   1   |   *   |   1   |
+         F  |       |       |   1   |       |   1   |   *   |
+         S  |   1   |   1   |       |       |       |       |
+
+
+        Krok 1
+            Z
+    Do      |   A   |   B   |   C   |   D   |   E   |   F   |
+         A  |   *   |   1   |   2 B |       |       |       |
+         B  |   1   |   *   |   1   |       |   2 C |   2 C |
+         C  |   2 B |   1   |   *   |   2 E |   1   |   1   |
+         D  |       |       |   2 E |   *   |   1   |   2 E |
+         E  |       |   2 C |   1   |   1   |   *   |   1   |
+         F  |       |   2 C |   1   |   2 E |   1   |   *   |
+         S  |   1   |   1   |   2 B |       |       |       |
+
+
+        Krok 2
+            Z
+    Do      |   A   |   B   |   C   |   D   |   E   |   F   |
+         A  |   *   |   1   |   2 B |       |   3 C |   3 C |
+         B  |   1   |   *   |   1   |   3 E |   2 C |   2 C |
+         C  |   2 B |   1   |   *   |   2 E |   1   |   1   |
+         D  |       |   3 C |   2 E |   *   |   1   |   2 E |
+         E  |   3 B |   2 C |   1   |   1   |   *   |   1   |
+         F  |   3 B |   2 C |   1   |   2 E |   1   |   *   |
+         S  |   1   |   1   |   2 B |       |   3 C |   3 C |
+
+        Krok 3
+            Z
+    Do      |   A   |   B   |   C   |   D   |   E   |   F   |
+         A  |   *   |   1   |   2 B |   4 E |   3 C |   3 C |
+         B  |   1   |   *   |   1   |   3 E |   2 C |   2 C |
+         C  |   2 B |   1   |   *   |   2 E |   1   |   1   |
+         D  |   4 B |   3 C |   2 E |   *   |   1   |   2 E |
+         E  |   3 B |   2 C |   1   |   1   |   *   |   1   |
+         F  |   3 B |   2 C |   1   |   2 E |   1   |   *   |
+         S  |   1   |   1   |   2 B |   4 E |   3 C |   3 C |
+
+    W 3 krokach.
+
+
+
+
+
+Zad 7
+
+    Przed
+            Z
+    Do      |   A   |   B   |   C   |   D   |   E   |   F   |
+         A  |   *   |   1   |   2 B |   4 E |   3 C |   3 C |
+         B  |   1   |   *   |   1   |   3 E |   2 C |   2 C |
+         C  |   2 B |   1   |   *   |   2 E |   1   |   1   |
+         D  |   4 B |   3 C |   2 E |   *   |   1   |   2 E |
+         E  |   3 B |   2 C |   1   |   1   |   *   |   1   |
+         F  |   3 B |   2 C |   1   |   2 E |   1   |   *   |
+         S  |   1   |   1   |   2 B |   4 E |   3 C |   3 C |
+
+    Po
+        Krok 0
+            Z
+    Do      |   A   |   B   |   C   |   D   |   E   |   F   |
+         A  |   *   |   1   |   2 B |   1   |   3 C |   3 C |
+         B  |   1   |   *   |   1   |   3 E |   2 C |   2 C |
+         C  |   2 B |   1   |   *   |   2 E |   1   |   1   |
+         D  |   1   |   3 C |   2 E |   *   |   1   |   2 E |
+         E  |   3 B |   2 C |   1   |   1   |   *   |   1   |
+         F  |   3 B |   2 C |   1   |   2 E |   1   |   *   |
+         S  |   1   |   1   |   2 B |   4 E |   3 C |   3 C |
+
+        Krok 1
+            Z
+    Do      |   A   |   B   |   C   |   D   |   E   |   F   |
+         A  |   *   |   1   |   2 B |   1   |   2 D |   3 C |
+         B  |   1   |   *   |   1   |   2 A |   2 C |   2 C |
+         C  |   2 B |   1   |   *   |   2 E |   1   |   1   |
+         D  |   1   |   2 A |   2 E |   *   |   1   |   2 E |
+         E  |   3 B |   2 C |   1   |   1   |   *   |   1   |
+         F  |   3 B |   2 C |   1   |   2 E |   1   |   *   |
+         S  |   1   |   1   |   2 B |   2 A |   3 C |   3 C |
+
+    Odległości pomiędzy poszczególbymi routerami się zmniejszyły.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Zad 8
+
+    Tablica odległości do E, b. s. o. załóżmy, że droga z A do E przebiega przez B (symetryczny przypadek jeśli przebiega przez C)
+        i - infinity
+
+        |   A   |   B   |   C   |   D   |
+        |   3 B |   2 D |   2 D |   i   |
+
+    D wysyła informacje o nieskończonej odlwgłości (do E) do B i C
+
+        |   A   |   B   |   C   |   D   |
+        |   3 B |   i   |   i   |   i   |
+
+    A wysyła do B zatrutą ścieżke bo droga z A do E przebiega przez B i wysyła też informacje do C o swojej drodze
+        |   A   |   B   |   C   |   D   |
+        |   3 B |   i   |   4 A |   i   |
+    C wysyła do A zatrutą ścieżke bo droga z C do E przebiega przez A i wysyła też informacje do D o swojej drodze
+        |   A   |   B   |   C   |   D   |
+        |   3 B |   i   |   4 A |   5 C |
+    D wysyła do C zatrutą ścieżke bo droga z D do E przebiega przez C i wysyła też informacje do B o swojej drodze
+        |   A   |   B   |   C   |   D   |
+        |   3 B |   B   |   4 A |   5 C |
+    Powstał cykl.
+
+Zad 9
+
+    Dla sieci z 5 routerami, które przed awarią są połączone w cykl A<->B<->C<->D<->E<->A. i wszystkie routery oprócz C dowiedziały się, że krawędź pomiędzy A i B przestała istnieć. Przykładowo C będzie chciała wysłać informację do A i wysyła ją do B, ponieważ ma starą informację, że B jest połączone z A, zaś B ma już aktualną wesję grafu, więc odsyła wiadomość do C i w taki sposób powstaje cykl.
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+Zad 10
+
+    Z treści zadania rozumiem, że jeśli router w tym samym czasie dostanie dwa komunikaty to wysyła oba.
+    Ponumerujmy routery od 1 do n. Routery będą mieć krawędzie do każdego routera o mniejszym numerze. Oczywiste jest, że nie mają cykl bo wtedy oznaczałoby to, że istniałaby krawędź z routera o niższym numerze do takiego z większym. Krytyczna jest krawędź pomiędzy routerem 0 i 1. Router n jest routerem, który rozpoczyna wysyłanie komunikatu. Można stworzyć zależność rekurencyjną S(n) = suma dla i od 1 do n-1 S(i), gdzie S(1) = 1 i (teza) jest to liczba wygenerowanych komunikatów przez wierzchołek n, które muszą przejść przez krawędź krytyczną. Dowód indukcyjny wzoru:
+        
+        Dla n = 1 jeśli router 1 wysyła komunikat to przesyła go do 0.
+
+        ZI zachodzi dla n <= k
+        TI Czy zachodzi dla n = k + 1?
+            n+1 wysyła komunikat dla wszystkich wierzchołków o mniejszym numerze, więc suma wygenerowanych komunikatów przez jego "synów" będzie równa wygenerowanych komunikatów przez n.
+
+        Komunikaty z i do 0 nie wpływają na komunikaty przesłane pomiędzy 0, a 1 ponieważ z 0 nie wychodzą krawędzie.
+
+        Więc na mocy indukcji zachodzi teza.
+
+    S(n) = 2^(n-2) ~ dowód indukcyjny (trywialny) S(1) = 1 S(2) = 1 Suma S(n) = S(n-1) + S(n-2) + ... = S(n-1) + S(n-1) = 2*S(n-1) i z korzystająć z założenia indukcyjnego otrzymujemy wzór.
+
+    Więc skoro przez krawędź 1->0 musi przejść 2^(n-2) komunikatów to przesyłanie zakóńczy się przynajmniej po czasie 2^(OMEGA(n)).
+        

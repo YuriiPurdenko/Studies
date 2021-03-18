@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        SJU 2020/04/22 - HackMD
+    </title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @charset "UTF-8";@import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{display:block;background:#fff;padding:.5em;color:#333;overflow-x:auto}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{color:#55a532;background-color:#eaffea}.hljs-deletion{color:#bd2c00;background-color:#ffecec}.hljs-link{text-decoration:underline}.markdown-body{font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0}.markdown-body blockquote{font-size:16px;padding:0 1em;color:#777;border-left:.25em solid #ddd}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid #ccc;border-bottom-color:#bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eee}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#777}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{padding:0;list-style-type:none}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}.markdown-body span.align-center{display:block;overflow:hidden;clear:both}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{display:block;overflow:hidden;clear:both}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{letter-spacing:-.2em;content:"\00a0"}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.markdown-body pre code,.markdown-body pre tt{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{padding:10px 8px 9px;text-align:right;background:#fff;border:0}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{font-weight:700;background:#f8f8f8;border-top:0}.news .alert .markdown-body blockquote{padding:0 0 0 40px;border:0 none}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle;cursor:default!important}.markdown-body{padding-top:40px;padding-bottom:40px;max-width:758px;overflow:visible!important;position:relative}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{text-align:right;position:relative;display:inline-block;cursor:default;z-index:4;padding:0 8px 0 0;min-width:20px;box-sizing:content-box;color:#afafaf!important;border-right:3px solid #6ce26c!important}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-left:none;border-top:none;border-bottom:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-spacing:0;border-collapse:inherit!important}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{overflow:unset;margin-bottom:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{text-align:center;background-color:inherit;border-radius:0;white-space:inherit;overflow:visible}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{max-width:100%;height:100%}.markdown-body pre>code.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.markdown-body .alert>p,.markdown-body .alert>ul{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{cursor:pointer;display:table;text-align:center;background-position:50%;background-repeat:no-repeat;background-size:contain;background-color:#000;overflow:hidden}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{width:100%;object-fit:contain;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{width:100%;height:100%;position:absolute;top:0;left:0}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{position:absolute;height:auto;width:auto;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.3;transition:opacity .2s;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{position:relative;z-index:2;max-width:760px;margin:25px auto -25px;color:#777}.toc .invisable-node{list-style-type:none}.ui-toc{position:fixed;bottom:20px;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{height:40px;padding:10px 4px;border-top-left-radius:0;border-bottom-left-radius:0}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{opacity:1;color:#fff;transition:opacity .2s}.ui-toc-label:focus{opacity:.3;background-color:#ccc;color:#000}.ui-toc-label:hover{opacity:1;background-color:#ccc;transition:opacity .2s}.ui-toc-dropdown{margin-top:20px;margin-bottom:20px;padding-left:10px;padding-right:10px;max-width:45vw;width:25vw;max-height:70vh;overflow:auto;text-align:inherit}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{padding-right:0;letter-spacing:.0029em}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}.ui-toc-dropdown .nav>li:first-child:last-child > ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{padding-left:19px;color:#000;text-decoration:none;background-color:transparent;border-left:1px solid #000}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{padding-right:19px;border-left:none;border-right:1px solid #000}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{padding-left:18px;font-weight:700;color:#000;background-color:transparent;border-left:2px solid #000}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{padding-right:18px;border-left:none;border-right:2px solid #000}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:40px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{padding-left:28px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{padding-left:38px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{position:fixed;top:0;max-width:15vw;max-height:70vh;overflow:auto}.back-to-top,.expand-toggle,.go-to-bottom{display:block;padding:4px 10px;margin-top:10px;margin-left:10px;font-size:12px;font-weight:500;color:#999}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{width:20px;height:20px;display:block;border-radius:3px;margin-top:2px;margin-bottom:2px;margin-right:5px;background-position:50%;background-repeat:no-repeat;background-size:cover}.ui-user-icon.small{width:18px;height:18px;display:inline-block;vertical-align:middle;margin:0 0 .2em}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-published-note{color:#337ab7}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{position:relative;z-index:1;color:#222}.markdown-body.slides:before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:currentColor;box-shadow:0 0 0 50vw}.markdown-body.slides section[data-markdown]{position:relative;margin-bottom:1.5em;background-color:#fff;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{position:absolute;top:50%;left:1em;right:1em;transform:translateY(-50%);max-height:100%;overflow:hidden}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{content:"";position:absolute;top:-1.5em;right:1em;height:1.5em;border:3px solid #777}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;text-shadow:0 0 1em transparent,1px 1px 1.2px rgba(0,0,0,.004);-webkit-overflow-scrolling:touch;letter-spacing:.025em;font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="SJU-20200422" data-id="SJU-20200422"><a class="anchor hidden-xs" href="#SJU-20200422" title="SJU-20200422"><span class="octicon octicon-link"></span></a><span>SJU 2020/04/22</span></h1><h2 id="Zadanie-5" data-id="Zadanie-5"><a class="anchor hidden-xs" href="#Zadanie-5" title="Zadanie-5"><span class="octicon octicon-link"></span></a><span>Zadanie 5.</span></h2><ul>
+<li><em><span>tick</span></em><span> – 1000 razy na sekundę (generuje przerwanie zegarowe)</span></li>
+<li><span>ale mamy oszustwo i jądro zazwyczaj sobie robi to “much less frequently” (bo uznaje, że nie warto to obsługiwać częściej)</span></li>
+<li><span>dlaczego oszukujemy? bo jak komputer idzie sobie spać i nie musi obsługiwać przerwanka to zjada mniej prądu (fajne w laptopie)</span></li>
+<li><code>hardclock</code><span> to była procedurka, która sobie to obsługiwała</span>
+<ul>
+<li><span>z oczywistych powodów musi on działać bardzo szybko (szybciej niż jeden tick) bo zaczniemy gubić czas i będzie bardzo nieprzyjemnie</span></li>
+<li><span>jako, że ma priorytet niczym Królowa Angielska to wszystko inne jest zablokowane na czas jego wykonania – a co się dzieje jak blokujemy obsługę karty sieciowej? no pakiety nie dochodzą… a co się dzieje jak nie dochodzą nam pakiety UDP jak oglądamy Barwy Szczęścia? no jesteśmy nieszczęśliwi</span></li>
+</ul>
+</li>
+<li><code>softclock</code><span> no to jak wiemy, że </span><code>hardclock</code><span> jest jak Królowa Angielska to potrzebujemy czegoś, do czego deleguje się mniej ważne rzeczy, no i tym zajmuje się softclock</span></li>
+<li><code>statclock</code><span> 127 razy na sekundę, dla jakiś statystyk systemowych</span></li>
+<li><code>profclock</code><span> 8128 razy na sekudnę do profilowania</span></li>
+</ul><p><span>No i co robi </span><code>hardclock</code><span>?</span></p><ul>
+<li><span>jeśli mamy ustawiony timer wirtualny lub profilowania to dekrementujemy go i jeśli upłynął czas to dostarczamy sygnał (trochę nie po polsku)</span></li>
+<li><span>poprawiamy czas dnia o odpowiednią liczbę (względem poprzedniego wywołania timera)</span></li>
+<li><span>jeśli nie ma ustawionego </span><code>profclock</code><span> to wykonujemy jego robotę</span></li>
+<li><span>jak wyżej dla </span><code>statclock</code></li>
+<li><span>jeśli </span><code>softclock</code><span> powinien zostać wykonany, to robimy proces z nim </span><code>runnable</code></li>
+<li><span>wymusza context switcha (historycznie tak robił)</span></li>
+</ul><p><code>statclock</code></p><ul>
+<li><span>po 4 tickach dla procesu robimy ponowne przeliczenie priorytetu</span></li>
+<li><span>dalsza statystyka (co robiliśmy w momencie ticka)</span></li>
+</ul><p><code>softclock</code></p><ul>
+<li><span>przeliczanie priorytetów (ale scheduler mamy już raz na sekundę)</span></li>
+<li><span>timeouty – informowanie o nich procesów</span></li>
+<li><span>retransmisja dropniętych pakietów</span></li>
+<li><span>watchdog</span></li>
+</ul><p><span>mamy coś takiego jak </span><code>callout queue</code><span> w którą wrzuamy co się ma stać jak przyjdzie timeout (obrazek był na wykładzie) – mamy 200 takich kolejek (po jednej na tick, umiemy więc reprezentować czas od teraz do teraz + 199)</span></p><p><span>kiedy robimy</span><code>hardclock</code><span> to </span><code>teraz++</code><span> (odnosząc się do kolejek), jeśli kolejka z </span><code>teraz</code><span> nie jest pusta, to będziemy zapuszczać </span><code>softclock</code><span> który zajmuje się interpretacją zawartości kolejki</span></p><p><span>oczywiście w naszym wpisie w kolejce pamiętamy kiedy przyjdzie </span><code>teraz</code><span>, więc jak chcemy wrzucić się do czasu </span><code>teraz + n</code><span> to liczymy </span><code>teraz + n mod 200</code><span> (jeśli umiem matematykę, ale wiadomo o co chodzi) i wrzucamy też do kolejki informację o tym jaki tick nas interesuje (jak przyjdzie zły tick to po porstu będziemy nadal czekać w tej kolejce, a jak przyjdzie interesujący nas tick to wywalimy się z kolejki – teraz zastanawiam się czy nazwanie tego kolejką jest sensowne?)</span></p><pre><code class="C hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="136"></span>
+<span data-linenumber="137"></span>
+<span data-linenumber="138"></span>
+<span data-linenumber="139"></span>
+<span data-linenumber="140"></span>
+<span data-linenumber="141"></span>
+<span data-linenumber="142"></span>
+<span data-linenumber="143"></span>
+<span data-linenumber="144"></span>
+<span data-linenumber="145"></span>
+<span data-linenumber="146"></span>
+<span data-linenumber="147"></span>
+<span data-linenumber="148"></span>
+<span data-linenumber="149"></span></div><div class="code"><span class="hljs-attribute">int</span>
+hardclockintr(void)
+{
+    <span class="hljs-attribute">sbintime_t</span> now;
+    <span class="hljs-attribute">struct</span> pcpu_state *state;
+    <span class="hljs-attribute">int</span> done;
+
+    <span class="hljs-attribute">if</span> (doconfigtimer() || busy)
+        return (FILTER_HANDLED);
+    <span class="hljs-attribute">state</span> = DPCPU_PTR(timerstate);
+    <span class="hljs-attribute">now</span> = state-&gt;now;
+    <span class="hljs-attribute">done</span> = handleevents(now, <span class="hljs-number">0</span>);
+    <span class="hljs-attribute">return</span> (done ? FILTER_HANDLED : FILTER_STRAY);
+}
+</div></div></code></pre><p><code>doconfigtimer</code><span> – Reconfigure specified per-CPU timer on other CPU. Called from IPI handler. (na podstawie action z pcpu_state)</span></p><pre><code class="C hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="113"></span>
+<span data-linenumber="114"></span>
+<span data-linenumber="115"></span>
+<span data-linenumber="116"></span>
+<span data-linenumber="117"></span>
+<span data-linenumber="118"></span>
+<span data-linenumber="119"></span>
+<span data-linenumber="120"></span>
+<span data-linenumber="121"></span>
+<span data-linenumber="122"></span>
+<span data-linenumber="123"></span>
+<span data-linenumber="124"></span>
+<span data-linenumber="125"></span>
+<span data-linenumber="126"></span>
+<span data-linenumber="127"></span></div><div class="code"><span class="hljs-keyword">struct</span> pcpu_state {
+    <span class="hljs-keyword">struct</span> mtx  et_hw_mtx;  <span class="hljs-comment">/* Per-CPU timer mutex. */</span>
+    u_int       action;     <span class="hljs-comment">/* Reconfiguration requests. */</span>
+    u_int       handle;     <span class="hljs-comment">/* Immediate handle resuests. */</span>
+    sbintime_t  now;        <span class="hljs-comment">/* Last tick time. */</span>
+    sbintime_t  nextevent;  <span class="hljs-comment">/* Next scheduled event on this CPU. */</span>
+    sbintime_t  nexttick;   <span class="hljs-comment">/* Next timer tick time. */</span>
+    sbintime_t  nexthard;   <span class="hljs-comment">/* Next hardclock() event. */</span>
+    sbintime_t  nextstat;   <span class="hljs-comment">/* Next statclock() event. */</span>
+    sbintime_t  nextprof;   <span class="hljs-comment">/* Next profclock() event. */</span>
+    sbintime_t  nextcall;   <span class="hljs-comment">/* Next callout event. */</span>
+    sbintime_t  nextcallopt;    <span class="hljs-comment">/* Next optional callout event. */</span>
+    <span class="hljs-keyword">int</span>     ipi;        <span class="hljs-comment">/* This CPU needs IPI. */</span>
+    <span class="hljs-keyword">int</span>     idle;       <span class="hljs-comment">/* This CPU is in idle mode. */</span>
+};
+</div></div></code></pre><p><span>Pytanie, dlaczego </span><code>typedef __int64_t   sbintime_t;</code><span>? </span><code>__int64_t</code><span> to w tym przypadku typedef na long long, dlaczego nie używamy po prostu nazewnictwa </span><code>int64_t</code><span>?</span></p><p><a href="http://bxr.su/FreeBSD/sys/kern/kern_clocksource.c#handleevents" target="_blank" rel="noopener"><code>handleevents</code></a></p><pre><code class="C hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="155"></span>
+<span data-linenumber="156"></span>
+<span data-linenumber="157"></span>
+<span data-linenumber="158"></span>
+<span data-linenumber="159"></span>
+<span data-linenumber="160"></span>
+<span data-linenumber="161"></span>
+<span data-linenumber="162"></span>
+<span data-linenumber="163"></span>
+<span data-linenumber="164"></span>
+<span data-linenumber="165"></span>
+<span data-linenumber="166"></span>
+<span data-linenumber="167"></span>
+<span data-linenumber="168"></span>
+<span data-linenumber="169"></span>
+<span data-linenumber="170"></span>
+<span data-linenumber="171"></span>
+<span data-linenumber="172"></span>
+<span data-linenumber="173"></span>
+<span data-linenumber="174"></span>
+<span data-linenumber="175"></span>
+<span data-linenumber="176"></span>
+<span data-linenumber="177"></span>
+<span data-linenumber="178"></span>
+<span data-linenumber="179"></span>
+<span data-linenumber="180"></span>
+<span data-linenumber="181"></span>
+<span data-linenumber="182"></span>
+<span data-linenumber="183"></span>
+<span data-linenumber="184"></span>
+<span data-linenumber="185"></span>
+<span data-linenumber="186"></span>
+<span data-linenumber="187"></span>
+<span data-linenumber="188"></span>
+<span data-linenumber="189"></span>
+<span data-linenumber="190"></span>
+<span data-linenumber="191"></span>
+<span data-linenumber="192"></span>
+<span data-linenumber="193"></span>
+<span data-linenumber="194"></span>
+<span data-linenumber="195"></span>
+<span data-linenumber="196"></span>
+<span data-linenumber="197"></span>
+<span data-linenumber="198"></span>
+<span data-linenumber="199"></span>
+<span data-linenumber="200"></span>
+<span data-linenumber="201"></span>
+<span data-linenumber="202"></span>
+<span data-linenumber="203"></span>
+<span data-linenumber="204"></span>
+<span data-linenumber="205"></span>
+<span data-linenumber="206"></span>
+<span data-linenumber="207"></span>
+<span data-linenumber="208"></span>
+<span data-linenumber="209"></span>
+<span data-linenumber="210"></span>
+<span data-linenumber="211"></span>
+<span data-linenumber="212"></span>
+<span data-linenumber="213"></span>
+<span data-linenumber="214"></span>
+<span data-linenumber="215"></span>
+<span data-linenumber="216"></span>
+<span data-linenumber="217"></span>
+<span data-linenumber="218"></span>
+<span data-linenumber="219"></span></div><div class="code">static <span class="hljs-built_in">int</span>
+handleevents(sbintime_t now, <span class="hljs-built_in">int</span> fake)
+{
+    sbintime_t t, *hct;
+    <span class="hljs-keyword">struct</span> trapframe *frame;
+    <span class="hljs-keyword">struct</span> pcpu_state *state;
+    <span class="hljs-built_in">int</span> usermode;
+    <span class="hljs-built_in">int</span> <span class="hljs-keyword">done</span>, runs;
+
+    <span class="hljs-keyword">done</span> = <span class="hljs-number">0</span>;
+    frame = curthread-&gt;td_intr_frame;
+    usermode = <span class="hljs-type">TRAPF_USERMODE</span>(frame);
+
+    state = <span class="hljs-type">DPCPU_PTR</span>(timerstate);
+
+    runs = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">while</span> (now &gt;= state-&gt;nexthard) {
+        state-&gt;nexthard += tick_sbt;
+        runs++;
+    }
+    <span class="hljs-keyword">if</span> (runs) {
+        hct = <span class="hljs-type">DPCPU_PTR</span>(hardclocktime);
+        *hct = state-&gt;nexthard - tick_sbt;
+        <span class="hljs-keyword">if</span> (fake &lt; <span class="hljs-number">2</span>) {
+            hardclock(runs, usermode);
+            <span class="hljs-keyword">done</span> = <span class="hljs-number">1</span>;
+        }
+    }
+    runs = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">while</span> (now &gt;= state-&gt;nextstat) {
+        state-&gt;nextstat += statperiod;
+        runs++;
+    }
+    <span class="hljs-keyword">if</span> (runs &amp;&amp; fake &lt; <span class="hljs-number">2</span>) {
+        statclock(runs, usermode);
+        <span class="hljs-keyword">done</span> = <span class="hljs-number">1</span>;
+    }
+    <span class="hljs-keyword">if</span> (profiling) {
+        runs = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">while</span> (now &gt;= state-&gt;nextprof) {
+            state-&gt;nextprof += profperiod;
+            runs++;
+        }
+        <span class="hljs-keyword">if</span> (runs) {
+            profclock(runs, usermode, <span class="hljs-type">TRAPF_PC</span>(frame));
+            <span class="hljs-keyword">done</span> = <span class="hljs-number">1</span>;
+        }
+    } <span class="hljs-keyword">else</span>
+        state-&gt;nextprof = state-&gt;nextstat;
+    <span class="hljs-keyword">if</span> (now &gt;= state-&gt;nextcallopt || now &gt;= state-&gt;nextcall) {
+        state-&gt;nextcall = state-&gt;nextcallopt = <span class="hljs-type">SBT_MAX</span>;
+        callout_process(now);
+    }
+
+    t = getnextcpuevent(<span class="hljs-number">0</span>);
+    <span class="hljs-type">ET_HW_LOCK</span>(state);
+    <span class="hljs-keyword">if</span> (!busy) {
+        state-&gt;idle = <span class="hljs-number">0</span>;
+        state-&gt;nextevent = t;
+        loadtimer(now, (fake == <span class="hljs-number">2</span>) &amp;&amp;
+            (timer-&gt;et_flags &amp; <span class="hljs-type">ET_FLAGS_PERCPU</span>));
+    }
+    <span class="hljs-type">ET_HW_UNLOCK</span>(state);
+    return (<span class="hljs-keyword">done</span>);
+}
+</div></div></code></pre><pre><code class="C hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="457"></span>
+<span data-linenumber="458"></span>
+<span data-linenumber="459"></span>
+<span data-linenumber="460"></span>
+<span data-linenumber="461"></span>
+<span data-linenumber="462"></span>
+<span data-linenumber="463"></span>
+<span data-linenumber="464"></span>
+<span data-linenumber="465"></span>
+<span data-linenumber="466"></span>
+<span data-linenumber="467"></span>
+<span data-linenumber="468"></span>
+<span data-linenumber="469"></span>
+<span data-linenumber="470"></span>
+<span data-linenumber="471"></span>
+<span data-linenumber="472"></span>
+<span data-linenumber="473"></span>
+<span data-linenumber="474"></span>
+<span data-linenumber="475"></span>
+<span data-linenumber="476"></span>
+<span data-linenumber="477"></span>
+<span data-linenumber="478"></span>
+<span data-linenumber="479"></span>
+<span data-linenumber="480"></span>
+<span data-linenumber="481"></span>
+<span data-linenumber="482"></span>
+<span data-linenumber="483"></span>
+<span data-linenumber="484"></span>
+<span data-linenumber="485"></span>
+<span data-linenumber="486"></span>
+<span data-linenumber="487"></span>
+<span data-linenumber="488"></span>
+<span data-linenumber="489"></span>
+<span data-linenumber="490"></span>
+<span data-linenumber="491"></span>
+<span data-linenumber="492"></span>
+<span data-linenumber="493"></span>
+<span data-linenumber="494"></span>
+<span data-linenumber="495"></span>
+<span data-linenumber="496"></span>
+<span data-linenumber="497"></span>
+<span data-linenumber="498"></span>
+<span data-linenumber="499"></span>
+<span data-linenumber="500"></span>
+<span data-linenumber="501"></span>
+<span data-linenumber="502"></span>
+<span data-linenumber="503"></span></div><div class="code"><span class="hljs-function"><span class="hljs-keyword">void</span>
+<span class="hljs-title">hardclock</span>(<span class="hljs-params"><span class="hljs-keyword">int</span> cnt, <span class="hljs-keyword">int</span> usermode</span>)
+</span>{
+    <span class="hljs-keyword">struct</span> pstats *pstats;
+    <span class="hljs-keyword">struct</span> thread *td = curthread;
+    <span class="hljs-keyword">struct</span> proc *p = td-&gt;td_proc;
+    <span class="hljs-keyword">int</span> *t = DPCPU_PTR(pcputicks);
+    <span class="hljs-keyword">int</span> <span class="hljs-keyword">global</span>, i, newticks;
+
+    <span class="hljs-comment">/*
+     * Update per-CPU and possibly global ticks values.
+     */</span>
+    *t += cnt;
+    <span class="hljs-keyword">global</span> = ticks;
+    <span class="hljs-keyword">do</span> {
+        newticks = *t - <span class="hljs-keyword">global</span>;
+        <span class="hljs-keyword">if</span> (newticks &lt;= <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">if</span> (newticks &lt; <span class="hljs-number">-1</span>)
+                *t = <span class="hljs-keyword">global</span> - <span class="hljs-number">1</span>;
+            newticks = <span class="hljs-number">0</span>;
+            <span class="hljs-keyword">break</span>;
+        }
+    } <span class="hljs-keyword">while</span> (!atomic_fcmpset_int(&amp;ticks, &amp;<span class="hljs-keyword">global</span>, *t));
+
+    <span class="hljs-comment">/*
+     * Run current process's virtual and profile time, as needed.
+     */</span>
+    pstats = p-&gt;p_stats;
+    <span class="hljs-keyword">if</span> (__predict_false(
+        timevalisset(&amp;pstats-&gt;p_timer[ITIMER_VIRTUAL].it_value) ||
+        timevalisset(&amp;pstats-&gt;p_timer[ITIMER_PROF].it_value)))
+        hardclock_itimer(td, pstats, cnt, usermode);
+
+    <span class="hljs-comment">/* We are in charge to handle this tick duty. */</span>
+    <span class="hljs-keyword">if</span> (newticks &gt; <span class="hljs-number">0</span>) {
+        tc_ticktock(newticks);
+        <span class="hljs-keyword">if</span> (watchdog_enabled &gt; <span class="hljs-number">0</span>) {
+            i = atomic_fetchadd_int(&amp;watchdog_ticks, -newticks);
+            <span class="hljs-keyword">if</span> (i &gt; <span class="hljs-number">0</span> &amp;&amp; i &lt;= newticks)
+                watchdog_fire();
+        }
+    }
+    <span class="hljs-keyword">if</span> (curcpu == CPU_FIRST())
+        cpu_tick_calibration();
+    <span class="hljs-keyword">if</span> (__predict_false(DPCPU_GET(epoch_cb_count)))
+        GROUPTASK_ENQUEUE(DPCPU_PTR(epoch_cb_task));
+}
+</div></div></code></pre><pre><code class="C hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="231"></span>
+<span data-linenumber="232"></span>
+<span data-linenumber="233"></span>
+<span data-linenumber="234"></span>
+<span data-linenumber="235"></span>
+<span data-linenumber="236"></span>
+<span data-linenumber="237"></span>
+<span data-linenumber="238"></span>
+<span data-linenumber="239"></span>
+<span data-linenumber="240"></span>
+<span data-linenumber="241"></span>
+<span data-linenumber="242"></span>
+<span data-linenumber="243"></span>
+<span data-linenumber="244"></span>
+<span data-linenumber="245"></span>
+<span data-linenumber="246"></span>
+<span data-linenumber="247"></span>
+<span data-linenumber="248"></span>
+<span data-linenumber="249"></span>
+<span data-linenumber="250"></span>
+<span data-linenumber="251"></span>
+<span data-linenumber="252"></span>
+<span data-linenumber="253"></span>
+<span data-linenumber="254"></span>
+<span data-linenumber="255"></span>
+<span data-linenumber="256"></span>
+<span data-linenumber="257"></span>
+<span data-linenumber="258"></span>
+<span data-linenumber="259"></span>
+<span data-linenumber="260"></span>
+<span data-linenumber="261"></span>
+<span data-linenumber="262"></span></div><div class="code"><span class="hljs-function"><span class="hljs-keyword">static</span> sbintime_t
+<span class="hljs-title">getnextcpuevent</span>(<span class="hljs-params"><span class="hljs-keyword">int</span> idle</span>)
+</span>{
+    sbintime_t <span class="hljs-keyword">event</span>;
+    <span class="hljs-keyword">struct</span> pcpu_state *state;
+    u_int hardfreq;
+
+    state = DPCPU_PTR(timerstate);
+    <span class="hljs-comment">/* Handle hardclock() events, skipping some if CPU is idle. */</span>
+    <span class="hljs-keyword">event</span> = state-&gt;nexthard;
+    <span class="hljs-keyword">if</span> (idle) {
+        hardfreq = (u_int)hz / <span class="hljs-number">2</span>;
+        <span class="hljs-keyword">if</span> (tc_min_ticktock_freq &gt; <span class="hljs-number">2</span>
+<span class="hljs-meta">#ifdef SMP</span>
+            &amp;&amp; curcpu == CPU_FIRST()
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+            )
+            hardfreq = hz / tc_min_ticktock_freq;
+        <span class="hljs-keyword">if</span> (hardfreq &gt; <span class="hljs-number">1</span>)
+            <span class="hljs-keyword">event</span> += tick_sbt * (hardfreq - <span class="hljs-number">1</span>);
+    }
+    <span class="hljs-comment">/* Handle callout events. */</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">event</span> &gt; state-&gt;nextcall)
+        <span class="hljs-keyword">event</span> = state-&gt;nextcall;
+    <span class="hljs-keyword">if</span> (!idle) { <span class="hljs-comment">/* If CPU is active - handle other types of events. */</span>
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">event</span> &gt; state-&gt;nextstat)
+            <span class="hljs-keyword">event</span> = state-&gt;nextstat;
+        <span class="hljs-keyword">if</span> (profiling &amp;&amp; <span class="hljs-keyword">event</span> &gt; state-&gt;nextprof)
+            <span class="hljs-keyword">event</span> = state-&gt;nextprof;
+    }
+    <span class="hljs-keyword">return</span> (<span class="hljs-keyword">event</span>);
+}
+</div></div></code></pre><ul>
+<li><span>w pętli while sprawdzamy, czy teraźniejszość przekroczyła czas hardclocka, jeśli tak, to poprawiamy czas następnego hardlocka i zwiększamy licznik, ile hardlocków się wykonało</span></li>
+<li><span>jeśli wykonaliśmy tick, to robimy </span><code>hardclocka</code>
+<ul>
+<li><span>omówiliśmy już wyżej co robi zgodnie z książką</span></li>
+<li><span>robimy update liczby ticków</span></li>
+<li><span>jeśli mamy ustawiony timer virtual lub profile to liczymy jakieś tam statystyki</span></li>
+<li><span>potem robimy watchdoga jeśli trzeba</span></li>
+<li><span>i kalibrujemy czas</span></li>
+</ul>
+</li>
+<li><span>to samo powtarzamy dla statclocka</span></li>
+<li><span>i to samo dla profclocka</span></li>
+<li><code>getnextcpuevent</code>
+<ul>
+<li><span>Schedule binuptime of the next event on current CPU.</span></li>
+<li><span>generalnie liczymy według jakiś ustalonych reguł następny event</span></li>
+</ul>
+</li>
+<li><code>ET_HW_LOCK</code><span> pod spodem to spinlock</span></li>
+<li><span>jeśli nie jesteśmy busy to będziemy chcieli być idle</span></li>
+</ul><h2 id="Zadanie-1" data-id="Zadanie-1"><a class="anchor hidden-xs" href="#Zadanie-1" title="Zadanie-1"><span class="octicon octicon-link"></span></a><span>Zadanie 1.</span></h2><p><span>Mechanizm usypiania i pobudki nie działa prawidłowo na maszynie</span><br>
+<span>wieloprcesorowej.</span></p><p><img src="https://misc.jasiak.xyz/wa.png" alt=""></p><p><span>Wątek </span><em><span>T1</span></em><span> zablokował zasób </span><em><span>R1</span></em><span>. Wątek </span><em><span>T2</span></em><span>, chodzący na innym procesorze</span><br>
+<span>próbuje zabrać zasób </span><em><span>R1</span></em><span>, ale jest on już zabrany. </span><em><span>T2</span></em><span> idzie spać i czeka</span><br>
+<span>na zasób. Pomiędzy sprawdzeniem a czasem pójścia spać </span><em><span>T1</span></em><span> odblokowuje </span><em><span>R1</span></em><span>.</span><br>
+<span>No i w tym momencie </span><em><span>R1</span></em><span> jest wolne, </span><em><span>T1</span></em><span> sobie działa, a </span><em><span>T2</span></em><span> śpi i czeka, aż</span><br>
+<span>ktoś go obudzi, ale nikt tego nie zrobi i </span><em><span>T2</span></em><span> zdechło na wieczność – chyba,</span><br>
+<span>że inny proces znów zabierze </span><em><span>R1</span></em><span> i odda.</span></p><p><span>Mechanizmem który jest w stanie rozwiązać ten problem jest wykonanie blokady na</span><br>
+<em><span>R1</span></em><span> i pójścia spać w przypadku niepowodzenia jako atomowej operacji.</span></p><p><a href="https://www.freebsd.org/cgi/man.cgi?query=mtx_sleep&amp;sektion=9" target="_blank" rel="noopener"><code>mtx_sleep</code></a></p><pre><code class="C hljs"><span class="hljs-function"><span class="hljs-keyword">int</span>
+<span class="hljs-title">mtx_sleep</span>(<span class="hljs-params"><span class="hljs-keyword">void</span> *chan, <span class="hljs-keyword">struct</span> mtx *mtx, <span class="hljs-keyword">int</span> priority, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *wmesg,
+          <span class="hljs-keyword">int</span> timo</span>)</span>;
+</code></pre><blockquote>
+<p><span>The </span><code>mtx_sleep()</code><span> function is used to atomically release mtx while waiting for an event. For more details on the parameters to this function, see sleep(9).</span></p>
+</blockquote><p><span>Jest to makro</span></p><pre><code class="C hljs"><span class="hljs-comment">#define mtx_sleep(chan, mtx, pri, wmesg, timo)              \</span>
+    _sleep(<span class="hljs-function"><span class="hljs-params">(chan)</span>, &amp;<span class="hljs-params">(mtx)</span>-&gt;</span>lock_object, (pri), (wmesg),     \
+        tick_sbt * (timo), <span class="hljs-number">0</span>, C_HARDCLOCK)
+</code></pre><pre><code class="C hljs"><span class="hljs-keyword">int</span>
+_sleep(<span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *ident, <span class="hljs-keyword">struct</span> lock_object *<span class="hljs-keyword">lock</span>, <span class="hljs-keyword">int</span> priority,
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *wmesg, sbintime_t sbt, sbintime_t pr, <span class="hljs-keyword">int</span> flags)
+</code></pre><pre><code>/*
+ * General sleep call.  Suspends the current thread until a wakeup is
+ * performed on the specified identifier.  The thread will then be made
+ * runnable with the specified priority.  Sleeps at most sbt units of time
+ * (0 means no timeout).  If pri includes the PCATCH flag, let signals
+ * interrupt the sleep, otherwise ignore them while sleeping.  Returns 0 if
+ * awakened, EWOULDBLOCK if the timeout expires.  If PCATCH is set and a
+ * signal becomes pending, ERESTART is returned if the current system
+ * call should be restarted if possible, and EINTR is returned if the system
+ * call should be interrupted by the signal (return EINTR).
+ *
+ * The lock argument is unlocked before the caller is suspended, and
+ * re-locked before _sleep() returns.  If priority includes the PDROP
+ * flag the lock is not re-locked before returning.
+ */
+</code></pre><pre><code>/*
+* We put ourselves on the sleep queue and start our timeout
+* before calling thread_suspend_check, as we could stop there,
+* and a wakeup or a SIGCONT (or both) could occur while we were
+* stopped without resuming us.  Thus, we must be ready for sleep
+* when cursig() is called.  If the wakeup happens while we're
+* stopped, then td will no longer be on a sleep queue upon
+* return from cursig().
+*/
+</code></pre><h2 id="Zadanie-2" data-id="Zadanie-2"><a class="anchor hidden-xs" href="#Zadanie-2" title="Zadanie-2"><span class="octicon octicon-link"></span></a><span>Zadanie 2.</span></h2><p><span>W porównaniu do tradycyjnego mechanizmu usypiania i pobudek, semafory umożliwiają,</span><br>
+<span>aby proces nie był budzony niepotrzebnie. Kiedy wątek zostanie obudzony, jest</span><br>
+<span>zagwarantowane, że otrzyma on zasób. Posiadanie jest przekazane jeszcze przed</span><br>
+<span>wzowieniem procesu. Jeśli inny wątek spórbuje dokonać bolokady w międzyczasie</span><br>
+<span>nie będzie w stanie tego dokonać. Niestety powoduje to pewne problemy wydajnościowe</span><br>
+<span>zwane konwojami. Konwój jest tworzony, kiedy jest częsty </span><em><span>spór</span></em><span> o semafor.</span></p><p><span>Na poniższym rysunku mamy przypadek konwoju. </span><em><span>R1</span></em><span> jest krytycznym kawałkiem,</span><br>
+<span>chronionym przez semafor. </span><em><span>T2</span></em><span> trzyma semafor podczas gdy </span><em><span>T3</span></em><span> czeka aby go zabrać.</span><br>
+<em><span>T1</span></em><span> chodzi na innym procesorze, a </span><em><span>T4</span></em><span> czeka na schedulera. </span><em><span>T2</span></em><span> zwalnia semafor.</span><br>
+<em><span>T3</span></em><span> dostaje semafor i czeka na schedulera. Teraz </span><em><span>T1</span></em><span> czeka na semafor więc idzie spać.</span><br>
+<em><span>T4</span></em><span> zostaje wrzucony na procesor za </span><em><span>T1</span></em><span>. Problem? </span><em><span>T1</span></em><span> i </span><em><span>T3</span></em><span> muszą poczekać, aż</span><br>
+<em><span>T2</span></em><span> i </span><em><span>T4</span></em><span> zejdą z CPU.</span></p><p><span>Naszym problemem jest to, że dokonujemy tutaj context switche.o</span></p><p><span>Jeśli w </span><strong><span>(b)</span></strong><span> mielibyśmy mutex, to </span><em><span>T2</span></em><span> zwolniłoby blokadę i obudziłoby </span><em><span>T3</span></em><span>. Ale </span><em><span>T3</span></em><br>
+<span>nie miałoby jeszcze locka na </span><em><span>R1</span></em><span> i </span><em><span>T1</span></em><span> mogłoby się spokojnie dalej wykonywać bez context</span><br>
+<span>switcha.</span></p><p><img src="https://misc.jasiak.xyz/con.png" alt=""></p><h2 id="Zadanie-3" data-id="Zadanie-3"><a class="anchor hidden-xs" href="#Zadanie-3" title="Zadanie-3"><span class="octicon octicon-link"></span></a><span>Zadanie 3.</span></h2><p><span>Kiedy wątek zwolni pewnien zasób to budzi on pozostałe wątki czekające na tenże zasób. Jeden z tych wątków może założyć&nbsp;blokadę, lecz reszta zobaczy, że zasób jest zablokowany i pójdzie dalej spać. To może powodować duży narzut poprzez budzenie i zmiane kontekstu.</span></p><p><span>Problem ten nie występuje na maszynach z jednym procesorem, gdyż gdy pewnien wątek czekający na zasób dostaje kontrolę to znaczy, że zasób na pewno będzie wolny. Na wieloprocesorowej maszynie zaś, jeśli wiele wątków czeka na jeden zasób to wybudzenie wszystkich może spowodować ich jednoczesne zaschedulowanie na różnych rdzeniach i wtedy będą walczyć o zasób. To nazywa się właśnie problem </span><em><span>wygłodniałej hordy (thundering herd)</span></em><span>. Od wybudzenia do działania mija pewien czas, w którym ktoś inny może zabrać zasób. Jeśli to się będzie zdarzało często to może dojść do głodzenia.</span></p><p><span>A short-term lock is managed by a </span><strong><span>turnstile</span></strong><span> data structure. The turnstile tracks the current owner of the lock and the list of threads waiting for access to the lock. Across the top of the figure is a set of hash headers that allow a quick lookup to find a lock with waiting threads. If a turnstile is found, it provides a pointer to the thread that currently owns the lock and lists of the threads that are waiting for exclusive and shared access. The most important use of the turnstile is to quickly find the threads that need to be awakened when a lock is released.</span></p><p><span>A turnstile is needed each time a thread blocks on a contested lock. Because blocking is common, it would be prohibitively slow to allocate and free a turnstile every time one is needed. So each thread allocates a turnstile when it is created. As a thread may only be blocked on one lock at any point in time, it will never need more than one turnstile. Turnstiles are allocated by threads rather than being incorporated into each lock structure because there are far more locks in the kernel than there are threads. Allocating one turnstile per thread rather than one per lock results in lower memory utilization in the kernel.</span></p><p><span>When a thread is about to block on a short-term lock, it provides its turnstile to be used to track the lock. If it is the first thread to block on the lock, its turnstile is used. If it is not the first thread to block, then an earlier thread’s turnstile will be in use to do the tracking. The additional turnstiles that are provided are kept on a free list whose head is the turnstile being used to track the lock. When a thread is awakened and is being made runnable, it is given a turnstile from the free list (which may not be the same one that it originally provided). When the last thread is awakened, the free list will be empty and the turnstile no longer needed, so it can be taken by the awakening thread.</span></p><p><span>W bramkach obrotowych wykorzystuje się mechanizm dziedziczenia piorytetów.</span></p><p><span>Implementacja </span><code>turnstile_broadcast()</code><span> w Mimikerze (w FreeBSD idea jest ta sama):</span></p><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="356"></span>
+<span data-linenumber="357"></span>
+<span data-linenumber="358"></span>
+<span data-linenumber="359"></span>
+<span data-linenumber="360"></span>
+<span data-linenumber="361"></span>
+<span data-linenumber="362"></span>
+<span data-linenumber="363"></span>
+<span data-linenumber="364"></span></div><div class="code"><span class="token keyword">void</span> <span class="token function">turnstile_broadcast</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span>wchan<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  turnstile_chain_t <span class="token operator">*</span>tc <span class="token operator">=</span> <span class="token function">TC_LOOKUP</span><span class="token punctuation">(</span>wchan<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  turnstile_t <span class="token operator">*</span>ts <span class="token operator">=</span> <span class="token function">turnstile_lookup</span><span class="token punctuation">(</span>wchan<span class="token punctuation">,</span> tc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>ts <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">give_back_turnstiles</span><span class="token punctuation">(</span>ts<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">unlend_self</span><span class="token punctuation">(</span>ts<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">wakeup_blocked</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>ts<span class="token operator">-&gt;</span>ts_blocked<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</div></div></code></pre><p><span>Co robimy:</span></p><ol>
+<li><span>zwracamy bramki obrotowe do zablokowanych wątków</span></li>
+<li><span>przywracamy piorytety</span></li>
+<li><span>budzimy każdy zablokowany wątek</span></li>
+</ol><p><span>Zatem podczas zwalniania blokady wszystkie wątki są budzone. Jednak warto wspomnieć o tym, że zablokowane wątki są posortowane po piorytecie i w takiej też kolejności będą budzone, więc najprawdopodobniej wątek o najwyższym piorytecie dostanie zasób. Jednak nic nas nie zabezpiecza przed tym, że przyjdzie jakiś nowy wątek i zabierze zasób. Więc dalej istnieje problem </span><em><span>wygłodniałej hordy</span></em><span>.</span></p><h2 id="Zadanie-4" data-id="Zadanie-4"><a class="anchor hidden-xs" href="#Zadanie-4" title="Zadanie-4"><span class="octicon octicon-link"></span></a><span>Zadanie 4.</span></h2><p><span>Przypomnijmy, że propagacja piorytetów występuje wtedy, gdy pewien wątek założył blokadę na zasób i wątek o wyższym piorytecie również&nbsp;chce dostępu do tego zasobu. Wtedy ten działający wątek ma podwyższany piorytet do najwyższej wartości spośród wątków oczekujących na zasób.</span></p><p><span>Podczas zwalaniania blokady z użyciem </span><code>turnstile_broadcast()</code><span> wszystkie zablokowane wątki są budze w kolejności od najwyższego piorytetu. To implikuje, że najprawdopodobniej (a na maszynach jednoprocesorowych na pewno) blokadę założy wątek o najwyższym piorytecie. Zatem nie nastąpi propagacja piorytetu, gdyż właśnie działający wątek ma najwyższy piorytet.</span><br>
+<span>Zwalnianie blokady:</span></p><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1014"></span>
+<span data-linenumber="1015"></span>
+<span data-linenumber="1016"></span>
+<span data-linenumber="1017"></span>
+<span data-linenumber="1018"></span>
+<span data-linenumber="1019"></span>
+<span data-linenumber="1020"></span>
+<span data-linenumber="1021"></span>
+<span data-linenumber="1022"></span>
+<span data-linenumber="1023"></span>
+<span data-linenumber="1024"></span>
+<span data-linenumber="1025"></span>
+<span data-linenumber="1026"></span>
+<span data-linenumber="1027"></span>
+<span data-linenumber="1028"></span>
+<span data-linenumber="1029"></span>
+<span data-linenumber="1030"></span>
+<span data-linenumber="1031"></span>
+<span data-linenumber="1032"></span>
+<span data-linenumber="1033"></span>
+<span data-linenumber="1034"></span>
+<span data-linenumber="1035"></span>
+<span data-linenumber="1036"></span></div><div class="code"><span class="token keyword">void</span>
+<span class="token function">__mtx_unlock_sleep</span><span class="token punctuation">(</span><span class="token keyword">volatile</span> uintptr_t <span class="token operator">*</span>c<span class="token punctuation">,</span> uintptr_t v<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">struct</span> mtx <span class="token operator">*</span>m<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> turnstile <span class="token operator">*</span>ts<span class="token punctuation">;</span>
+	uintptr_t tid<span class="token punctuation">;</span>
+
+	tid <span class="token operator">=</span> <span class="token punctuation">(</span>uintptr_t<span class="token punctuation">)</span>curthread<span class="token punctuation">;</span>
+	m <span class="token operator">=</span> <span class="token function">mtxlock2mtx</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">__predict_false</span><span class="token punctuation">(</span>v <span class="token operator">==</span> tid<span class="token punctuation">)</span><span class="token punctuation">)</span>
+		v <span class="token operator">=</span> <span class="token function">MTX_READ_VALUE</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>v <span class="token operator">==</span> tid <span class="token operator">&amp;&amp;</span> <span class="token function">_mtx_release_lock</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span> tid<span class="token punctuation">)</span><span class="token punctuation">)</span>
+		<span class="token keyword">return</span><span class="token punctuation">;</span>
+
+	<span class="token function">turnstile_chain_lock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>m<span class="token operator">-&gt;</span>lock_object<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">_mtx_release_lock_quick</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	ts <span class="token operator">=</span> <span class="token function">turnstile_lookup</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>m<span class="token operator">-&gt;</span>lock_object<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">turnstile_broadcast</span><span class="token punctuation">(</span>ts<span class="token punctuation">,</span> TS_EXCLUSIVE_QUEUE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">turnstile_unpend</span><span class="token punctuation">(</span>ts<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">turnstile_chain_unlock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>m<span class="token operator">-&gt;</span>lock_object<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</div></div></code></pre><h2 id="Programistyczne-1" data-id="Programistyczne-1"><a class="anchor hidden-xs" href="#Programistyczne-1" title="Programistyczne-1"><span class="octicon octicon-link"></span></a><span>Programistyczne 1.</span></h2><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1"></span>
+<span data-linenumber="2"></span>
+<span data-linenumber="3"></span>
+<span data-linenumber="4"></span>
+<span data-linenumber="5"></span>
+<span data-linenumber="6"></span>
+<span data-linenumber="7"></span>
+<span data-linenumber="8"></span>
+<span data-linenumber="9"></span>
+<span data-linenumber="10"></span>
+<span data-linenumber="11"></span>
+<span data-linenumber="12"></span>
+<span data-linenumber="13"></span>
+<span data-linenumber="14"></span>
+<span data-linenumber="15"></span>
+<span data-linenumber="16"></span>
+<span data-linenumber="17"></span>
+<span data-linenumber="18"></span>
+<span data-linenumber="19"></span>
+<span data-linenumber="20"></span>
+<span data-linenumber="21"></span>
+<span data-linenumber="22"></span>
+<span data-linenumber="23"></span>
+<span data-linenumber="24"></span>
+<span data-linenumber="25"></span>
+<span data-linenumber="26"></span>
+<span data-linenumber="27"></span>
+<span data-linenumber="28"></span>
+<span data-linenumber="29"></span>
+<span data-linenumber="30"></span>
+<span data-linenumber="31"></span>
+<span data-linenumber="32"></span>
+<span data-linenumber="33"></span>
+<span data-linenumber="34"></span>
+<span data-linenumber="35"></span>
+<span data-linenumber="36"></span>
+<span data-linenumber="37"></span>
+<span data-linenumber="38"></span>
+<span data-linenumber="39"></span>
+<span data-linenumber="40"></span>
+<span data-linenumber="41"></span>
+<span data-linenumber="42"></span>
+<span data-linenumber="43"></span>
+<span data-linenumber="44"></span>
+<span data-linenumber="45"></span>
+<span data-linenumber="46"></span>
+<span data-linenumber="47"></span>
+<span data-linenumber="48"></span>
+<span data-linenumber="49"></span>
+<span data-linenumber="50"></span>
+<span data-linenumber="51"></span>
+<span data-linenumber="52"></span>
+<span data-linenumber="53"></span>
+<span data-linenumber="54"></span>
+<span data-linenumber="55"></span>
+<span data-linenumber="56"></span>
+<span data-linenumber="57"></span>
+<span data-linenumber="58"></span>
+<span data-linenumber="59"></span>
+<span data-linenumber="60"></span>
+<span data-linenumber="61"></span>
+<span data-linenumber="62"></span>
+<span data-linenumber="63"></span>
+<span data-linenumber="64"></span>
+<span data-linenumber="65"></span>
+<span data-linenumber="66"></span>
+<span data-linenumber="67"></span>
+<span data-linenumber="68"></span>
+<span data-linenumber="69"></span>
+<span data-linenumber="70"></span>
+<span data-linenumber="71"></span>
+<span data-linenumber="72"></span>
+<span data-linenumber="73"></span>
+<span data-linenumber="74"></span>
+<span data-linenumber="75"></span>
+<span data-linenumber="76"></span>
+<span data-linenumber="77"></span>
+<span data-linenumber="78"></span>
+<span data-linenumber="79"></span>
+<span data-linenumber="80"></span>
+<span data-linenumber="81"></span>
+<span data-linenumber="82"></span>
+<span data-linenumber="83"></span>
+<span data-linenumber="84"></span>
+<span data-linenumber="85"></span>
+<span data-linenumber="86"></span>
+<span data-linenumber="87"></span>
+<span data-linenumber="88"></span>
+<span data-linenumber="89"></span>
+<span data-linenumber="90"></span>
+<span data-linenumber="91"></span>
+<span data-linenumber="92"></span>
+<span data-linenumber="93"></span>
+<span data-linenumber="94"></span>
+<span data-linenumber="95"></span>
+<span data-linenumber="96"></span>
+<span data-linenumber="97"></span>
+<span data-linenumber="98"></span>
+<span data-linenumber="99"></span>
+<span data-linenumber="100"></span>
+<span data-linenumber="101"></span>
+<span data-linenumber="102"></span>
+<span data-linenumber="103"></span>
+<span data-linenumber="104"></span>
+<span data-linenumber="105"></span>
+<span data-linenumber="106"></span>
+<span data-linenumber="107"></span>
+<span data-linenumber="108"></span>
+<span data-linenumber="109"></span>
+<span data-linenumber="110"></span>
+<span data-linenumber="111"></span>
+<span data-linenumber="112"></span>
+<span data-linenumber="113"></span>
+<span data-linenumber="114"></span>
+<span data-linenumber="115"></span>
+<span data-linenumber="116"></span>
+<span data-linenumber="117"></span>
+<span data-linenumber="118"></span>
+<span data-linenumber="119"></span>
+<span data-linenumber="120"></span>
+<span data-linenumber="121"></span>
+<span data-linenumber="122"></span>
+<span data-linenumber="123"></span>
+<span data-linenumber="124"></span>
+<span data-linenumber="125"></span>
+<span data-linenumber="126"></span>
+<span data-linenumber="127"></span>
+<span data-linenumber="128"></span>
+<span data-linenumber="129"></span></div><div class="code"><span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+  int32_t quot<span class="token punctuation">;</span> <span class="token comment">/* quotient */</span>
+  int32_t rem<span class="token punctuation">;</span>  <span class="token comment">/* remainder */</span>
+<span class="token punctuation">}</span> div_t<span class="token punctuation">;</span>
+
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+  int32_t hi<span class="token punctuation">;</span>
+  int32_t lo<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> mul_t<span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">vPortTrapHandler</span><span class="token punctuation">(</span><span class="token keyword">struct</span> TrapFrame <span class="token operator">*</span>frame<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>T_ILLINST <span class="token operator">!=</span> frame<span class="token operator">-&gt;</span>trapnum<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">vPortDefaultTrapHandler</span><span class="token punctuation">(</span>frame<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  uint32_t pc <span class="token operator">=</span> frame<span class="token operator">-&gt;</span>m68000<span class="token punctuation">.</span>pc<span class="token punctuation">;</span>
+  uint16_t sr <span class="token operator">=</span> frame<span class="token operator">-&gt;</span>m68000<span class="token punctuation">.</span>sr<span class="token punctuation">;</span>
+
+  <span class="token keyword">static</span> <span class="token keyword">const</span> int32_t div_mask <span class="token operator">=</span> <span class="token number">0x4c400800</span><span class="token punctuation">;</span>
+  <span class="token keyword">static</span> <span class="token keyword">const</span> int32_t mul_mask <span class="token operator">=</span> <span class="token number">0x4c3c0800</span><span class="token punctuation">;</span>
+
+  uint32_t instruction <span class="token operator">=</span> <span class="token operator">*</span><span class="token punctuation">(</span>uint32_t <span class="token operator">*</span><span class="token punctuation">)</span>pc<span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>div_mask <span class="token operator">==</span> <span class="token punctuation">(</span>instruction <span class="token operator">&amp;</span> div_mask<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* --- we only handle subset of div instructions */</span>
+
+    <span class="token comment">/* --- reminder if dr != dq */</span>
+    uint32_t reg_dr <span class="token operator">=</span> <span class="token punctuation">(</span>instruction <span class="token operator">&amp;</span> <span class="token number">0x7</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/* --- divident -&gt; quotient */</span>
+    uint32_t reg_dq <span class="token operator">=</span> <span class="token punctuation">(</span>instruction <span class="token operator">&amp;</span> <span class="token number">0x7000</span><span class="token punctuation">)</span> <span class="token operator">&gt;&gt;</span> <span class="token number">12</span><span class="token punctuation">;</span>
+
+    uint32_t size <span class="token operator">=</span> instruction <span class="token operator">&amp;</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    int32_t <span class="token operator">*</span>d <span class="token operator">=</span> <span class="token punctuation">(</span>int32_t <span class="token operator">*</span><span class="token punctuation">)</span>frame<span class="token punctuation">;</span>
+
+    int32_t divident <span class="token operator">=</span> d<span class="token punctuation">[</span>reg_dq<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    int32_t divider <span class="token operator">=</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">(</span>int32_t <span class="token operator">*</span><span class="token punctuation">)</span>pc<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    int32_t quotient <span class="token operator">=</span> <span class="token number">0xdeadbeaf</span><span class="token punctuation">;</span>
+    int32_t reminder <span class="token operator">=</span> <span class="token number">0xdeadbeaf</span><span class="token punctuation">;</span>
+
+    div_t x <span class="token operator">=</span> <span class="token function">div</span><span class="token punctuation">(</span>divident<span class="token punctuation">,</span> divider<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    quotient <span class="token operator">=</span> x<span class="token punctuation">.</span>quot<span class="token punctuation">;</span>
+    reminder <span class="token operator">=</span> x<span class="token punctuation">.</span>rem<span class="token punctuation">;</span>
+
+    d<span class="token punctuation">[</span>reg_dr<span class="token punctuation">]</span> <span class="token operator">=</span> reminder<span class="token punctuation">;</span>
+    d<span class="token punctuation">[</span>reg_dq<span class="token punctuation">]</span> <span class="token operator">=</span> quotient<span class="token punctuation">;</span>
+
+    sr <span class="token operator">|</span><span class="token operator">=</span> <span class="token number">0xe</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/* --- Clear sr bits */</span>
+
+    <span class="token comment">/* ---  Set if the quotient is negative */</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>quotient <span class="token operator">&gt;=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+      sr <span class="token operator">&amp;</span><span class="token operator">=</span> <span class="token number">0xfff7</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* --- Set if the quotient is zero */</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>quotient<span class="token punctuation">)</span>
+      sr <span class="token operator">&amp;</span><span class="token operator">=</span> <span class="token number">0xfffb</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/* --- Set if division overflow occurs */</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+      sr <span class="token operator">&amp;</span><span class="token operator">=</span> <span class="token number">0xfffd</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/* --- Clear last bit */</span>
+    sr <span class="token operator">&amp;</span><span class="token operator">=</span> <span class="token number">0xfffe</span><span class="token punctuation">;</span>
+
+    pc <span class="token operator">+</span><span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span>
+    frame<span class="token operator">-&gt;</span>m68000<span class="token punctuation">.</span>sr <span class="token operator">=</span> sr<span class="token punctuation">;</span>
+    frame<span class="token operator">-&gt;</span>m68000<span class="token punctuation">.</span>pc <span class="token operator">=</span> pc<span class="token punctuation">;</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>mul_mask <span class="token operator">==</span> <span class="token punctuation">(</span>instruction <span class="token operator">&amp;</span> mul_mask<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* --- we only handle subset of mul instructions */</span>
+
+    <span class="token comment">/* --- reminder if dr != dq */</span>
+    uint32_t reg_dh <span class="token operator">=</span> <span class="token punctuation">(</span>instruction <span class="token operator">&amp;</span> <span class="token number">0x7</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/* --- divident -&gt; quotient */</span>
+    uint32_t reg_di <span class="token operator">=</span> <span class="token punctuation">(</span>instruction <span class="token operator">&amp;</span> <span class="token number">0x7000</span><span class="token punctuation">)</span> <span class="token operator">&gt;&gt;</span> <span class="token number">12</span><span class="token punctuation">;</span>
+
+    uint32_t size <span class="token operator">=</span> instruction <span class="token operator">&amp;</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    int32_t <span class="token operator">*</span>d <span class="token operator">=</span> <span class="token punctuation">(</span>int32_t <span class="token operator">*</span><span class="token punctuation">)</span>frame<span class="token punctuation">;</span>
+
+    int32_t lhs <span class="token operator">=</span> d<span class="token punctuation">[</span>reg_di<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    int32_t rhs <span class="token operator">=</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">(</span>int32_t <span class="token operator">*</span><span class="token punctuation">)</span>pc<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    int32_t result <span class="token operator">=</span> <span class="token number">0xc00de</span><span class="token punctuation">;</span>
+    bool overflow <span class="token operator">=</span> false<span class="token punctuation">;</span>
+
+    mul_t x <span class="token operator">=</span> <span class="token function">mul</span><span class="token punctuation">(</span>lhs<span class="token punctuation">,</span> rhs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    result <span class="token operator">=</span> x<span class="token punctuation">.</span>lo<span class="token punctuation">;</span>
+    overflow <span class="token operator">=</span> <span class="token punctuation">(</span>x<span class="token punctuation">.</span>hi <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>size <span class="token operator">&amp;&amp;</span> overflow<span class="token punctuation">)</span>
+      d<span class="token punctuation">[</span>reg_dh<span class="token punctuation">]</span> <span class="token operator">=</span> x<span class="token punctuation">.</span>hi<span class="token punctuation">;</span>
+    d<span class="token punctuation">[</span>reg_di<span class="token punctuation">]</span> <span class="token operator">=</span> result<span class="token punctuation">;</span>
+
+    sr <span class="token operator">|</span><span class="token operator">=</span> <span class="token number">0xe</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/* --- Clear sr bits */</span>
+
+    <span class="token comment">/* ---  Set if the result is negative */</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>result <span class="token operator">&gt;=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> x<span class="token punctuation">.</span>hi <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">(</span>x<span class="token punctuation">.</span>hi <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      sr <span class="token operator">&amp;</span><span class="token operator">=</span> <span class="token number">0xfff7</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* --- Set if the result is zero */</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>result <span class="token operator">||</span> x<span class="token punctuation">.</span>hi<span class="token punctuation">)</span>
+      sr <span class="token operator">&amp;</span><span class="token operator">=</span> <span class="token number">0xfffb</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/* --- Set if overflow */</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>overflow<span class="token punctuation">)</span>
+      sr <span class="token operator">&amp;</span><span class="token operator">=</span> <span class="token number">0xfffd</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/* --- Clear last bit */</span>
+    sr <span class="token operator">&amp;</span><span class="token operator">=</span> <span class="token number">0xfffe</span><span class="token punctuation">;</span>
+
+    pc <span class="token operator">+</span><span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span>
+    frame<span class="token operator">-&gt;</span>m68000<span class="token punctuation">.</span>sr <span class="token operator">=</span> sr<span class="token punctuation">;</span>
+    frame<span class="token operator">-&gt;</span>m68000<span class="token punctuation">.</span>pc <span class="token operator">=</span> pc<span class="token punctuation">;</span> 
+
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">vPortDefaultTrapHandler</span><span class="token punctuation">(</span>frame<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</div></div></code></pre><h2 data-id="Programistyczne-2" id="Programistyczne-2"><span class="fake-id" id="Programistyczne-2" style="float: left; margin-top: -60px;"></span><a class="anchor hidden-xs" href="#Programistyczne-2" title="Programistyczne-2"><span class="octicon octicon-link"></span></a><span>Programistyczne 2.</span></h2><pre><code class="C hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1"></span>
+<span data-linenumber="2"></span>
+<span data-linenumber="3"></span>
+<span data-linenumber="4"></span>
+<span data-linenumber="5"></span>
+<span data-linenumber="6"></span>
+<span data-linenumber="7"></span>
+<span data-linenumber="8"></span>
+<span data-linenumber="9"></span>
+<span data-linenumber="10"></span>
+<span data-linenumber="11"></span>
+<span data-linenumber="12"></span>
+<span data-linenumber="13"></span>
+<span data-linenumber="14"></span>
+<span data-linenumber="15"></span>
+<span data-linenumber="16"></span>
+<span data-linenumber="17"></span>
+<span data-linenumber="18"></span>
+<span data-linenumber="19"></span>
+<span data-linenumber="20"></span>
+<span data-linenumber="21"></span>
+<span data-linenumber="22"></span>
+<span data-linenumber="23"></span>
+<span data-linenumber="24"></span>
+<span data-linenumber="25"></span>
+<span data-linenumber="26"></span>
+<span data-linenumber="27"></span>
+<span data-linenumber="28"></span>
+<span data-linenumber="29"></span>
+<span data-linenumber="30"></span>
+<span data-linenumber="31"></span>
+<span data-linenumber="32"></span>
+<span data-linenumber="33"></span>
+<span data-linenumber="34"></span>
+<span data-linenumber="35"></span>
+<span data-linenumber="36"></span>
+<span data-linenumber="37"></span>
+<span data-linenumber="38"></span>
+<span data-linenumber="39"></span>
+<span data-linenumber="40"></span>
+<span data-linenumber="41"></span>
+<span data-linenumber="42"></span>
+<span data-linenumber="43"></span>
+<span data-linenumber="44"></span>
+<span data-linenumber="45"></span>
+<span data-linenumber="46"></span>
+<span data-linenumber="47"></span>
+<span data-linenumber="48"></span>
+<span data-linenumber="49"></span>
+<span data-linenumber="50"></span>
+<span data-linenumber="51"></span>
+<span data-linenumber="52"></span>
+<span data-linenumber="53"></span>
+<span data-linenumber="54"></span>
+<span data-linenumber="55"></span>
+<span data-linenumber="56"></span>
+<span data-linenumber="57"></span>
+<span data-linenumber="58"></span>
+<span data-linenumber="59"></span>
+<span data-linenumber="60"></span>
+<span data-linenumber="61"></span>
+<span data-linenumber="62"></span>
+<span data-linenumber="63"></span>
+<span data-linenumber="64"></span>
+<span data-linenumber="65"></span>
+<span data-linenumber="66"></span>
+<span data-linenumber="67"></span>
+<span data-linenumber="68"></span>
+<span data-linenumber="69"></span>
+<span data-linenumber="70"></span>
+<span data-linenumber="71"></span>
+<span data-linenumber="72"></span>
+<span data-linenumber="73"></span>
+<span data-linenumber="74"></span>
+<span data-linenumber="75"></span>
+<span data-linenumber="76"></span>
+<span data-linenumber="77"></span>
+<span data-linenumber="78"></span>
+<span data-linenumber="79"></span>
+<span data-linenumber="80"></span>
+<span data-linenumber="81"></span>
+<span data-linenumber="82"></span>
+<span data-linenumber="83"></span>
+<span data-linenumber="84"></span>
+<span data-linenumber="85"></span>
+<span data-linenumber="86"></span>
+<span data-linenumber="87"></span>
+<span data-linenumber="88"></span>
+<span data-linenumber="89"></span>
+<span data-linenumber="90"></span>
+<span data-linenumber="91"></span>
+<span data-linenumber="92"></span>
+<span data-linenumber="93"></span>
+<span data-linenumber="94"></span>
+<span data-linenumber="95"></span>
+<span data-linenumber="96"></span>
+<span data-linenumber="97"></span>
+<span data-linenumber="98"></span>
+<span data-linenumber="99"></span>
+<span data-linenumber="100"></span>
+<span data-linenumber="101"></span>
+<span data-linenumber="102"></span>
+<span data-linenumber="103"></span>
+<span data-linenumber="104"></span>
+<span data-linenumber="105"></span>
+<span data-linenumber="106"></span>
+<span data-linenumber="107"></span>
+<span data-linenumber="108"></span>
+<span data-linenumber="109"></span>
+<span data-linenumber="110"></span>
+<span data-linenumber="111"></span>
+<span data-linenumber="112"></span>
+<span data-linenumber="113"></span>
+<span data-linenumber="114"></span>
+<span data-linenumber="115"></span>
+<span data-linenumber="116"></span>
+<span data-linenumber="117"></span>
+<span data-linenumber="118"></span>
+<span data-linenumber="119"></span>
+<span data-linenumber="120"></span>
+<span data-linenumber="121"></span>
+<span data-linenumber="122"></span>
+<span data-linenumber="123"></span>
+<span data-linenumber="124"></span>
+<span data-linenumber="125"></span>
+<span data-linenumber="126"></span>
+<span data-linenumber="127"></span>
+<span data-linenumber="128"></span></div><div class="code">static <span class="hljs-keyword">int</span> charToInt(char c) {
+  <span class="hljs-keyword">if</span> (c &lt;= <span class="hljs-string">'9'</span> &amp;&amp; c &gt;= <span class="hljs-string">'0'</span>)
+    <span class="hljs-keyword">return</span> c - <span class="hljs-string">'0'</span>;
+  <span class="hljs-keyword">return</span> c - <span class="hljs-string">'a'</span> + <span class="hljs-number">10</span>;
+}
+
+
+static void doCmd(char *buff, <span class="hljs-keyword">int</span> idx, File_t *tty) {
+  <span class="hljs-keyword">printf</span>(<span class="hljs-string">"doCmd: '%s' %d\n"</span>, buff, idx);
+  <span class="hljs-keyword">if</span> (idx == <span class="hljs-number">0</span>)
+    <span class="hljs-keyword">return</span>;
+  <span class="hljs-keyword">if</span> (buff[<span class="hljs-number">0</span>] == <span class="hljs-string">'c'</span>) {
+    <span class="hljs-keyword">int</span> r = charToInt(buff[<span class="hljs-number">4</span>]), g = charToInt(buff[<span class="hljs-number">5</span>]), b = charToInt(buff[<span class="hljs-number">6</span>]);
+    <span class="hljs-keyword">int</span> n = charToInt(buff[<span class="hljs-number">2</span>]);
+    <span class="hljs-keyword">printf</span>(<span class="hljs-string">"%d 0x%x%x%x\n"</span>, n, r, g, b);
+    custom.color[n] = r * <span class="hljs-number">16</span> * <span class="hljs-number">16</span> + g &amp; <span class="hljs-number">16</span> + b;
+    <span class="hljs-keyword">return</span>;
+  }
+  <span class="hljs-keyword">if</span> (buff[<span class="hljs-number">0</span>] == <span class="hljs-string">'d'</span>) {
+    char *p = buff + <span class="hljs-number">2</span>;
+    unsigned <span class="hljs-keyword">int</span> start = <span class="hljs-number">0</span>, end = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">while</span> (!((<span class="hljs-string">'0'</span> &lt;= *p &amp;&amp; *p &lt;= <span class="hljs-string">'9'</span>) || (<span class="hljs-string">'a'</span> &lt;= *p &amp;&amp; *p &lt;= <span class="hljs-string">'f'</span>)) &amp;&amp;
+           p &lt; buff + idx)
+      ++p;
+    <span class="hljs-keyword">while</span> ((<span class="hljs-string">'0'</span> &lt;= *p &amp;&amp; *p &lt;= <span class="hljs-string">'9'</span>) || (<span class="hljs-string">'a'</span> &lt;= *p &amp;&amp; *p &lt;= <span class="hljs-string">'f'</span>)) {
+      start *= <span class="hljs-number">16</span>;
+      start += charToInt(*p);
+      ++p;
+    }
+    <span class="hljs-keyword">while</span> (!((<span class="hljs-string">'0'</span> &lt;= *p &amp;&amp; *p &lt;= <span class="hljs-string">'9'</span>) || (<span class="hljs-string">'a'</span> &lt;= *p &amp;&amp; *p &lt;= <span class="hljs-string">'f'</span>)) &amp;&amp;
+           p &lt; buff + idx)
+      ++p;
+
+    <span class="hljs-keyword">while</span> ((<span class="hljs-string">'0'</span> &lt;= *p &amp;&amp; *p &lt;= <span class="hljs-string">'9'</span>) || (<span class="hljs-string">'a'</span> &lt;= *p &amp;&amp; *p &lt;= <span class="hljs-string">'f'</span>)) {
+      end *= <span class="hljs-number">16</span>;
+      end += charToInt(*p);
+      ++p;
+    }
+    <span class="hljs-keyword">printf</span>(<span class="hljs-string">"d 0x%x 0x%x\n"</span>, start, end);
+    uint8_t *ptr = (uint8_t *)start;
+    <span class="hljs-keyword">while</span> (ptr &lt; (uint8_t *)end) {
+      <span class="hljs-keyword">printf</span>(<span class="hljs-string">"%02x "</span>, *ptr);
+      FilePrintf(tty, <span class="hljs-string">"%02x "</span>, *ptr);
+      ++ptr;
+    }
+    <span class="hljs-keyword">return</span>;
+  }
+  FilePrintf(tty, <span class="hljs-string">"unknown command: '%s'\n"</span>, buff);
+}
+
+static void vInputTask(void *data) {
+  File_t *tty = data;
+  static const <span class="hljs-keyword">int</span> kBackspace = <span class="hljs-number">0x41</span>;
+  static const <span class="hljs-keyword">int</span> kEnter = <span class="hljs-number">0x44</span>;
+
+  static char buff[<span class="hljs-number">1024</span>];
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">1024</span>; ++i)
+    buff[i] = <span class="hljs-number">0</span>;
+  short <span class="hljs-keyword">x</span> = <span class="hljs-number">0</span>, <span class="hljs-keyword">y</span> = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">int</span> idx = <span class="hljs-number">0</span>;
+
+  FilePrintf(tty, <span class="hljs-string">"pj@FreeRTOS: ~: "</span>);
+  ConsoleSetCursor(<span class="hljs-keyword">x</span>, <span class="hljs-keyword">y</span>);
+
+  <span class="hljs-keyword">for</span> (;;) {
+    Event_t ev;
+    <span class="hljs-keyword">if</span> (!PopEvent(&amp;ev))
+      <span class="hljs-keyword">continue</span>;
+
+    <span class="hljs-keyword">if</span> (ev.type == EV_KEY) {
+      <span class="hljs-keyword">if</span> (ev.key.modifier &amp; MOD_PRESSED) {
+        char c = ev.key.ascii;
+        switch (ev.key.code) {
+        case kBackspace: {
+          <span class="hljs-keyword">printf</span>(<span class="hljs-string">"kBackspace\n"</span>);
+          idx--;
+          <span class="hljs-keyword">if</span> (idx &lt; <span class="hljs-number">0</span>)
+            idx = <span class="hljs-number">0</span>;
+          buff[idx] = <span class="hljs-string">' '</span>;
+          <span class="hljs-keyword">break</span>;
+        }
+        case kEnter: {
+          <span class="hljs-keyword">printf</span>(<span class="hljs-string">"kEnter\n"</span>);
+          FilePrintf(tty, <span class="hljs-string">"pj@FreeRTOS: ~: %s\n"</span>, buff);
+          doCmd(buff, idx, tty);
+          <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">1024</span>; ++i)
+            buff[i] = <span class="hljs-number">0</span>;
+          idx = <span class="hljs-number">0</span>;
+          ConsoleGetCursor(&amp;<span class="hljs-keyword">x</span>, &amp;<span class="hljs-keyword">y</span>);
+          <span class="hljs-keyword">break</span>;
+        }
+        default: {
+          <span class="hljs-keyword">if</span> (idx == <span class="hljs-number">80</span>)
+            <span class="hljs-keyword">break</span>;
+          <span class="hljs-keyword">printf</span>(<span class="hljs-string">"char = %c\n"</span>, c);
+      
+          <span class="hljs-regexp">//</span> <span class="hljs-keyword">kill</span> line
+          <span class="hljs-keyword">if</span> ((ev.key.modifier &amp; MOD_CONTROL) &amp;&amp; c == <span class="hljs-string">'c'</span>) {
+            <span class="hljs-keyword">printf</span>(<span class="hljs-string">"kill\n"</span>);
+            FilePrintf(tty, <span class="hljs-string">"pj@FreeRTOS: ~: %s^c\n"</span>, buff);
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">1024</span>; ++i)
+              buff[i] = <span class="hljs-number">0</span>;
+            idx = <span class="hljs-number">0</span>;
+            ConsoleGetCursor(&amp;<span class="hljs-keyword">x</span>, &amp;<span class="hljs-keyword">y</span>);
+            <span class="hljs-keyword">break</span>;
+          }
+
+          // erase line
+          <span class="hljs-keyword">if</span> ((ev.key.modifier &amp; MOD_CONTROL) &amp;&amp; c == <span class="hljs-string">'u'</span>) {
+            <span class="hljs-keyword">printf</span>(<span class="hljs-string">"erase\n"</span>);
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; idx; ++i)
+              buff[i] = <span class="hljs-string">' '</span>;
+            idx = <span class="hljs-number">0</span>;
+            ConsoleGetCursor(&amp;<span class="hljs-keyword">x</span>, &amp;<span class="hljs-keyword">y</span>);
+            <span class="hljs-keyword">break</span>;
+          }
+
+          buff[idx] = c;
+          ++idx;
+          <span class="hljs-keyword">break</span>;
+        }
+        }
+        FilePrintf(tty, <span class="hljs-string">"pj@FreeRTOS: ~: %s"</span>, buff);
+        ConsoleSetCursor(<span class="hljs-keyword">x</span>, <span class="hljs-keyword">y</span>);
+      }
+    }
+  }
+}
+</div></div></code></pre></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li class=""><a href="#SJU-20200422" title="SJU 2020/04/22">SJU 2020/04/22</a><ul class="nav">
+<li><a href="#Zadanie-5" title="Zadanie 5.">Zadanie 5.</a></li>
+<li><a href="#Zadanie-1" title="Zadanie 1.">Zadanie 1.</a></li>
+<li><a href="#Zadanie-2" title="Zadanie 2.">Zadanie 2.</a></li>
+<li><a href="#Zadanie-3" title="Zadanie 3.">Zadanie 3.</a></li>
+<li><a href="#Zadanie-4" title="Zadanie 4.">Zadanie 4.</a></li>
+<li><a href="#Programistyczne-1" title="Programistyczne 1.">Programistyczne 1.</a></li>
+<li><a href="#Programistyczne-2" title="Programistyczne 2.">Programistyczne 2.</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+        <div class="toc"><ul class="nav">
+<li class=""><a href="#SJU-20200422" title="SJU 2020/04/22">SJU 2020/04/22</a><ul class="nav">
+<li><a href="#Zadanie-5" title="Zadanie 5.">Zadanie 5.</a></li>
+<li><a href="#Zadanie-1" title="Zadanie 1.">Zadanie 1.</a></li>
+<li><a href="#Zadanie-2" title="Zadanie 2.">Zadanie 2.</a></li>
+<li><a href="#Zadanie-3" title="Zadanie 3.">Zadanie 3.</a></li>
+<li><a href="#Zadanie-4" title="Zadanie 4.">Zadanie 4.</a></li>
+<li><a href="#Programistyczne-1" title="Programistyczne 1.">Programistyczne 1.</a></li>
+<li><a href="#Programistyczne-2" title="Programistyczne 2.">Programistyczne 2.</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>
